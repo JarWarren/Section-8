@@ -15,6 +15,8 @@ class Step {
     let stepCompleted: Bool
     let homeImageName: String
     
+    var items: [Item] = []
+    
     init(name: String, stepNumber: String, stepCompleted: Bool, homeImageName: String) {
         self.name = name
         self.stepNumber = stepNumber

@@ -1,5 +1,5 @@
 //
-//  StepTableViewCell.swift
+//  StepTVCell.swift
 //  Section 8
 //
 //  Created by Arkin Hill on 11/28/18.
@@ -8,11 +8,12 @@
 
 import UIKit
 
-class StepTableViewCell: UITableViewCell {
+class StepTVCell: UITableViewCell {
     
     // MARK: - OUTLETS
     
     @IBOutlet weak var stepImageView: UIImageView!
     @IBOutlet weak var stepNumberLabel: UILabel!
     @IBOutlet weak var stepNameLabel: UILabel!
+
 }
