@@ -14,8 +14,12 @@
 		81DD083321AF1D470037F3AA /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DD083221AF1D470037F3AA /* Step.swift */; };
 		81DD083521AF1E880037F3AA /* StepController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DD083421AF1E880037F3AA /* StepController.swift */; };
 		81DD083721AF32F20037F3AA /* HomeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DD083621AF32F20037F3AA /* HomeTVC.swift */; };
-		81DD083B21AF3C010037F3AA /* StepTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DD083A21AF3C010037F3AA /* StepTableViewCell.swift */; };
-		81E9D6AD21AF674300B48A24 /* Step1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E9D6AC21AF674300B48A24 /* Step1VC.swift */; };
+		81DD083B21AF3C010037F3AA /* StepTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DD083A21AF3C010037F3AA /* StepTVCell.swift */; };
+		81FF0A9121B093B7004A7EDB /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FF0A9021B093B7004A7EDB /* Item.swift */; };
+		81FF0A9321B095F6004A7EDB /* ItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FF0A9221B095F6004A7EDB /* ItemController.swift */; };
+		81FF0A9521B09BC6004A7EDB /* StepDetailTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FF0A9421B09BC6004A7EDB /* StepDetailTVC.swift */; };
+		81FF0A9721B09EAC004A7EDB /* ParagraphTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FF0A9621B09EAC004A7EDB /* ParagraphTVCell.swift */; };
+		81FF0A9921B09EBC004A7EDB /* TipTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FF0A9821B09EBC004A7EDB /* TipTVCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +32,12 @@
 		81DD083221AF1D470037F3AA /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
 		81DD083421AF1E880037F3AA /* StepController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepController.swift; sourceTree = "<group>"; };
 		81DD083621AF32F20037F3AA /* HomeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTVC.swift; sourceTree = "<group>"; };
-		81DD083A21AF3C010037F3AA /* StepTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepTableViewCell.swift; sourceTree = "<group>"; };
-		81E9D6AC21AF674300B48A24 /* Step1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step1VC.swift; sourceTree = "<group>"; };
+		81DD083A21AF3C010037F3AA /* StepTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepTVCell.swift; sourceTree = "<group>"; };
+		81FF0A9021B093B7004A7EDB /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		81FF0A9221B095F6004A7EDB /* ItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemController.swift; sourceTree = "<group>"; };
+		81FF0A9421B09BC6004A7EDB /* StepDetailTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepDetailTVC.swift; sourceTree = "<group>"; };
+		81FF0A9621B09EAC004A7EDB /* ParagraphTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParagraphTVCell.swift; sourceTree = "<group>"; };
+		81FF0A9821B09EBC004A7EDB /* TipTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipTVCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,10 +71,10 @@
 			isa = PBXGroup;
 			children = (
 				7E67E2A521ADE895007E4103 /* UI */,
-				7E67E2A621ADE8A2007E4103 /* Views */,
-				7E67E2A921ADE8BB007E4103 /* ViewControllers */,
-				7E67E2A821ADE8B1007E4103 /* ModelControllers */,
 				7E67E2A721ADE8A9007E4103 /* Models */,
+				7E67E2A821ADE8B1007E4103 /* ModelControllers */,
+				7E67E2A921ADE8BB007E4103 /* ViewControllers */,
+				7E67E2A621ADE8A2007E4103 /* Views */,
 				7E67E2AB21ADE8E2007E4103 /* HelperFiles */,
 				7E67E2AA21ADE8CE007E4103 /* Resources */,
 			);
@@ -85,6 +93,9 @@
 		7E67E2A621ADE8A2007E4103 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				81DD083A21AF3C010037F3AA /* StepTVCell.swift */,
+				81FF0A9621B09EAC004A7EDB /* ParagraphTVCell.swift */,
+				81FF0A9821B09EBC004A7EDB /* TipTVCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -93,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				81DD083221AF1D470037F3AA /* Step.swift */,
+				81FF0A9021B093B7004A7EDB /* Item.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -101,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				81DD083421AF1E880037F3AA /* StepController.swift */,
+				81FF0A9221B095F6004A7EDB /* ItemController.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -109,8 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				81DD083621AF32F20037F3AA /* HomeTVC.swift */,
-				81DD083A21AF3C010037F3AA /* StepTableViewCell.swift */,
-				81E9D6AC21AF674300B48A24 /* Step1VC.swift */,
+				81FF0A9421B09BC6004A7EDB /* StepDetailTVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -205,9 +217,13 @@
 			files = (
 				7E67E29421ADE777007E4103 /* AppDelegate.swift in Sources */,
 				81DD083321AF1D470037F3AA /* Step.swift in Sources */,
-				81E9D6AD21AF674300B48A24 /* Step1VC.swift in Sources */,
+				81FF0A9721B09EAC004A7EDB /* ParagraphTVCell.swift in Sources */,
+				81FF0A9521B09BC6004A7EDB /* StepDetailTVC.swift in Sources */,
+				81FF0A9321B095F6004A7EDB /* ItemController.swift in Sources */,
 				81DD083721AF32F20037F3AA /* HomeTVC.swift in Sources */,
-				81DD083B21AF3C010037F3AA /* StepTableViewCell.swift in Sources */,
+				81FF0A9121B093B7004A7EDB /* Item.swift in Sources */,
+				81FF0A9921B09EBC004A7EDB /* TipTVCell.swift in Sources */,
+				81DD083B21AF3C010037F3AA /* StepTVCell.swift in Sources */,
 				81DD083521AF1E880037F3AA /* StepController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,28 +14,22 @@ class HomeTVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
-    // MARK: - VIEWS FUNCTIONS
+    // MARK: - VIEW DID LOAD
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewDidLoad()
-        self.tableView.reloadData()
-    }
-    
     // MARK: - TABLE VIEW DATA SOURCE
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return StepController.steps.count
+        return StepController.shared.steps.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "stepCell", for: indexPath) as? StepTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "stepCell", for: indexPath) as? StepTVCell else { return UITableViewCell() }
         
-        let step = StepController.steps[indexPath.row]
-        print(step.homeImageName)
+        let step = StepController.shared.steps[indexPath.row]
         
         // Configure the cell
         cell.stepImageView.image = UIImage(named: step.homeImageName)
@@ -43,5 +37,16 @@ class HomeTVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         cell.stepNameLabel.text = step.name
         return cell
         
+    }
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toStepDetail" {
+            guard let destinationVC = segue.destination as? StepDetailTVC, let indexPath = tableView.indexPathForSelectedRow else { return }
+            
+            let selectedStep = StepController.shared.steps[indexPath.row]
+            destinationVC.selectedStep = selectedStep
+        }
     }
 }
