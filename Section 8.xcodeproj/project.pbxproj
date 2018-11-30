@@ -11,6 +11,7 @@
 		7E67E29921ADE777007E4103 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E67E29721ADE777007E4103 /* Main.storyboard */; };
 		7E67E29B21ADE778007E4103 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E67E29A21ADE778007E4103 /* Assets.xcassets */; };
 		7E67E29E21ADE778007E4103 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E67E29C21ADE778007E4103 /* LaunchScreen.storyboard */; };
+		81542E0F21B1A8AD0082BA3E /* ParagraphWithButtonTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81542E0E21B1A8AD0082BA3E /* ParagraphWithButtonTVCell.swift */; };
 		81DD083321AF1D470037F3AA /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DD083221AF1D470037F3AA /* Step.swift */; };
 		81DD083521AF1E880037F3AA /* StepController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DD083421AF1E880037F3AA /* StepController.swift */; };
 		81DD083721AF32F20037F3AA /* HomeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DD083621AF32F20037F3AA /* HomeTVC.swift */; };
@@ -29,6 +30,7 @@
 		7E67E29A21ADE778007E4103 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E67E29D21ADE778007E4103 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E67E29F21ADE778007E4103 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81542E0E21B1A8AD0082BA3E /* ParagraphWithButtonTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParagraphWithButtonTVCell.swift; sourceTree = "<group>"; };
 		81DD083221AF1D470037F3AA /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
 		81DD083421AF1E880037F3AA /* StepController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepController.swift; sourceTree = "<group>"; };
 		81DD083621AF32F20037F3AA /* HomeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTVC.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				81DD083A21AF3C010037F3AA /* StepTVCell.swift */,
 				81FF0A9621B09EAC004A7EDB /* ParagraphTVCell.swift */,
 				81FF0A9821B09EBC004A7EDB /* TipTVCell.swift */,
+				81542E0E21B1A8AD0082BA3E /* ParagraphWithButtonTVCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				81DD083321AF1D470037F3AA /* Step.swift in Sources */,
 				81FF0A9721B09EAC004A7EDB /* ParagraphTVCell.swift in Sources */,
 				81FF0A9521B09BC6004A7EDB /* StepDetailTVC.swift in Sources */,
+				81542E0F21B1A8AD0082BA3E /* ParagraphWithButtonTVCell.swift in Sources */,
 				81FF0A9321B095F6004A7EDB /* ItemController.swift in Sources */,
 				81DD083721AF32F20037F3AA /* HomeTVC.swift in Sources */,
 				81FF0A9121B093B7004A7EDB /* Item.swift in Sources */,
