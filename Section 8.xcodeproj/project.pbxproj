@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E1DF3F121B19FBE0012BFEE /* GoogleNetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DF3F021B19FBE0012BFEE /* GoogleNetworkController.swift */; };
+		7E1DF3F421B19FE70012BFEE /* ApartmentLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DF3F221B19FE70012BFEE /* ApartmentLocation.swift */; };
+		7E1DF3F521B19FE70012BFEE /* MapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DF3F321B19FE70012BFEE /* MapMarker.swift */; };
+		7E1DF3F721B1A0610012BFEE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DF3F621B1A0610012BFEE /* MapViewController.swift */; };
+		7E1DF3F921B1A15F0012BFEE /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E1DF3F821B1A15F0012BFEE /* Map.storyboard */; };
 		7E67E29421ADE777007E4103 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E67E29321ADE777007E4103 /* AppDelegate.swift */; };
 		7E67E29921ADE777007E4103 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E67E29721ADE777007E4103 /* Main.storyboard */; };
 		7E67E29B21ADE778007E4103 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E67E29A21ADE778007E4103 /* Assets.xcassets */; };
@@ -21,9 +26,15 @@
 		81FF0A9521B09BC6004A7EDB /* StepDetailTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FF0A9421B09BC6004A7EDB /* StepDetailTVC.swift */; };
 		81FF0A9721B09EAC004A7EDB /* ParagraphTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FF0A9621B09EAC004A7EDB /* ParagraphTVCell.swift */; };
 		81FF0A9921B09EBC004A7EDB /* TipTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FF0A9821B09EBC004A7EDB /* TipTVCell.swift */; };
+		8FFF3E270F8D2C628EDCEA21 /* Pods_Section_8.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B40F76A9B4F7D68ACCD25A61 /* Pods_Section_8.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E1DF3F021B19FBE0012BFEE /* GoogleNetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleNetworkController.swift; sourceTree = "<group>"; };
+		7E1DF3F221B19FE70012BFEE /* ApartmentLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApartmentLocation.swift; sourceTree = "<group>"; };
+		7E1DF3F321B19FE70012BFEE /* MapMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapMarker.swift; sourceTree = "<group>"; };
+		7E1DF3F621B1A0610012BFEE /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		7E1DF3F821B1A15F0012BFEE /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		7E67E29021ADE777007E4103 /* Section 8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Section 8.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E67E29321ADE777007E4103 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E67E29821ADE777007E4103 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -40,6 +51,9 @@
 		81FF0A9421B09BC6004A7EDB /* StepDetailTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepDetailTVC.swift; sourceTree = "<group>"; };
 		81FF0A9621B09EAC004A7EDB /* ParagraphTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParagraphTVCell.swift; sourceTree = "<group>"; };
 		81FF0A9821B09EBC004A7EDB /* TipTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipTVCell.swift; sourceTree = "<group>"; };
+		AB5301DFAFD4218170B78427 /* Pods-Section 8.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Section 8.release.xcconfig"; path = "Pods/Target Support Files/Pods-Section 8/Pods-Section 8.release.xcconfig"; sourceTree = "<group>"; };
+		B40F76A9B4F7D68ACCD25A61 /* Pods_Section_8.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Section_8.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F224A78C64900B379E449661 /* Pods-Section 8.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Section 8.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Section 8/Pods-Section 8.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,17 +61,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FFF3E270F8D2C628EDCEA21 /* Pods_Section_8.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E7F24FA8D1A4071A6E96B47 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F224A78C64900B379E449661 /* Pods-Section 8.debug.xcconfig */,
+				AB5301DFAFD4218170B78427 /* Pods-Section 8.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		60D6EFD5C45462F207BD27E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B40F76A9B4F7D68ACCD25A61 /* Pods_Section_8.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7E67E28721ADE777007E4103 = {
 			isa = PBXGroup;
 			children = (
 				7E67E29221ADE777007E4103 /* Section 8 */,
 				7E67E29121ADE777007E4103 /* Products */,
+				2E7F24FA8D1A4071A6E96B47 /* Pods */,
+				60D6EFD5C45462F207BD27E5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,6 +122,7 @@
 			children = (
 				7E67E29721ADE777007E4103 /* Main.storyboard */,
 				7E67E29C21ADE778007E4103 /* LaunchScreen.storyboard */,
+				7E1DF3F821B1A15F0012BFEE /* Map.storyboard */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -98,6 +133,7 @@
 				81DD083A21AF3C010037F3AA /* StepTVCell.swift */,
 				81FF0A9621B09EAC004A7EDB /* ParagraphTVCell.swift */,
 				81FF0A9821B09EBC004A7EDB /* TipTVCell.swift */,
+				7E1DF3F321B19FE70012BFEE /* MapMarker.swift */,
 				81542E0E21B1A8AD0082BA3E /* ParagraphWithButtonTVCell.swift */,
 			);
 			path = Views;
@@ -108,6 +144,7 @@
 			children = (
 				81DD083221AF1D470037F3AA /* Step.swift */,
 				81FF0A9021B093B7004A7EDB /* Item.swift */,
+				7E1DF3F221B19FE70012BFEE /* ApartmentLocation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -126,6 +163,7 @@
 			children = (
 				81DD083621AF32F20037F3AA /* HomeTVC.swift */,
 				81FF0A9421B09BC6004A7EDB /* StepDetailTVC.swift */,
+				7E1DF3F621B1A0610012BFEE /* MapViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -143,6 +181,7 @@
 		7E67E2AB21ADE8E2007E4103 /* HelperFiles */ = {
 			isa = PBXGroup;
 			children = (
+				7E1DF3F021B19FBE0012BFEE /* GoogleNetworkController.swift */,
 			);
 			path = HelperFiles;
 			sourceTree = "<group>";
@@ -154,9 +193,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E67E2A221ADE778007E4103 /* Build configuration list for PBXNativeTarget "Section 8" */;
 			buildPhases = (
+				2122E29ACE60B9BB96D8DABC /* [CP] Check Pods Manifest.lock */,
 				7E67E28C21ADE777007E4103 /* Sources */,
 				7E67E28D21ADE777007E4103 /* Frameworks */,
 				7E67E28E21ADE777007E4103 /* Resources */,
+				D2809F20392C933765139DC8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -208,10 +249,62 @@
 				7E67E29E21ADE778007E4103 /* LaunchScreen.storyboard in Resources */,
 				7E67E29B21ADE778007E4103 /* Assets.xcassets in Resources */,
 				7E67E29921ADE777007E4103 /* Main.storyboard in Resources */,
+				7E1DF3F921B1A15F0012BFEE /* Map.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2122E29ACE60B9BB96D8DABC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Section 8-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2809F20392C933765139DC8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Section 8/Pods-Section 8-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlacePicker.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Section 8/Pods-Section 8-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7E67E28C21ADE777007E4103 /* Sources */ = {
@@ -222,13 +315,17 @@
 				81DD083321AF1D470037F3AA /* Step.swift in Sources */,
 				81FF0A9721B09EAC004A7EDB /* ParagraphTVCell.swift in Sources */,
 				81FF0A9521B09BC6004A7EDB /* StepDetailTVC.swift in Sources */,
+				7E1DF3F721B1A0610012BFEE /* MapViewController.swift in Sources */,
 				81542E0F21B1A8AD0082BA3E /* ParagraphWithButtonTVCell.swift in Sources */,
 				81FF0A9321B095F6004A7EDB /* ItemController.swift in Sources */,
+				7E1DF3F121B19FBE0012BFEE /* GoogleNetworkController.swift in Sources */,
 				81DD083721AF32F20037F3AA /* HomeTVC.swift in Sources */,
 				81FF0A9121B093B7004A7EDB /* Item.swift in Sources */,
 				81FF0A9921B09EBC004A7EDB /* TipTVCell.swift in Sources */,
 				81DD083B21AF3C010037F3AA /* StepTVCell.swift in Sources */,
 				81DD083521AF1E880037F3AA /* StepController.swift in Sources */,
+				7E1DF3F421B19FE70012BFEE /* ApartmentLocation.swift in Sources */,
+				7E1DF3F521B19FE70012BFEE /* MapMarker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +469,7 @@
 		};
 		7E67E2A321ADE778007E4103 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F224A78C64900B379E449661 /* Pods-Section 8.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -390,6 +488,7 @@
 		};
 		7E67E2A421ADE778007E4103 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB5301DFAFD4218170B78427 /* Pods-Section 8.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
