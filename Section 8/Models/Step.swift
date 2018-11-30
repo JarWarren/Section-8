@@ -12,7 +12,7 @@ class Step {
     
     let name: String
     let stepNumber: String
-    let stepCompleted: Bool
+    var stepCompleted: Bool
     let homeImageName: String
     let stepImageName: String
     

@@ -14,10 +14,20 @@ class HomeTVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: - Constants
+    
+    let completedCheckBoxImage = UIImage(named: "home_checked")
+    let incompleteCheckBoxImage = UIImage(named: "home_unchecked")
+    
     // MARK: - VIEW DID LOAD
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
     
     // MARK: - TABLE VIEW DATA SOURCE
@@ -35,8 +45,13 @@ class HomeTVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         cell.stepImageView.image = UIImage(named: step.homeImageName)
         cell.stepNumberLabel.text = step.stepNumber
         cell.stepNameLabel.text = step.name
-        return cell
         
+        if step.stepCompleted {
+            cell.checkBoxView.image = completedCheckBoxImage
+        } else {
+            cell.checkBoxView.image = incompleteCheckBoxImage
+        }
+        return cell
     }
     
     // MARK: - Navigation
