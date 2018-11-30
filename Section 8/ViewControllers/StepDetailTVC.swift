@@ -91,7 +91,11 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             return cell
             
         case .paragraphWithButton:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "buttonCell", for: indexPath) as? ParagraphWithButtonTVCell else { return UITableViewCell() }
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "plaragraphWithButtonCell", for: indexPath) as? ParagraphWithButtonTVCell else { return UITableViewCell() }
+            return cell
+            
+        case .datePicker:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "datePickerCell", for: indexPath) as? ParagraphWithButtonTVCell else { return UITableViewCell() }
             return cell
         }
     }
