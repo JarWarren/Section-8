@@ -15,5 +15,10 @@ class StepTVCell: UITableViewCell {
     @IBOutlet weak var stepImageView: UIImageView!
     @IBOutlet weak var stepNumberLabel: UILabel!
     @IBOutlet weak var stepNameLabel: UILabel!
-
+    @IBOutlet weak var checkBoxView: UIImageView!
+    
+    
+    // Landing Pad
+    
+    var step: Step?
 }

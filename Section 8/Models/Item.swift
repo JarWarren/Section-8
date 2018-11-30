@@ -12,11 +12,13 @@ class Item {
     
     var title: String?
     let text: String
+    let buttonText: String?
     let format: ItemFormat
     
-    init(title: String?, text: String, format: ItemFormat) {
+    init(title: String?, text: String, buttonText: String? = nil, format: ItemFormat) {
         self.title = title
         self.text = text
+        self.buttonText = buttonText
         self.format = format
     }
 }
@@ -26,4 +28,5 @@ class Item {
 enum ItemFormat: String {
     case tip = "tip"
     case paragraph = "paragraph"
+    case paragraphWithButton = "paragraphWithButton"
 }
