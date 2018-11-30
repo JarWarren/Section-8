@@ -14,13 +14,15 @@ class Step {
     let stepNumber: String
     let stepCompleted: Bool
     let homeImageName: String
+    let stepImageName: String
     
     var items: [Item] = []
     
-    init(name: String, stepNumber: String, stepCompleted: Bool, homeImageName: String) {
+    init(name: String, stepNumber: String, stepCompleted: Bool, homeImageName: String, stepImageName: String) {
         self.name = name
         self.stepNumber = stepNumber
         self.stepCompleted = stepCompleted
         self.homeImageName = homeImageName.lowercased()
+        self.stepImageName = stepImageName.lowercased()
     }
 }

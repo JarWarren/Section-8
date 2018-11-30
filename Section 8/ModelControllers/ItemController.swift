@@ -10,8 +10,8 @@ import Foundation
 
 class ItemController {
     
-    static func addNewItem(title: String?, text: String, format: ItemFormat, step: Step) {
-        let newItem = Item(title: title, text: text, format: format)
+    static func addNewItem(title: String?, text: String, buttonText: String? = nil, format: ItemFormat, step: Step) {
+        let newItem = Item(title: title, text: text, buttonText: buttonText, format: format)
         step.items.append(newItem)
     }
 }

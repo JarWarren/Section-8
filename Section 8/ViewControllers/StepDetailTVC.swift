@@ -36,7 +36,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         if let thisStep = selectedStep {
             self.stepNameLabel.text = thisStep.name
             self.stepNumberLabel.text = thisStep.stepNumber
-            self.stepImageView.image = UIImage(named: thisStep.homeImageName)
+            self.stepImageView.image = UIImage(named: thisStep.stepImageName)
         }
     }
     
@@ -65,6 +65,13 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             
             // Configure cell
             cell.paragraphTextLabel?.text = item.text
+            return cell
+            
+        case .paragraphWithButton:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "buttonCell", for: indexPath) as? ParagraphWithButtonTVCell else { return UITableViewCell() }
+            
+            // Configure cell
+//            cell.buttonButton?.text = item.button
             return cell
         }
     }
