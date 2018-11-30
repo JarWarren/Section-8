@@ -9,7 +9,7 @@
 import UIKit
 
 class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
     // MARK: - LANDING PAD & SOURCE OF TRUTH
     
     var selectedStep: Step? {
@@ -27,7 +27,8 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     @IBOutlet weak var stepNameLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    // MARK: - VIEW DID LOAD
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +38,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             self.stepNameLabel.text = thisStep.name
             self.stepNumberLabel.text = thisStep.stepNumber
             self.stepImageView.image = UIImage(named: thisStep.stepImageName)
+            completeButtonTapped()
         }
     }
     
@@ -69,10 +71,21 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             
         case .paragraphWithButton:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "buttonCell", for: indexPath) as? ParagraphWithButtonTVCell else { return UITableViewCell() }
-            
-            // Configure cell
-//            cell.buttonButton?.text = item.button
             return cell
+        }
+    }
+    
+    // NOTE: -  Currently this func is being called in the view did load, to take the place of an actual button being tapped and firing the function. The print statments will explain the logic
+    func completeButtonTapped() {
+        guard let unwrappedStep = selectedStep else {return}
+        switch unwrappedStep.stepCompleted == false {
+        case true:
+            navigationController?.popViewController(animated: true)
+            print("Step # \(unwrappedStep.stepNumber) was originally set to inComplete but now its complete")
+            unwrappedStep.stepCompleted = true
+        case false:
+            print("Step # \(unwrappedStep.stepNumber) was originally set to Complete but now its not compelted")
+            unwrappedStep.stepCompleted = false 
         }
     }
 }
