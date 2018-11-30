@@ -20,7 +20,7 @@ class StepController {
         
         let step1 = Step(name: "Complete online application", stepNumber: "STEP 1", stepCompleted: false, homeImageName: "home1", stepImageName: "step1")
         let step2 = Step(name: "Photo ID & Social Security Card", stepNumber: "STEP 2", stepCompleted: false, homeImageName: "home2", stepImageName: "step2")
-        let step3 = Step(name: "Complete application apointment", stepNumber: "STEP 3", stepCompleted: false, homeImageName: "home3", stepImageName: "step3")
+        let step3 = Step(name: "Complete mailed application", stepNumber: "STEP 3", stepCompleted: false, homeImageName: "home3", stepImageName: "step3")
         let step4 = Step(name: "Attend briefing", stepNumber: "STEP 4", stepCompleted: false, homeImageName: "home4", stepImageName: "step4")
         let step5 = Step(name: "Calculate rent payment", stepNumber: "STEP 5", stepCompleted: false, homeImageName: "home5", stepImageName: "step5")
         let step6 = Step(name: "Choose apartment", stepNumber: "STEP 6", stepCompleted: false, homeImageName: "home6", stepImageName: "step6")
@@ -59,7 +59,7 @@ class StepController {
                 // Item 2A
                 ItemController.addNewItem(title: nil, text: "Paragraph 2A text. This text is extremely important. Jared and Ivan should make sure to memorize all of these words, and they should chant them to themselves three times each night before they go to sleep.", format: .paragraph, step: step)
                 // Item 2B
-                ItemController.addNewItem(title: nil, text: "Paragraph 2B text. This text is extremely important.", format: .paragraph, step: step)
+                ItemController.addNewItem(title: nil, text: "Paragraph 2B text. This text is extremely important. Jared and Ivan should make sure to memorize all of these words, and they should chant them to themselves three times each night before they go to sleep. This text is extremely important. Jared and Ivan should make sure to memorize all of these words, and they should chant them to themselves three times each night before they go to sleep.This text is extremely important. Jared and Ivan should make sure to memorize all of these words, and they should chant them to themselves three times each night before they go to sleep.", format: .paragraph, step: step)
                 // Item 2C
                 ItemController.addNewItem(title: "TIP 2C TITLE", text: "Tip 2C text. This text is extremely important. Jared and Ivan should make sure to memorize all of these words.", format: .tip, step: step)
                 // Item 2D
