@@ -51,10 +51,11 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         // Change title to specific step
         if let thisStep = selectedStep {
             if !thisStep.stepCompleted {
-                completeButtonStatus.setTitle("MARK \(thisStep.stepNumber) COMPLETE", for: .normal)
-                
+
+                completeButtonStatus.setTitle(" CLICK WHEN \(thisStep.stepNumber) IS COMPLETE ", for: .normal)
+ develop
             } else {
-                completeButtonStatus.setTitle("MARK \(thisStep.stepNumber) INCOMPLETE", for: .normal)
+                completeButtonStatus.setTitle(" CLICK TO CHANGE \(thisStep.stepNumber) TO INCOMPLETE ", for: .normal)
             }
             self.stepNameLabel.text = thisStep.name
             self.stepNumberLabel.text = thisStep.stepNumber
@@ -105,15 +106,33 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             cell.paragraphTextLabel?.text = item.text
             return cell
             
-        case .paragraphWithButton:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "plaragraphWithButtonCell", for: indexPath) as? ParagraphWithButtonTVCell else { return UITableViewCell() }
+        case .clickLink:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "clickLinkCell", for: indexPath) as? ClickLinkTVCell else { return UITableViewCell() }
+            
+            // Configure cell
+            cell.clickLinkTextLabel?.text = item.text
+            cell.clickLinkButtonText?.setTitle("\(item.buttonText ?? "CLICK TO GO TO LINK")", for: .normal)
             return cell
             
         case .datePicker:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "datePickerCell", for: indexPath) as? ParagraphWithButtonTVCell else { return UITableViewCell() }
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "datePickerCell", for: indexPath) as? DatePickerTVCell else { return UITableViewCell() }
+            cell.delegate = self
+            
+            // Configure cell
+            cell.datePickerTitleLabel?.text = item.title
+            cell.datePickerTextLabel?.text = item.text
+            cell.datePickerButtonTextLabel?.setTitle("\(item.buttonText ?? "CLICK TO SET DATE")", for: .normal)
             return cell
         }
     }
+}
+
+extension StepDetailTVC: DatePickerTVCellDelegate {
+    func datePickerButtonTapped(_ sender: DatePickerTVCell, _ picker: UIDatePicker) {
+        // Set up notification center stuff
+    }
+    
+    
 }
 
 extension UIView {

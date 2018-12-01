@@ -11,16 +11,18 @@ import Foundation
 class Item {
     
     var title: String?
-    let text: String
+    let text: String?
     let buttonText: String?
-    let datePicker: Date?
+    let url: String?
+    let graphicName: String?
     let format: ItemFormat
     
-    init(title: String?, text: String, buttonText: String? = nil, datePicker: Date? = nil, format: ItemFormat) {
+    init(title: String?, text: String?, buttonText: String?, url: String?, graphicName: String?, format: ItemFormat) {
         self.title = title
         self.text = text
         self.buttonText = buttonText
-        self.datePicker = datePicker
+        self.url = url
+        self.graphicName = graphicName
         self.format = format
     }
 }
@@ -30,6 +32,6 @@ class Item {
 enum ItemFormat: String {
     case tip = "tip"
     case paragraph = "paragraph"
-    case paragraphWithButton = "paragraphWithButton"
+    case clickLink = "clickLink"
     case datePicker = "datePicker"
 }
