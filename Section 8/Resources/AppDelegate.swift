@@ -8,16 +8,40 @@
 
 import UIKit
 import GoogleMaps
+import UserNotifications
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Google Maps
         GMSServices.provideAPIKey("AIzaSyAchY5OHlVXXQyaux0dO-kM0gVQz0T0rzE")
+        
+        // User Notifcation
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+            
+            if granted {
+                print("Permission for notificationw as granted by the user")
+                      UNUserNotificationCenter.current().delegate = self
+            }
+            // Access granted
+            if let error = error {
+                print("There was an error in \(#function) ; (error) ; \(error.localizedDescription)")
+            }
+            // Access to use notification was denied
+            if !granted {
+                print("Notification Access Denied")
+            }
+        }
         return true
+    }
+    
+    // Ivan - Not sure what this does just yet
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
