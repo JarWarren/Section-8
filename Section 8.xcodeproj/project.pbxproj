@@ -17,7 +17,7 @@
 		7E67E29B21ADE778007E4103 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E67E29A21ADE778007E4103 /* Assets.xcassets */; };
 		7E67E29E21ADE778007E4103 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E67E29C21ADE778007E4103 /* LaunchScreen.storyboard */; };
 		81B7E94E21B1FEC1003A209F /* DatePickerTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B7E94D21B1FEC1003A209F /* DatePickerTVCell.swift */; };
-		81B7E95021B1FF0E003A209F /* ParagraphWithButtonTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B7E94F21B1FF0E003A209F /* ParagraphWithButtonTVCell.swift */; };
+		81B7E95021B1FF0E003A209F /* ClickLinkTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B7E94F21B1FF0E003A209F /* ClickLinkTVCell.swift */; };
 		81DD083321AF1D470037F3AA /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DD083221AF1D470037F3AA /* Step.swift */; };
 		81DD083521AF1E880037F3AA /* StepController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DD083421AF1E880037F3AA /* StepController.swift */; };
 		81DD083721AF32F20037F3AA /* HomeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DD083621AF32F20037F3AA /* HomeTVC.swift */; };
@@ -43,7 +43,7 @@
 		7E67E29D21ADE778007E4103 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E67E29F21ADE778007E4103 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81B7E94D21B1FEC1003A209F /* DatePickerTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTVCell.swift; sourceTree = "<group>"; };
-		81B7E94F21B1FF0E003A209F /* ParagraphWithButtonTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParagraphWithButtonTVCell.swift; sourceTree = "<group>"; };
+		81B7E94F21B1FF0E003A209F /* ClickLinkTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickLinkTVCell.swift; sourceTree = "<group>"; };
 		81DD083221AF1D470037F3AA /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
 		81DD083421AF1E880037F3AA /* StepController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepController.swift; sourceTree = "<group>"; };
 		81DD083621AF32F20037F3AA /* HomeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTVC.swift; sourceTree = "<group>"; };
@@ -133,11 +133,8 @@
 			isa = PBXGroup;
 			children = (
 				81DD083A21AF3C010037F3AA /* StepTVCell.swift */,
-				81FF0A9621B09EAC004A7EDB /* ParagraphTVCell.swift */,
-				81FF0A9821B09EBC004A7EDB /* TipTVCell.swift */,
+				81B7E95121B20236003A209F /* ItemFormats */,
 				7E1DF3F321B19FE70012BFEE /* MapMarker.swift */,
-				81B7E94D21B1FEC1003A209F /* DatePickerTVCell.swift */,
-				81B7E94F21B1FF0E003A209F /* ParagraphWithButtonTVCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -187,6 +184,17 @@
 				7E1DF3F021B19FBE0012BFEE /* GoogleNetworkController.swift */,
 			);
 			path = HelperFiles;
+			sourceTree = "<group>";
+		};
+		81B7E95121B20236003A209F /* ItemFormats */ = {
+			isa = PBXGroup;
+			children = (
+				81FF0A9621B09EAC004A7EDB /* ParagraphTVCell.swift */,
+				81FF0A9821B09EBC004A7EDB /* TipTVCell.swift */,
+				81B7E94F21B1FF0E003A209F /* ClickLinkTVCell.swift */,
+				81B7E94D21B1FEC1003A209F /* DatePickerTVCell.swift */,
+			);
+			path = ItemFormats;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,7 +324,7 @@
 			files = (
 				7E67E29421ADE777007E4103 /* AppDelegate.swift in Sources */,
 				81DD083321AF1D470037F3AA /* Step.swift in Sources */,
-				81B7E95021B1FF0E003A209F /* ParagraphWithButtonTVCell.swift in Sources */,
+				81B7E95021B1FF0E003A209F /* ClickLinkTVCell.swift in Sources */,
 				81FF0A9721B09EAC004A7EDB /* ParagraphTVCell.swift in Sources */,
 				81FF0A9521B09BC6004A7EDB /* StepDetailTVC.swift in Sources */,
 				7E1DF3F721B1A0610012BFEE /* MapViewController.swift in Sources */,
