@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import UserNotifications
 
-class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegate, TimerControllerDelegete {
+    
     
     // MARK: - LANDING PAD & SOURCE OF TRUTH
     
@@ -28,6 +30,11 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var completeButtonStatus: UIButton!
     
+    // MARK: - Constants
+    
+    let timerController = TimerController()
+    let timeKeepingId = "timerID"
+    let sevenDayCountDown = TimeInterval(5)
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
     }
@@ -35,10 +42,18 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // timer
+        timerController.delegate = self
+        timerController.startTimer(time: sevenDayCountDown)
+        //Need to figure out if this is what gets rid of the badge icon
+        timerController.cancelLocalNotificationWith(identifier: "NotificationID")
+        
         // Change title to specific step
         if let thisStep = selectedStep {
             if !thisStep.stepCompleted {
+
                 completeButtonStatus.setTitle(" CLICK WHEN \(thisStep.stepNumber) IS COMPLETE ", for: .normal)
+ develop
             } else {
                 completeButtonStatus.setTitle(" CLICK TO CHANGE \(thisStep.stepNumber) TO INCOMPLETE ", for: .normal)
             }
@@ -54,12 +69,13 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         guard let unwrappedStep = selectedStep else {return}
         switch unwrappedStep.stepCompleted {
         case false:
-            print("Step # \(unwrappedStep.stepNumber) was originally set to inComplete but now its complete")
+            print("🔥Step # \(unwrappedStep.stepNumber) was originally set to inComplete but now its complete🤗")
             unwrappedStep.stepCompleted = true
         case true:
-            print("Step # \(unwrappedStep.stepNumber) was originally set to Complete but now its not compelted")
+            print("🔥Step # \(unwrappedStep.stepNumber) was originally set to Complete but now its not compelted😭")
             unwrappedStep.stepCompleted = false
         }
+         timerController.startTimer(time: sevenDayCountDown)
         navigationController?.popViewController(animated: true)
     }
     
@@ -204,4 +220,28 @@ extension UIView {
             }
         }
     }
+}
+
+extension StepDetailTVC {
+    
+    // MARK: - Time Controller Delegate
+    func timerSecondTick() {
+        // NOTE: - In here we can put in a label that will become a visible timer to show the user how long they have before their housing voucher expires
+        /*
+         example:
+         visableLabel.text = timerontroller.timeAsString()
+         */
+    }
+    
+    func timerCompleted() {
+        let timerEndedAlert = AlertControllerManager.presentAlertControllerWith(title: "We miss you", message: "The're hasn't been much progress come back and lets get going !!!")
+        present(timerEndedAlert, animated: true, completion: nil)
+    }
+    
+    func timerStopped() {
+        // This func will completely stop the on going 7 day timer 
+        timerController.timer?.invalidate()
+    }
+    
+  
 }
