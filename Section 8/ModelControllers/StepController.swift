@@ -61,8 +61,8 @@ class StepController {
                 // Item 1D
                 ItemController.addNewItem(title: "FINISHED BUTTON", text: "Finally, click on the “Finished” button near the bottom of the screen, and return to this page.", buttonText: nil, url: nil, format: .tip, step: step)
                 
-//                // Item 1E
-//                ItemController.addNewItem(title: nil, text: "(1E) When you’re ready, click here to be taken to the online application on the HAUC website:", buttonText: "PRELIMINARY APPLICATION", url: "https://www.waitlistcheck.com/application/form.php?ID=972-UT011", format: .clickLink, step: step)
+                // Item 1E
+                ItemController.addNewItem(title: nil, text: "(1E) When you’re ready, click here to be taken to the online application on the HAUC website:", buttonText: "PRELIMINARY APPLICATION", url: "https://www.waitlistcheck.com/application/form.php?ID=972-UT011", format: .clickLink, step: step)
                 
                 
             case "STEP 2":
@@ -85,8 +85,8 @@ class StepController {
                 // Item 3A
                 ItemController.addNewItem(title: nil, text: "When your name reaches the top of the waiting list, you will receive a full application in the mail. Along with that application you will receive an appointment date to bring in your application to the HAUC main office:", buttonText: nil, url: nil, format: .paragraph, step: step)
                 
-//                // Item 3B
-//                ItemController.addNewItem(title: "APPOINTMENT DATE", text: "Please enter your appointment date here, so we can send you a reminder notification:", buttonText: "SET APPOINTMENT DATE", url: nil, format: .datePicker, step: step)
+                // Item 3B
+                ItemController.addNewItem(title: "APPOINTMENT DATE", text: "Please enter your appointment date here, so we can send you a reminder notification:", buttonText: "SET APPOINTMENT DATE", url: nil, format: .datePicker, step: step)
                 
                 // Item 3C
                 ItemController.addNewItem(title: nil, text: "Read the application carefully, and complete each section. Be sure to update household and income verification. \n\nWhen you go to your appointment, you will bring the complete application, along with income verifications, birth certificates, and Social Security Cards for everyone in the household.", buttonText: nil, url: nil, format: .paragraph, step: step)

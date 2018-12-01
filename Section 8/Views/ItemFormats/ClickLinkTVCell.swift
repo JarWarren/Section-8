@@ -17,15 +17,11 @@ class ClickLinkTVCell: UITableViewCell {
     
     // MARK: - ACTIONS
     
-    @IBAction func clickLinkButtonTapped(sender: AnyObject) {
+    @IBAction func clickLinkButtonTapped(_ sender: UIButton) {
         if let url = URL(string: "https://www.waitlistcheck.com/application/form.php?ID=972-UT011") {
             if UIApplication.shared.canOpenURL(url) {
                 UIApplication.shared.open(url, options: [:])
             }
         }
     }
-    
-    
-    
-
 }
