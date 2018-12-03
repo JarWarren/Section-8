@@ -10,6 +10,10 @@ import UIKit
 
 class StepTVCell: UITableViewCell {
     
+    // MARK: - LANDING PAD
+    
+    var step: Step?
+    
     // MARK: - OUTLETS
     
     @IBOutlet weak var stepImageView: UIImageView!
@@ -17,8 +21,4 @@ class StepTVCell: UITableViewCell {
     @IBOutlet weak var stepNameLabel: UILabel!
     @IBOutlet weak var checkBoxView: UIImageView!
     
-    
-    // Landing Pad
-    
-    var step: Step?
 }

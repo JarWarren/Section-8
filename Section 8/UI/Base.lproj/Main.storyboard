@@ -188,7 +188,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="cfK-jR-axS">
-                                    <rect key="frame" x="0.0" y="835" width="414" height="80"/>
+                                    <rect key="frame" x="0.0" y="846" width="414" height="80"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Section8 logo - gray" translatesAutoresizingMaskIntoConstraints="NO" id="SF5-Ct-1C3">
@@ -411,11 +411,11 @@
                                             <outlet property="datePickerTitleLabel" destination="np2-6U-1I6" id="KQv-LG-GWa"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="inputDataCell" rowHeight="196" id="R7b-2W-igQ" customClass="InputDataTVCell" customModule="Section_8" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="514" width="414" height="196"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dataInputCell" rowHeight="207" id="R7b-2W-igQ" customClass="DataInputTVCell" customModule="Section_8" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="514" width="414" height="207"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R7b-2W-igQ" id="vAz-4s-Yaf">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="195.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="206.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Data input text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTj-k5-Brj">
@@ -431,7 +431,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxY-g3-A8w">
-                                                    <rect key="frame" x="40" y="143.5" width="334" height="36"/>
+                                                    <rect key="frame" x="40" y="149.5" width="334" height="41"/>
                                                     <color key="backgroundColor" red="0.21224952050000001" green="0.60157132150000003" blue="0.18863901399999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="G2m-Eg-Yrc"/>
@@ -455,15 +455,21 @@
                                                     </connections>
                                                 </button>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter total household income here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NGe-uE-Qry">
-                                                    <rect key="frame" x="20" y="59.5" width="374" height="30"/>
+                                                    <rect key="frame" x="20" y="59.5" width="374" height="35"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="idE-3o-yPc"/>
+                                                    </constraints>
                                                     <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter voucher amount here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3ke-g8-gtk">
-                                                    <rect key="frame" x="20" y="97.5" width="374" height="30"/>
+                                                    <rect key="frame" x="20" y="98.5" width="374" height="35"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="ld9-32-Roz"/>
+                                                    </constraints>
                                                     <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
@@ -478,7 +484,7 @@
                                                 <constraint firstItem="uT0-T3-QFm" firstAttribute="top" secondItem="vAz-4s-Yaf" secondAttribute="top" constant="16" id="VM6-71-yfb"/>
                                                 <constraint firstAttribute="trailing" secondItem="wTj-k5-Brj" secondAttribute="trailing" constant="20" id="YZa-9I-hnJ"/>
                                                 <constraint firstItem="rxY-g3-A8w" firstAttribute="leading" secondItem="vAz-4s-Yaf" secondAttribute="leading" constant="40" id="abR-ye-5Nf"/>
-                                                <constraint firstItem="3ke-g8-gtk" firstAttribute="top" secondItem="NGe-uE-Qry" secondAttribute="bottom" constant="8" id="mla-0u-zb2"/>
+                                                <constraint firstItem="3ke-g8-gtk" firstAttribute="top" secondItem="NGe-uE-Qry" secondAttribute="bottom" constant="4" id="mla-0u-zb2"/>
                                                 <constraint firstItem="NGe-uE-Qry" firstAttribute="top" secondItem="wTj-k5-Brj" secondAttribute="bottom" constant="8" id="nrv-vZ-H8d"/>
                                                 <constraint firstAttribute="trailing" secondItem="rxY-g3-A8w" secondAttribute="trailing" constant="40" id="nvu-oD-veK"/>
                                                 <constraint firstItem="3ke-g8-gtk" firstAttribute="leading" secondItem="vAz-4s-Yaf" secondAttribute="leading" constant="20" id="sRE-3d-Aj8"/>
@@ -495,8 +501,8 @@
                                             <outlet property="dataInputTitleLabel" destination="uT0-T3-QFm" id="xRH-9R-fxY"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="displayDataCell" rowHeight="125" id="GLG-jh-8u9" customClass="DataDisplayTVCell" customModule="Section_8" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="710" width="414" height="125"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dataDisplayCell" rowHeight="125" id="GLG-jh-8u9" customClass="DataDisplayTVCell" customModule="Section_8" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="721" width="414" height="125"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GLG-jh-8u9" id="T2k-fR-qXN">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="124.5"/>
@@ -554,8 +560,6 @@
                                             <outlet property="dataDisplayDataLabel" destination="lH7-af-xui" id="Aox-sf-u6d"/>
                                             <outlet property="dataDisplayTextLabel" destination="ayP-9o-7nn" id="EKf-o7-eX4"/>
                                             <outlet property="dataDisplayTitleLabel" destination="y5P-vb-Lk5" id="6eM-pR-G6y"/>
-                                            <outlet property="dataInputTextLabel" destination="ayP-9o-7nn" id="K1k-O5-v7t"/>
-                                            <outlet property="dataInputTitleLabel" destination="y5P-vb-Lk5" id="Kai-Pm-bhQ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
