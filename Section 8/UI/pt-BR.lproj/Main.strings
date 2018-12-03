@@ -1,0 +1,48 @@
+
+/* Class = "UILabel"; text = "Tip text"; ObjectID = "5Eb-lH-Vnm"; */
+"5Eb-lH-Vnm.text" = "Tip text";
+
+/* Class = "UILabel"; text = "Complete online application"; ObjectID = "ApV-zV-Lz3"; */
+"ApV-zV-Lz3.text" = "Complete online application";
+
+/* Class = "UILabel"; text = "Click on each step to see a list of instructions. When you finish, a green checkmark will appear on the right. Then move to the next step."; ObjectID = "N2i-QN-570"; */
+"N2i-QN-570.text" = "Click on each step to see a list of instructions. When you finish, a green checkmark will appear on the right. Then move to the next step.";
+
+/* Class = "UIButton"; normalTitle = "(BUTTON TEXT)"; ObjectID = "P2A-Cj-pTm"; */
+"P2A-Cj-pTm.normalTitle" = "(BUTTON TEXT)";
+
+/* Class = "UILabel"; text = "STEP 1"; ObjectID = "YSE-rQ-pOA"; */
+"YSE-rQ-pOA.text" = "STEP 1";
+
+/* Class = "UILabel"; text = "Paragraph text"; ObjectID = "YfM-Vs-Sut"; */
+"YfM-Vs-Sut.text" = "Paragraph text";
+
+/* Class = "UILabel"; text = "STEP 1"; ObjectID = "Yrz-J2-Vss"; */
+"Yrz-J2-Vss.text" = "STEP 1";
+
+/* Class = "UIButton"; normalTitle = "(BUTTON TEXT)"; ObjectID = "byc-O9-kez"; */
+"byc-O9-kez.normalTitle" = "(BUTTON TEXT)";
+
+/* Class = "UIButton"; normalTitle = "CLICK WHEN STEP IS COMPLETE"; ObjectID = "e7e-Cx-6oI"; */
+"e7e-Cx-6oI.normalTitle" = "CLICK WHEN STEP IS COMPLETE";
+
+/* Class = "UILabel"; text = "ClickLink text"; ObjectID = "jwT-Wg-ryI"; */
+"jwT-Wg-ryI.text" = "ClickLink text";
+
+/* Class = "UILabel"; text = "DatePicker text"; ObjectID = "k49-OZ-Vvn"; */
+"k49-OZ-Vvn.text" = "DatePicker text";
+
+/* Class = "UILabel"; text = "LOW INCOME HOUSING ASSISTANT"; ObjectID = "kR9-08-CDs"; */
+"kR9-08-CDs.text" = "LOW INCOME HOUSING ASSISTANT";
+
+/* Class = "UILabel"; text = "TIP TITLE"; ObjectID = "kaH-ZF-E9z"; */
+"kaH-ZF-E9z.text" = "TIP TITLE";
+
+/* Class = "UILabel"; text = "DATE PICKER TITLE"; ObjectID = "np2-6U-1I6"; */
+"np2-6U-1I6.text" = "DATE PICKER TITLE";
+
+/* Class = "UILabel"; text = "Complete online application"; ObjectID = "vwV-h3-PDR"; */
+"vwV-h3-PDR.text" = "Complete online application";
+
+/* Class = "UILabel"; text = "Section8"; ObjectID = "yvj-mJ-s1X"; */
+"yvj-mJ-s1X.text" = "Section8";
