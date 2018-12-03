@@ -13,15 +13,21 @@ class DatePickerTVCell: UITableViewCell {
     weak var delegate: DatePickerTVCellDelegate?
     
     // MARK: - OUTLETS
-    
+   
     @IBOutlet weak var datePickerTitleLabel: UILabel!
     @IBOutlet weak var datePickerTextLabel: UILabel!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var datePickerButtonTextLabel: UIButton!
     
-    // MARK: - ACTIONS
+    override func awakeFromNib() {
+        
+        // Set datePicker background
+        datePicker.backgroundColor = UIColor.white
+    }
     
-    @IBAction func datePickerButton(_ sender: UIButton) {
+    // MARK: - ACTIONS
+   
+    @IBAction func datePickerButtonTapped(_ sender: Any) {
         delegate?.datePickerButtonTapped(self, datePicker)
     }
 }

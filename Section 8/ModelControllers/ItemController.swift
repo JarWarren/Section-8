@@ -14,6 +14,7 @@ class ItemController {
                            text: String?,
                            buttonText: String?,
                            url: String?,
+                           graphicName: String?,
                            format: ItemFormat,
                            step: Step) {
         
@@ -21,6 +22,7 @@ class ItemController {
                            text: text,
                            buttonText: buttonText,
                            url: url,
+                           graphicName: graphicName,
                            format: format)
         
         step.items.append(newItem)

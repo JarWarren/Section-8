@@ -27,3 +27,5 @@ class ApartmentComplexMarker: GMSMarker {
         //        icon = UIImage(named: "")
     }
 }
+
+//TODO: Pass info from tapped marker into another file.
