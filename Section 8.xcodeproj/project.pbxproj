@@ -20,6 +20,7 @@
 		7E67E29B21ADE778007E4103 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E67E29A21ADE778007E4103 /* Assets.xcassets */; };
 		7E67E29E21ADE778007E4103 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E67E29C21ADE778007E4103 /* LaunchScreen.storyboard */; };
 		81212AED21B5AC5A0082C88B /* InputDataTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81212AEC21B5AC5A0082C88B /* InputDataTVCell.swift */; };
+		81212AEF21B5CCF90082C88B /* DataDisplayTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81212AEE21B5CCF90082C88B /* DataDisplayTVCell.swift */; };
 		81B7E94E21B1FEC1003A209F /* DatePickerTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B7E94D21B1FEC1003A209F /* DatePickerTVCell.swift */; };
 		81B7E95021B1FF0E003A209F /* ClickLinkTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B7E94F21B1FF0E003A209F /* ClickLinkTVCell.swift */; };
 		81DD083321AF1D470037F3AA /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DD083221AF1D470037F3AA /* Step.swift */; };
@@ -56,6 +57,7 @@
 		7E67E29D21ADE778007E4103 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E67E29F21ADE778007E4103 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81212AEC21B5AC5A0082C88B /* InputDataTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputDataTVCell.swift; sourceTree = "<group>"; };
+		81212AEE21B5CCF90082C88B /* DataDisplayTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDisplayTVCell.swift; sourceTree = "<group>"; };
 		81B7E94D21B1FEC1003A209F /* DatePickerTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTVCell.swift; sourceTree = "<group>"; };
 		81B7E94F21B1FF0E003A209F /* ClickLinkTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickLinkTVCell.swift; sourceTree = "<group>"; };
 		81DD083221AF1D470037F3AA /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				81B7E94F21B1FF0E003A209F /* ClickLinkTVCell.swift */,
 				81B7E94D21B1FEC1003A209F /* DatePickerTVCell.swift */,
 				81212AEC21B5AC5A0082C88B /* InputDataTVCell.swift */,
+				81212AEE21B5CCF90082C88B /* DataDisplayTVCell.swift */,
 			);
 			path = ItemFormats;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				81FF0A9121B093B7004A7EDB /* Item.swift in Sources */,
 				81FF0A9921B09EBC004A7EDB /* TipTVCell.swift in Sources */,
 				81DD083B21AF3C010037F3AA /* StepTVCell.swift in Sources */,
+				81212AEF21B5CCF90082C88B /* DataDisplayTVCell.swift in Sources */,
 				81DD083521AF1E880037F3AA /* StepController.swift in Sources */,
 				7E1DF3F421B19FE70012BFEE /* ApartmentLocation.swift in Sources */,
 				7E1DF3F521B19FE70012BFEE /* MapMarker.swift in Sources */,
@@ -533,7 +537,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 466UYFDWDY;
 				INFOPLIST_FILE = "$(SRCROOT)/Section 8/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -552,7 +556,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 466UYFDWDY;
 				INFOPLIST_FILE = "$(SRCROOT)/Section 8/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
