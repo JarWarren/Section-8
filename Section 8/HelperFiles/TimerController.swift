@@ -60,11 +60,12 @@ class TimerController {
             delegate?.timerCompleted()
             
             // Restart Time
-            startTimer(time: 5)
+//            startTimer(time: 5)
         }
     }
     
     func startTimer(time: TimeInterval) { // start timer with numbers in it
+        
         if timeRemaining == nil {// check for safety
             timeRemaining = time // our reaminign time is what ever we put in it
             scheduleLocalNotificationFor(identifier: identifier1)
@@ -129,6 +130,7 @@ class TimerController {
     func cancelLocalNotificationWith(identifier: String) {
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [identifier])
     }
+    
     
     
     
