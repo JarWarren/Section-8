@@ -35,6 +35,8 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     let timerController = TimerController()
     let timeKeepingId = "timerID"
     let sevenDayCountDown = TimeInterval(5)
+    var boolValueToTestTimer = false
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
     }
@@ -44,9 +46,17 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         
         // timer
         timerController.delegate = self
+        
+        if timerController.isOn && boolValueToTestTimer == true {
+            timerController.startTimer(time: 5)
+            
+        } else {
+        timerStopped()
+            boolValueToTestTimer = false
+        }
+        
         timerController.startTimer(time: sevenDayCountDown)
-        //Need to figure out if this is what gets rid of the badge icon
-        timerController.cancelLocalNotificationWith(identifier: "NotificationID")
+       
         
         // Change title to specific step
         if let thisStep = selectedStep {
@@ -74,7 +84,9 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             print("🔥Step # \(unwrappedStep.stepNumber) was originally set to Complete but now its not compelted😭")
             unwrappedStep.stepCompleted = false
         }
-         timerController.startTimer(time: sevenDayCountDown)
+        
+        
+        
         navigationController?.popViewController(animated: true)
     }
     
@@ -233,8 +245,8 @@ extension StepDetailTVC {
     }
     
     func timerCompleted() {
-        let timerEndedAlert = AlertControllerManager.presentAlertControllerWith(title: "We miss you", message: "The're hasn't been much progress come back and lets get going !!!")
-        present(timerEndedAlert, animated: true, completion: nil)
+        timerController.startTimer(time: 3)
+        print("\nTimer hit zero and completed\n")
     }
     
     func timerStopped() {
