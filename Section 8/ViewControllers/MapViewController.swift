@@ -22,7 +22,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         
         setupMap()
         setBorderAroundUtahCounty()
-//        addMarkers()
+        addMarkers()
     }
     
     func setupMap() {

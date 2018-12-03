@@ -18,7 +18,7 @@ class StepController {
     // Source of truth
     var steps: [Step] = {
         
-        let step1 = Step(name: "Complete online application", stepNumber: "STEP 1", stepCompleted: false, homeImageName: "home1", stepImageName: "step1")
+        let step1 = Step(name: NSLocalizedString("step1", comment: ""), stepNumber: NSLocalizedString("STEP", comment: "") + " 1", stepCompleted: false, homeImageName: "home1", stepImageName: "step1")
         let step2 = Step(name: "Photo ID & Social Security Card", stepNumber: "STEP 2", stepCompleted: false, homeImageName: "home2", stepImageName: "step2")
         let step3 = Step(name: "Complete mailed application", stepNumber: "STEP 3", stepCompleted: false, homeImageName: "home3", stepImageName: "step3")
         let step4 = Step(name: "Attend briefing", stepNumber: "STEP 4", stepCompleted: false, homeImageName: "home4", stepImageName: "step4")
@@ -47,10 +47,10 @@ class StepController {
         for step in steps {
             switch step.stepNumber {
             
-            case "STEP 1":
+            case NSLocalizedString("STEP", comment: "") + " 1":
                 
                 // Item 1A
-                ItemController.addNewItem(title: nil, text: "Fill out the preliminary application by clicking the button below, but read these instructions first:", buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
+                ItemController.addNewItem(title: nil, text: NSLocalizedString("1a", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
                 // Item 1B
                 ItemController.addNewItem(title: "VIEWING TIP", text: "It might be easier to turn your phone sideways, so the application is easier to read.", buttonText: nil, url: nil, graphicName: nil, format: .tip, step: step)

@@ -14,10 +14,12 @@
 		7E1DF3F521B19FE70012BFEE /* MapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DF3F321B19FE70012BFEE /* MapMarker.swift */; };
 		7E1DF3F721B1A0610012BFEE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DF3F621B1A0610012BFEE /* MapViewController.swift */; };
 		7E1DF3F921B1A15F0012BFEE /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E1DF3F821B1A15F0012BFEE /* Map.storyboard */; };
+		7E59408921B5AC1100C02E61 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E59408B21B5AC1100C02E61 /* Localizable.strings */; };
 		7E67E29421ADE777007E4103 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E67E29321ADE777007E4103 /* AppDelegate.swift */; };
 		7E67E29921ADE777007E4103 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E67E29721ADE777007E4103 /* Main.storyboard */; };
 		7E67E29B21ADE778007E4103 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E67E29A21ADE778007E4103 /* Assets.xcassets */; };
 		7E67E29E21ADE778007E4103 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E67E29C21ADE778007E4103 /* LaunchScreen.storyboard */; };
+		81212AED21B5AC5A0082C88B /* InputDataTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81212AEC21B5AC5A0082C88B /* InputDataTVCell.swift */; };
 		81B7E94E21B1FEC1003A209F /* DatePickerTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B7E94D21B1FEC1003A209F /* DatePickerTVCell.swift */; };
 		81B7E95021B1FF0E003A209F /* ClickLinkTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B7E94F21B1FF0E003A209F /* ClickLinkTVCell.swift */; };
 		81DD083321AF1D470037F3AA /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DD083221AF1D470037F3AA /* Step.swift */; };
@@ -40,12 +42,20 @@
 		7E1DF3F321B19FE70012BFEE /* MapMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapMarker.swift; sourceTree = "<group>"; };
 		7E1DF3F621B1A0610012BFEE /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		7E1DF3F821B1A15F0012BFEE /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
+		7E59408221B5ABAD00C02E61 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Main.strings"; sourceTree = "<group>"; };
+		7E59408321B5ABAD00C02E61 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		7E59408421B5ABB500C02E61 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
+		7E59408521B5ABB600C02E61 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		7E59408A21B5AC1100C02E61 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7E59408C21B5AC1500C02E61 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		7E59408D21B5AC1800C02E61 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		7E67E29021ADE777007E4103 /* Section 8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Section 8.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E67E29321ADE777007E4103 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E67E29821ADE777007E4103 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7E67E29A21ADE778007E4103 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E67E29D21ADE778007E4103 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E67E29F21ADE778007E4103 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81212AEC21B5AC5A0082C88B /* InputDataTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputDataTVCell.swift; sourceTree = "<group>"; };
 		81B7E94D21B1FEC1003A209F /* DatePickerTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTVCell.swift; sourceTree = "<group>"; };
 		81B7E94F21B1FF0E003A209F /* ClickLinkTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickLinkTVCell.swift; sourceTree = "<group>"; };
 		81DD083221AF1D470037F3AA /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
@@ -91,6 +101,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7E59408621B5ABC800C02E61 /* LocalizationFiles */ = {
+			isa = PBXGroup;
+			children = (
+				7E59408B21B5AC1100C02E61 /* Localizable.strings */,
+			);
+			path = LocalizationFiles;
+			sourceTree = "<group>";
+		};
 		7E67E28721ADE777007E4103 = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +136,7 @@
 				7E67E2A921ADE8BB007E4103 /* ViewControllers */,
 				7E67E2A621ADE8A2007E4103 /* Views */,
 				7E67E2AB21ADE8E2007E4103 /* HelperFiles */,
+				7E59408621B5ABC800C02E61 /* LocalizationFiles */,
 				7E67E2AA21ADE8CE007E4103 /* Resources */,
 			);
 			path = "Section 8";
@@ -199,6 +218,7 @@
 				81FF0A9821B09EBC004A7EDB /* TipTVCell.swift */,
 				81B7E94F21B1FF0E003A209F /* ClickLinkTVCell.swift */,
 				81B7E94D21B1FEC1003A209F /* DatePickerTVCell.swift */,
+				81212AEC21B5AC5A0082C88B /* InputDataTVCell.swift */,
 			);
 			path = ItemFormats;
 			sourceTree = "<group>";
@@ -247,6 +267,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"es-419",
+				"pt-BR",
 			);
 			mainGroup = 7E67E28721ADE777007E4103;
 			productRefGroup = 7E67E29121ADE777007E4103 /* Products */;
@@ -263,6 +285,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E59408921B5AC1100C02E61 /* Localizable.strings in Resources */,
 				7E67E29E21ADE778007E4103 /* LaunchScreen.storyboard in Resources */,
 				7E67E29B21ADE778007E4103 /* Assets.xcassets in Resources */,
 				7E67E29921ADE777007E4103 /* Main.storyboard in Resources */,
@@ -332,6 +355,7 @@
 				81DD083321AF1D470037F3AA /* Step.swift in Sources */,
 				81B7E95021B1FF0E003A209F /* ClickLinkTVCell.swift in Sources */,
 				81FF0A9721B09EAC004A7EDB /* ParagraphTVCell.swift in Sources */,
+				81212AED21B5AC5A0082C88B /* InputDataTVCell.swift in Sources */,
 				81FF0A9521B09BC6004A7EDB /* StepDetailTVC.swift in Sources */,
 				7E1DF3F721B1A0610012BFEE /* MapViewController.swift in Sources */,
 				81FF0A9321B095F6004A7EDB /* ItemController.swift in Sources */,
@@ -352,10 +376,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		7E59408B21B5AC1100C02E61 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E59408A21B5AC1100C02E61 /* en */,
+				7E59408C21B5AC1500C02E61 /* es-419 */,
+				7E59408D21B5AC1800C02E61 /* pt-BR */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		7E67E29721ADE777007E4103 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				7E67E29821ADE777007E4103 /* Base */,
+				7E59408221B5ABAD00C02E61 /* es-419 */,
+				7E59408421B5ABB500C02E61 /* pt-BR */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -364,6 +400,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				7E67E29D21ADE778007E4103 /* Base */,
+				7E59408321B5ABAD00C02E61 /* es-419 */,
+				7E59408521B5ABB600C02E61 /* pt-BR */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -375,6 +413,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -436,6 +475,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -493,7 +533,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L7AYJDAX2C;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Section 8/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -512,7 +552,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L7AYJDAX2C;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Section 8/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

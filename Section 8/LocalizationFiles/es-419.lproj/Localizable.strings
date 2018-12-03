@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  Section 8
+
+  Created by Jared Warren on 12/3/18.
+  Copyright © 2018 Warren. All rights reserved.
+*/
+
+"STEP" = "PASO";
+"step1" = "Llena applicación enlínea";
+"step2" = "Foto Identificación y Tarjeta de Seguro Social";
+"step3" = "Assistir instrucciones";
+
+// ITEMS
+"1a" = "Complete la solicitud preliminar haciendo clic en el botón de abajo, pero lea estas instrucciones primero:";
