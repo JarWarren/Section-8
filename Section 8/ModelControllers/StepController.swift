@@ -121,7 +121,25 @@ class StepController {
                 
                 // Item 4f
                 ItemController.addNewItem(title: NSLocalizedString("4fTitle", comment: ""), text: NSLocalizedString("4fText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .tip, step: step)
-            
+                
+            // MARK: - STEP 5
+                
+            case NSLocalizedString("STEP", comment: "") + " 5":
+                
+                // Item 5a
+                ItemController.addNewItem(title: nil, text: NSLocalizedString("5aText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
+                
+                // Item 5b
+                ItemController.addNewItem(title: NSLocalizedString("5bTitle", comment: ""), text: NSLocalizedString("5bText", comment: ""), buttonText: NSLocalizedString("5bButtonText", comment: ""), url: nil, graphicName: nil, format: .dataInput, step: step)
+                
+                // Item 5c (RENT MAX LABEL NOT PROGRAMMED HERE!!!)
+                ItemController.addNewItem(title: NSLocalizedString("5cTitle", comment: ""), text: NSLocalizedString("5cText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .dataDisplay, step: step)
+                
+                // Item 5d
+                ItemController.addNewItem(title: NSLocalizedString("5DTitle", comment: ""), text: NSLocalizedString("5dText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .tip, step: step)
+                
+                // Item 5e
+                ItemController.addNewItem(title: nil, text: NSLocalizedString("5eText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
             
             default:
             return
