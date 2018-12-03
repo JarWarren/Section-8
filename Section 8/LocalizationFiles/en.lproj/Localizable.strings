@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  Section 8
+
+  Created by Jared Warren on 12/3/18.
+  Copyright © 2018 Warren. All rights reserved.
+*/
+
+// STEPS
+"STEP" = "STEP";
+"step1" = "Complete online application";
+"step2" = "Photo ID & Social Security Card";
+"step3" = "Attend briefing";
+
+// ITEMS
+"1a" = "Fill out the preliminary application by clicking the button below, but read these instructions first:";

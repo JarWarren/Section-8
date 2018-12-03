@@ -53,7 +53,6 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             if !thisStep.stepCompleted {
 
                 completeButtonStatus.setTitle(" CLICK WHEN \(thisStep.stepNumber) IS COMPLETE ", for: .normal)
- develop
             } else {
                 completeButtonStatus.setTitle(" CLICK TO CHANGE \(thisStep.stepNumber) TO INCOMPLETE ", for: .normal)
             }
