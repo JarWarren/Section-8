@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         GMSServices.provideAPIKey("AIzaSyAchY5OHlVXXQyaux0dO-kM0gVQz0T0rzE")
         
         // User Notifcation
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge]) { (granted, error) in
             
             if granted {
                 print("Permission for notificationw as granted by the user")
