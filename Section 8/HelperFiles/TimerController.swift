@@ -65,6 +65,7 @@ class TimerController {
     }
     
     func startTimer(time: TimeInterval) { // start timer with numbers in it
+        
         if timeRemaining == nil {// check for safety
             timeRemaining = time // our reaminign time is what ever we put in it
             scheduleLocalNotificationFor(identifier: identifier1)
