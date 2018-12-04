@@ -40,9 +40,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         return true
     }
     
+    // MARK: - Perhaps this needs to be in its own extension and a deleaget gets set in the func 
     // Ivan - Not sure what this does just yet
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         
+        defer {
+            completionHandler()
+        }
+        
+        switch response.actionIdentifier {
+        case UNNotificationDismissActionIdentifier:
+            print("/n🥶 dissmiss action tapped on the pop up notifcation/n")
+        case UNNotificationDefaultActionIdentifier:
+            print("\n😜 UNNotificationDefaultActionIdentifier: tapped some how \n")
+        default:
+            print("\nunkown action tapped by user")
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

@@ -35,7 +35,10 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     let timerController = TimerController()
     let timeKeepingId = "timerID"
     let sevenDayCountDown = TimeInterval(5)
+    let sevenDays = 60
     var boolValueToTestTimer = false
+    let sevenDayTimerID = "sevenDays"
+    let notificationActionID = "dismissActionKey"
     
     // MARK: - VIEW DID LOAD & VIEW WILL APPEAR
     
@@ -45,20 +48,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // timer
-        timerController.delegate = self
-        
-        if timerController.isOn && boolValueToTestTimer == true {
-            timerController.startTimer(time: 5)
-            
-        } else {
-        timerStopped()
-            boolValueToTestTimer = false
-        }
-        
-        timerController.startTimer(time: sevenDayCountDown)
-       
+
         
         // Change title to specific step
         if let thisStep = selectedStep {
@@ -72,6 +62,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             self.stepNumberLabel.text = thisStep.stepNumber
             self.stepImageView.image = UIImage(named: thisStep.stepImageName)
         }
+       
     }
     
     // MARK: - ACTIONS
@@ -87,10 +78,21 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             unwrappedStep.stepCompleted = false
         }
         
-        
+        if unwrappedStep.stepNumber != "STEP 14" {
+            cancelSevenDayNotification()
+            scheduleSevenDayNotification()
+        } else if unwrappedStep.stepNumber == "STEP 14" && boolValueToTestTimer == false {
+                boolValueToTestTimer = true
+                cancelSevenDayNotification()
+        } else if unwrappedStep.stepNumber == "STEP 14" && boolValueToTestTimer == true {
+            scheduleSevenDayNotification()
+            boolValueToTestTimer = false 
+        }
+
         
         navigationController?.popViewController(animated: true)
     }
+    
     
     // MARK: - TABLE VIEW DATA SOURCE
     
@@ -284,5 +286,16 @@ extension StepDetailTVC {
         timerController.timer?.invalidate()
     }
     
+    func cancelSevenDayNotification() {
+        timerController.cancelLocalNotificationWith(identifier: notificationActionID)
+        print("\n🐙🗓  7 day notification canceled\n")
+    }
+    
+    func scheduleSevenDayNotification() {
+        print("\n📅 7 day notification set\n")
+       timerController.scheduleLocalNotificationFor2(identifier: sevenDayTimerID,
+                                                     actionTitle: "Dismiss", categoryID: notificationActionID, contentTitle: "🚨Content Title", contentBody: "Content Body", contentBadge: 1,
+                                                     contentSound: UNNotificationSound.default, contentLuanchImage: "IMAGE_NAME", desiredTimeInterval: sevenDays)
+    }
   
 }
