@@ -12,6 +12,7 @@ class ClickLinkTVCell: UITableViewCell {
 
     // MARK: - OUTLETS
     
+    @IBOutlet weak var clickLinkTitleLabel: UILabel!
     @IBOutlet weak var clickLinkTextLabel: UILabel!
     @IBOutlet weak var clickLinkButtonText: UIButton!
     
@@ -25,3 +26,5 @@ class ClickLinkTVCell: UITableViewCell {
         }
     }
 }
+
+// NEED TO PASS THROUGH ITEM.URL INSTEAD OF HARDCODED URL HERE
