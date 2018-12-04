@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         GMSServices.provideAPIKey("AIzaSyAchY5OHlVXXQyaux0dO-kM0gVQz0T0rzE")
         
         // User Notifcation
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge]) { (granted, error) in
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
             
             if granted {
                 print("Permission for notificationw as granted by the user")
@@ -40,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         return true
     }
     
-    // MARK: - Perhaps this needs to be in its own extension and a deleaget gets set in the func 
+
     // Ivan - Not sure what this does just yet
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         
@@ -52,9 +52,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         case UNNotificationDismissActionIdentifier:
             print("/n🥶 dissmiss action tapped on the pop up notifcation/n")
         case UNNotificationDefaultActionIdentifier:
-            print("\n😜 UNNotificationDefaultActionIdentifier: tapped some how \n")
+            print("\n😜 UNNotificationDefaultActionIdentifier: User Tapped the Title area of the notifcation and was segued to the app \n")
         default:
-            print("\nunkown action tapped by user")
+            print("\nUser Tapped The Dississ Button")
         }
     }
 

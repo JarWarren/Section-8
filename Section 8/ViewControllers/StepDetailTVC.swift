@@ -36,7 +36,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     let timeKeepingId = "timerID"
     let sevenDayCountDown = TimeInterval(5)
     let sevenDays = 60
-    var boolValueToTestTimer = false
+    var boolValueToTestTimer = true
     let sevenDayTimerID = "sevenDays"
     let notificationActionID = "dismissActionKey"
     
@@ -48,12 +48,12 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         
         // Change title to specific step
         if let thisStep = selectedStep {
             if !thisStep.stepCompleted {
-
+                
                 completeButtonStatus.setTitle(" CLICK WHEN \(thisStep.stepNumber) IS COMPLETE ", for: .normal)
             } else {
                 completeButtonStatus.setTitle(" CLICK TO CHANGE \(thisStep.stepNumber) TO INCOMPLETE ", for: .normal)
@@ -62,7 +62,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             self.stepNumberLabel.text = thisStep.stepNumber
             self.stepImageView.image = UIImage(named: thisStep.stepImageName)
         }
-       
+        
     }
     
     // MARK: - ACTIONS
@@ -77,22 +77,30 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             print("🔥Step # \(unwrappedStep.stepNumber) was originally set to Complete but now its not compelted😭")
             unwrappedStep.stepCompleted = false
         }
-        
-        if unwrappedStep.stepNumber != "STEP 14" {
-            cancelSevenDayNotification()
-            scheduleSevenDayNotification()
-        } else if unwrappedStep.stepNumber == "STEP 14" && boolValueToTestTimer == false {
-                boolValueToTestTimer = true
-                cancelSevenDayNotification()
-        } else if unwrappedStep.stepNumber == "STEP 14" && boolValueToTestTimer == true {
-            scheduleSevenDayNotification()
-            boolValueToTestTimer = false 
-        }
-
-        
+        checkButtonStatusNotificationSet()
+        finalStepButtonTapped()
         navigationController?.popViewController(animated: true)
     }
     
+    func checkButtonStatusNotificationSet() {
+        guard let unwrappedStep = selectedStep else {return}
+        if unwrappedStep.stepNumber != "STEP 14"  {
+            cancelSevenDayNotification()
+            scheduleSevenDayNotification()
+        }
+    }
+    
+    func finalStepButtonTapped() {
+        guard let unwrappedStep = selectedStep else {return}
+        if unwrappedStep.stepNumber == "STEP 14" && unwrappedStep.stepCompleted == true {
+            cancelSevenDayNotification()
+            
+        } else {
+            if unwrappedStep.stepNumber == "STEP 14" && unwrappedStep.stepCompleted != true {
+                scheduleSevenDayNotification()
+            }
+        }
+    }
     
     // MARK: - TABLE VIEW DATA SOURCE
     
@@ -138,7 +146,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             cell.datePickerTextLabel?.text = item.text
             cell.datePickerButtonTextLabel?.setTitle("\(item.buttonText ?? "CLICK TO SET DATE")", for: .normal)
             return cell
-        
+            
         case .dataInput:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "dataInputCell", for: indexPath) as? DataInputTVCell else { return UITableViewCell() }
             cell.delegate = self
@@ -293,9 +301,9 @@ extension StepDetailTVC {
     
     func scheduleSevenDayNotification() {
         print("\n📅 7 day notification set\n")
-       timerController.scheduleLocalNotificationFor2(identifier: sevenDayTimerID,
-                                                     actionTitle: "Dismiss", categoryID: notificationActionID, contentTitle: "🚨Content Title", contentBody: "Content Body", contentBadge: 1,
-                                                     contentSound: UNNotificationSound.default, contentLuanchImage: "IMAGE_NAME", desiredTimeInterval: sevenDays)
+        timerController.scheduleLocalNotificationFor2(identifier: sevenDayTimerID,
+                                                      actionTitle: "Dismiss", categoryID: notificationActionID, contentTitle: "🚨Content Title", contentBody: "Content Body", contentBadge: 1,
+                                                      contentSound: UNNotificationSound.default, contentLuanchImage: "IMAGE_NAME", desiredTimeInterval: sevenDays)
     }
-  
+    
 }
