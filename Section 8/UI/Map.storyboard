@@ -14,14 +14,57 @@
         <scene sceneID="9gX-Ck-xaS">
             <objects>
                 <viewController id="b0v-U0-GsT" customClass="MapViewController" customModule="Section_8" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hbn-YR-Dz5" customClass="GMSMapView">
+                    <view key="view" contentMode="scaleToFill" id="hbn-YR-Dz5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V80-Vl-D1W" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your target rental cost is $(value) or less per month." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUh-Cf-gzG">
+                                <rect key="frame" x="0.0" y="20" width="375" height="41"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5f8-t9-UlM">
+                                <rect key="frame" x="301" y="593" width="50" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1va-fu-B1b"/>
+                                    <constraint firstAttribute="width" constant="50" id="br7-B6-FPJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="24"/>
+                                <state key="normal" title="📞"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="callButtonTapped:" destination="b0v-U0-GsT" eventType="touchUpInside" id="11i-Gj-xme"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PUh-Cf-gzG" firstAttribute="leading" secondItem="Eaj-hI-X1B" secondAttribute="leading" id="118-u4-GDF"/>
+                            <constraint firstItem="Eaj-hI-X1B" firstAttribute="trailing" secondItem="V80-Vl-D1W" secondAttribute="trailing" id="2vL-tM-dhO"/>
+                            <constraint firstItem="PUh-Cf-gzG" firstAttribute="top" secondItem="Eaj-hI-X1B" secondAttribute="top" id="EwX-kf-hCC"/>
+                            <constraint firstItem="Eaj-hI-X1B" firstAttribute="trailing" secondItem="PUh-Cf-gzG" secondAttribute="trailing" id="LEf-3g-wCM"/>
+                            <constraint firstItem="Eaj-hI-X1B" firstAttribute="bottom" secondItem="5f8-t9-UlM" secondAttribute="bottom" constant="24" id="LQD-b6-8LQ"/>
+                            <constraint firstItem="Eaj-hI-X1B" firstAttribute="bottom" secondItem="V80-Vl-D1W" secondAttribute="bottom" id="alt-Xp-77c"/>
+                            <constraint firstItem="V80-Vl-D1W" firstAttribute="leading" secondItem="Eaj-hI-X1B" secondAttribute="leading" id="h6V-4X-y9E"/>
+                            <constraint firstItem="Eaj-hI-X1B" firstAttribute="trailing" secondItem="5f8-t9-UlM" secondAttribute="trailing" constant="24" id="sd2-OD-Sht"/>
+                            <constraint firstItem="V80-Vl-D1W" firstAttribute="top" secondItem="Eaj-hI-X1B" secondAttribute="top" id="w80-Nz-OVW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Eaj-hI-X1B"/>
                     </view>
                     <connections>
-                        <outlet property="utahCountyMapView" destination="hbn-YR-Dz5" id="II4-Pm-w0G"/>
+                        <outlet property="callButton" destination="5f8-t9-UlM" id="Ec8-iR-clN"/>
+                        <outlet property="utahCountyMapView" destination="V80-Vl-D1W" id="7u0-B5-XEb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pdE-IV-5qc" userLabel="First Responder" sceneMemberID="firstResponder"/>

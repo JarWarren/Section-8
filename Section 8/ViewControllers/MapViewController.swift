@@ -10,25 +10,28 @@ import UIKit
 import GoogleMaps
 import GooglePlaces
 
+
+// TODO: Implement marker clustering -> github.com/googlemaps/google-maps-ios-utils
 class MapViewController: UIViewController, GMSMapViewDelegate {
     
+    @IBOutlet weak var callButton: UIButton!
+    var locations: [ApartmentLocation]?
     
     @IBOutlet weak var utahCountyMapView: GMSMapView!
-//    var queriedLocation: CLLocationCoordinate2D
-//    private let searchRadius: Double = 1000
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupMap()
-        setBorderAroundUtahCounty()
         addMarkers()
+        utahCountyMapView.delegate = self
     }
     
+    // MARK: - Setup Methods
     func setupMap() {
         
         utahCountyMapView.delegate = self
-        utahCountyMapView.camera = GMSCameraPosition(target: CLLocationCoordinate2D(latitude: 40.0966, longitude: -111.5707), zoom: 10, bearing: 0, viewingAngle: 0)
+        utahCountyMapView.camera = GMSCameraPosition(target: CLLocationCoordinate2D(latitude: 40.0966, longitude: -111.5707), zoom: 11, bearing: 0, viewingAngle: 0)
         
     }
     
@@ -37,6 +40,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
 
         GoogleNetworkController.fetchNearbyComplexes { (locations) in
             
+            self.locations = locations
             DispatchQueue.main.async {
             for location in locations {
                     let newMarker = ApartmentComplexMarker(apartmentLocation: location)
@@ -46,22 +50,61 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         }
     }
     
-    func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
-        // TODO: Implement action on didTapInfoWindow OR didTap marker.
+    func setupCustomView() {
+        
+        //TODO: Create a reusable custom view that contains name, address, phone and photo.
+    }
+        //TODO: Method that takes in a city and returns a CLLocationCoordinate2D in order to position camera.
+    
+    // MARK: - Data Source Methods
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+    
+        guard let locations = locations else { return false }
+        for location in locations {
+            if location.geometry.location.lat == marker.position.latitude && location.geometry.location.lng == marker.position.longitude {
+                GoogleNetworkController.fetchPlaceDetails(placeID: location.place_id) { (name, phone, address) in
+                    DispatchQueue.main.async {
+                        marker.tracksInfoWindowChanges = true
+                        marker.title = name
+                        marker.snippet = "\(phone)\n\(address)"
+                    }
+                }
+            }
+        }
+        return true
     }
     
-    func setBorderAroundUtahCounty() {
+    func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
         
-        let path = GMSMutablePath()
-        path.add(CLLocationCoordinate2D(latitude: 39.897824, longitude: -110.081725))
-        path.add(CLLocationCoordinate2D(latitude: 39.897824, longitude: -110.856506))
-        path.add(CLLocationCoordinate2D(latitude: 39.811903, longitude: -110.856506))
+        // Called when a marker is about to become selected, and provides an optional custom info window to use for that marker if this method returns a UIView.
+        return UIView()
+    }
+    
+    func mapView(_ mapView: GMSMapView, markerInfoContents marker: GMSMarker) -> UIView? {
         
-        let utahCounty = GMSPolyline(path: path)
-        utahCounty.strokeColor = UIColor.red
-        utahCounty.strokeWidth = 2
-        utahCounty.map = self.utahCountyMapView
+        // Called when mapView:markerInfoWindow: returns nil.
+        return UIView()
+    }
+    
+    func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
+        
+        // Called after a marker's info window has been tapped.
+    }
+
+    // MARK: - Actions
+    @IBAction func callButtonTapped(_ sender: Any) {
+        
+        switch true {
+        case ApartmentController.shared.selectedApartment == nil :
+            let callAlert = UIAlertController(title: "Choose an Apartment to Call", message: "Select an apartment in order to see more details about it.\nThen, tap the call button again in order to proceed.", preferredStyle: .actionSheet)
+            let backAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            callAlert.addAction(backAction)
+            present(callAlert, animated: true, completion: nil)
+        case ApartmentController.shared.selectedApartment != nil :
+            print("APARTMENT NOT NIL")
+        default :
+            print("CALLBUTTON ERROR")
+        }
+        
     }
 }
-
-// TODO: Method that takes in a city and returns a CLLocationCoordinate2D in order to position camera.

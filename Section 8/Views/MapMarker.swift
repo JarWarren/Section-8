@@ -13,13 +13,15 @@ import GooglePlaces
 class ApartmentComplexMarker: GMSMarker {
     
     let apartmentLocation: ApartmentLocation
-    
-    init(apartmentLocation: ApartmentLocation) {
+    let phoneNumber: String?
+    init(apartmentLocation: ApartmentLocation, phoneNumber: String? = nil) {
         
         self.apartmentLocation = apartmentLocation
+        self.phoneNumber = phoneNumber
         
         super.init()
         
+        self.tracksInfoWindowChanges = true
         self.position = CLLocationCoordinate2D(latitude: apartmentLocation.geometry.location.lat, longitude: apartmentLocation.geometry.location.lng)
         self.title = apartmentLocation.name
         groundAnchor = CGPoint(x: 0.5, y: 1)
