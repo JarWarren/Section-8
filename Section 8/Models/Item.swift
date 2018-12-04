@@ -36,4 +36,5 @@ enum ItemFormat: String {
     case datePicker = "datePicker"
     case dataInput = "dataInput"
     case dataDisplay = "datadisplay"
+    case map = "map"
 }

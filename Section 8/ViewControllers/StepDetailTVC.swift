@@ -174,6 +174,13 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             cell.dataDisplayTextLabel?.text = item.text
             cell.dataDisplayDataLabel?.text = "NEED TO LINK TO MAX RENT"
             return cell
+            
+        case .map:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "mapCell", for: indexPath) as? MapTVCell else { return UITableViewCell() }
+            
+            // Configure cell
+            cell.mapTextLabel.text = item.text
+            return cell
         }
     }
 }

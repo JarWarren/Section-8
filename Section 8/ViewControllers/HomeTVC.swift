@@ -54,14 +54,26 @@ class HomeTVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        // What is the index of the Map step
+        if indexPath.row == 5 {
+            performSegue(withIdentifier: "toMapDetail", sender: nil)
+        } else {
+            performSegue(withIdentifier: "toStepDetail", sender: tableView.cellForRow(at: indexPath))
+        }
+    }
+    
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toStepDetail" {
-            guard let destinationVC = segue.destination as? StepDetailTVC, let indexPath = tableView.indexPathForSelectedRow else { return }
+            guard let destinationVC = segue.destination as? StepDetailTVC, let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) else { return }
             
             let selectedStep = StepController.shared.steps[indexPath.row]
             destinationVC.selectedStep = selectedStep
+        } else if segue.identifier == "toMapDetail" {
+            // Do nothing
         }
     }
 }
