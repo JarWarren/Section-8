@@ -130,28 +130,11 @@
     "5eText" = "Once you have calculated your maximum rent, you can mark this step complete! Remember that you will need to make sure to choose an apartment with rent BELOW this amount.";
 
 
-//// MARK: - STEP 6
-//
-//    // Step 6a
-//    "" = ""
-//    "" = ""
-//    "" = ""
-//
-//    // Step 6b
-//    "" = ""
-//    "" = ""
-//    "" = ""
-//
-//    // Step 6c
-//    "" = ""
-//    "" = ""
-//    "" = ""
-//
-//    // Step 6d
-//    "" = ""
-//    "" = ""
-//    "" = ""
-//
+// MARK: - STEP 6
+
+    // Step 6a
+    "6aText" = "This map shows several options. Click on a marker to see details. Choose one, and click “Complete” below.";
+
 
 // MARK: - STEP 7
 //
@@ -228,25 +211,27 @@
 "9dTitle" = "CHECK YOUR CONTACT INFORMATION";
 "9dText" = "Once the Housing Authority office has processed this paperwork, if the unit is approved, they will either call your phone number on the application you submitted, or send a letter to your present address, so make sure your phone number and address are correct.";
 
+
 // MARK: - STEP 10
 
     // Step 10a
-    "10Text" = "Several days after you have submitted the required forms to the HAUC office, you will either get a phone call, or receive a letter in the mail. The Housing Authority will contact you to set up an apartment inspection.";
+    "10aText" = "Several days after you have submitted the required forms to the HAUC office, you will either get a phone call, or receive a letter in the mail. The Housing Authority will contact you to set up an apartment inspection.";
 
     // Step 10b
-    "10Title" = "IMPORTANT REMINDER";
-    "10Text" = "The apartment to be inspected must either be vacant, or it must be your current apartment, and if it is your current apartment, all the utilities MUST be turned on.";
+    "10bTitle" = "IMPORTANT REMINDER";
+    "10bText" = "The apartment to be inspected must either be vacant, or it must be your current apartment, and if it is your current apartment, all the utilities MUST be turned on.";
 
     // Step 10c
-    "10Text" = "You will need to talk to the HAUC, as well as the apartment complex, to find a time that works for both. You will also need to make sure that an adult at the until when the inspector arrives. ";
+    "10cText" = "You will need to talk to the HAUC, as well as the apartment complex, to find a time that works for both. You will also need to make sure that an adult at the until when the inspector arrives. ";
 
     // Step 10d
-    "10Title" = "INSPECTION DATE";
-    "10Text" = "Please enter your inspection date here, so we can send you a reminder notification:";
-    "10ButtonText" = "SET INSPECTION DATE";
+    "10dTitle" = "INSPECTION DATE";
+    "10dText" = "Please enter your inspection date here, so we can send you a reminder notification:";
+    "10dButtonText" = "SET INSPECTION DATE";
 
     // Step 10e
-    "10Text" = "Once the inspection has been scheduled with the Housing Authority and the apartment complex, you are finished with this step! Click on the button below to move on to the next step.";
+    "10eText" = "Once the inspection has been scheduled with the Housing Authority and the apartment complex, you are finished with this step! Click on the button below to move on to the next step.";
+
 
 // MARK: - STEP 11
 
@@ -287,50 +272,47 @@
 
     // Step 12f
     "12fTitle" = "IF YOU NEED TO RESCHEDULE";
-"12fText" = "If you miss your appointment, call the Housing Authority to schedule a new appointment, and then make sure to go back and change the appointment date above and click on the “Set Final Appointment Date” button again, so we can remind you when it’s getting closer to inspection time.";
+    "12fText" = "If you miss your appointment, call the Housing Authority to schedule a new appointment, and then make sure to go back and change the appointment date above and click on the “Set Final Appointment Date” button again, so we can remind you when it’s getting closer to inspection time.";
 
-//// MARK: - STEP 13
-//
-//    // Step 13a
-//    "" = ""
-//    "" = ""
-//    "" = ""
-//
-//    // Step 13b
-//    "" = ""
-//    "" = ""
-//    "" = ""
-//
-//    // Step 13c
-//    "" = ""
-//    "" = ""
-//    "" = ""
-//
-//    // Step 13d
-//    "" = ""
-//    "" = ""
-//    "" = ""
-//
-//// MARK: - STEP 14
-//
-//    // Step 14a
-//    "" = ""
-//    "" = ""
-//    "" = ""
-//
-//    // Step 14b
-//    "" = ""
-//    "" = ""
-//    "" = ""
-//
-//    // Step 14c
-//    "" = ""
-//    "" = ""
-//    "" = ""
-//
-//    // Step 14d
-//    "" = ""
-//    "" = ""
-//    "" = ""
-//
-//
+
+// MARK: - STEP 13
+
+    // Step 13a
+    "13aText" = "After your final appointment, you will need to deliver the leases and contracts to the apartment complex, so they can be signed. Then you must return ALL copies to the housing authority:";
+
+    // Step 13b
+    "13bTitle" = "HAUC OFFICE INFORMATION";
+    "13bText" = "240 E Center St \nProvo, UT 84606 \nHours: Monday – Thursday, 7:30am to 5:30pm \nPhone: 801-373-8333";
+
+    // Step 13c
+    "13cText" = "Once you have returned the signed leases and contracts to the Housing Authority, you are finished with this step! Click on the button below to move on to the next step.";
+
+    // Step 13d
+    "13dTitle" = "WHAT IS NEXT?";
+    "13dText" = "After the signed leases and contracts are processed, the Housing Authority will mail out copies to you and to your landlord.";
+
+
+// MARK: - STEP 14
+
+    // Step 14a
+    "14aText" = "Once you have received signed copies of the contracts and leases in the mail, you can schedule a time with the apartment complex to move in.";
+
+    // Step 14b
+    "14bTitle" = "CONGRATULATIONS!";
+    "14bText" = "You have now completed the process of obtaining affordable Section 8 housing. It is a long and difficult process, and you have done a great job!";
+
+    // Step 14c
+    "14cText" = "Remember that at some point in the future, you will have to go through the re-certification process process. You will receive a letter two to three months before your re-certification deadline. That letter will contain instructions on what steps to take to complete the process.";
+
+    // Step 14d
+    "14dTitle" = "ONE FINAL REMINDER";
+    "14dText" = "You also need to make sure to inform the Housing Authority when any changes occur, either in your household income, or in the number of people living in your apartment.";
+
+    // Step 14e
+    "14eText" = "Click on the button below to complete the process!";
+
+
+// MARK: - NOTIFICATIONS
+
+
+

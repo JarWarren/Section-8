@@ -96,7 +96,6 @@
                                             <outlet property="stepImageView" destination="lTZ-2E-mJo" id="3tr-7U-Rba"/>
                                             <outlet property="stepNameLabel" destination="vwV-h3-PDR" id="BzO-dU-YJd"/>
                                             <outlet property="stepNumberLabel" destination="YSE-rQ-pOA" id="ta4-vS-ibg"/>
-                                            <segue destination="QMa-vk-bT6" kind="show" identifier="toStepDetail" id="1nE-7q-jbL"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -146,11 +145,21 @@
                     <navigationItem key="navigationItem" id="i9t-W3-0rm"/>
                     <connections>
                         <outlet property="tableView" destination="0ql-OW-4y5" id="dKE-vT-Yhq"/>
+                        <segue destination="QMa-vk-bT6" kind="show" identifier="toStepDetail" id="FfI-HO-gAc"/>
+                        <segue destination="c3P-Uc-vsQ" kind="show" identifier="toMapDetail" id="h8P-UY-m9h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l1i-ex-OVI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1078.2608695652175" y="107.14285714285714"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="76n-NV-Bs6">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Map" id="c3P-Uc-vsQ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HrR-Sg-Wct" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1078" y="529"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WdR-Xg-Xho">
@@ -686,6 +695,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0qf-zI-W0g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1831.8840579710147" y="106.47321428571428"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="irF-tM-2fJ">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8fV-hP-jnM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder id="yar-56-akc" sceneMemberID="viewController"/>
+            </objects>
+            <point key="canvasLocation" x="2612" y="382"/>
         </scene>
     </scenes>
     <resources>

@@ -24,6 +24,7 @@
 		7EA8381A21B602D400E9B9CE /* Apartment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA8381921B602D400E9B9CE /* Apartment.swift */; };
 		81212AED21B5AC5A0082C88B /* DataInputTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81212AEC21B5AC5A0082C88B /* DataInputTVCell.swift */; };
 		81212AEF21B5CCF90082C88B /* DataDisplayTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81212AEE21B5CCF90082C88B /* DataDisplayTVCell.swift */; };
+		81871F1121B7079700407E51 /* MapTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81871F1021B7079700407E51 /* MapTVCell.swift */; };
 		81B7E94E21B1FEC1003A209F /* DatePickerTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B7E94D21B1FEC1003A209F /* DatePickerTVCell.swift */; };
 		81B7E95021B1FF0E003A209F /* ClickLinkTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B7E94F21B1FF0E003A209F /* ClickLinkTVCell.swift */; };
 		81DD083321AF1D470037F3AA /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DD083221AF1D470037F3AA /* Step.swift */; };
@@ -64,6 +65,7 @@
 		7EA8381921B602D400E9B9CE /* Apartment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apartment.swift; sourceTree = "<group>"; };
 		81212AEC21B5AC5A0082C88B /* DataInputTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInputTVCell.swift; sourceTree = "<group>"; };
 		81212AEE21B5CCF90082C88B /* DataDisplayTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDisplayTVCell.swift; sourceTree = "<group>"; };
+		81871F1021B7079700407E51 /* MapTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTVCell.swift; sourceTree = "<group>"; };
 		81B7E94D21B1FEC1003A209F /* DatePickerTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTVCell.swift; sourceTree = "<group>"; };
 		81B7E94F21B1FF0E003A209F /* ClickLinkTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickLinkTVCell.swift; sourceTree = "<group>"; };
 		81DD083221AF1D470037F3AA /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				81B7E94D21B1FEC1003A209F /* DatePickerTVCell.swift */,
 				81212AEC21B5AC5A0082C88B /* DataInputTVCell.swift */,
 				81212AEE21B5CCF90082C88B /* DataDisplayTVCell.swift */,
+				81871F1021B7079700407E51 /* MapTVCell.swift */,
 			);
 			path = ItemFormats;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				81FF0A9921B09EBC004A7EDB /* TipTVCell.swift in Sources */,
 				81DD083B21AF3C010037F3AA /* StepTVCell.swift in Sources */,
 				7EA8381A21B602D400E9B9CE /* Apartment.swift in Sources */,
+				81871F1121B7079700407E51 /* MapTVCell.swift in Sources */,
 				81212AEF21B5CCF90082C88B /* DataDisplayTVCell.swift in Sources */,
 				81DD083521AF1E880037F3AA /* StepController.swift in Sources */,
 				7E1DF3F421B19FE70012BFEE /* ApartmentLocation.swift in Sources */,
