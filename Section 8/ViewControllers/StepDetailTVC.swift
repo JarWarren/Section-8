@@ -30,11 +30,15 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var completeButtonStatus: UIButton!
     
-    // MARK: - Constants
+    // MARK: - CONSTANTS
     
     let timerController = TimerController()
     let timeKeepingId = "timerID"
     let sevenDayCountDown = TimeInterval(5)
+    var boolValueToTestTimer = false
+    
+    // MARK: - VIEW DID LOAD & VIEW WILL APPEAR
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
     }
@@ -44,9 +48,17 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         
         // timer
         timerController.delegate = self
+        
+        if timerController.isOn && boolValueToTestTimer == true {
+            timerController.startTimer(time: 5)
+            
+        } else {
+        timerStopped()
+            boolValueToTestTimer = false
+        }
+        
         timerController.startTimer(time: sevenDayCountDown)
-        //Need to figure out if this is what gets rid of the badge icon
-        timerController.cancelLocalNotificationWith(identifier: "NotificationID")
+       
         
         // Change title to specific step
         if let thisStep = selectedStep {
@@ -74,7 +86,9 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             print("🔥Step # \(unwrappedStep.stepNumber) was originally set to Complete but now its not compelted😭")
             unwrappedStep.stepCompleted = false
         }
-         timerController.startTimer(time: sevenDayCountDown)
+        
+        
+        
         navigationController?.popViewController(animated: true)
     }
     
@@ -122,17 +136,45 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             cell.datePickerTextLabel?.text = item.text
             cell.datePickerButtonTextLabel?.setTitle("\(item.buttonText ?? "CLICK TO SET DATE")", for: .normal)
             return cell
+        
+        case .dataInput:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "dataInputCell", for: indexPath) as? DataInputTVCell else { return UITableViewCell() }
+            cell.delegate = self
+            
+            // Configure cell
+            cell.dataInputTitleLabel?.text = item.title
+            cell.dataInputTextLabel?.text = item.text
+            return cell
+            
+        case .dataDisplay:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "dataDisplayCell", for: indexPath) as? DataDisplayTVCell else { return UITableViewCell() }
+            
+            // Configure cell
+            cell.dataDisplayTitleLabel.text = item.title
+            cell.dataDisplayTextLabel?.text = item.text
+            cell.dataDisplayDataLabel?.text = "NEED TO LINK TO MAX RENT"
+            return cell
         }
     }
 }
 
+// MARK: - DATE PICKER CELL DELEGATE
+
 extension StepDetailTVC: DatePickerTVCellDelegate {
     func datePickerButtonTapped(_ sender: DatePickerTVCell, _ picker: UIDatePicker) {
-        // Set up notification center stuff
+        // SET UP NOTIFCATION CENTER STUFF
     }
-    
-    
 }
+
+// MARK: - DATA INPUT CELL DELEGATE
+
+extension StepDetailTVC: DataInputTVCellDelegate {
+    func dataInputButtonTapped(_ sender: DataInputTVCell, _ textField1: UITextField, _ textField2: UITextField) {
+        // SET UP CODE TO TAKE MAX RENT DATA
+    }
+}
+
+// MARK: - ATTRIBUTES INSPECTOR EXPANDER CODE
 
 extension UIView {
     
@@ -233,8 +275,8 @@ extension StepDetailTVC {
     }
     
     func timerCompleted() {
-        let timerEndedAlert = AlertControllerManager.presentAlertControllerWith(title: "We miss you", message: "The're hasn't been much progress come back and lets get going !!!")
-        present(timerEndedAlert, animated: true, completion: nil)
+        timerController.startTimer(time: 3)
+        print("\nTimer hit zero and completed\n")
     }
     
     func timerStopped() {

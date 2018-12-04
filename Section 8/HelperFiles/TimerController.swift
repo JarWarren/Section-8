@@ -60,7 +60,7 @@ class TimerController {
             delegate?.timerCompleted()
             
             // Restart Time
-            startTimer(time: 5)
+//            startTimer(time: 5)
         }
     }
     
@@ -130,6 +130,7 @@ class TimerController {
     func cancelLocalNotificationWith(identifier: String) {
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [identifier])
     }
+    
     
     
     

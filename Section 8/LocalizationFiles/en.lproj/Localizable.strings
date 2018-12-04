@@ -6,11 +6,320 @@
   Copyright © 2018 Warren. All rights reserved.
 */
 
-// STEPS
-"STEP" = "STEP";
-"step1" = "Complete online application";
-"step2" = "Photo ID & Social Security Card";
-"step3" = "Attend briefing";
+// MARK: - STEPS
 
-// ITEMS
-"1a" = "Fill out the preliminary application by clicking the button below, but read these instructions first:";
+    "STEP" = "STEP";
+
+    "step1" = "Complete online application";
+    "step2" = "Photo ID & Social Security Card";
+    "step3" = "Complete mailed application";
+    "step4" = "Attend briefing";
+    "step5" = "Calculate rent payment";
+    "step6" = "Choose apartment";
+    "step7" = "Landlord signs request form";
+    "step8" = "Return request form to HAUC";
+    "step9" = "Schedule inspection";
+    "step10" = "Apartment inspection";
+    "step11" = "Landlord signs lease";
+    "step12" = "Return lease to HAUC";
+    "step13" = "Lease mailed back";
+    "step14" = "Time to move in!";
+
+// MARK: - STEP 1 ITEMS
+
+    // Item 1a
+    "1aText" = "Fill out the preliminary application by clicking the button below, but read these instructions first:";
+
+    // Item 1b
+    "1bTitle" = "VIEWING TIP";
+    "1bText" = "Once you open the online application, it might be easier to turn your phone sideways, so the application is easier to read.";
+
+    // Item 1c
+    "1cTitle" = "APPLICATION RECEIPT";
+    "1cText" = "When finished, you will see an “Application Receipt” screen. Take a screenshot and save it.";
+
+    // Item 1d
+    "1dTitle" = "FINISHED BUTTON";
+    "1dText" = "Finally, click on the “Finished” button near the bottom of the screen, and return to this page.";
+
+    // Item 1e
+    "1eText" = "Click here to be taken to the online application on the HAUC website:";
+    "1eButtonText" = "PRELIMINARY APPLICATION";
+
+// MARK: - STEP 2 ITEMS
+
+    // Step 2a
+    "2aText" = "After submitting your preliminary application online, the head of household must take a photo ID and social security card to the Housing Authority of Utah County (HAUC) main office.";
+
+    // Step 2b
+    "2bTitle" = "HOUSING AUTHORITY (HAUC) OFFICE INFORMATION";
+    "2bText" = "240 E Center St \nProvo, UT 84606 \nHours: Monday – Thursday, 7:30am to 5:30pm \nPhone: 801-373-8333";
+
+    // Step 2c
+    "2cText" = "Once the head of household has taken these two forms of identification in to the HAUC office, this step is complete!";
+
+    // Step 2d
+    "2dTitle" = "WAITING LIST";
+    "2dText" = "Once you have completed this step, you will be placed on a waiting list, and the wait time is from TWO MONTHS up to MORE THAN A YEAR. \n\nBe patient, and make sure to update your phone number and mailing address with the Housing Authority if anything changes!";
+
+// MARK: - STEP 3 ITEMS
+
+    // Step 3a
+    "3aText" = "When your name reaches the top of the waiting list, you will receive a full application in the mail. Along with that application you will receive an appointment date to bring in your application to the HAUC main office:";
+
+    // Step 3b
+    "3bTitle" = "APPOINTMENT DATE";
+    "3bText" = "Please enter your appointment date here, so we can send you a reminder notification:";
+    "3bButtonText" = "SET APPOINTMENT DATE";
+
+    // Step 3c
+    "3cText" = "Read the application carefully, and complete each section. Be sure to update household and income verification. \n\nWhen you go to your appointment, you will bring the complete application, along with income verifications, birth certificates, and Social Security Cards for everyone in the household.";
+
+    // Step 3d
+    "3dTitle" = "APPLICATION APPOINTMENT";
+    "3dText" = "Once you have taken your application, income verifications, birth certificates and Social Security Cards to your appointment, and the HAUC has let you know the application is complete, you have completed this step! \n\nIn the next several days, a briefing will be scheduled for you.";
+
+// MARK: - STEP 4 ITEMS
+
+    // Step 4a
+    "4aText" = "You should receive an invitation to attend a briefing several days after your application appointment. If you don’t, call the HAUC office to find out when you can come to a briefing.";
+
+    // Step 4b
+    "4bTitle" = "HAUC OFFICE INFORMATION";
+    "4bText" = "Hours: Monday – Thursday, 7:30am to 5:30pm \nPhone: 801-373-8333";
+
+    // Step 4c
+    "4cText" = "In the briefing, program procedures are explained, and you will be taught how to begin receiving assistance.";
+
+    // Step 4d
+    "4dTitle" = "BRIEFING DATE";
+    "4dText" = "Please enter your briefing date here, so we can send you a reminder notification:";
+    "4dButtonText" = "SET BRIEFING DATE";
+
+    // Step 4e
+    "4eText" = "Once you have attended the briefing, you ONLY have 60 days to find a place to live, and to complete the remaining steps in this app.";
+
+    // Step 4f
+    "4fTitle" = "BRIEFING APPOINTMENT";
+    "4fText" = "Once you have attended your briefing, you have completed this step! \n\nYou will be reminded weekly how much time you have left to find an apartment and completed the remaining steps.";
+
+// MARK: - STEP 5
+
+    // Step 5a
+"5aText" = "The Housing Authority will only let you rent an apartment within a certain price range. To calculate this, you need to provide a couple pieces of information:";
+
+    // Step 5b
+    "5bTitle" = "OVERALL HOUSEHOLD INCOME";
+    "5bText" = "In the first box below, include all income from everyone in the household. You can include: wages, salaries, unemployment benefits, child support, Social Security payments, interest and royalties, and financial assistance. \n\nIn the second box, enter the amount that you qualify for from the Housing Authority voucher.";
+    "5bButtonText" = "CLICK TO SUBMIT AMOUNTS";
+
+    // Step 5c
+    "5cTitle" = "MAXIMUM RENT AMOUNT";
+    "5cText" = "Based on your household income, your voucher amount, the number of bedrooms you need, and an average utility allowance, you should NOT look at apartments with rent higher than this amount:";
+
+    // Step 5d
+    "5dTitle" = "HOW IS THIS CALCULATED?";
+    "5dText" = "In addition to the voucher amount you qualify for, you are only allowed to pay up to 40% of your household income to rent, and that includes utilities. \n\nThe number above does not include utilities, because you will pay those in addition to your monthly rent payment. There are also limits on the rent you can pay based on the number of bedrooms you choose.";
+
+    // Step 5e
+    "5eText" = "Once you have calculated your maximum rent, you can mark this step complete! Remember that you will need to make sure to choose an apartment with rent BELOW this amount.";
+
+//// MARK: - STEP 6
+//
+//    // Step 6a
+//    "" = ""
+//    "" = ""
+//    "" = ""
+//
+//    // Step 6b
+//    "" = ""
+//    "" = ""
+//    "" = ""
+//
+//    // Step 6c
+//    "" = ""
+//    "" = ""
+//    "" = ""
+//
+//    // Step 6d
+//    "" = ""
+//    "" = ""
+//    "" = ""
+//
+//// MARK: - STEP 7
+//
+//    // Step 7a
+//    "" = ""
+//    "" = ""
+//    "" = ""
+//
+//    // Step 7b
+//    "" = ""
+//    "" = ""
+//    "" = ""
+//
+//    // Step 7c
+//    "" = ""
+//    "" = ""
+//    "" = ""
+//
+//    // Step 7d
+//    "" = ""
+//    "" = ""
+//    "" = ""
+//
+//// MARK: - STEP 8
+//
+//    // Step 8a
+//    "" = ""
+//    "" = ""
+//    "" = ""
+//
+//    // Step 8b
+//    "" = ""
+//    "" = ""
+//    "" = ""
+//
+//    // Step 8c
+//    "" = ""
+//    "" = ""
+//    "" = ""
+//
+//    // Step 8d
+//    "" = ""
+//    "" = ""
+//    "" = ""
+//
+//// MARK: - STEP 9
+//
+//    // Step 9a
+//    "" = ""
+//    "" = ""
+//    "" = ""
+//
+//    // Step 9b
+//    "" = ""
+//    "" = ""
+//    "" = ""
+//
+//    // Step 9c
+//    "" = ""
+//    "" = ""
+//    "" = ""
+//
+//    // Step 9d
+//    "" = ""
+//    "" = ""
+//    "" = ""
+//
+//// MARK: - STEP 10
+//
+//    // Step 10a
+//    "" = ""
+//    "" = ""
+//    "" = ""
+//
+//    // Step 10b
+//    "" = ""
+//    "" = ""
+//    "" = ""
+//
+//    // Step 10c
+//    "" = ""
+//    "" = ""
+//    "" = ""
+//
+//    // Step 10d
+//    "" = ""
+//    "" = ""
+//    "" = ""
+//
+//// MARK: - STEP 11
+//
+//    // Step 11a
+//    "" = ""
+//    "" = ""
+//    "" = ""
+//
+//    // Step 11b
+//    "" = ""
+//    "" = ""
+//    "" = ""
+//
+//    // Step 11c
+//    "" = ""
+//    "" = ""
+//    "" = ""
+//
+//    // Step 11d
+//    "" = ""
+//    "" = ""
+//    "" = ""
+//
+//// MARK: - STEP 12
+//
+//    // Step 12a
+//    "" = ""
+//    "" = ""
+//    "" = ""
+//
+//    // Step 12b
+//    "" = ""
+//    "" = ""
+//    "" = ""
+//
+//    // Step 12c
+//    "" = ""
+//    "" = ""
+//    "" = ""
+//
+//    // Step 12d
+//    "" = ""
+//    "" = ""
+//    "" = ""
+//
+//// MARK: - STEP 13
+//
+//    // Step 13a
+//    "" = ""
+//    "" = ""
+//    "" = ""
+//
+//    // Step 13b
+//    "" = ""
+//    "" = ""
+//    "" = ""
+//
+//    // Step 13c
+//    "" = ""
+//    "" = ""
+//    "" = ""
+//
+//    // Step 13d
+//    "" = ""
+//    "" = ""
+//    "" = ""
+//
+//// MARK: - STEP 14
+//
+//    // Step 14a
+//    "" = ""
+//    "" = ""
+//    "" = ""
+//
+//    // Step 14b
+//    "" = ""
+//    "" = ""
+//    "" = ""
+//
+//    // Step 14c
+//    "" = ""
+//    "" = ""
+//    "" = ""
+//
+//    // Step 14d
+//    "" = ""
+//    "" = ""
+//    "" = ""
+//
+//

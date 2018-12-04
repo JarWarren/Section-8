@@ -34,4 +34,6 @@ enum ItemFormat: String {
     case paragraph = "paragraph"
     case clickLink = "clickLink"
     case datePicker = "datePicker"
+    case dataInput = "dataInput"
+    case dataDisplay = "datadisplay"
 }

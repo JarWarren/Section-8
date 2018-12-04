@@ -36,6 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                 print("Notification Access Denied")
             }
         }
+         
         return true
     }
     
