@@ -16,14 +16,15 @@
     "step4" = "Attend briefing";
     "step5" = "Calculate rent payment";
     "step6" = "Choose apartment";
-    "step7" = "Landlord signs request form";
-    "step8" = "Return request form to HAUC";
-    "step9" = "Schedule inspection";
-    "step10" = "Apartment inspection";
-    "step11" = "Landlord signs lease";
-    "step12" = "Return lease to HAUC";
-    "step13" = "Lease mailed back";
+    "step7" = "Call apartment complex";
+    "step8" = "Have landlord complete forms";
+    "step9" = "Return forms to HAUC";
+    "step10" = "Schedule inspection";
+    "step11" = "Apartment inspection";
+    "step12" = "Final HAUC appointment";
+    "step13" = "Return signed leases to HAUC";
     "step14" = "Time to move in!";
+
 
 // MARK: - STEP 1 ITEMS
 
@@ -46,6 +47,7 @@
     "1eText" = "Click here to be taken to the online application on the HAUC website:";
     "1eButtonText" = "PRELIMINARY APPLICATION";
 
+
 // MARK: - STEP 2 ITEMS
 
     // Step 2a
@@ -61,6 +63,7 @@
     // Step 2d
     "2dTitle" = "WAITING LIST";
     "2dText" = "Once you have completed this step, you will be placed on a waiting list, and the wait time is from TWO MONTHS up to MORE THAN A YEAR. \n\nBe patient, and make sure to update your phone number and mailing address with the Housing Authority if anything changes!";
+
 
 // MARK: - STEP 3 ITEMS
 
@@ -79,6 +82,7 @@
     "3dTitle" = "APPLICATION APPOINTMENT";
     "3dText" = "Once you have taken your application, income verifications, birth certificates and Social Security Cards to your appointment, and the HAUC has let you know the application is complete, you have completed this step! \n\nIn the next several days, a briefing will be scheduled for you.";
 
+
 // MARK: - STEP 4 ITEMS
 
     // Step 4a
@@ -92,7 +96,7 @@
     "4cText" = "In the briefing, program procedures are explained, and you will be taught how to begin receiving assistance.";
 
     // Step 4d
-    "4dTitle" = "BRIEFING DATE";
+"4dTitle" = "BRIEFING DATE";
     "4dText" = "Please enter your briefing date here, so we can send you a reminder notification:";
     "4dButtonText" = "SET BRIEFING DATE";
 
@@ -103,10 +107,11 @@
     "4fTitle" = "BRIEFING APPOINTMENT";
     "4fText" = "Once you have attended your briefing, you have completed this step! \n\nYou will be reminded weekly how much time you have left to find an apartment and completed the remaining steps.";
 
+
 // MARK: - STEP 5
 
     // Step 5a
-"5aText" = "The Housing Authority will only let you rent an apartment within a certain price range. To calculate this, you need to provide a couple pieces of information:";
+    "5aText" = "The Housing Authority will only let you rent an apartment within a certain price range. To calculate this, you need to provide a couple pieces of information:";
 
     // Step 5b
     "5bTitle" = "OVERALL HOUSEHOLD INCOME";
@@ -123,6 +128,7 @@
 
     // Step 5e
     "5eText" = "Once you have calculated your maximum rent, you can mark this step complete! Remember that you will need to make sure to choose an apartment with rent BELOW this amount.";
+
 
 //// MARK: - STEP 6
 //
@@ -146,138 +152,143 @@
 //    "" = ""
 //    "" = ""
 //
-//// MARK: - STEP 7
+
+// MARK: - STEP 7
 //
 //    // Step 7a
-//    "" = ""
-//    "" = ""
-//    "" = ""
+//    "" = "";
+//    "" = "";
+//    "" = "";
 //
 //    // Step 7b
-//    "" = ""
-//    "" = ""
-//    "" = ""
+//    "" = "";
+//    "" = "";
+//    "" = "";
 //
 //    // Step 7c
-//    "" = ""
-//    "" = ""
-//    "" = ""
+//    "" = "";
+//    "" = "";
+//    "" = "";
 //
 //    // Step 7d
-//    "" = ""
-//    "" = ""
-//    "" = ""
-//
-//// MARK: - STEP 8
-//
-//    // Step 8a
-//    "" = ""
-//    "" = ""
-//    "" = ""
-//
-//    // Step 8b
-//    "" = ""
-//    "" = ""
-//    "" = ""
-//
-//    // Step 8c
-//    "" = ""
-//    "" = ""
-//    "" = ""
-//
-//    // Step 8d
-//    "" = ""
-//    "" = ""
-//    "" = ""
-//
-//// MARK: - STEP 9
-//
-//    // Step 9a
-//    "" = ""
-//    "" = ""
-//    "" = ""
-//
-//    // Step 9b
-//    "" = ""
-//    "" = ""
-//    "" = ""
-//
-//    // Step 9c
-//    "" = ""
-//    "" = ""
-//    "" = ""
-//
-//    // Step 9d
-//    "" = ""
-//    "" = ""
-//    "" = ""
-//
-//// MARK: - STEP 10
-//
-//    // Step 10a
-//    "" = ""
-//    "" = ""
-//    "" = ""
-//
-//    // Step 10b
-//    "" = ""
-//    "" = ""
-//    "" = ""
-//
-//    // Step 10c
-//    "" = ""
-//    "" = ""
-//    "" = ""
-//
-//    // Step 10d
-//    "" = ""
-//    "" = ""
-//    "" = ""
-//
-//// MARK: - STEP 11
-//
-//    // Step 11a
-//    "" = ""
-//    "" = ""
-//    "" = ""
-//
-//    // Step 11b
-//    "" = ""
-//    "" = ""
-//    "" = ""
-//
-//    // Step 11c
-//    "" = ""
-//    "" = ""
-//    "" = ""
-//
-//    // Step 11d
-//    "" = ""
-//    "" = ""
-//    "" = ""
-//
-//// MARK: - STEP 12
-//
-//    // Step 12a
-//    "" = ""
-//    "" = ""
-//    "" = ""
-//
-//    // Step 12b
-//    "" = ""
-//    "" = ""
-//    "" = ""
-//
-//    // Step 12c
-//    "" = ""
-//    "" = ""
-//    "" = ""
-//
-//    // Step 12d
-//    "" = ""
-//    "" = ""
-//    "" = ""
-//
+//    "" = "";
+//    "" = "";
+//    "" = "";
+
+
+// MARK: - STEP 8
+
+    // Step 8a
+    "8aText" = "Once you’ve talked to the apartment complex and they’ve let you know that they do accept Section 8 housing, it’s time to go visit them. You will need them to complete FOUR forms. \n\nThey might be able to fill everything out while you wait, or they may tell you to come back on another day. \n\nIn the packet you received at your briefing, you should have a copy of each of these forms: \n\n– Tenancy Approval form \n– Copy of proposed lease \n– W-9 form \n– Cover letter";
+
+    // Step 8b
+    "8bTitle" = "HELPFUL HINT";
+    "8bText" = "If you are missing these forms, most apartment complexes should have copies of these forms, but if for some reason they don’t, click on the links below, and then on the browser share button to send forms by email address or mobile number.";
+
+    // Step 8c
+    "8cTitle" = "TENANCY APPROVAL FORM";
+    "8cText" = "Make sure the form is filled out completely, and SIGNED:";
+    "8cButtonText" = "LINK TO TENANCY APPROVAL FORM";
+
+    // Step 8d
+    "8dTitle" = "W-9 FORM";
+    "8dText" = "Make sure the form is filled out completely, and SIGNED:";
+    "8dButtonText" = "LINK TO W-9 FORM";
+
+    // Step 8e
+    "8eTitle" = "COVER LETTER FORM";
+    "8eText" = "Make sure the form is filled out completely, and SIGNED:";
+    "8eButtonText" = "LINK TO COVER LETTER FORM";
+
+    // Step 8f
+    "8fTitle" = "COPY OF PROPOSED LEASE";
+    "8fText" = "Make sure the following is written somewhere on the lease: “The HUD Tenancy Addendum is hereby made a part of this lease.";
+
+    // Step 8g
+    "8gTitle" = "IMPORTANT REMINDER";
+    "8gText" = "Make sure you get ALL FOUR of these documents, or you won’t be able to complete the next step.";
+
+    // Step 8h
+    "8hText" = "Once you have both documents, you have completed this step! Click on the button at the bottom of this page to move to the next step.";
+
+
+// MARK: - STEP 9
+
+    // Step 9a
+"9aText" = "Now that you have the four required documents from Step 8, you just need to take them down to the Housing Authority office. Here is the address and hours of operation:";
+
+    // Step 9b
+"9bTitle" = "HAUC OFFICE INFORMATION";
+"9bText" = "240 E Center St \nProvo, UT 84606 \nHours: Monday – Thursday, 7:30am to 5:30pm \nPhone: 801-373-8333";
+
+    // Step 9c
+"9cText" = "Once these documents have been submitted at the HAUC office, you have completed this step! Click on the button below to move on to the next step, but first…";
+
+    // Step 9d
+"9dTitle" = "CHECK YOUR CONTACT INFORMATION";
+"9dText" = "Once the Housing Authority office has processed this paperwork, if the unit is approved, they will either call your phone number on the application you submitted, or send a letter to your present address, so make sure your phone number and address are correct.";
+
+// MARK: - STEP 10
+
+    // Step 10a
+    "10Text" = "Several days after you have submitted the required forms to the HAUC office, you will either get a phone call, or receive a letter in the mail. The Housing Authority will contact you to set up an apartment inspection.";
+
+    // Step 10b
+    "10Title" = "IMPORTANT REMINDER";
+    "10Text" = "The apartment to be inspected must either be vacant, or it must be your current apartment, and if it is your current apartment, all the utilities MUST be turned on.";
+
+    // Step 10c
+    "10Text" = "You will need to talk to the HAUC, as well as the apartment complex, to find a time that works for both. You will also need to make sure that an adult at the until when the inspector arrives. ";
+
+    // Step 10d
+    "10Title" = "INSPECTION DATE";
+    "10Text" = "Please enter your inspection date here, so we can send you a reminder notification:";
+    "10ButtonText" = "SET INSPECTION DATE";
+
+    // Step 10e
+    "10Text" = "Once the inspection has been scheduled with the Housing Authority and the apartment complex, you are finished with this step! Click on the button below to move on to the next step.";
+
+// MARK: - STEP 11
+
+    // Step 11a
+    "11aText" = "On the day of the inspection, make sure that there is an adult at the apartment when the inspector arrives. That can be you or someone from the apartment complex.";
+
+    // Step 11b
+    "11bTitle" = "IF APARTMENT DOES NOT PASS INSPECTION";
+    "11bText" = "If unit does not pass, necessary repairs must be made. When repairs are completed, call HAUC at 801-373-8333, extension 117 to schedule a re-inspection appointment.";
+
+    // Step 11c
+    "11cTitle" = "IF YOU NEED TO RESCHEDULE";
+    "11cText" = "If you miss your appointment, or need to schedule a re-inspection appointment, make sure to go back and change the inspection date on Step 10 and click on the “Set Inspection Date” button again, so we can remind you when it’s getting closer to inspection time.";
+
+    // Step 11d
+    "11dText" = "Once the inspection has been completed, you are finished with this step! Click on the button below to move on to the next step.";
+
+
+// MARK: - STEP 12
+
+    // Step 12a
+    "12aText" = "After your unit passes an inspection, HAUC will call you to make an appointment to sign the final paperwork. ";
+
+    // Step 12b
+    "12bTitle" = "FINAL APPOINTMENT DATE";
+    "12bText" = "Please enter your final appointment date here, so we can send you a reminder notification:";
+    "12bButtonText" = "SET FINAL APPOINTMENT DATE";
+
+    // Step 12c
+    "12cText" = "Make sure to not forget your appointment. On the day of the appointment, plan ahead and arrive early:";
+
+    // Step 12d
+    "12dTitle" = "HAUC OFFICE INFORMATION";
+    "12dText" = "240 E Center St \nProvo, UT 84606 \nHours: Monday – Thursday, 7:30am to 5:30pm \nPhone: 801-373-8333";
+
+    // Step 12e
+    "12eText" = "Once you have gone to the Housing Authority for your final appointment, you are finished with this step! Click on the button below to move on to the next step.";
+
+    // Step 12f
+    "12fTitle" = "IF YOU NEED TO RESCHEDULE";
+"12fText" = "If you miss your appointment, call the Housing Authority to schedule a new appointment, and then make sure to go back and change the appointment date above and click on the “Set Final Appointment Date” button again, so we can remind you when it’s getting closer to inspection time.";
+
 //// MARK: - STEP 13
 //
 //    // Step 13a
