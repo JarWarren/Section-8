@@ -14,6 +14,7 @@ struct ApartmentLocation: Decodable {
     
     let name: String
     let place_id: String
+    let photos: [PhotoDictionary]?
     let geometry: GeometryDictionary
 }
 
@@ -32,6 +33,10 @@ struct LocationDictionary: Decodable {
 
 struct TopLevelPhoneBook: Decodable {
     let result: PlaceDetail
+}
+
+struct PhotoDictionary: Decodable {
+    let photo_reference: String?
 }
 
 struct PlaceDetail: Decodable {
