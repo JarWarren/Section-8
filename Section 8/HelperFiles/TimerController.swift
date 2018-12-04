@@ -135,7 +135,7 @@ class TimerController {
     
     
     // This is a reUsable schedul Notifc alert however it needs to be worked on
-    func scheduleLocalNotificationFor2(identifier: String, actionTitle: String, categoryID: String, contentTitle: String, contentBody: String, contentBadge: NSNumber, contentSound: UNNotificationSound, contentLuanchImage: String, timeRemaining: TimeInterval?) {
+     func scheduleLocalNotificationFor2(identifier: String, actionTitle: String, categoryID: String, contentTitle: String, contentBody: String, contentBadge: NSNumber, contentSound: UNNotificationSound, contentLuanchImage: String, desiredTimeInterval: Int) {
         
         // The Alert Button options
         let action = UNNotificationAction(identifier: identifier, title: actionTitle, options: [])
@@ -152,12 +152,8 @@ class TimerController {
         //This is the String ID for what we want to prseent to the user
         content.categoryIdentifier = categoryID
         
-        guard let timeRemaining = timeRemaining else {return}
-        let date = Date(timeInterval: timeRemaining, since: Date()) // Date() the time right now. ugly date
-        let dateComponents = Calendar.current.dateComponents([.minute, .second], from: date) // pretty calendar based on the users
-        
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false) // date component based on the date composition of the user's device. you can chop up the date cmpoonents to get what you want
-        
+    
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(desiredTimeInterval), repeats: true)
         
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
         UNUserNotificationCenter.current().add(request) { (error) in
