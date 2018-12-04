@@ -94,7 +94,8 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         guard let unwrappedStep = selectedStep else {return}
         if unwrappedStep.stepNumber == "STEP 14" && unwrappedStep.stepCompleted == true {
             cancelSevenDayNotification()
-            
+            UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+            UNUserNotificationCenter.current().removeAllDeliveredNotifications()
         } else {
             if unwrappedStep.stepNumber == "STEP 14" && unwrappedStep.stepCompleted != true {
                 scheduleSevenDayNotification()
