@@ -38,7 +38,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     let sevenDays = 60
     var boolValueToTestTimer = true
     let sevenDayTimerID = "sevenDays"
-    let notificationActionID = "dismissActionKey"
+    let categorySevenNotificationID = "dismissActionKey"
     
     // MARK: - VIEW DID LOAD & VIEW WILL APPEAR
     
@@ -93,7 +93,6 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     func finalStepButtonTapped() {
         guard let unwrappedStep = selectedStep else {return}
         if unwrappedStep.stepNumber == "STEP 14" && unwrappedStep.stepCompleted == true {
-            cancelSevenDayNotification()
             UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
             UNUserNotificationCenter.current().removeAllDeliveredNotifications()
         } else {
@@ -307,15 +306,22 @@ extension StepDetailTVC {
     }
     
     func cancelSevenDayNotification() {
-        timerController.cancelLocalNotificationWith(identifier: notificationActionID)
+        timerController.cancelLocalNotificationWith(identifier: categorySevenNotificationID)
         print("\n🐙🗓  7 day notification canceled\n")
     }
     
     func scheduleSevenDayNotification() {
         print("\n📅 7 day notification set\n")
-        timerController.scheduleLocalNotificationFor2(identifier: sevenDayTimerID,
-                                                      actionTitle: "Dismiss", categoryID: notificationActionID, contentTitle: "🚨Content Title", contentBody: "Content Body", contentBadge: 1,
-                                                      contentSound: UNNotificationSound.default, contentLuanchImage: "IMAGE_NAME", desiredTimeInterval: sevenDays)
+        timerController.scheduleLocalNotificationOnTimer(identifier: sevenDayTimerID,
+                                                      actionTitle: "Dismiss", categoryID: categorySevenNotificationID, contentTitle: "Content Title", contentSubtitle: "Content Subtitle", contentBody: "Content Body", contentBadge: 1,
+                                                      contentSound: UNNotificationSound.default, contentLuanchImage: "",
+                                                      desiredTimeInterval: sevenDays, resourceName: "homeFound", extenstionType: "jpeg")
     }
     
+    func randomRandom() {
+        timerController
+    }
+   
 }
+
+//..attachImageWith: "homeFound", extenstionType: "jpeg"
