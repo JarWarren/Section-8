@@ -18,10 +18,11 @@ class GoogleNetworkController {
     typealias Name = String
     typealias Address = String
     typealias PhoneNumber = String
+    typealias PhotoReference = String
     
     static func fetchNearbyComplexes(completion: @escaping ([ApartmentLocation]) -> Void) {
         
-        guard let mainURL = URL(string: "https://maps.googleapis.com/maps/api/place/textsearch/json?query=springville%20apartments&location=40.0966,-111.5707&radius=30000&key=AIzaSyAchY5OHlVXXQyaux0dO-kM0gVQz0T0rzE") else { completion([]); return }
+        guard let mainURL = URL(string: "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=40.0966,-111.5707&radius=30000&key=AIzaSyAchY5OHlVXXQyaux0dO-kM0gVQz0T0rzE&types=point_of_interest,establishment&keyword=apartment,lindon,orem,springville") else { completion([]); return }
         
         //TODO: &language=en || &language=es || &language=pt
         //TODO: Attempt placeSearch or nearbySearch rather than textSearch.
@@ -60,15 +61,34 @@ class GoogleNetworkController {
         }
         dataTask.resume()
     }
+    
+    static func fetchPlaceImage(photoReference: String, completion: @escaping (UIImage?) -> Void) {
+        
+        guard let mainURL = URL(string: "https://maps.googleapis.com/maps/api/place/photo?maxwidth=150&photoreference=\(photoReference)&key=AIzaSyAchY5OHlVXXQyaux0dO-kM0gVQz0T0rzE") else { completion(nil); return }
+        
+        let dataTask = URLSession.shared.dataTask(with: mainURL) { (data, _, error) in
+            if let error = error { print("IMAGE ERROR: \(error)"); completion(nil); return }
+            guard let data = data else { completion(nil); return }
+            
+            let apartmentImage = UIImage(data: data)
+            completion(apartmentImage)
+        }
+        dataTask.resume()
+    }
 }
 
 //TODO: Embed APIkey in propertyList.
 
-// SEARCH COMPLEXES
-// https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=40.0966,-111.5707&radius=1000&rankby=prominence&sensor=true&key=AIzaSyBb8WDOGylLfL6-texYep4nyzz_FzgzMHQ&types=food
+// NEARBYSEARCH
+// https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=40.0966,-111.5707&radius=30000&rankby=prominence&sensor=true&key=AIzaSyAchY5OHlVXXQyaux0dO-kM0gVQz0T0rzE&types=point_of_interest,establishment
 
+// TEXTSEARCH
+// https://maps.googleapis.com/maps/api/place/textsearch/json?query=springville%20apartments&location=40.0966,-111.5707&radius=30000&key=AIzaSyAchY5OHlVXXQyaux0dO-kM0gVQz0T0rzE
 
 // FIND PHOTO FROM REFERENCE
-// https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&photoreference=\(reference)&key=AIzaSyBb8WDOGylLfL6-texYep4nyzz_FzgzMHQ
+// https://maps.googleapis.com/maps/api/place/photo?maxwidth=150&photoreference=\(photoReference)&key=AIzaSyAchY5OHlVXXQyaux0dO-kM0gVQz0T0rzE
 
 //https://maps.googleapis.com/maps/api/place/details/json?key=AIzaSyAchY5OHlVXXQyaux0dO-kM0gVQz0T0rzE&placeid=ChIJH5oAJvmDTYcRzb93-p3tQgk&fields=formatted_phone_number
+
+// https://maps.googleapis.com/maps/api/place/details/json?key=AIzaSyAchY5OHlVXXQyaux0dO-kM0gVQz0T0rzE&placeid=ChIJ4bLiLRubTYcRimX3xiHEN5Y&fields=formatted_phone_number,formatted_address,name
+

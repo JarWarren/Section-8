@@ -17,6 +17,6 @@ class ApartmentController {
     
     // MARK: - Methods
     func selectApartment() {
-        // TODO: Implement
+        // TODO: Implement.
     }
 }
