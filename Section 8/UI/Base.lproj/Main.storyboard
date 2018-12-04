@@ -188,7 +188,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="cfK-jR-axS">
-                                    <rect key="frame" x="0.0" y="846" width="414" height="80"/>
+                                    <rect key="frame" x="0.0" y="862" width="414" height="80"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Section8 logo - gray" translatesAutoresizingMaskIntoConstraints="NO" id="SF5-Ct-1C3">
@@ -268,28 +268,28 @@
                                             <outlet property="tipTitleLabel" destination="kaH-ZF-E9z" id="amm-Sa-HT2"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="clickLinkCell" rowHeight="104" id="YIx-m9-db3" customClass="ClickLinkTVCell" customModule="Section_8" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="147" width="414" height="104"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="clickLinkCell" rowHeight="120" id="YIx-m9-db3" customClass="ClickLinkTVCell" customModule="Section_8" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="147" width="414" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YIx-m9-db3" id="Cxc-Ps-1dV">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="103.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="119.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="ClickLink text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwT-Wg-ryI">
-                                                    <rect key="frame" x="20" y="16" width="374" height="20"/>
+                                                    <rect key="frame" x="20" y="31.5" width="374" height="20"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P2A-Cj-pTm">
-                                                    <rect key="frame" x="40" y="52" width="334" height="35.5"/>
+                                                    <rect key="frame" x="40" y="67.5" width="334" height="36"/>
                                                     <color key="backgroundColor" red="0.21224952050000001" green="0.60157132150000003" blue="0.18863901399999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="0qi-Mg-e8g"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <state key="normal" title="(BUTTON TEXT)"/>
+                                                    <state key="normal" title="(CLICKLINK BUTTON TEXT)"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                             <real key="value" value="3"/>
@@ -305,14 +305,23 @@
                                                         <action selector="clickLinkButtonTapped:" destination="YIx-m9-db3" eventType="touchUpInside" id="iD2-ho-w0L"/>
                                                     </connections>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CLICKLINK TITLE" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2qp-93-MVI">
+                                                    <rect key="frame" x="20" y="16" width="374" height="15.5"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
+                                                    <color key="textColor" red="0.21224952050000001" green="0.60157132150000003" blue="0.18863901399999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="jwT-Wg-ryI" firstAttribute="leading" secondItem="Cxc-Ps-1dV" secondAttribute="leading" constant="20" id="5pZ-gd-J7n"/>
+                                                <constraint firstItem="jwT-Wg-ryI" firstAttribute="top" secondItem="2qp-93-MVI" secondAttribute="bottom" id="8Ms-CW-kVa"/>
+                                                <constraint firstAttribute="trailing" secondItem="2qp-93-MVI" secondAttribute="trailing" constant="20" id="CP5-ub-YXf"/>
                                                 <constraint firstAttribute="trailing" secondItem="P2A-Cj-pTm" secondAttribute="trailing" constant="40" id="Jf2-FY-Cgm"/>
-                                                <constraint firstItem="jwT-Wg-ryI" firstAttribute="top" secondItem="Cxc-Ps-1dV" secondAttribute="top" constant="16" id="NXO-Kt-gcQ"/>
+                                                <constraint firstItem="2qp-93-MVI" firstAttribute="top" secondItem="Cxc-Ps-1dV" secondAttribute="top" constant="16" id="Jij-Ob-eEW"/>
                                                 <constraint firstItem="P2A-Cj-pTm" firstAttribute="top" secondItem="jwT-Wg-ryI" secondAttribute="bottom" constant="16" id="Sm2-Xq-1Vs"/>
                                                 <constraint firstAttribute="trailing" secondItem="jwT-Wg-ryI" secondAttribute="trailing" constant="20" id="VEB-2T-uol"/>
                                                 <constraint firstItem="P2A-Cj-pTm" firstAttribute="leading" secondItem="Cxc-Ps-1dV" secondAttribute="leading" constant="40" id="cGl-gg-0So"/>
+                                                <constraint firstItem="2qp-93-MVI" firstAttribute="leading" secondItem="Cxc-Ps-1dV" secondAttribute="leading" constant="20" id="fEw-SR-dYQ"/>
                                                 <constraint firstAttribute="bottom" secondItem="P2A-Cj-pTm" secondAttribute="bottom" constant="16" id="v9d-2U-eoU"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -320,10 +329,11 @@
                                         <connections>
                                             <outlet property="clickLinkButtonText" destination="P2A-Cj-pTm" id="xcD-CI-sfa"/>
                                             <outlet property="clickLinkTextLabel" destination="jwT-Wg-ryI" id="elr-9P-Ona"/>
+                                            <outlet property="clickLinkTitleLabel" destination="2qp-93-MVI" id="Xpm-lU-F13"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="datePickerCell" rowHeight="263" id="uLJ-Na-7Mi" customClass="DatePickerTVCell" customModule="Section_8" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="251" width="414" height="263"/>
+                                        <rect key="frame" x="0.0" y="267" width="414" height="263"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uLJ-Na-7Mi" id="MsL-GV-v63">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="262.5"/>
@@ -370,7 +380,7 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <state key="normal" title="(BUTTON TEXT)"/>
+                                                    <state key="normal" title="(DATEPICKER BUTTON TEXT)"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                             <real key="value" value="4"/>
@@ -412,7 +422,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dataInputCell" rowHeight="207" id="R7b-2W-igQ" customClass="DataInputTVCell" customModule="Section_8" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="514" width="414" height="207"/>
+                                        <rect key="frame" x="0.0" y="530" width="414" height="207"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R7b-2W-igQ" id="vAz-4s-Yaf">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="206.5"/>
@@ -438,7 +448,7 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <state key="normal" title="(BUTTON TEXT)"/>
+                                                    <state key="normal" title="(DATA INPUT BUTTON TEXT)"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                             <real key="value" value="4"/>
@@ -502,7 +512,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dataDisplayCell" rowHeight="125" id="GLG-jh-8u9" customClass="DataDisplayTVCell" customModule="Section_8" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="721" width="414" height="125"/>
+                                        <rect key="frame" x="0.0" y="737" width="414" height="125"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GLG-jh-8u9" id="T2k-fR-qXN">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="124.5"/>

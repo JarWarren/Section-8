@@ -125,8 +125,10 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "clickLinkCell", for: indexPath) as? ClickLinkTVCell else { return UITableViewCell() }
             
             // Configure cell
+            cell.clickLinkTitleLabel?.text = item.title
             cell.clickLinkTextLabel?.text = item.text
             cell.clickLinkButtonText?.setTitle("\(item.buttonText ?? "CLICK TO GO TO LINK")", for: .normal)
+            // CAN WE PASS THROUGH ITEM.URL
             return cell
             
         case .datePicker:
