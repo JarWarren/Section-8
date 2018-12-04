@@ -9,7 +9,11 @@
 import UIKit
 
 class ClickLinkTVCell: UITableViewCell {
-
+    
+    // MARK: - DELEGATE
+    
+    var url: URL?
+    
     // MARK: - OUTLETS
     
     @IBOutlet weak var clickLinkTitleLabel: UILabel!
@@ -19,12 +23,10 @@ class ClickLinkTVCell: UITableViewCell {
     // MARK: - ACTIONS
     
     @IBAction func clickLinkButtonTapped(_ sender: UIButton) {
-        if let url = URL(string: "https://www.waitlistcheck.com/application/form.php?ID=972-UT011") {
+        if let url = url {
             if UIApplication.shared.canOpenURL(url) {
                 UIApplication.shared.open(url, options: [:])
             }
         }
     }
 }
-
-// NEED TO PASS THROUGH ITEM.URL INSTEAD OF HARDCODED URL HERE

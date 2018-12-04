@@ -127,6 +127,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "paragraphCell", for: indexPath) as? ParagraphTVCell else { return UITableViewCell() }
             
             // Configure cell
+            cell.paragraphTitleLabel?.text = item.title
             cell.paragraphTextLabel?.text = item.text
             return cell
             
@@ -137,6 +138,9 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             cell.clickLinkTitleLabel?.text = item.title
             cell.clickLinkTextLabel?.text = item.text
             cell.clickLinkButtonText?.setTitle("\(item.buttonText ?? "CLICK TO GO TO LINK")", for: .normal)
+            if let urlString = item.url {
+                cell.url = URL(string: urlString)
+            }
             // CAN WE PASS THROUGH ITEM.URL
             return cell
             
@@ -152,6 +156,9 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             
         case .dataInput:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "dataInputCell", for: indexPath) as? DataInputTVCell else { return UITableViewCell() }
+            
+            // Set delegate to custom view cell
+            // (Step 5 of 5 - 3 steps in child, 2 in parent(this file))
             cell.delegate = self
             
             // Configure cell
@@ -181,6 +188,8 @@ extension StepDetailTVC: DatePickerTVCellDelegate {
 
 // MARK: - DATA INPUT CELL DELEGATE
 
+// Conforming to delegate set above -
+// (Step 4 of 5 - 3 steps in child, 2 in parent(this file))
 extension StepDetailTVC: DataInputTVCellDelegate {
     func dataInputButtonTapped(_ sender: DataInputTVCell, _ textField1: UITextField, _ textField2: UITextField) {
         // SET UP CODE TO TAKE MAX RENT DATA
