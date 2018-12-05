@@ -12,6 +12,7 @@
 		47BD249121B6F6D100CC6192 /* homeFound.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 47BD249021B6F6D100CC6192 /* homeFound.jpeg */; };
 		47BD249321B7206700CC6192 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BD249221B7206700CC6192 /* Alarm.swift */; };
 		47BD249521B742CC00CC6192 /* AlarmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BD249421B742CC00CC6192 /* AlarmController.swift */; };
+		47C519F121B869870020BC7E /* supermarioghost_1_copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C519F021B869870020BC7E /* supermarioghost_1_copy.png */; };
 		7E1DF3F121B19FBE0012BFEE /* GoogleNetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DF3F021B19FBE0012BFEE /* GoogleNetworkController.swift */; };
 		7E1DF3F421B19FE70012BFEE /* ApartmentLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DF3F221B19FE70012BFEE /* ApartmentLocation.swift */; };
 		7E1DF3F521B19FE70012BFEE /* MapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DF3F321B19FE70012BFEE /* MapMarker.swift */; };
@@ -22,6 +23,8 @@
 		7E67E29921ADE777007E4103 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E67E29721ADE777007E4103 /* Main.storyboard */; };
 		7E67E29B21ADE778007E4103 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E67E29A21ADE778007E4103 /* Assets.xcassets */; };
 		7E67E29E21ADE778007E4103 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E67E29C21ADE778007E4103 /* LaunchScreen.storyboard */; };
+		7E686E1C21B85BB20005D5BB /* SelectedApartment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E686E1B21B85BB20005D5BB /* SelectedApartment.swift */; };
+		7E686E1E21B85BCD0005D5BB /* SelectedApartmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E686E1D21B85BCD0005D5BB /* SelectedApartmentController.swift */; };
 		7EA8381821B6024200E9B9CE /* ApartmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA8381721B6024200E9B9CE /* ApartmentController.swift */; };
 		7EA8381A21B602D400E9B9CE /* Apartment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA8381921B602D400E9B9CE /* Apartment.swift */; };
 		81212AED21B5AC5A0082C88B /* DataInputTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81212AEC21B5AC5A0082C88B /* DataInputTVCell.swift */; };
@@ -50,6 +53,7 @@
 		47BD249021B6F6D100CC6192 /* homeFound.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = homeFound.jpeg; sourceTree = "<group>"; };
 		47BD249221B7206700CC6192 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		47BD249421B742CC00CC6192 /* AlarmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmController.swift; sourceTree = "<group>"; };
+		47C519F021B869870020BC7E /* supermarioghost_1_copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = supermarioghost_1_copy.png; sourceTree = "<group>"; };
 		7E1DF3F021B19FBE0012BFEE /* GoogleNetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleNetworkController.swift; sourceTree = "<group>"; };
 		7E1DF3F221B19FE70012BFEE /* ApartmentLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApartmentLocation.swift; sourceTree = "<group>"; };
 		7E1DF3F321B19FE70012BFEE /* MapMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapMarker.swift; sourceTree = "<group>"; };
@@ -68,6 +72,8 @@
 		7E67E29A21ADE778007E4103 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E67E29D21ADE778007E4103 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E67E29F21ADE778007E4103 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E686E1B21B85BB20005D5BB /* SelectedApartment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedApartment.swift; sourceTree = "<group>"; };
+		7E686E1D21B85BCD0005D5BB /* SelectedApartmentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedApartmentController.swift; sourceTree = "<group>"; };
 		7EA8381721B6024200E9B9CE /* ApartmentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApartmentController.swift; sourceTree = "<group>"; };
 		7EA8381921B602D400E9B9CE /* Apartment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apartment.swift; sourceTree = "<group>"; };
 		81212AEC21B5AC5A0082C88B /* DataInputTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInputTVCell.swift; sourceTree = "<group>"; };
@@ -191,6 +197,7 @@
 				7EA8381921B602D400E9B9CE /* Apartment.swift */,
 				47BD249221B7206700CC6192 /* Alarm.swift */,
 				818FC57B21B84A6C0084323E /* Rent.swift */,
+				7E686E1B21B85BB20005D5BB /* SelectedApartment.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -203,6 +210,7 @@
 				7EA8381721B6024200E9B9CE /* ApartmentController.swift */,
 				47BD249421B742CC00CC6192 /* AlarmController.swift */,
 				818FC57D21B84A760084323E /* RentController.swift */,
+				7E686E1D21B85BCD0005D5BB /* SelectedApartmentController.swift */
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -222,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				7E67E29A21ADE778007E4103 /* Assets.xcassets */,
+				47C519F021B869870020BC7E /* supermarioghost_1_copy.png */,
 				47BD249021B6F6D100CC6192 /* homeFound.jpeg */,
 				7E67E29F21ADE778007E4103 /* Info.plist */,
 				7E67E29321ADE777007E4103 /* AppDelegate.swift */,
@@ -319,6 +328,7 @@
 				7E67E29E21ADE778007E4103 /* LaunchScreen.storyboard in Resources */,
 				7E67E29B21ADE778007E4103 /* Assets.xcassets in Resources */,
 				7E67E29921ADE777007E4103 /* Main.storyboard in Resources */,
+				47C519F121B869870020BC7E /* supermarioghost_1_copy.png in Resources */,
 				7E1DF3F921B1A15F0012BFEE /* Map.storyboard in Resources */,
 				47BD249121B6F6D100CC6192 /* homeFound.jpeg in Resources */,
 			);
@@ -389,6 +399,7 @@
 				81FF0A9721B09EAC004A7EDB /* ParagraphTVCell.swift in Sources */,
 				81212AED21B5AC5A0082C88B /* DataInputTVCell.swift in Sources */,
 				81FF0A9521B09BC6004A7EDB /* StepDetailTVC.swift in Sources */,
+				7E686E1C21B85BB20005D5BB /* SelectedApartment.swift in Sources */,
 				7E1DF3F721B1A0610012BFEE /* MapViewController.swift in Sources */,
 				81FF0A9321B095F6004A7EDB /* ItemController.swift in Sources */,
 				81B7E94E21B1FEC1003A209F /* DatePickerTVCell.swift in Sources */,
@@ -404,6 +415,7 @@
 				818FC57E21B84A760084323E /* RentController.swift in Sources */,
 				7EA8381A21B602D400E9B9CE /* Apartment.swift in Sources */,
 				818FC59E21B868D30084323E /* UITextField+Extensions.swift in Sources */,
+				7E686E1E21B85BCD0005D5BB /* SelectedApartmentController.swift in Sources */,
 				81871F1121B7079700407E51 /* MapTVCell.swift in Sources */,
 				81212AEF21B5CCF90082C88B /* DataDisplayTVCell.swift in Sources */,
 				818FC57C21B84A6C0084323E /* Rent.swift in Sources */,

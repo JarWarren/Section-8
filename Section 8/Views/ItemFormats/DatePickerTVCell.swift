@@ -56,7 +56,7 @@ class DatePickerTVCell: UITableViewCell {
         
         delegate?.datePickerButtonTapped(self, datePicker)
         print("\n\nSet Time Button Tapped in: DatePickerTVCell\n")
-//        buttonPropertiesToggled()
+// when this gets tapped, the work thats in the parent Detail VC code for Date INput BUtton Tapped gets called 
     }
     
     

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MapViewController.swift
 //  GooglePlayground
 //
 //  Created by Jared Warren on 11/28/18.
@@ -16,13 +16,21 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     
     // MARK: - OUTLETS
     
+    @IBOutlet var markerView: UIView!
     @IBOutlet weak var mapInstructionsLabel: UILabel!
+    @IBOutlet weak var apartmentImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
+    @IBOutlet weak var callButton: UIButton!
+    @IBOutlet weak var utahCountyMapView: GMSMapView!
     
     // MARK: - VARIABLES
     
-    @IBOutlet weak var callButton: UIButton!
+    var markerViewIsVisible = false
     var locations: [ApartmentLocation]?
-    var markerView: UIView?
+    
+    // Observers on all of the following properties allow them to both be stored for later persistance, as well as update our outlets automatically.
     var currentPhone: String? {
         didSet {
             self.phoneLabel.text = currentPhone
@@ -30,7 +38,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     }
     var currentName: String? {
         didSet {
-                self.nameLabel.text = self.currentName
+                self.nameLabel.text = currentName
         }
     }
     var currentAddress: String? {
@@ -44,7 +52,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         }
     }
     
-    @IBOutlet weak var utahCountyMapView: GMSMapView!
+    // MARK: - Setup and Data Fetches
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,21 +60,18 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         setupMap()
         addMarkers()
         utahCountyMapView.delegate = self
-        
-        // Set instructions text label
         mapInstructionsLabel.text = NSLocalizedString("6aText", comment: "")
     }
     
-    // MARK: - Setup Methods
     func setupMap() {
         
         utahCountyMapView.delegate = self
+        // Current default camera position is at the "center" of Utah County.
         utahCountyMapView.camera = GMSCameraPosition(target: CLLocationCoordinate2D(latitude: 40.0966, longitude: -111.5707), zoom: 11, bearing: 0, viewingAngle: 0)
         
     }
     
     func addMarkers() {
-        
         
         GoogleNetworkController.fetchNearbyComplexes { (locations) in
             
@@ -79,31 +84,28 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
             }
         }
     }
-    //TODO: Method that takes in a city and returns a CLLocationCoordinate2D in order to position camera.
+    // TODO: Method that takes in a city and returns a CLLocationCoordinate2D in order to position camera.
+    // Said method will operate in synchrony with liquid menu button in lower right corner.
     
-    // MARK: - Data Source Methods
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
-        utahCountyMapView.animate(to: GMSCameraPosition(target: marker.position, zoom: 12, bearing: 0, viewingAngle: 0))
         
-        setupMarkerView(marker: marker)
+        // Move camera to display the tapped marker.
+            utahCountyMapView.animate(to: GMSCameraPosition(target: CLLocationCoordinate2D(latitude: marker.position.latitude - 0.01, longitude: marker.position.longitude), zoom: 12, bearing: 0, viewingAngle: 0))
         
-        if let markerView = markerView {
-            //            markerView.isHidden = false
-            constrainApartmentImageView(view: markerView)
-            constrainNameLabel(view: markerView)
-            constrainPhoneLabel(view: markerView)
-            constrainAddressLabel(view: markerView)
-        }
-        
-        
+        // Check to make sure that the ApartmentLocation and the marker we tapped are, in fact, the same place.
         guard let locations = locations else { return false }
         for location in locations {
             if location.geometry.location.lat == marker.position.latitude && location.geometry.location.lng == marker.position.longitude {
+                
+                // Fetch image from ApartmentLocation, using the photoreference retrieved in setupMarkers function.
                 GoogleNetworkController.fetchPlaceImage(photoReference: location.photos?.first?.photo_reference ?? "") { (image) in
                     DispatchQueue.main.async {
                         self.currentImage = image
+                        self.markerViewIsVisible = true
                     }
                 }
+                
+                // Fetch place details using the place_ID retrieved in setupMarkers function.
                 GoogleNetworkController.fetchPlaceDetails(placeID: location.place_id) { (name, phone, address) in
                     DispatchQueue.main.async {
                         self.currentName = name
@@ -116,21 +118,22 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         return true
     }
     
+    // Any time the map begins to move, the markerView should disappear.
     func mapView(_ mapView: GMSMapView, willMove gesture: Bool) {
+        self.markerView.removeFromSuperview()
+        markerViewIsVisible = false
         
-                 markerView?.isHidden = true
-//        markerView?.removeFromSuperview()
-        //        markerView = nil
-        //TODO: Nuke markerView without ruining map.
     }
     
+    // This method is called any time the map becomes stationary. Our markerView should become visible if we've tapped on a marker and the camera is centered on it - else it should stay invisible.
     func mapViewSnapshotReady(_ mapView: GMSMapView) {
-        markerView?.isHidden = false
-//        guard let markerView = markerView else { return }
-//        utahCountyMapView.addSubview(markerView)
+        
+        guard markerViewIsVisible != false else { return }
+        self.view.addSubview(markerView)
+        self.markerView.center = self.view.center
     }
     
-    // TODO: Figure out why none of the following breakpoints are ever hit/use a different method if necessary.
+    // Optional other methods that we're not currently implementing but that I don't want to forget yet.
     func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
         
         // Called when a marker is about to become selected, and provides an optional custom info window to use for that marker if this method returns a UIView.
@@ -150,12 +153,13 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     }
     
     // MARK: - Actions
+    
     @IBAction func callButtonTapped(_ sender: Any) {
         
         switch true {
         case ApartmentController.shared.selectedApartment == nil :
-            let callAlert = UIAlertController(title: "Choose an Apartment to Call", message: "Select an apartment in order to see more details about it.\nThen, tap the call button again in order to proceed.", preferredStyle: .actionSheet)
-            let backAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            let callAlert = UIAlertController(title: "SEGUE TO STEP 7", message: "Eventually, this button will be a segue instead of an alert.", preferredStyle: .actionSheet)
+            let backAction = UIAlertAction(title: "Got it", style: .default, handler: nil)
             callAlert.addAction(backAction)
             present(callAlert, animated: true, completion: nil)
         case ApartmentController.shared.selectedApartment != nil :
@@ -164,93 +168,5 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
             print("CALLBUTTON ERROR")
         }
         
-    }
-    
-    // MARK: - MarkerView Methods
-    func setupMarkerView(marker: GMSMarker) {
-        
-        let markerView = UIView()
-        self.utahCountyMapView.addSubview(markerView)
-        markerView.translatesAutoresizingMaskIntoConstraints = false
-        markerView.backgroundColor = UIColor.white
-        markerView.cornerRadius = 25
-        markerView.borderWidth = 5
-        markerView.borderColor = UIColor.darkGray
-        NSLayoutConstraint.activate([
-            markerView.heightAnchor.constraint(equalToConstant: 250),
-            markerView.widthAnchor.constraint(equalToConstant: 350),
-            markerView.centerXAnchor.constraint(equalTo: utahCountyMapView.centerXAnchor),
-            markerView.centerYAnchor.constraint(equalTo: utahCountyMapView.centerYAnchor, constant: -150)
-            ])
-        self.markerView = markerView
-        //TODO: Create a reusable custom view that contains name, address, phone and photo.
-    }
-    
-    let apartmentImageView: UIImageView = {
-        var apartment = UIImageView()
-        apartment.backgroundColor = UIColor.brown
-        apartment.cornerRadius = 10
-        return apartment
-    }()
-    func constrainApartmentImageView(view: UIView) {
-        apartmentImageView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(apartmentImageView)
-        NSLayoutConstraint.activate([
-            apartmentImageView.heightAnchor.constraint(equalToConstant: 125),
-            apartmentImageView.widthAnchor.constraint(equalToConstant: 150),
-            apartmentImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
-            apartmentImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 15)
-            ])
-    }
-    
-     var nameLabel: UILabel = {
-        var label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 18)
-        label.numberOfLines = 0
-        return label
-    }()
-    
-    func constrainNameLabel(view: UIView){
-        nameLabel.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(nameLabel)
-        NSLayoutConstraint.activate([
-            nameLabel.widthAnchor.constraint(equalToConstant: 165),
-            nameLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
-            nameLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 10)
-            ])
-    }
-    
-    let phoneLabel: UILabel = {
-        var label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 12)
-        label.textAlignment = .center
-        return label
-    }()
-    func constrainPhoneLabel(view: UIView){
-        phoneLabel.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(phoneLabel)
-        NSLayoutConstraint.activate([
-            phoneLabel.widthAnchor.constraint(equalToConstant: 150),
-            phoneLabel.topAnchor.constraint(equalTo: apartmentImageView.bottomAnchor, constant: 10),
-            phoneLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15)
-            ])
-    }
-    
-    let addressLabel: UILabel = {
-        var label = UILabel()
-        label.text = "1 test 2 address, from, ME 34567"
-        label.numberOfLines = 0
-        label.adjustsFontSizeToFitWidth = true
-        return label
-    }()
-    func constrainAddressLabel(view: UIView){
-        addressLabel.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(addressLabel)
-        NSLayoutConstraint.activate([
-            addressLabel.widthAnchor.constraint(equalToConstant: 165),
-            addressLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 10),
-            addressLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
-            addressLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -80)
-            ])
     }
 }

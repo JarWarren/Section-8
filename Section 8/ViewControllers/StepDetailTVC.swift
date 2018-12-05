@@ -33,12 +33,14 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     
     let timerController = TimerController()
     let timeKeepingId = "timerID"
-    let sevenDayCountDown = TimeInterval(5)
+//    let sevenDayCountDown = TimeInterval(5)
     let sevenDays = 60
-    var boolValueToTestTimer = true
+//    var boolValueToTestTimer = true
     let sevenDayTimerID = "sevenDays"
     let categorySevenNotificationID = "dismissActionKey"
-    
+    let datePActionId = "datePickerNotifID"
+    let datePCategoryId = "dateCatergoryID"
+    var alarmIsOn: Bool = false
     // MARK: - VIEW DID LOAD & VIEW WILL APPEAR
     
     override func viewWillAppear(_ animated: Bool) {
@@ -219,7 +221,22 @@ extension StepDetailTVC: ClickLinkTVCellDelegate {
 
 extension StepDetailTVC: DatePickerTVCellDelegate {
     func datePickerButtonTapped(_ sender: DatePickerTVCell, _ picker: UIDatePicker) {
-        // SET UP NOTIFCATION CENTER STUFF
+         print("\n\n🚀Set Time Button Tapped in: DatePickerTVCell\n")
+        guard let unwrappedStep = selectedStep else {return}
+        
+        let fireDate = picker.date
+        
+        
+        if unwrappedStep.stepNumber == "STEP 4" {
+            // SET UP NOTIFCATION CENTER STUFF
+           
+            
+            let alarm = AlarmController.shared.addAlarm(fireDate: fireDate, alarm: unwrappedStep.stepNumber, isOn: alarmIsOn)
+
+            AlarmController.shared.scheduleDatePickerUserNotifications(for: alarm, scheduleDissmissDateNotifId: "DissMissID", dissmissActionTitle: "Dissmiss", scheduleEditNotifId: "EditNotifID", editDateActionTitle: "Edit Schedule", editDateOption: .authenticationRequired, categoryID: datePCategoryId, contentTitle: "Content Title", contentSubtitle: "Content Subtitle", contentBody: "Content Body", contentBadge: 1, contentSound: .default, contentLuanchImage: "", resourceName: "supermarioghost_1_copy", extenstionType: "png")
+        } else {
+            return
+        }
     }
 }
 
@@ -373,3 +390,45 @@ extension UIView {
         }
     }
 }
+
+extension StepDetailTVC {
+    
+    // MARK: - Time Controller Delegate
+    func timerSecondTick() {
+        // NOTE: - In here we can put in a label that will become a visible timer to show the user how long they have before their housing voucher expires
+        /*
+         example:
+         visableLabel.text = timerontroller.timeAsString()
+         */
+    }
+    
+    func timerCompleted() {
+        timerController.startTimer(time: 3)
+        print("\nTimer hit zero and completed\n")
+    }
+    
+    func timerStopped() {
+        // This func will completely stop the on going 7 day timer 
+        timerController.timer?.invalidate()
+    }
+    
+    func cancelSevenDayNotification() {
+        timerController.cancelLocalNotificationWith(identifier: categorySevenNotificationID)
+        print("\n🐙🗓  7 day notification canceled\n")
+    }
+    
+    func scheduleSevenDayNotification() {
+        print("\n📅 7 day notification set\n")
+        timerController.scheduleLocalNotificationOnTimer(identifier: sevenDayTimerID,
+                                                         actionTitle: "Dismiss", categoryID: categorySevenNotificationID, contentTitle: "Content Title", contentSubtitle: "Content Subtitle", contentBody: "Content Body", contentBadge: 1,
+                                                         contentSound: UNNotificationSound.default, contentLuanchImage: "",
+                                                         desiredTimeInterval: sevenDays, resourceName: "homeFound", extenstionType: "jpeg")
+    }
+    
+    func randomRandom() {
+        timerController
+    }
+    
+}
+
+//..attachImageWith: "homeFound", extenstionType: "jpeg"
