@@ -47,13 +47,13 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcs-yd-QUN">
                                         <rect key="frame" x="40" y="20" width="295" height="35"/>
-                                        <color key="backgroundColor" red="0.29849177599999999" green="0.85634750130000004" blue="0.39206048850000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.21224952050000001" green="0.60157132150000003" blue="0.18863901399999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="3fh-R8-QDf"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="CLICK WHEN STEP IS COMPLETE"/>
+                                        <state key="normal" title="CLICK WHEN STEP 6 IS COMPLETE"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                 <real key="value" value="1"/>
@@ -128,6 +128,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="yJf-AS-fOH"/>
                     <connections>
+                        <outlet property="mapInstructionsLabel" destination="gXB-iS-EZQ" id="mgp-eD-RPa"/>
                         <outlet property="utahCountyMapView" destination="V80-Vl-D1W" id="7u0-B5-XEb"/>
                     </connections>
                 </viewController>
