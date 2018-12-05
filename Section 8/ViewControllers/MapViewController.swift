@@ -14,6 +14,12 @@ import GooglePlaces
 // TODO: Implement marker clustering -> github.com/googlemaps/google-maps-ios-utils
 class MapViewController: UIViewController, GMSMapViewDelegate {
     
+    // MARK: - OUTLETS
+    
+    @IBOutlet weak var mapInstructionsLabel: UILabel!
+    
+    // MARK: - VARIABLES
+    
     @IBOutlet weak var callButton: UIButton!
     var locations: [ApartmentLocation]?
     var markerView: UIView?
@@ -46,6 +52,9 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         setupMap()
         addMarkers()
         utahCountyMapView.delegate = self
+        
+        // Set instructions text label
+        mapInstructionsLabel.text = NSLocalizedString("6aText", comment: "")
     }
     
     // MARK: - Setup Methods

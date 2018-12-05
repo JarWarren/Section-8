@@ -16,9 +16,11 @@ class DataInputTVCell: UITableViewCell {
 
     // MARK: - OUTLETS
     
-    @IBOutlet weak var dataInputTitleLabel: UILabel!
-    @IBOutlet weak var dataInputTextLabel: UILabel!
+    @IBOutlet weak var dataInputTitle1Label: UILabel!
+    @IBOutlet weak var dataInputText1Label: UILabel!
     @IBOutlet weak var dataInputText1Field: UITextField!
+    @IBOutlet weak var dataInputTitle2Label: UILabel!
+    @IBOutlet weak var dataInputText2Label: UILabel!
     @IBOutlet weak var dataInputText2Field: UITextField!
     @IBOutlet weak var dataInputButtonTextLabel: UIButton!
     
