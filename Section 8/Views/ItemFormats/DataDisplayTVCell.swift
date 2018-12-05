@@ -15,4 +15,5 @@ class DataDisplayTVCell: UITableViewCell {
     @IBOutlet weak var dataDisplayTitleLabel: UILabel!
     @IBOutlet weak var dataDisplayTextLabel: UILabel!
     @IBOutlet weak var dataDisplayDataLabel: UILabel!
+    
 }
