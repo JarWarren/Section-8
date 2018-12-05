@@ -25,12 +25,12 @@ class SelectedApartmentController {
     
     private func persistSelectedApartment(asJSON apartment: SelectedApartment) {
         
-        do {
-            let apartmentJSON = try JSONEncoder().encode(apartment)
-            
-        } catch {
-            print("FAILED TO PERSIST SELECTED APARTMENT")
-        }
+//        do {
+//            let apartmentJSON = try JSONEncoder().encode(apartment)
+//            
+//        } catch {
+//            print("FAILED TO PERSIST SELECTED APARTMENT")
+//        }
     }
     
     private func fileURL() -> URL {
