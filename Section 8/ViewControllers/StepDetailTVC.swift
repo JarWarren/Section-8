@@ -30,12 +30,17 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var completeButtonStatus: UIButton!
     
-    // MARK: - Constants
+    // MARK: - CONSTANTS
     
     let timerController = TimerController()
     let timeKeepingId = "timerID"
     let sevenDayCountDown = TimeInterval(5)
-    var boolValueToTestTimer = false
+    let sevenDays = 60
+    var boolValueToTestTimer = true
+    let sevenDayTimerID = "sevenDays"
+    let categorySevenNotificationID = "dismissActionKey"
+    
+    // MARK: - VIEW DID LOAD & VIEW WILL APPEAR
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -44,24 +49,11 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // timer
-        timerController.delegate = self
-        
-        if timerController.isOn && boolValueToTestTimer == true {
-            timerController.startTimer(time: 5)
-            
-        } else {
-        timerStopped()
-            boolValueToTestTimer = false
-        }
-        
-        timerController.startTimer(time: sevenDayCountDown)
-       
         
         // Change title to specific step
         if let thisStep = selectedStep {
             if !thisStep.stepCompleted {
-
+                
                 completeButtonStatus.setTitle(" CLICK WHEN \(thisStep.stepNumber) IS COMPLETE ", for: .normal)
             } else {
                 completeButtonStatus.setTitle(" CLICK TO CHANGE \(thisStep.stepNumber) TO INCOMPLETE ", for: .normal)
@@ -70,6 +62,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             self.stepNumberLabel.text = thisStep.stepNumber
             self.stepImageView.image = UIImage(named: thisStep.stepImageName)
         }
+        
     }
     
     // MARK: - ACTIONS
@@ -84,10 +77,29 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             print("🔥Step # \(unwrappedStep.stepNumber) was originally set to Complete but now its not compelted😭")
             unwrappedStep.stepCompleted = false
         }
-        
-        
-        
+        checkButtonStatusNotificationSet()
+        finalStepButtonTapped()
         navigationController?.popViewController(animated: true)
+    }
+    
+    func checkButtonStatusNotificationSet() {
+        guard let unwrappedStep = selectedStep else {return}
+        if unwrappedStep.stepNumber != "STEP 14"  {
+            cancelSevenDayNotification()
+            scheduleSevenDayNotification()
+        }
+    }
+    
+    func finalStepButtonTapped() {
+        guard let unwrappedStep = selectedStep else {return}
+        if unwrappedStep.stepNumber == "STEP 14" && unwrappedStep.stepCompleted == true {
+            UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+            UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+        } else {
+            if unwrappedStep.stepNumber == "STEP 14" && unwrappedStep.stepCompleted != true {
+                scheduleSevenDayNotification()
+            }
+        }
     }
     
     // MARK: - TABLE VIEW DATA SOURCE
@@ -114,6 +126,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "paragraphCell", for: indexPath) as? ParagraphTVCell else { return UITableViewCell() }
             
             // Configure cell
+            cell.paragraphTitleLabel?.text = item.title
             cell.paragraphTextLabel?.text = item.text
             return cell
             
@@ -121,8 +134,13 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "clickLinkCell", for: indexPath) as? ClickLinkTVCell else { return UITableViewCell() }
             
             // Configure cell
+            cell.clickLinkTitleLabel?.text = item.title
             cell.clickLinkTextLabel?.text = item.text
             cell.clickLinkButtonText?.setTitle("\(item.buttonText ?? "CLICK TO GO TO LINK")", for: .normal)
+            if let urlString = item.url {
+                cell.url = URL(string: urlString)
+            }
+            // CAN WE PASS THROUGH ITEM.URL
             return cell
             
         case .datePicker:
@@ -134,17 +152,57 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             cell.datePickerTextLabel?.text = item.text
             cell.datePickerButtonTextLabel?.setTitle("\(item.buttonText ?? "CLICK TO SET DATE")", for: .normal)
             return cell
+            
+        case .dataInput:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "dataInputCell", for: indexPath) as? DataInputTVCell else { return UITableViewCell() }
+            
+            // Set delegate to custom view cell
+            // (Step 5 of 5 - 3 steps in child, 2 in parent(this file))
+            cell.delegate = self
+            
+            // Configure cell
+            cell.dataInputTitleLabel?.text = item.title
+            cell.dataInputTextLabel?.text = item.text
+            return cell
+            
+        case .dataDisplay:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "dataDisplayCell", for: indexPath) as? DataDisplayTVCell else { return UITableViewCell() }
+            
+            // Configure cell
+            cell.dataDisplayTitleLabel.text = item.title
+            cell.dataDisplayTextLabel?.text = item.text
+            cell.dataDisplayDataLabel?.text = "NEED TO LINK TO MAX RENT"
+            return cell
+            
+        case .map:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "mapCell", for: indexPath) as? MapTVCell else { return UITableViewCell() }
+            
+            // Configure cell
+            cell.mapTextLabel.text = item.text
+            return cell
         }
     }
 }
 
+// MARK: - DATE PICKER CELL DELEGATE
+
 extension StepDetailTVC: DatePickerTVCellDelegate {
     func datePickerButtonTapped(_ sender: DatePickerTVCell, _ picker: UIDatePicker) {
-        // Set up notification center stuff
+        // SET UP NOTIFCATION CENTER STUFF
     }
-    
-    
 }
+
+// MARK: - DATA INPUT CELL DELEGATE
+
+// Conforming to delegate set above -
+// (Step 4 of 5 - 3 steps in child, 2 in parent(this file))
+extension StepDetailTVC: DataInputTVCellDelegate {
+    func dataInputButtonTapped(_ sender: DataInputTVCell, _ textField1: UITextField, _ textField2: UITextField) {
+        // SET UP CODE TO TAKE MAX RENT DATA
+    }
+}
+
+// MARK: - ATTRIBUTES INSPECTOR EXPANDER CODE
 
 extension UIView {
     
@@ -254,5 +312,23 @@ extension StepDetailTVC {
         timerController.timer?.invalidate()
     }
     
-  
+    func cancelSevenDayNotification() {
+        timerController.cancelLocalNotificationWith(identifier: categorySevenNotificationID)
+        print("\n🐙🗓  7 day notification canceled\n")
+    }
+    
+    func scheduleSevenDayNotification() {
+        print("\n📅 7 day notification set\n")
+        timerController.scheduleLocalNotificationOnTimer(identifier: sevenDayTimerID,
+                                                      actionTitle: "Dismiss", categoryID: categorySevenNotificationID, contentTitle: "Content Title", contentSubtitle: "Content Subtitle", contentBody: "Content Body", contentBadge: 1,
+                                                      contentSound: UNNotificationSound.default, contentLuanchImage: "",
+                                                      desiredTimeInterval: sevenDays, resourceName: "homeFound", extenstionType: "jpeg")
+    }
+    
+    func randomRandom() {
+        timerController
+    }
+   
 }
+
+//..attachImageWith: "homeFound", extenstionType: "jpeg"

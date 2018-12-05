@@ -12,6 +12,7 @@ class ParagraphTVCell: UITableViewCell {
 
     // MARK: - OUTLETS
     
+    @IBOutlet weak var paragraphTitleLabel: UILabel!
     @IBOutlet weak var paragraphTextLabel: UILabel!
     
 }

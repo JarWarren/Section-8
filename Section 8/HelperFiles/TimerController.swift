@@ -135,7 +135,7 @@ class TimerController {
     
     
     // This is a reUsable schedul Notifc alert however it needs to be worked on
-    func scheduleLocalNotificationFor2(identifier: String, actionTitle: String, categoryID: String, contentTitle: String, contentBody: String, contentBadge: NSNumber, contentSound: UNNotificationSound, contentLuanchImage: String, timeRemaining: TimeInterval?) {
+    func scheduleLocalNotificationOnTimer(identifier: String, actionTitle: String, categoryID: String, contentTitle: String, contentSubtitle: String, contentBody: String, contentBadge: NSNumber, contentSound: UNNotificationSound, contentLuanchImage: String, desiredTimeInterval: Int, resourceName: String, extenstionType: String) {
         
         // The Alert Button options
         let action = UNNotificationAction(identifier: identifier, title: actionTitle, options: [])
@@ -145,21 +145,72 @@ class TimerController {
         // MARK: - The notification payload
         let content = UNMutableNotificationContent()
         content.title = contentTitle
+        content.subtitle = contentSubtitle
         content.body = contentBody
         content.badge = contentBadge
         content.sound = contentSound
         content.launchImageName = contentLuanchImage
         //This is the String ID for what we want to prseent to the user
         content.categoryIdentifier = categoryID
+         /*When you schedule a notification request containing the attachment, the attachment’s file is moved to a new location to facilitate access by the appropriate processes. After the move, the only way to access the file is using the methods of the UNUserNotificationCenter object.*/
+//        guard let url = Bundle.main.url(forResource: "homeFound", withExtension: "jpeg") else {return}
+         guard let url = Bundle.main.url(forResource: resourceName, withExtension: extenstionType) else {return}
+        do {
+            let attachments =  try UNNotificationAttachment(identifier: categoryID, url: url, options: [:])
+            
+            content.attachments = [attachments]
+        } catch {
+            print("\n\n🚀 There was an error with the attachment in: \(#file) \n\n \(#function); \n\n\(error); \n\n\(error.localizedDescription) 🚀\n\n")
+        }
         
-        guard let timeRemaining = timeRemaining else {return}
-        let date = Date(timeInterval: timeRemaining, since: Date()) // Date() the time right now. ugly date
-        let dateComponents = Calendar.current.dateComponents([.minute, .second], from: date) // pretty calendar based on the users
         
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false) // date component based on the date composition of the user's device. you can chop up the date cmpoonents to get what you want
-        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(desiredTimeInterval), repeats: true)
         
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request) { (error) in
+            if let error = error {
+                print("💩 There was an error in \(#function) ; (error) ; \(error.localizedDescription) 💩")
+            }
+        }
+    }
+    
+    
+    // MARK: - Calendar Notification
+    func scheduleLocalNotificationOnDate(schedulateDateNotifId: String, dissmissActionTitle: String, editDateActionTitle: String, editDateOption: UNNotificationActionOptions,  categoryID: String, contentTitle: String, contentSubtitle: String, contentBody: String, contentBadge: NSNumber, contentSound: UNNotificationSound, contentLuanchImage: String, desiredTimeInterval: Int, resourceName: String, extenstionType: String, alrmComponent: Date) {
+        
+        // The Alert Button options
+        let dissmissAction = UNNotificationAction(identifier: schedulateDateNotifId, title: dissmissActionTitle, options: [])
+        let editDateAction = UNNotificationAction(identifier: schedulateDateNotifId, title: editDateActionTitle, options: [editDateOption])
+        let category = UNNotificationCategory(identifier: categoryID, actions: [dissmissAction, editDateAction], intentIdentifiers: [], options: [.customDismissAction])
+        UNUserNotificationCenter.current().setNotificationCategories([category])
+        
+        // MARK: - The notification payload
+        let content = UNMutableNotificationContent()
+        content.title = contentTitle
+        content.subtitle = contentSubtitle
+        content.body = contentBody
+        content.badge = contentBadge
+        content.sound = contentSound
+        content.launchImageName = contentLuanchImage
+        //This is the String ID for what we want to prseent to the user
+        content.categoryIdentifier = categoryID
+        /*When you schedule a notification request containing the attachment, the attachment’s file is moved to a new location to facilitate access by the appropriate processes. After the move, the only way to access the file is using the methods of the UNUserNotificationCenter object.*/
+        //        guard let url = Bundle.main.url(forResource: "homeFound", withExtension: "jpeg") else {return}
+        guard let url = Bundle.main.url(forResource: resourceName, withExtension: extenstionType) else {return}
+        do {
+            let attachments =  try UNNotificationAttachment(identifier: categoryID, url: url, options: [:])
+            
+            content.attachments = [attachments]
+        } catch {
+            print("\n\n🚀 There was an error with the attachment in: \(#file) \n\n \(#function); \n\n\(error); \n\n\(error.localizedDescription) 🚀\n\n")
+        }
+        
+        let componets = Calendar.current.dateComponents([.hour, .minute], from: alrmComponent)
+        
+        let trigger = UNCalendarNotificationTrigger(dateMatching: componets, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: schedulateDateNotifId, content: content, trigger: trigger)
+        
         UNUserNotificationCenter.current().add(request) { (error) in
             if let error = error {
                 print("💩 There was an error in \(#function) ; (error) ; \(error.localizedDescription) 💩")

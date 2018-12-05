@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         GMSServices.provideAPIKey("AIzaSyAchY5OHlVXXQyaux0dO-kM0gVQz0T0rzE")
         
         // User Notifcation
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge]) { (granted, error) in
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
             
             if granted {
                 print("Permission for notificationw as granted by the user")
@@ -40,9 +40,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         return true
     }
     
+
     // Ivan - Not sure what this does just yet
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         
+        defer {
+            completionHandler()
+        }
+        
+        switch response.actionIdentifier {
+        case UNNotificationDismissActionIdentifier:
+            print("/n🥶 dissmiss action tapped on the pop up notifcation/n")
+        case UNNotificationDefaultActionIdentifier:
+            print("\n😜 UNNotificationDefaultActionIdentifier: User Tapped the Title area of the notifcation and was segued to the app \n")
+        default:
+            print("\nUser Tapped The Dississ Button")
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -57,6 +70,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+        application.applicationIconBadgeNumber = 0;
+
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
