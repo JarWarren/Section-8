@@ -12,6 +12,7 @@
 		47BD249121B6F6D100CC6192 /* homeFound.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 47BD249021B6F6D100CC6192 /* homeFound.jpeg */; };
 		47BD249321B7206700CC6192 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BD249221B7206700CC6192 /* Alarm.swift */; };
 		47BD249521B742CC00CC6192 /* AlarmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BD249421B742CC00CC6192 /* AlarmController.swift */; };
+		47C519F121B869870020BC7E /* supermarioghost_1_copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C519F021B869870020BC7E /* supermarioghost_1_copy.png */; };
 		7E1DF3F121B19FBE0012BFEE /* GoogleNetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DF3F021B19FBE0012BFEE /* GoogleNetworkController.swift */; };
 		7E1DF3F421B19FE70012BFEE /* ApartmentLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DF3F221B19FE70012BFEE /* ApartmentLocation.swift */; };
 		7E1DF3F521B19FE70012BFEE /* MapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DF3F321B19FE70012BFEE /* MapMarker.swift */; };
@@ -49,6 +50,7 @@
 		47BD249021B6F6D100CC6192 /* homeFound.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = homeFound.jpeg; sourceTree = "<group>"; };
 		47BD249221B7206700CC6192 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		47BD249421B742CC00CC6192 /* AlarmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmController.swift; sourceTree = "<group>"; };
+		47C519F021B869870020BC7E /* supermarioghost_1_copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = supermarioghost_1_copy.png; sourceTree = "<group>"; };
 		7E1DF3F021B19FBE0012BFEE /* GoogleNetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleNetworkController.swift; sourceTree = "<group>"; };
 		7E1DF3F221B19FE70012BFEE /* ApartmentLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApartmentLocation.swift; sourceTree = "<group>"; };
 		7E1DF3F321B19FE70012BFEE /* MapMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapMarker.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				7E67E29A21ADE778007E4103 /* Assets.xcassets */,
+				47C519F021B869870020BC7E /* supermarioghost_1_copy.png */,
 				47BD249021B6F6D100CC6192 /* homeFound.jpeg */,
 				7E67E29F21ADE778007E4103 /* Info.plist */,
 				7E67E29321ADE777007E4103 /* AppDelegate.swift */,
@@ -316,6 +319,7 @@
 				7E67E29E21ADE778007E4103 /* LaunchScreen.storyboard in Resources */,
 				7E67E29B21ADE778007E4103 /* Assets.xcassets in Resources */,
 				7E67E29921ADE777007E4103 /* Main.storyboard in Resources */,
+				47C519F121B869870020BC7E /* supermarioghost_1_copy.png in Resources */,
 				7E1DF3F921B1A15F0012BFEE /* Map.storyboard in Resources */,
 				47BD249121B6F6D100CC6192 /* homeFound.jpeg in Resources */,
 			);
