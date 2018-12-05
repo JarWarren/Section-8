@@ -435,7 +435,7 @@
                                         <color key="backgroundColor" red="0.92944163079999997" green="0.97314912080000004" blue="0.93725079300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <outlet property="datePicker" destination="PaX-tC-hJ7" id="Guy-mh-cpe"/>
-                                            <outlet property="datePickerButtonTextLabel" destination="byc-O9-kez" id="ydc-7R-CXL"/>
+                                            <outlet property="datePickerButton" destination="byc-O9-kez" id="ydc-7R-CXL"/>
                                             <outlet property="datePickerTextLabel" destination="k49-OZ-Vvn" id="cYO-uc-3EU"/>
                                             <outlet property="datePickerTitleLabel" destination="np2-6U-1I6" id="KQv-LG-GWa"/>
                                         </connections>
