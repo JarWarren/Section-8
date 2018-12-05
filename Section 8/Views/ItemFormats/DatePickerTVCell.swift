@@ -10,6 +10,11 @@ import UIKit
 
 class DatePickerTVCell: UITableViewCell {
     
+    // MARK: - SET DELEGATE
+    
+    // Set delegate to protocol in child
+    // (Step 2 of 5 - 3 steps in child (this file), 2 in parent)
+    
     weak var delegate: DatePickerTVCellDelegate?
     
     // MARK: - OUTLETS
@@ -40,12 +45,15 @@ class DatePickerTVCell: UITableViewCell {
         datePicker.date = alarm.fireDate
         alarmIsOn = alarm.isOn
         // NOTE: - Not sure if we need the buttonProToggeled in here
-       
     }
 
     // MARK: - ACTIONS
     
     @IBAction func datePickerButtonTapped(_ sender: Any) {
+        
+        // Call the delegate function
+        // (Step 3 of 5 - 3 steps in child (this file), 2 in parent)
+        
         delegate?.datePickerButtonTapped(self, datePicker)
         print("\n\nSet Time Button Tapped in: DatePickerTVCell\n")
 //        buttonPropertiesToggled()
@@ -54,7 +62,10 @@ class DatePickerTVCell: UITableViewCell {
     
 }
 
+// MARK: - CUSTOM PROTOCOL FOR DELEGATE
 
+// Create custom protocol for delegate so we can collect data in custom view and pass it to view controller
+// (Step 1 of 5 - 3 steps in child (this file), 2 in parent)
 
 protocol DatePickerTVCellDelegate: class {
     func datePickerButtonTapped(_ sender: DatePickerTVCell, _ picker: UIDatePicker)

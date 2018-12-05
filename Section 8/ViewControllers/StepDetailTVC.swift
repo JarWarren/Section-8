@@ -11,7 +11,6 @@ import UserNotifications
 
 class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegate, TimerControllerDelegete {
     
-    
     // MARK: - LANDING PAD & SOURCE OF TRUTH
     
     var selectedStep: Step? {
@@ -49,6 +48,8 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Persistence
+        RentController.shared.loadFromPersistentStorage()
         
         // Change title to specific step
         if let thisStep = selectedStep {
@@ -62,7 +63,6 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             self.stepNumberLabel.text = thisStep.stepNumber
             self.stepImageView.image = UIImage(named: thisStep.stepImageName)
         }
-        
     }
     
     // MARK: - ACTIONS
@@ -111,6 +111,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = items[indexPath.row]
         
+        // Switch to choose which custom cell mataches the item format
         switch item.format {
             
         case .tip:
@@ -133,6 +134,10 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         case .clickLink:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "clickLinkCell", for: indexPath) as? ClickLinkTVCell else { return UITableViewCell() }
             
+            // Set delegate to custom view cell
+            // (Step 5 of 5 - 3 steps in child, 2 in parent(this file))
+            cell.delegate = self
+            
             // Configure cell
             cell.clickLinkTitleLabel?.text = item.title
             cell.clickLinkTextLabel?.text = item.text
@@ -140,11 +145,13 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             if let urlString = item.url {
                 cell.url = URL(string: urlString)
             }
-            // CAN WE PASS THROUGH ITEM.URL
             return cell
             
         case .datePicker:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "datePickerCell", for: indexPath) as? DatePickerTVCell else { return UITableViewCell() }
+            
+            // Set delegate to custom view cell
+            // (Step 5 of 5 - 3 steps in child, 2 in parent(this file))
             cell.delegate = self
             
             // Configure cell
@@ -165,29 +172,50 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             cell.dataInputText1Label?.text = item.text
             cell.dataInputTitle2Label?.text = item.url
             cell.dataInputText2Label?.text = item.graphicName
+            cell.dataInputText2Field?.text = String(describing: RentController.shared.rent?.voucherAmount)
             cell.dataInputButtonTextLabel?.setTitle("\(item.buttonText ?? "CLICK TO SAVE")", for: .normal)
+            
+            // Passing through to fields household income and voucher amount, if entered previously
+            if let householdIncome = RentController.shared.rent?.householdIncome {
+                cell.dataInputText1Field?.text = String(describing: householdIncome)
+            } else {
+                cell.dataInputText1Field.text = ""
+            }
+            if let voucherAmount = RentController.shared.rent?.voucherAmount {
+                cell.dataInputText2Field?.text = String(describing: voucherAmount)
+            } else {
+                cell.dataInputText2Field.text = ""
+            }
             return cell
             
         case .dataDisplay:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "dataDisplayCell", for: indexPath) as? DataDisplayTVCell else { return UITableViewCell() }
-            
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "dataDisplayCell", for: indexPath) as? DataDisplayTVCell, let rent = RentController.shared.rent else { return UITableViewCell() }
             // Configure cell
             cell.dataDisplayTitleLabel.text = item.title
             cell.dataDisplayTextLabel?.text = item.text
-            cell.dataDisplayDataLabel?.text = "NEED TO LINK TO MAX RENT"
-            return cell
-            
-        case .map:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "mapCell", for: indexPath) as? MapTVCell else { return UITableViewCell() }
-            
-            // Configure cell
-            cell.mapTextLabel.text = item.text
+            cell.dataDisplayDataLabel?.text = "$\(rent.maxRent) per month or lower"
             return cell
         }
     }
 }
 
+// MARK: - CLICK LINK CELL DELEGATE
+
+// Conforming to delegate set above -
+// (Step 4 of 5 - 3 steps in child, 2 in parent(this file))
+
+extension StepDetailTVC: ClickLinkTVCellDelegate {
+    func clickLinkButtonTapped(_ sender: ClickLinkTVCell) {
+        if sender.clickLinkButtonText?.titleLabel?.text == NSLocalizedString("7hButtonText", comment: "") {
+            performSegue(withIdentifier: "backToMapDetail", sender: nil)
+        }
+    }
+}
+
 // MARK: - DATE PICKER CELL DELEGATE
+
+// Conforming to delegate set above -
+// (Step 4 of 5 - 3 steps in child, 2 in parent(this file))
 
 extension StepDetailTVC: DatePickerTVCellDelegate {
     func datePickerButtonTapped(_ sender: DatePickerTVCell, _ picker: UIDatePicker) {
@@ -202,9 +230,60 @@ extension StepDetailTVC: DatePickerTVCellDelegate {
 
 extension StepDetailTVC: DataInputTVCellDelegate {
     func dataInputButtonTapped(_ sender: DataInputTVCell, _ textField1: UITextField, _ textField2: UITextField) {
-        // SET UP CODE TO TAKE MAX RENT DATA
+        
+        // Unwrap
+        guard let householdIncomeAsString = textField1.text,
+            let householdIncome = Int(householdIncomeAsString),
+            let voucherAmountAsString = textField2.text,
+            let voucherAmount = Int(voucherAmountAsString) else { return }
+        
+        // Generate the max rent and reload the tableView to show amount
+        RentController.shared.createMaxRent(householdIncome: householdIncome, voucherAmount: voucherAmount)
+        tableView.reloadData()
     }
 }
+
+// MARK: - TIMER CONTROLLER DELEGATE
+
+extension StepDetailTVC {
+    
+    func timerSecondTick() {
+        // NOTE: - In here we can put in a label that will become a visible timer to show the user how long they have before their housing voucher expires
+        /*
+         example:
+         visableLabel.text = timerontroller.timeAsString()
+         */
+    }
+    
+    func timerCompleted() {
+        timerController.startTimer(time: 3)
+        print("\nTimer hit zero and completed\n")
+    }
+    
+    func timerStopped() {
+        // This func will completely stop the on going 7 day timer 
+        timerController.timer?.invalidate()
+    }
+    
+    func cancelSevenDayNotification() {
+        timerController.cancelLocalNotificationWith(identifier: categorySevenNotificationID)
+        print("\n🐙🗓  7 day notification canceled\n")
+    }
+    
+    func scheduleSevenDayNotification() {
+        print("\n📅 7 day notification set\n")
+        timerController.scheduleLocalNotificationOnTimer(identifier: sevenDayTimerID,
+                                                      actionTitle: "Dismiss", categoryID: categorySevenNotificationID, contentTitle: "Content Title", contentSubtitle: "Content Subtitle", contentBody: "Content Body", contentBadge: 1,
+                                                      contentSound: UNNotificationSound.default, contentLuanchImage: "",
+                                                      desiredTimeInterval: sevenDays, resourceName: "homeFound", extenstionType: "jpeg")
+    }
+    
+    func randomRandom() {
+        timerController
+    }
+   
+}
+//..attachImageWith: "homeFound", extenstionType: "jpeg"
 
 // MARK: - ATTRIBUTES INSPECTOR EXPANDER CODE
 
@@ -294,45 +373,3 @@ extension UIView {
         }
     }
 }
-
-extension StepDetailTVC {
-    
-    // MARK: - Time Controller Delegate
-    func timerSecondTick() {
-        // NOTE: - In here we can put in a label that will become a visible timer to show the user how long they have before their housing voucher expires
-        /*
-         example:
-         visableLabel.text = timerontroller.timeAsString()
-         */
-    }
-    
-    func timerCompleted() {
-        timerController.startTimer(time: 3)
-        print("\nTimer hit zero and completed\n")
-    }
-    
-    func timerStopped() {
-        // This func will completely stop the on going 7 day timer 
-        timerController.timer?.invalidate()
-    }
-    
-    func cancelSevenDayNotification() {
-        timerController.cancelLocalNotificationWith(identifier: categorySevenNotificationID)
-        print("\n🐙🗓  7 day notification canceled\n")
-    }
-    
-    func scheduleSevenDayNotification() {
-        print("\n📅 7 day notification set\n")
-        timerController.scheduleLocalNotificationOnTimer(identifier: sevenDayTimerID,
-                                                      actionTitle: "Dismiss", categoryID: categorySevenNotificationID, contentTitle: "Content Title", contentSubtitle: "Content Subtitle", contentBody: "Content Body", contentBadge: 1,
-                                                      contentSound: UNNotificationSound.default, contentLuanchImage: "",
-                                                      desiredTimeInterval: sevenDays, resourceName: "homeFound", extenstionType: "jpeg")
-    }
-    
-    func randomRandom() {
-        timerController
-    }
-   
-}
-
-//..attachImageWith: "homeFound", extenstionType: "jpeg"

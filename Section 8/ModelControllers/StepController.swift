@@ -169,10 +169,6 @@ class StepController {
                 // Item 6a
                 ItemController.addNewItem(title: nil, text: NSLocalizedString("6aText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
-                // Item 6b
-                ItemController.addNewItem(title: nil, text: nil, buttonText: nil, url: nil, graphicName: nil, format: .map, step: step)
-                
-                
             // MARK: - STEP 7
                 
             case NSLocalizedString("STEP", comment: "") + " 7":

@@ -508,14 +508,17 @@
                                                         <action selector="dataInputButtonTapped:" destination="R7b-2W-igQ" eventType="touchUpInside" id="Ryq-VV-ySD"/>
                                                     </connections>
                                                 </button>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter total household income here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NGe-uE-Qry">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter total household income here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NGe-uE-Qry">
                                                     <rect key="frame" x="20" y="59.5" width="374" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="idE-3o-yPc"/>
                                                     </constraints>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </textField>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter voucher amount here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3ke-g8-gtk">
                                                     <rect key="frame" x="20" y="154" width="374" height="35"/>
@@ -524,7 +527,10 @@
                                                     </constraints>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DATA INPUT URL" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BjB-4h-Fhq">
                                                     <rect key="frame" x="20" y="110.5" width="374" height="15.5"/>
@@ -735,19 +741,12 @@
                         <outlet property="stepNameLabel" destination="ApV-zV-Lz3" id="DZb-5h-m0e"/>
                         <outlet property="stepNumberLabel" destination="Yrz-J2-Vss" id="6PC-Tq-JYb"/>
                         <outlet property="tableView" destination="imp-Hq-xDe" id="VWm-xV-fcP"/>
+                        <segue destination="c3P-Uc-vsQ" kind="show" identifier="backToMapDetail" id="vc9-0t-CZl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0qf-zI-W0g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1831.8840579710147" y="106.47321428571428"/>
-        </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="irF-tM-2fJ">
-            <objects>
-                <viewControllerPlaceholder id="yar-56-akc" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8fV-hP-jnM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2612" y="382"/>
         </scene>
     </scenes>
     <resources>
@@ -4445,4 +4444,7 @@ AAAAA12iA
 </mutableData>
         </image>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="vc9-0t-CZl"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -8,10 +8,15 @@
 
 import UIKit
 
-class DataInputTVCell: UITableViewCell {
+class DataInputTVCell: UITableViewCell, UITextFieldDelegate {
+    
+    static let shared = DataInputTVCell()
+    
+    // MARK: - SET DELEGATE
     
     // Set delegate to protocol in child
     // (Step 2 of 5 - 3 steps in child (this file), 2 in parent)
+    
     weak var delegate: DataInputTVCellDelegate?
 
     // MARK: - OUTLETS
@@ -26,16 +31,28 @@ class DataInputTVCell: UITableViewCell {
     
     // MARK: - ACTIONS
     
+    func random(){
+        
+    }
+    
     @IBAction func dataInputButtonTapped(_ sender: Any) {
         
         // Call the delegate function
         // (Step 3 of 5 - 3 steps in child (this file), 2 in parent)
+        
         delegate?.dataInputButtonTapped(self, dataInputText1Field, dataInputText2Field)
+        
+        // Reload view after changing input data
+        self.superview?.reloadInputViews()
     }
 }
 
+// MARK: - CUSTOM PROTOCOL FOR DELEGATE
+
 // Create custom protocol for delegate so we can collect data in custom view and pass it to view controller
 // (Step 1 of 5 - 3 steps in child (this file), 2 in parent)
+
 protocol DataInputTVCellDelegate: class {
+    
     func dataInputButtonTapped(_ sender: DataInputTVCell, _ textField1: UITextField, _ textField2: UITextField)
 }
