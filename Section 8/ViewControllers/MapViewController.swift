@@ -38,7 +38,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     }
     var currentName: String? {
         didSet {
-                self.nameLabel.text = self.currentName
+                self.nameLabel.text = currentName
         }
     }
     var currentAddress: String? {
