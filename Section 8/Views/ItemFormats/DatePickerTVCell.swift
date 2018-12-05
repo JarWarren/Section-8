@@ -48,13 +48,11 @@ class DatePickerTVCell: UITableViewCell {
     @IBAction func datePickerButtonTapped(_ sender: Any) {
         delegate?.datePickerButtonTapped(self, datePicker)
         print("\n\nSet Time Button Tapped in: DatePickerTVCell\n")
-//        buttonPropertiesToggled()
+// when this gets tapped, the work thats in the parent Detail VC code for Date INput BUtton Tapped gets called 
     }
     
     
 }
-
-
 
 protocol DatePickerTVCellDelegate: class {
     func datePickerButtonTapped(_ sender: DatePickerTVCell, _ picker: UIDatePicker)

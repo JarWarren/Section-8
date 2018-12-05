@@ -34,12 +34,14 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     
     let timerController = TimerController()
     let timeKeepingId = "timerID"
-    let sevenDayCountDown = TimeInterval(5)
+//    let sevenDayCountDown = TimeInterval(5)
     let sevenDays = 60
-    var boolValueToTestTimer = true
+//    var boolValueToTestTimer = true
     let sevenDayTimerID = "sevenDays"
     let categorySevenNotificationID = "dismissActionKey"
-    
+    let datePActionId = "datePickerNotifID"
+    let datePCategoryId = "dateCatergoryID"
+    var alarmIsOn: Bool = false
     // MARK: - VIEW DID LOAD & VIEW WILL APPEAR
     
     override func viewWillAppear(_ animated: Bool) {
@@ -191,7 +193,22 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
 
 extension StepDetailTVC: DatePickerTVCellDelegate {
     func datePickerButtonTapped(_ sender: DatePickerTVCell, _ picker: UIDatePicker) {
-        // SET UP NOTIFCATION CENTER STUFF
+         print("\n\n🚀Set Time Button Tapped in: DatePickerTVCell\n")
+        guard let unwrappedStep = selectedStep else {return}
+        
+        let fireDate = picker.date
+        
+        
+        if unwrappedStep.stepNumber == "STEP 4" {
+            // SET UP NOTIFCATION CENTER STUFF
+           
+            
+            let alarm = AlarmController.shared.addAlarm(fireDate: fireDate, alarm: unwrappedStep.stepNumber, isOn: alarmIsOn)
+
+            AlarmController.shared.scheduleDatePickerUserNotifications(for: alarm, scheduleDissmissDateNotifId: "DissMissID", dissmissActionTitle: "Dissmiss", scheduleEditNotifId: "EditNotifID", editDateActionTitle: "Edit Schedule", editDateOption: .authenticationRequired, categoryID: datePCategoryId, contentTitle: "Content Title", contentSubtitle: "Content Subtitle", contentBody: "Content Body", contentBadge: 1, contentSound: .default, contentLuanchImage: "", resourceName: "supermarioghost_1_copy", extenstionType: "png")
+        } else {
+            return
+        }
     }
 }
 
@@ -202,7 +219,7 @@ extension StepDetailTVC: DatePickerTVCellDelegate {
 
 extension StepDetailTVC: DataInputTVCellDelegate {
     func dataInputButtonTapped(_ sender: DataInputTVCell, _ textField1: UITextField, _ textField2: UITextField) {
-        // SET UP CODE TO TAKE MAX RENT DATA
+        
     }
 }
 
@@ -324,15 +341,15 @@ extension StepDetailTVC {
     func scheduleSevenDayNotification() {
         print("\n📅 7 day notification set\n")
         timerController.scheduleLocalNotificationOnTimer(identifier: sevenDayTimerID,
-                                                      actionTitle: "Dismiss", categoryID: categorySevenNotificationID, contentTitle: "Content Title", contentSubtitle: "Content Subtitle", contentBody: "Content Body", contentBadge: 1,
-                                                      contentSound: UNNotificationSound.default, contentLuanchImage: "",
-                                                      desiredTimeInterval: sevenDays, resourceName: "homeFound", extenstionType: "jpeg")
+                                                         actionTitle: "Dismiss", categoryID: categorySevenNotificationID, contentTitle: "Content Title", contentSubtitle: "Content Subtitle", contentBody: "Content Body", contentBadge: 1,
+                                                         contentSound: UNNotificationSound.default, contentLuanchImage: "",
+                                                         desiredTimeInterval: sevenDays, resourceName: "homeFound", extenstionType: "jpeg")
     }
     
     func randomRandom() {
         timerController
     }
-   
+    
 }
 
 //..attachImageWith: "homeFound", extenstionType: "jpeg"
