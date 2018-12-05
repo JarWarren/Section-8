@@ -63,10 +63,6 @@
                                     <constraint firstAttribute="bottom" secondItem="gXB-iS-EZQ" secondAttribute="bottom" constant="16" id="kZf-Sz-1An"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V80-Vl-D1W" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="148" width="375" height="519"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.29849177599999999" green="0.85634750130000004" blue="0.39206048850000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>

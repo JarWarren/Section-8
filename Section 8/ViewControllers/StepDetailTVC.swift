@@ -260,48 +260,6 @@ extension StepDetailTVC: DataInputTVCellDelegate {
     }
 }
 
-// MARK: - TIMER CONTROLLER DELEGATE
-
-extension StepDetailTVC {
-    
-    func timerSecondTick() {
-        // NOTE: - In here we can put in a label that will become a visible timer to show the user how long they have before their housing voucher expires
-        /*
-         example:
-         visableLabel.text = timerontroller.timeAsString()
-         */
-    }
-    
-    func timerCompleted() {
-        timerController.startTimer(time: 3)
-        print("\nTimer hit zero and completed\n")
-    }
-    
-    func timerStopped() {
-        // This func will completely stop the on going 7 day timer 
-        timerController.timer?.invalidate()
-    }
-    
-    func cancelSevenDayNotification() {
-        timerController.cancelLocalNotificationWith(identifier: categorySevenNotificationID)
-        print("\n🐙🗓  7 day notification canceled\n")
-    }
-    
-    func scheduleSevenDayNotification() {
-        print("\n📅 7 day notification set\n")
-        timerController.scheduleLocalNotificationOnTimer(identifier: sevenDayTimerID,
-                                                      actionTitle: "Dismiss", categoryID: categorySevenNotificationID, contentTitle: "Content Title", contentSubtitle: "Content Subtitle", contentBody: "Content Body", contentBadge: 1,
-                                                      contentSound: UNNotificationSound.default, contentLuanchImage: "",
-                                                      desiredTimeInterval: sevenDays, resourceName: "homeFound", extenstionType: "jpeg")
-    }
-    
-    func randomRandom() {
-        timerController
-    }
-   
-}
-//..attachImageWith: "homeFound", extenstionType: "jpeg"
-
 // MARK: - ATTRIBUTES INSPECTOR EXPANDER CODE
 
 extension UIView {
@@ -424,11 +382,7 @@ extension StepDetailTVC {
                                                          contentSound: UNNotificationSound.default, contentLuanchImage: "",
                                                          desiredTimeInterval: sevenDays, resourceName: "homeFound", extenstionType: "jpeg")
     }
-    
-    func randomRandom() {
-        timerController
-    }
-    
 }
 
-//..attachImageWith: "homeFound", extenstionType: "jpeg"
+//..attachImageWith: "home
+
