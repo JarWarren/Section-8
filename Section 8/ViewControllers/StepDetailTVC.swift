@@ -161,8 +161,11 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             cell.delegate = self
             
             // Configure cell
-            cell.dataInputTitleLabel?.text = item.title
-            cell.dataInputTextLabel?.text = item.text
+            cell.dataInputTitle1Label?.text = item.title
+            cell.dataInputText1Label?.text = item.text
+            cell.dataInputTitle2Label?.text = item.url
+            cell.dataInputText2Label?.text = item.graphicName
+            cell.dataInputButtonTextLabel?.setTitle("\(item.buttonText ?? "CLICK TO SAVE")", for: .normal)
             return cell
             
         case .dataDisplay:
