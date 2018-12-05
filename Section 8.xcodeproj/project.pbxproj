@@ -22,6 +22,8 @@
 		7E67E29921ADE777007E4103 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E67E29721ADE777007E4103 /* Main.storyboard */; };
 		7E67E29B21ADE778007E4103 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E67E29A21ADE778007E4103 /* Assets.xcassets */; };
 		7E67E29E21ADE778007E4103 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E67E29C21ADE778007E4103 /* LaunchScreen.storyboard */; };
+		7E686E1C21B85BB20005D5BB /* SelectedApartment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E686E1B21B85BB20005D5BB /* SelectedApartment.swift */; };
+		7E686E1E21B85BCD0005D5BB /* SelectedApartmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E686E1D21B85BCD0005D5BB /* SelectedApartmentController.swift */; };
 		7EA8381821B6024200E9B9CE /* ApartmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA8381721B6024200E9B9CE /* ApartmentController.swift */; };
 		7EA8381A21B602D400E9B9CE /* Apartment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA8381921B602D400E9B9CE /* Apartment.swift */; };
 		81212AED21B5AC5A0082C88B /* DataInputTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81212AEC21B5AC5A0082C88B /* DataInputTVCell.swift */; };
@@ -65,6 +67,8 @@
 		7E67E29A21ADE778007E4103 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E67E29D21ADE778007E4103 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E67E29F21ADE778007E4103 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E686E1B21B85BB20005D5BB /* SelectedApartment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedApartment.swift; sourceTree = "<group>"; };
+		7E686E1D21B85BCD0005D5BB /* SelectedApartmentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedApartmentController.swift; sourceTree = "<group>"; };
 		7EA8381721B6024200E9B9CE /* ApartmentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApartmentController.swift; sourceTree = "<group>"; };
 		7EA8381921B602D400E9B9CE /* Apartment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apartment.swift; sourceTree = "<group>"; };
 		81212AEC21B5AC5A0082C88B /* DataInputTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInputTVCell.swift; sourceTree = "<group>"; };
@@ -184,6 +188,7 @@
 				7E1DF3F221B19FE70012BFEE /* ApartmentLocation.swift */,
 				7EA8381921B602D400E9B9CE /* Apartment.swift */,
 				47BD249221B7206700CC6192 /* Alarm.swift */,
+				7E686E1B21B85BB20005D5BB /* SelectedApartment.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -195,6 +200,7 @@
 				81FF0A9221B095F6004A7EDB /* ItemController.swift */,
 				7EA8381721B6024200E9B9CE /* ApartmentController.swift */,
 				47BD249421B742CC00CC6192 /* AlarmController.swift */,
+				7E686E1D21B85BCD0005D5BB /* SelectedApartmentController.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -380,6 +386,7 @@
 				81FF0A9721B09EAC004A7EDB /* ParagraphTVCell.swift in Sources */,
 				81212AED21B5AC5A0082C88B /* DataInputTVCell.swift in Sources */,
 				81FF0A9521B09BC6004A7EDB /* StepDetailTVC.swift in Sources */,
+				7E686E1C21B85BB20005D5BB /* SelectedApartment.swift in Sources */,
 				7E1DF3F721B1A0610012BFEE /* MapViewController.swift in Sources */,
 				81FF0A9321B095F6004A7EDB /* ItemController.swift in Sources */,
 				81B7E94E21B1FEC1003A209F /* DatePickerTVCell.swift in Sources */,
@@ -393,6 +400,7 @@
 				47BD249521B742CC00CC6192 /* AlarmController.swift in Sources */,
 				81DD083B21AF3C010037F3AA /* StepTVCell.swift in Sources */,
 				7EA8381A21B602D400E9B9CE /* Apartment.swift in Sources */,
+				7E686E1E21B85BCD0005D5BB /* SelectedApartmentController.swift in Sources */,
 				81871F1121B7079700407E51 /* MapTVCell.swift in Sources */,
 				81212AEF21B5CCF90082C88B /* DataDisplayTVCell.swift in Sources */,
 				81DD083521AF1E880037F3AA /* StepController.swift in Sources */,
