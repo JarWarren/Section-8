@@ -84,11 +84,11 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V80-Vl-D1W" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="152" width="375" height="435"/>
+                                <rect key="frame" x="0.0" y="148" width="375" height="439"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e7d-c2-vBi" userLabel="Instructions">
-                                <rect key="frame" x="0.0" y="80" width="375" height="72"/>
+                                <rect key="frame" x="0.0" y="76" width="375" height="72"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Click on a marker to see details. Choose one, and click “Complete” below." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXB-iS-EZQ">
                                         <rect key="frame" x="20" y="16" width="335" height="40"/>
@@ -96,7 +96,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-  
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="gXB-iS-EZQ" secondAttribute="trailing" constant="20" id="EnL-l1-q3o"/>
@@ -116,9 +116,9 @@
                             <constraint firstItem="V80-Vl-D1W" firstAttribute="trailing" secondItem="Eaj-hI-X1B" secondAttribute="trailing" id="PnV-l0-vGK"/>
                             <constraint firstItem="d3a-D9-ErU" firstAttribute="leading" secondItem="Eaj-hI-X1B" secondAttribute="leading" constant="20" id="ZDd-ck-jlW"/>
                             <constraint firstAttribute="trailing" secondItem="iy4-N1-q2d" secondAttribute="trailing" constant="20" id="aCX-0D-QAc"/>
-                            <constraint firstItem="V80-Vl-D1W" firstAttribute="top" secondItem="iy4-N1-q2d" secondAttribute="bottom" constant="88" id="gJ9-6K-c4K"/>
+                            <constraint firstItem="V80-Vl-D1W" firstAttribute="top" secondItem="iy4-N1-q2d" secondAttribute="bottom" constant="84" id="gJ9-6K-c4K"/>
                             <constraint firstItem="e7d-c2-vBi" firstAttribute="trailing" secondItem="Eaj-hI-X1B" secondAttribute="trailing" id="jQQ-xb-GkP"/>
-                            <constraint firstItem="e7d-c2-vBi" firstAttribute="top" secondItem="iy4-N1-q2d" secondAttribute="bottom" constant="16" id="joh-Ue-ewT"/>
+                            <constraint firstItem="e7d-c2-vBi" firstAttribute="top" secondItem="iy4-N1-q2d" secondAttribute="bottom" constant="12" id="joh-Ue-ewT"/>
                             <constraint firstItem="iy4-N1-q2d" firstAttribute="leading" secondItem="d3a-D9-ErU" secondAttribute="trailing" constant="8" id="ojJ-0z-zjh"/>
                             <constraint firstItem="iy4-N1-q2d" firstAttribute="top" secondItem="Eaj-hI-X1B" secondAttribute="top" id="pyp-Qs-wuk"/>
                             <constraint firstItem="HS9-yL-OgC" firstAttribute="trailing" secondItem="Eaj-hI-X1B" secondAttribute="trailing" id="tCv-b8-D4I"/>
