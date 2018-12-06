@@ -38,7 +38,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     }
     var currentName: String? {
         didSet {
-                self.nameLabel.text = currentName
+            self.nameLabel.text = currentName
         }
     }
     var currentAddress: String? {
@@ -57,6 +57,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        SelectedApartmentController.shared.load()
         setupMap()
         addMarkers()
         utahCountyMapView.delegate = self
@@ -90,7 +91,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         
         // Move camera to display the tapped marker.
-            utahCountyMapView.animate(to: GMSCameraPosition(target: CLLocationCoordinate2D(latitude: marker.position.latitude - 0.01, longitude: marker.position.longitude), zoom: 12, bearing: 0, viewingAngle: 0))
+        utahCountyMapView.animate(to: GMSCameraPosition(target: CLLocationCoordinate2D(latitude: marker.position.latitude - 0.01, longitude: marker.position.longitude), zoom: 12, bearing: 0, viewingAngle: 0))
         
         // Check to make sure that the ApartmentLocation and the marker we tapped are, in fact, the same place.
         guard let locations = locations else { return false }
@@ -156,14 +157,21 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     
     @IBAction func callButtonTapped(_ sender: Any) {
         
+        if let name = currentName, let phone = currentPhone, let address = currentAddress {
+            SelectedApartmentController.shared.saveApartment(named: name, phone: phone, address: address)
+        }
+        
         switch true {
-        case ApartmentController.shared.selectedApartment == nil :
-            let callAlert = UIAlertController(title: "SEGUE TO STEP 7", message: "Eventually, this button will be a segue instead of an alert.", preferredStyle: .actionSheet)
+        case SelectedApartmentController.shared.selectedApartment == nil :
+            let callAlert = UIAlertController(title: "SELECT AN APARTMENT FIRST", message: "Eventually, this button will be a segue instead of an alert.", preferredStyle: .actionSheet)
             let backAction = UIAlertAction(title: "Got it", style: .default, handler: nil)
             callAlert.addAction(backAction)
             present(callAlert, animated: true, completion: nil)
-        case ApartmentController.shared.selectedApartment != nil :
-            print("APARTMENT NOT NIL")
+        case SelectedApartmentController.shared.selectedApartment != nil :
+            let callAlert = UIAlertController(title: "THE SELECTED APARTMENT HAS BEEN SAVED", message: "Eventually a segue is supposed to go here.", preferredStyle: .actionSheet)
+            let backAction = UIAlertAction(title: "Got it", style: .default, handler: nil)
+            callAlert.addAction(backAction)
+            present(callAlert, animated: true, completion: nil)
         default :
             print("CALLBUTTON ERROR")
         }
