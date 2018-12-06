@@ -30,10 +30,10 @@ class Item {
 // MARK: - FORMAT TYPE
 
 enum ItemFormat: String {
-    case tip = "tip"
-    case paragraph = "paragraph"
     case clickLink = "clickLink"
-    case datePicker = "datePicker"
-    case dataInput = "dataInput"
     case dataDisplay = "datadisplay"
+    case dataInput = "dataInput"
+    case datePicker = "datePicker"
+    case paragraph = "paragraph"
+    case tip = "tip"
 }
