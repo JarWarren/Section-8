@@ -51,16 +51,17 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print(SelectedApartmentController.shared.selectedApartment)
+        
         // Persistence
         RentController.shared.loadFromPersistentStorage()
         
         // Change title to specific step
         if let thisStep = selectedStep {
             if !thisStep.stepCompleted {
-                
-                completeButtonStatus.setTitle("Localize: CLICK WHEN \(thisStep.stepNumber) IS COMPLETE ", for: .normal)
+                completeButtonStatus.setTitle(NSLocalizedString("completeButtonTextTapToMarkCompleteA", comment: "") + " \(thisStep.stepNumber) " + NSLocalizedString("completeButtonTextTapToMarkCompleteB", comment: ""), for: .normal)
             } else {
-                completeButtonStatus.setTitle("Localize: CLICK TO CHANGE \(thisStep.stepNumber) TO INCOMPLETE ", for: .normal)
+                completeButtonStatus.setTitle(NSLocalizedString("completeButtonTextTapToMarkIncompleteA", comment: "") + " \(thisStep.stepNumber) " + NSLocalizedString("completeButtonTextTapToMarkIncompleteB", comment: ""), for: .normal)
             }
             self.stepNameLabel.text = thisStep.name
             self.stepNumberLabel.text = thisStep.stepNumber
@@ -262,8 +263,6 @@ extension StepDetailTVC: DataInputTVCellDelegate {
 }
 
 
-
-
 // MARK: - 7-DAY NOTIFICATION EXTENSION
 
 extension StepDetailTVC {
@@ -277,23 +276,27 @@ extension StepDetailTVC {
     }
     
     func timerCompleted() {
+    
         timerController.startTimer(time: 3)
         print("\nTimer hit zero and completed\n")
     }
     
     func timerStopped() {
+        
         // This func will completely stop the on going 7 day timer
         timerController.timer?.invalidate()
     }
     
     func cancelSevenDayNotification() {
+        
         timerController.cancelLocalNotificationWith(identifier: categorySevenNotificationID)
         print("\n🐙🗓  7 day notification canceled\n")
     }
     
     func scheduleSevenDayNotification() {
+        
         print("\n📅 7 day notification set\n")
-        timerController.scheduleLocalNotificationOnTimer(identifier: sevenDayTimerID,actionTitle: NSLocalizedString("7DayDismiss", comment: ""), categoryID: categorySevenNotificationID, contentTitle: NSLocalizedString("7DayContentTitle", comment: ""), contentSubtitle: NSLocalizedString("7DayContentSubtitle", comment: ""), contentBody: NSLocalizedString("7DayContentBody", comment: ""), contentBadge: 1,contentSound: UNNotificationSound.default, contentLuanchImage: "", desiredTimeInterval: sevenDays, resourceName: "homeFound", extenstionType: "jpeg")
+        timerController.scheduleLocalNotificationOnTimer(identifier: sevenDayTimerID,actionTitle: NSLocalizedString("7DayDismiss", comment: ""), categoryID: categorySevenNotificationID, contentTitle: NSLocalizedString("7DayContentTitle", comment: ""), contentSubtitle: NSLocalizedString("7DayContentSubtitle", comment: ""), contentBody: NSLocalizedString("7DayContentBody", comment: ""), contentBadge: 1,contentSound: UNNotificationSound.default, contentLaunchImage: "", desiredTimeInterval: sevenDays, resourceName: NSLocalizedString("notificationBanner", comment: ""), extenstionType: "png")
     }
 }
 

@@ -177,7 +177,7 @@ class StepController {
                 ItemController.addNewItem(title: nil, text: NSLocalizedString("7aText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
                 // Item 7b
-                ItemController.addNewItem(title: NSLocalizedString("7bTitle", comment: ""), text: NSLocalizedString("7bText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .tip, step: step)
+                ItemController.addNewItem(title: NSLocalizedString("7bTitle", comment: ""), text: "\(String(describing: SelectedApartmentController.shared.selectedApartment?.name))\n\(String(describing: SelectedApartmentController.shared.selectedApartment?.address))\n\(String(describing: SelectedApartmentController.shared.selectedApartment?.phone))", buttonText: nil, url: nil, graphicName: nil, format: .tip, step: step)
                 
                 // Item 7c
                 ItemController.addNewItem(title: nil, text: NSLocalizedString("7cText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
@@ -353,8 +353,8 @@ class StepController {
     }
     
     // MARK: - STEP PERSISTENCE
+    
     func persistCompletedSteps() {
-        
         do {
             let apartmentJSON = try JSONEncoder().encode(self.steps)
             try apartmentJSON.write(to: fileURL())
