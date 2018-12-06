@@ -51,14 +51,19 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+      
+      // Persistence
         SelectedApartmentController.shared.loadSelectedApartment()
+        
+        
+        RentController.shared.loadFromPersistentStorage()
+        
         // Change title to specific step
         if let thisStep = selectedStep {
             if !thisStep.stepCompleted {
-                
-                completeButtonStatus.setTitle("Localize: CLICK WHEN \(thisStep.stepNumber) IS COMPLETE ", for: .normal)
+                completeButtonStatus.setTitle(NSLocalizedString("completeButtonTextTapToMarkCompleteA", comment: "") + " \(thisStep.stepNumber) " + NSLocalizedString("completeButtonTextTapToMarkCompleteB", comment: ""), for: .normal)
             } else {
-                completeButtonStatus.setTitle("Localize: CLICK TO CHANGE \(thisStep.stepNumber) TO INCOMPLETE ", for: .normal)
+                completeButtonStatus.setTitle(NSLocalizedString("completeButtonTextTapToMarkIncompleteA", comment: "") + " \(thisStep.stepNumber) " + NSLocalizedString("completeButtonTextTapToMarkIncompleteB", comment: ""), for: .normal)
             }
             self.stepNameLabel.text = thisStep.name
             self.stepNumberLabel.text = thisStep.stepNumber
@@ -275,47 +280,6 @@ extension StepDetailTVC: DataInputTVCellDelegate {
     }
 }
 
-// MARK: - DATE PICKER CELL DELEGATE EXTENSION
-
-// Conforming to delegate set above -
-// (Step 4 of 5 - 3 steps in child, 2 in parent(this file))
-
-extension StepDetailTVC: DatePickerTVCellDelegate {
-    
-    func datePickerButtonTapped(_ sender: DatePickerTVCell, _ picker: UIDatePicker) {
-        print("\n\n🚀Set Time Button Tapped in: DatePickerTVCell\n")
-        guard let unwrappedStep = selectedStep else {return}
-        
-        let fireDate = picker.date
-        
-        // Step 4 - Briefing date picker
-        if unwrappedStep.stepNumber == "STEP 4" {
-            // SET UP NOTIFCATION CENTER STUFF
-            
-            let alarm = AlarmController.shared.addAlarm(fireDate: fireDate, alarm: unwrappedStep.stepNumber, isOn: alarmIsOn)
-            
-            // NOTE: - scheduleEditNotifId: "Localize: EditNotifID", will probably get cut in our version 1.0 due to priority
-            AlarmController.shared.scheduleDatePickerUserNotifications(for: alarm, scheduleDissmissDateNotifId: "DissMissID", dissmissActionTitle: "Localize: Dissmiss", scheduleEditNotifId: "Localize: EditNotifID", editDateActionTitle: "Localize: Edit Schedule", editDateOption: [.authenticationRequired, .foreground], categoryID: datePCategoryId, contentTitle: "Content Title", contentSubtitle: "Content Subtitle", contentBody: "Localize: Content Body", contentBadge: 1, contentSound: .default, contentLuanchImage: "", resourceName: "supermarioghost_1_copy", extenstionType: "png")
-        } else {
-            return
-        }
-        //        if unwrappedStep.stepNumber == "STEP 3" {
-        //            print("Step 3 Button Tapped")
-        //
-        //            {
-        //                if unwrappedStep.stepNumber == "STEP 10" {
-        //                    print("Step 10 button Tapped")
-        //                }
-        //
-        //                if unwrappedStep.stepNumber == "STEP 12" {
-        //                    print("Step 12 button tapped")
-        //                }
-        //            }
-        //        } else {
-        //            return
-        //        }
-    }
-}
 
 // MARK: - 7-DAY NOTIFICATION EXTENSION
 
@@ -330,23 +294,27 @@ extension StepDetailTVC {
     }
     
     func timerCompleted() {
+    
         timerController.startTimer(time: 3)
         print("\nTimer hit zero and completed\n")
     }
     
     func timerStopped() {
+        
         // This func will completely stop the on going 7 day timer
         timerController.timer?.invalidate()
     }
     
     func cancelSevenDayNotification() {
+        
         timerController.cancelLocalNotificationWith(identifier: categorySevenNotificationID)
         print("\n🐙🗓  7 day notification canceled\n")
     }
     
     func scheduleSevenDayNotification() {
+        
         print("\n📅 7 day notification set\n")
-        timerController.scheduleLocalNotificationOnTimer(identifier: sevenDayTimerID,actionTitle: NSLocalizedString("7DayDismiss", comment: ""), categoryID: categorySevenNotificationID, contentTitle: NSLocalizedString("7DayContentTitle", comment: ""), contentSubtitle: NSLocalizedString("7DayContentSubtitle", comment: ""), contentBody: NSLocalizedString("7DayContentBody", comment: ""), contentBadge: 1,contentSound: UNNotificationSound.default, contentLuanchImage: "", desiredTimeInterval: sevenDays, resourceName: "homeFound", extenstionType: "jpeg")
+        timerController.scheduleLocalNotificationOnTimer(identifier: sevenDayTimerID,actionTitle: NSLocalizedString("7DayDismiss", comment: ""), categoryID: categorySevenNotificationID, contentTitle: NSLocalizedString("7DayContentTitle", comment: ""), contentSubtitle: NSLocalizedString("7DayContentSubtitle", comment: ""), contentBody: NSLocalizedString("7DayContentBody", comment: ""), contentBadge: 1,contentSound: UNNotificationSound.default, contentLaunchImage: "", desiredTimeInterval: sevenDays, resourceName: NSLocalizedString("notificationBanner", comment: ""), extenstionType: "png")
     }
 }
 

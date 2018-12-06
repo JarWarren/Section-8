@@ -177,8 +177,9 @@ class StepController {
                 ItemController.addNewItem(title: nil, text: NSLocalizedString("7aText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
                 // Item 7b
+
                 ItemController.addNewItem(title: NSLocalizedString("7bTitle", comment: ""), text: "", buttonText: nil, url: nil, graphicName: nil, format: .tip, step: step)
-                
+
                 // Item 7c
                 ItemController.addNewItem(title: nil, text: NSLocalizedString("7cText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
@@ -353,8 +354,9 @@ class StepController {
     }
     
     // MARK: - STEP PERSISTENCE
+    
     func persistCompletedSteps() {
-        
+
         var completedStepsArray: [Bool] = []
         
         for step in steps {

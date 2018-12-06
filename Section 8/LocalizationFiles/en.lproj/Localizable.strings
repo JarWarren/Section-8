@@ -10,6 +10,28 @@
 
     "LaunchScreenTitle" = "Section8";
 
+
+// MARK: - UI COMPONENTS
+
+    // Complete button
+    "completeButtonTextTapToMarkCompleteA" = "TAP WHEN";
+    "completeButtonTextTapToMarkCompleteB" = "IS COMPLETE";
+    "completeButtonTextTapToMarkIncompleteA" = "TAP TO CHANGE";
+    "completeButtonTextTapToMarkIncompleteB" = "TO INCOMPLETE";
+
+
+// MARK: - 7-DAY NOTIFICATIONS
+
+    // Text fields
+    "7DayDismiss" = "Dismiss";
+    "7DayContentTitle" = "Section 8 Housing Reminder";
+    "7DayContentSubtitle" = "";
+    "7DayContentBody" = "It's been a week since you worked on your application. Tap here to take the next step!";
+
+    // Images
+    "notificationBanner" = "Notification Banner - EN";
+
+
 // MARK: - STEPS
 
     "STEP" = "STEP";
@@ -351,14 +373,6 @@
 
     // Step 14e
     "14eText" = "Click on the button below to complete the Section 8 Housing process!";
-
-
-// MARK: - 7-DAY NOTIFICATIONS
-
-"7DayDismiss" = "Dismiss";
-"7DayContentTitle" = "Section 8 Housing Reminder";
-"7DayContentSubtitle" = "";
-"7DayContentBody" = "It's been a week since you last worked on your Section 8 housing application. Click here to find out what to do next";
 
 
 
