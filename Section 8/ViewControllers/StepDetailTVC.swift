@@ -33,9 +33,9 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     
     let timerController = TimerController()
     let timeKeepingId = "timerID"
-//    let sevenDayCountDown = TimeInterval(5)
+    //    let sevenDayCountDown = TimeInterval(5)
     let sevenDays = 60
-//    var boolValueToTestTimer = true
+    //    var boolValueToTestTimer = true
     let sevenDayTimerID = "sevenDays"
     let categorySevenNotificationID = "dismissActionKey"
     let datePActionId = "datePickerNotifID"
@@ -57,9 +57,9 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         if let thisStep = selectedStep {
             if !thisStep.stepCompleted {
                 
-                completeButtonStatus.setTitle(" CLICK WHEN \(thisStep.stepNumber) IS COMPLETE ", for: .normal)
+                completeButtonStatus.setTitle("Localize: CLICK WHEN \(thisStep.stepNumber) IS COMPLETE ", for: .normal)
             } else {
-                completeButtonStatus.setTitle(" CLICK TO CHANGE \(thisStep.stepNumber) TO INCOMPLETE ", for: .normal)
+                completeButtonStatus.setTitle("Localize: CLICK TO CHANGE \(thisStep.stepNumber) TO INCOMPLETE ", for: .normal)
             }
             self.stepNameLabel.text = thisStep.name
             self.stepNumberLabel.text = thisStep.stepNumber
@@ -227,6 +227,7 @@ extension StepDetailTVC: ClickLinkTVCellDelegate {
 // Conforming to delegate set above -
 // (Step 4 of 5 - 3 steps in child, 2 in parent(this file))
 
+
 extension StepDetailTVC: DatePickerTVCellDelegate {
     
     func datePickerButtonTapped(_ sender: DatePickerTVCell, _ picker: UIDatePicker) {
@@ -237,14 +238,84 @@ extension StepDetailTVC: DatePickerTVCellDelegate {
         
         // Step 4 - Briefing date picker
         if unwrappedStep.stepNumber == "STEP 4" {
-            
-            let alarm = AlarmController.shared.addAlarm(fireDate: fireDate, alarm: unwrappedStep.stepNumber, isOn: alarmIsOn)
+            // SET UP NOTIFCATION CENTER STUFF
 
-            AlarmController.shared.scheduleDatePickerUserNotifications(for: alarm, scheduleDissmissDateNotifId: "DissMissID", dissmissActionTitle: "Dissmiss", scheduleEditNotifId: "EditNotifID", editDateActionTitle: "Edit Schedule", editDateOption: .authenticationRequired, categoryID: datePCategoryId, contentTitle: "Content Title", contentSubtitle: "Content Subtitle", contentBody: "Content Body", contentBadge: 1, contentSound: .default, contentLuanchImage: "", resourceName: "supermarioghost_1_copy", extenstionType: "png")
+            let alarm = AlarmController.shared.addAlarm(fireDate: fireDate, alarm: unwrappedStep.stepNumber, isOn: alarmIsOn)
+            
+           // NOTE: - scheduleEditNotifId: "Localize: EditNotifID", will probably get cut in our version 1.0 due to priority
+            AlarmController.shared.scheduleDatePickerUserNotifications(for: alarm, scheduleDissmissDateNotifId: "DissMissID", dissmissActionTitle: "Localize: Dissmiss", scheduleEditNotifId: "Localize: EditNotifID", editDateActionTitle: "Localize: Edit Schedule", editDateOption: [.authenticationRequired, .foreground], categoryID: datePCategoryId, contentTitle: "Content Title", contentSubtitle: "Content Subtitle", contentBody: "Localize: Content Body", contentBadge: 1, contentSound: .default, contentLuanchImage: "", resourceName: "supermarioghost_1_copy", extenstionType: "png")
         } else {
             return
         }
+//        if unwrappedStep.stepNumber == "STEP 3" {
+//            print("Step 3 Button Tapped")
+//
+//            {
+//                if unwrappedStep.stepNumber == "STEP 10" {
+//                    print("Step 10 button Tapped")
+//                }
+//
+//                if unwrappedStep.stepNumber == "STEP 12" {
+//                    print("Step 12 button tapped")
+//                }
+//            }
+//        } else {
+//            return
+//        }
     }
+}
+
+    
+    // MARK: - DATA INPUT CELL DELEGATE
+    
+    // Conforming to delegate set above -
+    // (Step 4 of 5 - 3 steps in child, 2 in parent(this file))
+    
+    extension StepDetailTVC: DataInputTVCellDelegate {
+        func dataInputButtonTapped(_ sender: DataInputTVCell, _ textField1: UITextField, _ textField2: UITextField) {
+            
+            // Unwrap
+            guard let householdIncomeAsString = textField1.text,
+                let householdIncome = Int(householdIncomeAsString),
+                let voucherAmountAsString = textField2.text,
+                let voucherAmount = Int(voucherAmountAsString) else { return }
+            
+            // Generate the max rent and reload the tableView to show amount
+            RentController.shared.createMaxRent(householdIncome: householdIncome, voucherAmount: voucherAmount)
+            tableView.reloadData()
+        }
+    }
+    
+    extension StepDetailTVC {
+        
+        // MARK: - Time Controller Delegate
+        func timerSecondTick() {
+            // NOTE: - In here we can put in a label that will become a visible timer to show the user how long they have before their housing voucher expires
+            /*
+             example:
+             visableLabel.text = timerontroller.timeAsString()
+             */
+        }
+        
+        func timerCompleted() {
+            timerController.startTimer(time: 3)
+            print("\nTimer hit zero and completed\n")
+        }
+        
+        func timerStopped() {
+            // This func will completely stop the on going 7 day timer
+            timerController.timer?.invalidate()
+        }
+        
+        func cancelSevenDayNotification() {
+            timerController.cancelLocalNotificationWith(identifier: categorySevenNotificationID)
+            print("\n🐙🗓  7 day notification canceled\n")
+        }
+        
+        func scheduleSevenDayNotification() {
+            print("\n📅 7 day notification set\n")
+            timerController.scheduleLocalNotificationOnTimer(identifier: sevenDayTimerID,actionTitle: "Localize: Dismiss", categoryID: categorySevenNotificationID, contentTitle: "Localize: Content Title", contentSubtitle: "Localize: Content Subtitle", contentBody: "Localize: Content Body", contentBadge: 1,contentSound: UNNotificationSound.default, contentLuanchImage: "", desiredTimeInterval: sevenDays, resourceName: "homeFound", extenstionType: "jpeg")
+        }
 }
 
 // MARK: - DATA INPUT CELL DELEGATE EXTENSION
@@ -267,42 +338,6 @@ extension StepDetailTVC: DataInputTVCellDelegate {
     }
 }
 
-// MARK: - TIMER EXTENSION
+// MARK: - TIMER EXTENSIOn
 
-extension StepDetailTVC {
-    
-    // MARK: - Time Controller Delegate
-    func timerSecondTick() {
-        // NOTE: - In here we can put in a label that will become a visible timer to show the user how long they have before their housing voucher expires
-        /*
-         example:
-         visableLabel.text = timerontroller.timeAsString()
-         */
-    }
-    
-    func timerCompleted() {
-        timerController.startTimer(time: 3)
-        print("\nTimer hit zero and completed\n")
-    }
-    
-    func timerStopped() {
-        // This func will completely stop the on going 7 day timer 
-        timerController.timer?.invalidate()
-    }
-    
-    func cancelSevenDayNotification() {
-        timerController.cancelLocalNotificationWith(identifier: categorySevenNotificationID)
-        print("\n🐙🗓  7 day notification canceled\n")
-    }
-    
-    func scheduleSevenDayNotification() {
-        print("\n📅 7 day notification set\n")
-        timerController.scheduleLocalNotificationOnTimer(identifier: sevenDayTimerID,
-                                                         actionTitle: "Dismiss", categoryID: categorySevenNotificationID, contentTitle: "Content Title", contentSubtitle: "Content Subtitle", contentBody: "Content Body", contentBadge: 1,
-                                                         contentSound: UNNotificationSound.default, contentLuanchImage: "",
-                                                         desiredTimeInterval: sevenDays, resourceName: "homeFound", extenstionType: "jpeg")
-    }
-}
-
-//..attachImageWith: "home
 
