@@ -28,6 +28,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     // MARK: - VARIABLES
     
     var markerViewIsVisible = false
+    var userDidComeFromStep7 = false
     var locations: [ApartmentLocation]?
     
     // Observers on all of the following properties allow them to both be stored for later persistance, as well as update our outlets automatically.
@@ -91,7 +92,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         
         // Move camera to display the tapped marker.
-        utahCountyMapView.animate(to: GMSCameraPosition(target: CLLocationCoordinate2D(latitude: marker.position.latitude - 0.01, longitude: marker.position.longitude), zoom: 12, bearing: 0, viewingAngle: 0))
+        utahCountyMapView.animate(to: GMSCameraPosition(target: CLLocationCoordinate2D(latitude: marker.position.latitude - 0.01, longitude: marker.position.longitude), zoom: utahCountyMapView.camera.zoom, bearing: 0, viewingAngle: 0))
         
         // Check to make sure that the ApartmentLocation and the marker we tapped are, in fact, the same place.
         guard let locations = locations else { return false }
@@ -168,13 +169,16 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
             callAlert.addAction(backAction)
             present(callAlert, animated: true, completion: nil)
         case SelectedApartmentController.shared.selectedApartment != nil :
-            let callAlert = UIAlertController(title: "THE SELECTED APARTMENT HAS BEEN SAVED", message: "Eventually a segue is supposed to go here.", preferredStyle: .actionSheet)
-            let backAction = UIAlertAction(title: "Got it", style: .default, handler: nil)
-            callAlert.addAction(backAction)
-            present(callAlert, animated: true, completion: nil)
+            if userDidComeFromStep7 == true {
+                self.navigationController?.popViewController(animated: true)
+            } else {
+                guard let stepDetailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "stepsDetailTVC") as? StepDetailTVC else { return }
+                stepDetailVC.selectedStep = StepController.shared.steps[6]
+                stepDetailVC.userDidComeFromStep6 = true
+                self.navigationController?.pushViewController(stepDetailVC, animated: true)
+            }
         default :
             print("CALLBUTTON ERROR")
         }
-        
     }
 }

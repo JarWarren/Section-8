@@ -20,6 +20,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     }
     
     var items: [Item] = []
+    var userDidComeFromStep6 = false
     
     // MARK: - OUTLETS
     
@@ -215,7 +216,19 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             return cell
         }
     }
+    
+    // MARK: - NAVIGATION
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "backToMapDetail" {
+            guard let destinationVC = segue.destination as? MapViewController else { return }
+            destinationVC.userDidComeFromStep7 = true
+        }
+    }
 }
+
+
 
 // MARK: - CUSTOM CELL EXTENSIONS
 
@@ -236,7 +249,11 @@ extension StepDetailTVC: ClickLinkTVCellDelegate {
         
         // Step 7 - Item 7h - Button that returns to Step 6
         if sender.clickLinkButtonText?.titleLabel?.text == NSLocalizedString("7hButtonText", comment: "") {
-            performSegue(withIdentifier: "backToMapDetail", sender: nil)
+            if self.userDidComeFromStep6 == true{
+                self.navigationController?.popViewController(animated: true)
+            } else {
+                performSegue(withIdentifier: "backToMapDetail", sender: nil)
+            }
         }
     }
 }

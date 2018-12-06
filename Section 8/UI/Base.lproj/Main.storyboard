@@ -213,7 +213,7 @@
         <!--Step DetailTVC-->
         <scene sceneID="rct-YF-PSe">
             <objects>
-                <viewController id="QMa-vk-bT6" customClass="StepDetailTVC" customModule="Section_8" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="stepsDetailTVC" id="QMa-vk-bT6" customClass="StepDetailTVC" customModule="Section_8" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Im3-ay-oUy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1912"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
