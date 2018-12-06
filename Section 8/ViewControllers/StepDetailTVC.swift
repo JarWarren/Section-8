@@ -211,8 +211,8 @@ extension StepDetailTVC: ClickLinkTVCellDelegate {
         
         // Step 7 - Button that calls apartment phone number
         if sender.clickLinkButtonText?.titleLabel?.text == NSLocalizedString("7gButtonText", comment: "") {
-            let url = NSURL(string: "tel://1234567890")!
-            UIApplication.sharedApplication.openURL(url)
+            let url = url(string: "telprompt://8014173005") else { return }
+            UIApplication.shared.open(url)
         }
         
         // Step 7 - Button that returns to Step 6
