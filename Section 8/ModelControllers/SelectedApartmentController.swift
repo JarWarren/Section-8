@@ -17,20 +17,21 @@ class SelectedApartmentController {
     
     // TODO: CRUD or something? Need to make marverView info available for persistance and other uses throughout the app.
     
-    func save(apartment name: String, phone: String, address: String) {
+    func saveApartment(named name: String, phone: String, address: String) {
         
         let newApartment = SelectedApartment(name: name, address: address, phone: phone)
+        selectedApartment = newApartment
         persistSelectedApartment(asJSON: newApartment)
     }
     
     private func persistSelectedApartment(asJSON apartment: SelectedApartment) {
         
-//        do {
-//            let apartmentJSON = try JSONEncoder().encode(apartment)
-//            
-//        } catch {
-//            print("FAILED TO PERSIST SELECTED APARTMENT")
-//        }
+        do {
+            let apartmentJSON = try JSONEncoder().encode(apartment)
+            try apartmentJSON.write(to: fileURL())
+        } catch {
+            print("FAILED TO PERSIST SELECTED APARTMENT")
+        }
     }
     
     private func fileURL() -> URL {
@@ -39,5 +40,16 @@ class SelectedApartmentController {
         let documentsDirectoryURL = urls[0].appendingPathComponent(fileName)
         return documentsDirectoryURL
     }
+    
+    func load() {
+        
+        var selectedApartment: SelectedApartment?
+        do {
+            let apartmentJSON = try Data(contentsOf: fileURL())
+            selectedApartment = try JSONDecoder().decode(SelectedApartment.self, from: apartmentJSON)
+        } catch {
+            print("FAILED TO LOAD PREVIOUSLY SELECTED APARTMENT")
+        }
+        self.selectedApartment = selectedApartment
+    }
 }
-

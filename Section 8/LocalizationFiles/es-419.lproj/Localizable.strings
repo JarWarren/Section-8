@@ -6,10 +6,12 @@
   Copyright © 2018 Warren. All rights reserved.
 */
 
+// MARK: - STEPS
+
 "STEP" = "PASO";
-"step1" = "Llena applicación enlínea";
-"step2" = "Foto Identificación y Tarjeta de Seguro Social";
-"step3" = "Assistir instrucciones";
+"step1" = "Completar aplicación enlínea";
+"step2" = "Traer Identificación";
+"step3" = "Completar aplicación enviado";
 
 // ITEMS
 "1a" = "Complete la solicitud preliminar haciendo clic en el botón de abajo, pero lea estas instrucciones primero:";

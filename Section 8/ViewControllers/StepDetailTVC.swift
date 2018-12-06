@@ -201,37 +201,45 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     }
 }
 
-// MARK: - CLICK LINK CELL DELEGATE
+// MARK: - CLICK LINK CELL DELEGATE EXTENSION
 
 // Conforming to delegate set above -
 // (Step 4 of 5 - 3 steps in child, 2 in parent(this file))
 
 extension StepDetailTVC: ClickLinkTVCellDelegate {
     func clickLinkButtonTapped(_ sender: ClickLinkTVCell) {
+        
+        // Step 7 - Button that calls apartment phone number
+        if sender.clickLinkButtonText?.titleLabel?.text == NSLocalizedString("7gButtonText", comment: "") {
+            let url = NSURL(string: "tel://1234567890")!
+            UIApplication.sharedApplication.openURL(url)
+        }
+        
+        // Step 7 - Button that returns to Step 6
         if sender.clickLinkButtonText?.titleLabel?.text == NSLocalizedString("7hButtonText", comment: "") {
             performSegue(withIdentifier: "backToMapDetail", sender: nil)
         }
     }
 }
 
-// MARK: - DATE PICKER CELL DELEGATE
+// MARK: - DATE PICKER CELL DELEGATE EXTENSION
 
 // Conforming to delegate set above -
 // (Step 4 of 5 - 3 steps in child, 2 in parent(this file))
 
 
 extension StepDetailTVC: DatePickerTVCellDelegate {
+    
     func datePickerButtonTapped(_ sender: DatePickerTVCell, _ picker: UIDatePicker) {
         print("\n\n🚀Set Time Button Tapped in: DatePickerTVCell\n")
         guard let unwrappedStep = selectedStep else {return}
         
         let fireDate = picker.date
         
-        
+        // Step 4 - Briefing date picker
         if unwrappedStep.stepNumber == "STEP 4" {
             // SET UP NOTIFCATION CENTER STUFF
-            
-            
+
             let alarm = AlarmController.shared.addAlarm(fireDate: fireDate, alarm: unwrappedStep.stepNumber, isOn: alarmIsOn)
             
            // NOTE: - scheduleEditNotifId: "Localize: EditNotifID", will probably get cut in our version 1.0 due to priority
@@ -256,6 +264,7 @@ extension StepDetailTVC: DatePickerTVCellDelegate {
 //        }
     }
 }
+
     
     // MARK: - DATA INPUT CELL DELEGATE
     
@@ -274,95 +283,6 @@ extension StepDetailTVC: DatePickerTVCellDelegate {
             // Generate the max rent and reload the tableView to show amount
             RentController.shared.createMaxRent(householdIncome: householdIncome, voucherAmount: voucherAmount)
             tableView.reloadData()
-        }
-    }
-    
-    // MARK: - ATTRIBUTES INSPECTOR EXPANDER CODE
-    
-    extension UIView {
-        
-        @IBInspectable
-        var cornerRadius: CGFloat {
-            get {
-                return layer.cornerRadius
-            }
-            set {
-                layer.cornerRadius = newValue
-            }
-        }
-        
-        @IBInspectable
-        var borderWidth: CGFloat {
-            get {
-                return layer.borderWidth
-            }
-            set {
-                layer.borderWidth = newValue
-            }
-        }
-        
-        @IBInspectable
-        var borderColor: UIColor? {
-            get {
-                if let color = layer.borderColor {
-                    return UIColor(cgColor: color)
-                }
-                return nil
-            }
-            set {
-                if let color = newValue {
-                    layer.borderColor = color.cgColor
-                } else {
-                    layer.borderColor = nil
-                }
-            }
-        }
-        
-        @IBInspectable
-        var shadowRadius: CGFloat {
-            get {
-                return layer.shadowRadius
-            }
-            set {
-                layer.shadowRadius = newValue
-            }
-        }
-        
-        @IBInspectable
-        var shadowOpacity: Float {
-            get {
-                return layer.shadowOpacity
-            }
-            set {
-                layer.shadowOpacity = newValue
-            }
-        }
-        
-        @IBInspectable
-        var shadowOffset: CGSize {
-            get {
-                return layer.shadowOffset
-            }
-            set {
-                layer.shadowOffset = newValue
-            }
-        }
-        
-        @IBInspectable
-        var shadowColor: UIColor? {
-            get {
-                if let color = layer.shadowColor {
-                    return UIColor(cgColor: color)
-                }
-                return nil
-            }
-            set {
-                if let color = newValue {
-                    layer.shadowColor = color.cgColor
-                } else {
-                    layer.shadowColor = nil
-                }
-            }
         }
     }
     
@@ -398,5 +318,26 @@ extension StepDetailTVC: DatePickerTVCellDelegate {
         }
 }
 
+// MARK: - DATA INPUT CELL DELEGATE EXTENSION
+
+// Conforming to delegate set above -
+// (Step 4 of 5 - 3 steps in child, 2 in parent(this file))
+
+extension StepDetailTVC: DataInputTVCellDelegate {
+    func dataInputButtonTapped(_ sender: DataInputTVCell, _ textField1: UITextField, _ textField2: UITextField) {
+        
+        // Unwrap
+        guard let householdIncomeAsString = textField1.text,
+            let householdIncome = Int(householdIncomeAsString),
+            let voucherAmountAsString = textField2.text,
+            let voucherAmount = Int(voucherAmountAsString) else { return }
+        
+        // Generate the max rent and reload the tableView to show amount
+        RentController.shared.createMaxRent(householdIncome: householdIncome, voucherAmount: voucherAmount)
+        tableView.reloadData()
+    }
+}
+
+// MARK: - TIMER EXTENSIOn
 
 
