@@ -11,7 +11,7 @@ import Foundation
 class Item: Codable {
     
     var title: String?
-    let text: String?
+    var text: String?
     let buttonText: String?
     let url: String?
     let graphicName: String?

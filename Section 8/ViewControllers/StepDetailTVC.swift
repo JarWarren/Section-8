@@ -51,10 +51,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Persistence
-        RentController.shared.loadFromPersistentStorage()
-        
+        SelectedApartmentController.shared.loadSelectedApartment()
         // Change title to specific step
         if let thisStep = selectedStep {
             if !thisStep.stepCompleted {
