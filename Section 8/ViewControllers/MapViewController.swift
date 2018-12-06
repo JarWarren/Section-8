@@ -124,6 +124,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, willMove gesture: Bool) {
         self.markerView.removeFromSuperview()
         markerViewIsVisible = false
+        markerView.isHidden = false
         
     }
     
@@ -158,5 +159,8 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
             stepDetailVC.userDidComeFromStep6 = true
             self.navigationController?.pushViewController(stepDetailVC, animated: true)
         }
+    }
+    @IBAction func xButtonTapped(_ sender: UIButton) {
+        markerView.isHidden = true
     }
 }
