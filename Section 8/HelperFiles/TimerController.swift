@@ -98,7 +98,7 @@ class TimerController {
     func scheduleLocalNotificationFor(identifier: String) {
         
         // The Alert Button options
-        let action = UNNotificationAction(identifier: identifier, title: "Dissmiss", options: [])
+        let action = UNNotificationAction(identifier: identifier, title: "Dismiss", options: [])
         let category = UNNotificationCategory(identifier: outOfAppNotifIdentifer, actions: [action], intentIdentifiers: [], options: [.customDismissAction])
         UNUserNotificationCenter.current().setNotificationCategories([category])
         
