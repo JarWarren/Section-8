@@ -63,6 +63,7 @@ extension AlarmController {
         // The Alert Button options
         let dissmissAction = UNNotificationAction(identifier: scheduleDissmissDateNotifId, title: dissmissActionTitle, options: [])
         let editDateAction = UNNotificationAction(identifier: scheduleEditNotifId, title: editDateActionTitle, options: [editDateOption])
+        // NOTE: - CategoryID and ContentID have to match
         let category = UNNotificationCategory(identifier: categoryID, actions: [dissmissAction, editDateAction], intentIdentifiers: [], options: [.customDismissAction])
         UNUserNotificationCenter.current().setNotificationCategories([category])
         
@@ -92,6 +93,7 @@ extension AlarmController {
         let trigger = UNCalendarNotificationTrigger(dateMatching: componets, repeats: false)
         
         let request = UNNotificationRequest(identifier: scheduleDissmissDateNotifId, content: content, trigger: trigger)
+        
         
         UNUserNotificationCenter.current().add(request) { (error) in
             if let error = error {
