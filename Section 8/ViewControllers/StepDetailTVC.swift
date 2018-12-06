@@ -82,6 +82,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         }
         checkButtonStatusNotificationSet()
         finalStepButtonTapped()
+        StepController.shared.persistCompletedSteps()
         navigationController?.popViewController(animated: true)
     }
     

@@ -351,4 +351,35 @@ class StepController {
             }
         }
     }
+    
+    // MARK: - STEP PERSISTENCE
+    func persistCompletedSteps() {
+        
+        do {
+            let apartmentJSON = try JSONEncoder().encode(self.steps)
+            try apartmentJSON.write(to: fileURL())
+        } catch {
+            print("FAILED TO PERSIST COMPLETED STEPS")
+        }
+    }
+    
+    private func fileURL() -> URL {
+        let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let fileName = "CompletedSteps.json"
+        let documentsDirectoryURL = urls[0].appendingPathComponent(fileName)
+        return documentsDirectoryURL
+    }
+    
+    func loadCompletedSteps() {
+        
+        var steps: [Step]?
+        do {
+            let stepJSON = try Data(contentsOf: fileURL())
+            steps = try JSONDecoder().decode([Step].self, from: stepJSON)
+        } catch {
+            print("FAILED TO LOAD PREVIOUSLY COMPLETED STEPS")
+        }
+        guard let completedSteps = steps else { return }
+        self.steps = completedSteps
+    }
 }
