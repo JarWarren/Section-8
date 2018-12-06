@@ -58,7 +58,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        SelectedApartmentController.shared.load()
+        SelectedApartmentController.shared.loadSelectedApartment()
         setupMap()
         addMarkers()
         utahCountyMapView.delegate = self
@@ -135,50 +135,28 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         self.markerView.center = self.view.center
     }
     
-    // Optional other methods that we're not currently implementing but that I don't want to forget yet.
-    func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
-        
-        // Called when a marker is about to become selected, and provides an optional custom info window to use for that marker if this method returns a UIView.
-        return UIView()
-    }
-    
-    func mapView(_ mapView: GMSMapView, markerInfoContents marker: GMSMarker) -> UIView? {
-        
-        // Called when mapView:markerInfoWindow: returns nil.
-        return UIView()
-    }
-    
-    func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
-        
-        
-        // Called after a marker's info window has been tapped.
-    }
-    
     // MARK: - Actions
     
     @IBAction func callButtonTapped(_ sender: Any) {
         
+        // Tapping the call button saves their current apartment.
         if let name = currentName, let phone = currentPhone, let address = currentAddress {
             SelectedApartmentController.shared.saveApartment(named: name, phone: phone, address: address)
         }
         
-        switch true {
-        case SelectedApartmentController.shared.selectedApartment == nil :
-            let callAlert = UIAlertController(title: "SELECT AN APARTMENT FIRST", message: "Eventually, this button will be a segue instead of an alert.", preferredStyle: .actionSheet)
-            let backAction = UIAlertAction(title: "Got it", style: .default, handler: nil)
-            callAlert.addAction(backAction)
-            present(callAlert, animated: true, completion: nil)
-        case SelectedApartmentController.shared.selectedApartment != nil :
-            if userDidComeFromStep7 == true {
-                self.navigationController?.popViewController(animated: true)
-            } else {
-                guard let stepDetailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "stepsDetailTVC") as? StepDetailTVC else { return }
-                stepDetailVC.selectedStep = StepController.shared.steps[6]
-                stepDetailVC.userDidComeFromStep6 = true
-                self.navigationController?.pushViewController(stepDetailVC, animated: true)
-            }
-        default :
-            print("CALLBUTTON ERROR")
+        // Determine whether or not they came from Step 7.
+        switch userDidComeFromStep7 {
+            
+            // If they came from Step 7, pop the view controller.
+        case true :
+            self.navigationController?.popViewController(animated: true)
+            
+            // If they came from the Home screen, display an instance of Step 7.
+        case false :
+            guard let stepDetailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "stepsDetailTVC") as? StepDetailTVC else { return }
+            stepDetailVC.selectedStep = StepController.shared.steps[6]
+            stepDetailVC.userDidComeFromStep6 = true
+            self.navigationController?.pushViewController(stepDetailVC, animated: true)
         }
     }
 }

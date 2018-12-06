@@ -41,7 +41,7 @@ class SelectedApartmentController {
         return documentsDirectoryURL
     }
     
-    func load() {
+    func loadSelectedApartment() {
         
         var selectedApartment: SelectedApartment?
         do {
@@ -51,5 +51,8 @@ class SelectedApartmentController {
             print("FAILED TO LOAD PREVIOUSLY SELECTED APARTMENT")
         }
         self.selectedApartment = selectedApartment
+        if let unwrapped = selectedApartment {
+            StepController.shared.steps[6].items[1].text = "\(unwrapped.name)\n\(unwrapped.address)\n\(unwrapped.phone)"
+        }
     }
 }

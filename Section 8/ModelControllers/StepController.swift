@@ -177,8 +177,9 @@ class StepController {
                 ItemController.addNewItem(title: nil, text: NSLocalizedString("7aText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
                 // Item 7b
-                ItemController.addNewItem(title: NSLocalizedString("7bTitle", comment: ""), text: "\(String(describing: SelectedApartmentController.shared.selectedApartment?.name))\n\(String(describing: SelectedApartmentController.shared.selectedApartment?.address))\n\(String(describing: SelectedApartmentController.shared.selectedApartment?.phone))", buttonText: nil, url: nil, graphicName: nil, format: .tip, step: step)
-                
+
+                ItemController.addNewItem(title: NSLocalizedString("7bTitle", comment: ""), text: "", buttonText: nil, url: nil, graphicName: nil, format: .tip, step: step)
+
                 // Item 7c
                 ItemController.addNewItem(title: nil, text: NSLocalizedString("7cText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
@@ -355,8 +356,15 @@ class StepController {
     // MARK: - STEP PERSISTENCE
     
     func persistCompletedSteps() {
+
+        var completedStepsArray: [Bool] = []
+        
+        for step in steps {
+            completedStepsArray.append(step.stepCompleted)
+        }
+        
         do {
-            let apartmentJSON = try JSONEncoder().encode(self.steps)
+            let apartmentJSON = try JSONEncoder().encode(completedStepsArray)
             try apartmentJSON.write(to: fileURL())
         } catch {
             print("FAILED TO PERSIST COMPLETED STEPS")
@@ -372,14 +380,17 @@ class StepController {
     
     func loadCompletedSteps() {
         
-        var steps: [Step]?
+        var completedSteps: [Bool] = []
         do {
             let stepJSON = try Data(contentsOf: fileURL())
-            steps = try JSONDecoder().decode([Step].self, from: stepJSON)
+            completedSteps = try JSONDecoder().decode([Bool].self, from: stepJSON)
+            var stepIndex = 0
+            for step in self.steps {
+                step.stepCompleted = completedSteps[stepIndex]
+                stepIndex += 1
+            }
         } catch {
             print("FAILED TO LOAD PREVIOUSLY COMPLETED STEPS")
         }
-        guard let completedSteps = steps else { return }
-        self.steps = completedSteps
     }
 }
