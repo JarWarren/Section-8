@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Item {
+class Item: Codable {
     
     var title: String?
     let text: String?
@@ -29,7 +29,7 @@ class Item {
 
 // MARK: - FORMAT TYPE
 
-enum ItemFormat: String {
+enum ItemFormat: String, Codable {
     case clickLink = "clickLink"
     case dataDisplay = "datadisplay"
     case dataInput = "dataInput"

@@ -23,6 +23,7 @@ class HomeTVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        StepController.shared.loadCompletedSteps()
     }
     
     override func viewWillAppear(_ animated: Bool) {
