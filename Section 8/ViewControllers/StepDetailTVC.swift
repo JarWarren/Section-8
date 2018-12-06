@@ -226,13 +226,14 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
 extension StepDetailTVC: ClickLinkTVCellDelegate {
     func clickLinkButtonTapped(_ sender: ClickLinkTVCell) {
         
-        // Step 7 - Button that calls apartment phone number
+        // Step 7 - Item 7g - Button that calls apartment phone number
         if sender.clickLinkButtonText?.titleLabel?.text == NSLocalizedString("7gButtonText", comment: "") {
-            guard let url = URL(string: "telprompt://8014173005") else { return }
+            guard let phone = SelectedApartmentController.shared.selectedApartment?.phone else { return }
+            guard let url = URL(string: "telprompt://\(phone)") else { return }
             UIApplication.shared.open(url)
         }
         
-        // Step 7 - Button that returns to Step 6
+        // Step 7 - Item 7h - Button that returns to Step 6
         if sender.clickLinkButtonText?.titleLabel?.text == NSLocalizedString("7hButtonText", comment: "") {
             performSegue(withIdentifier: "backToMapDetail", sender: nil)
         }
@@ -301,7 +302,7 @@ extension StepDetailTVC: DatePickerTVCellDelegate {
     }
 }
 
-// MARK: - TIMER CONTROLLER DELEGATE EXTENSION
+// MARK: - 7-DAY NOTIFICATION EXTENSION
 
 extension StepDetailTVC {
     
@@ -330,7 +331,7 @@ extension StepDetailTVC {
     
     func scheduleSevenDayNotification() {
         print("\n📅 7 day notification set\n")
-        timerController.scheduleLocalNotificationOnTimer(identifier: sevenDayTimerID,actionTitle: "Localize: Dismiss", categoryID: categorySevenNotificationID, contentTitle: "Localize: Content Title", contentSubtitle: "Localize: Content Subtitle", contentBody: "Localize: Content Body", contentBadge: 1,contentSound: UNNotificationSound.default, contentLuanchImage: "", desiredTimeInterval: sevenDays, resourceName: "homeFound", extenstionType: "jpeg")
+        timerController.scheduleLocalNotificationOnTimer(identifier: sevenDayTimerID,actionTitle: NSLocalizedString("7DayDismiss", comment: ""), categoryID: categorySevenNotificationID, contentTitle: NSLocalizedString("7DayContentTitle", comment: ""), contentSubtitle: NSLocalizedString("7DayContentSubtitle", comment: ""), contentBody: NSLocalizedString("7DayContentBody", comment: ""), contentBadge: 1,contentSound: UNNotificationSound.default, contentLuanchImage: "", desiredTimeInterval: sevenDays, resourceName: "homeFound", extenstionType: "jpeg")
     }
 }
 
