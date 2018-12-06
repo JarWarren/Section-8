@@ -47,6 +47,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        self.tableView.reloadData()
     }
     
     override func viewDidLoad() {

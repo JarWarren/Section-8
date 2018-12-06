@@ -28,7 +28,6 @@
 		7EA8381A21B602D400E9B9CE /* Apartment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA8381921B602D400E9B9CE /* Apartment.swift */; };
 		81212AED21B5AC5A0082C88B /* DataInputTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81212AEC21B5AC5A0082C88B /* DataInputTVCell.swift */; };
 		81212AEF21B5CCF90082C88B /* DataDisplayTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81212AEE21B5CCF90082C88B /* DataDisplayTVCell.swift */; };
-		814E925921B9CF8200F83834 /* Notification banner - EN.png in Resources */ = {isa = PBXBuildFile; fileRef = 814E925821B9CF8200F83834 /* Notification banner - EN.png */; };
 		8161D47B21B8B30D00F44AC0 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8161D47D21B8B30D00F44AC0 /* Launch Screen.storyboard */; };
 		8161D48321B8C3E300F44AC0 /* AttributesExpander.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8161D48221B8C3E300F44AC0 /* AttributesExpander.swift */; };
 		81871F1121B7079700407E51 /* MapTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81871F1021B7079700407E51 /* MapTVCell.swift */; };
@@ -77,7 +76,6 @@
 		7EA8381921B602D400E9B9CE /* Apartment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apartment.swift; sourceTree = "<group>"; };
 		81212AEC21B5AC5A0082C88B /* DataInputTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInputTVCell.swift; sourceTree = "<group>"; };
 		81212AEE21B5CCF90082C88B /* DataDisplayTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDisplayTVCell.swift; sourceTree = "<group>"; };
-		814E925821B9CF8200F83834 /* Notification banner - EN.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Notification banner - EN.png"; path = "../../../../Graphics/Notifications/Notification banner - EN.png"; sourceTree = "<group>"; };
 		8161D47C21B8B30D00F44AC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		8161D48121B8B32C00F44AC0 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Launch Screen.strings"; sourceTree = "<group>"; };
 		8161D48221B8C3E300F44AC0 /* AttributesExpander.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributesExpander.swift; sourceTree = "<group>"; };
@@ -231,7 +229,6 @@
 		7E67E2AA21ADE8CE007E4103 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				814E925821B9CF8200F83834 /* Notification banner - EN.png */,
 				7E67E29A21ADE778007E4103 /* Assets.xcassets */,
 				47C519F021B869870020BC7E /* supermarioghost_1_copy.png */,
 				47BD249021B6F6D100CC6192 /* homeFound.jpeg */,
@@ -333,7 +330,6 @@
 				7E67E29B21ADE778007E4103 /* Assets.xcassets in Resources */,
 				7E67E29921ADE777007E4103 /* Main.storyboard in Resources */,
 				47C519F121B869870020BC7E /* supermarioghost_1_copy.png in Resources */,
-				814E925921B9CF8200F83834 /* Notification banner - EN.png in Resources */,
 				7E1DF3F921B1A15F0012BFEE /* Map.storyboard in Resources */,
 				47BD249121B6F6D100CC6192 /* homeFound.jpeg in Resources */,
 				8161D47B21B8B30D00F44AC0 /* Launch Screen.storyboard in Resources */,
