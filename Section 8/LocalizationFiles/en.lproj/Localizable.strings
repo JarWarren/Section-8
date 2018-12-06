@@ -29,7 +29,7 @@
     "7DayContentBody" = "It's been a week since you worked on your application. Tap here to take the next step!";
 
     // Images
-    "notificationBanner" = "Notification Banner - EN";
+    "notificationBanner" = "notificationBannerEN";
 
 
 // MARK: - STEPS
