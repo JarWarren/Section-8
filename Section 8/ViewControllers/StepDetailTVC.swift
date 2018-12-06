@@ -261,47 +261,8 @@ extension StepDetailTVC: DataInputTVCellDelegate {
     }
 }
 
-// MARK: - DATE PICKER CELL DELEGATE EXTENSION
 
-// Conforming to delegate set above -
-// (Step 4 of 5 - 3 steps in child, 2 in parent(this file))
 
-extension StepDetailTVC: DatePickerTVCellDelegate {
-    
-    func datePickerButtonTapped(_ sender: DatePickerTVCell, _ picker: UIDatePicker) {
-        print("\n\n🚀Set Time Button Tapped in: DatePickerTVCell\n")
-        guard let unwrappedStep = selectedStep else {return}
-        
-        let fireDate = picker.date
-        
-        // Step 4 - Briefing date picker
-        if unwrappedStep.stepNumber == "STEP 4" {
-            // SET UP NOTIFCATION CENTER STUFF
-            
-            let alarm = AlarmController.shared.addAlarm(fireDate: fireDate, alarm: unwrappedStep.stepNumber, isOn: alarmIsOn)
-            
-            // NOTE: - scheduleEditNotifId: "Localize: EditNotifID", will probably get cut in our version 1.0 due to priority
-            AlarmController.shared.scheduleDatePickerUserNotifications(for: alarm, scheduleDissmissDateNotifId: "DissMissID", dissmissActionTitle: "Localize: Dissmiss", scheduleEditNotifId: "Localize: EditNotifID", editDateActionTitle: "Localize: Edit Schedule", editDateOption: [.authenticationRequired, .foreground], categoryID: datePCategoryId, contentTitle: "Content Title", contentSubtitle: "Content Subtitle", contentBody: "Localize: Content Body", contentBadge: 1, contentSound: .default, contentLuanchImage: "", resourceName: "supermarioghost_1_copy", extenstionType: "png")
-        } else {
-            return
-        }
-        //        if unwrappedStep.stepNumber == "STEP 3" {
-        //            print("Step 3 Button Tapped")
-        //
-        //            {
-        //                if unwrappedStep.stepNumber == "STEP 10" {
-        //                    print("Step 10 button Tapped")
-        //                }
-        //
-        //                if unwrappedStep.stepNumber == "STEP 12" {
-        //                    print("Step 12 button tapped")
-        //                }
-        //            }
-        //        } else {
-        //            return
-        //        }
-    }
-}
 
 // MARK: - 7-DAY NOTIFICATION EXTENSION
 
