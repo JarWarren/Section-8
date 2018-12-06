@@ -1,10 +1,14 @@
-/* 
+/*
   Localizable.strings
   Section 8
 
   Created by Jared Warren on 12/3/18.
   Copyright © 2018 Warren. All rights reserved.
 */
+
+// MARK: - LAUNCH SCREEN
+
+    "LaunchScreenTitle" = "Section8";
 
 // MARK: - STEPS
 
