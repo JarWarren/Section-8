@@ -10,6 +10,28 @@
 
     "LaunchScreenTitle" = "Section8";
 
+
+// MARK: - UI COMPONENTS
+
+    // Complete button
+    "completeButtonTextTapToMarkCompleteA" = "TAP WHEN";
+    "completeButtonTextTapToMarkCompleteB" = "IS COMPLETE";
+    "completeButtonTextTapToMarkIncompleteA" = "TAP TO CHANGE";
+    "completeButtonTextTapToMarkIncompleteB" = "TO INCOMPLETE";
+
+
+// MARK: - 7-DAY NOTIFICATIONS
+
+    // Text fields
+    "7DayDismiss" = "Dismiss";
+    "7DayContentTitle" = "Section 8 Housing Reminder";
+    "7DayContentSubtitle" = "";
+    "7DayContentBody" = "It's been a week since you worked on your application. Tap here to take the next step!";
+
+    // Images
+    "notificationBanner" = "Notification Banner - EN";
+
+
 // MARK: - STEPS
 
     "STEP" = "STEP";
@@ -168,7 +190,6 @@
 
     // Step 7b
     "7bTitle" = "THE APARTMENT YOU CHOSE:";
-    "7bText" = "Parc on Center Apartments (EXAMPLE) \n1042 Center St, Orem, UT 84057 \n(801) 335-5721";
 
     // Step 7c
     "7cText" = "You need to call the apartment complex to ask them if they accept Section 8 housing, and to find out what their prices are.";
@@ -352,14 +373,6 @@
 
     // Step 14e
     "14eText" = "Click on the button below to complete the Section 8 Housing process!";
-
-
-// MARK: - 7-DAY NOTIFICATIONS
-
-"7DayDismiss" = "Dismiss";
-"7DayContentTitle" = "Section 8 Housing Reminder";
-"7DayContentSubtitle" = "";
-"7DayContentBody" = "It's been a week since you last worked on your Section 8 housing application. Click here to find out what to do next";
 
 
 
