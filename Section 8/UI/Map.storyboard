@@ -93,6 +93,7 @@
                         <outlet property="nameLabel" destination="ViN-5v-7E4" id="NEZ-o8-ooO"/>
                         <outlet property="phoneLabel" destination="lWM-vo-tKk" id="HXG-9i-A3n"/>
                         <outlet property="utahCountyMapView" destination="V80-Vl-D1W" id="7u0-B5-XEb"/>
+                        <segue destination="vWV-p5-Vch" kind="show" identifier="toStep7" id="YmR-uP-3tq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pdE-IV-5qc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -184,6 +185,14 @@
                 </view>
             </objects>
             <point key="canvasLocation" x="1127.2" y="105.69715142428787"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="GZh-pC-vGm">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="vWV-p5-Vch" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WY3-J3-i3d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1732" y="105"/>
         </scene>
     </scenes>
     <resources>
