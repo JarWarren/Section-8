@@ -142,7 +142,7 @@
                                 <constraint firstAttribute="height" constant="35" id="Jcm-H5-LFZ"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
-                            <state key="normal" title="TAP TO CALL">
+                            <state key="normal" title="TAP TO CO TO NEXT STEP">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <userDefinedRuntimeAttributes>
