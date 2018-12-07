@@ -106,7 +106,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.21224952050000001" green="0.60157132150000003" blue="0.18863901399999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </view>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JIj-c4-dss">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="No apartment image" translatesAutoresizingMaskIntoConstraints="NO" id="JIj-c4-dss">
                             <rect key="frame" x="0.0" y="44.5" width="350" height="197"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="JIj-c4-dss" secondAttribute="height" multiplier="16:9" id="nFR-lL-kiZ"/>
@@ -215,6 +215,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="No apartment image" width="480.25" height="270.25"/>
         <image name="step6" width="61" height="60"/>
         <image name="x" width="491.51998901367188" height="491.51998901367188"/>
     </resources>

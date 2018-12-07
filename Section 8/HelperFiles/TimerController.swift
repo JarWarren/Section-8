@@ -131,9 +131,7 @@ class TimerController {
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [identifier])
     }
     
-    
-    
-    
+
     // This is a reUsable schedul Notifc alert however it needs to be worked on
     func scheduleLocalNotificationOnTimer(identifier: String, actionTitle: String, categoryID: String, contentTitle: String, contentSubtitle: String, contentBody: String, contentBadge: NSNumber, contentSound: UNNotificationSound, contentLaunchImage: String, desiredTimeInterval: Int, resourceName: String, extenstionType: String) {
         

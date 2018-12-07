@@ -54,14 +54,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             //The action that indicates the user explicitly dismissed the notification interface.
             //This action is delivered only if the notification’s category object was configured with the customDismissAction option.
         case UNNotificationDismissActionIdentifier:
-            print("/n🥶 dissmiss action tapped on the pop up notifcation/n")
+            print("/n🥶 User tapped the little 'x' on their notification pop/n")
             //An action that indicates the user opened the app from the notification interface.
         case UNNotificationDefaultActionIdentifier:
-            print("\n😜 UNNotificationDefaultActionIdentifier: User Tapped the Title area of the notifcation and was segued to the app \n")
-        case "EditNotifID":
+            print("\n😜 UNNotificationDefaultActionIdentifier: User tapped on the somewhere on the body of the notification and were segued into the app's main screen. Apple says this is An action that indicates the user opened the app from the notification interface \n")
+        case NotificationIDKey.editButtonDateP.rawValue:
             print("\nUser Tapped on the edit option on the date picker notification")
         default:
-            print("\nUser Tapped The Dississ Button")
+            print("\nUser Tapped The Dissmiss Button, however in the app delegate this print statment got fired under the default case not under Apple's UNNotificationDismissActionIdentifier case")
         }
     }
 

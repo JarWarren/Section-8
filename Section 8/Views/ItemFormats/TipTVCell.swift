@@ -14,5 +14,6 @@ class TipTVCell: UITableViewCell {
     
     @IBOutlet weak var tipTitleLabel: UILabel!
     @IBOutlet weak var tipTextLabel: UILabel!
+    @IBOutlet weak var tipImageView: UIImageView!
     
 }
