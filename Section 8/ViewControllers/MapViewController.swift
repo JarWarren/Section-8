@@ -69,7 +69,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         
         utahCountyMapView.delegate = self
         // Current default camera position is at the "center" of Utah County.
-        utahCountyMapView.camera = GMSCameraPosition(target: CLLocationCoordinate2D(latitude: 40.0966, longitude: -111.5707), zoom: 11, bearing: 0, viewingAngle: 0)
+        utahCountyMapView.camera = GMSCameraPosition(target: CLLocationCoordinate2D(latitude: 40.2969, longitude: -111.6946), zoom: 12, bearing: 0, viewingAngle: 0)
         
     }
     
@@ -133,7 +133,8 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         
         guard markerViewIsVisible != false else { return }
         self.view.addSubview(markerView)
-        self.markerView.center = self.view.center
+        self.markerView.center.x = self.view.center.x
+        self.markerView.center.y = self.markerView.bounds.height
     }
     
     // MARK: - Actions
