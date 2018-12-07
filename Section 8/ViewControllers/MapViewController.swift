@@ -149,7 +149,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         if let name = currentName, let phone = currentPhone, let address = currentAddress {
             SelectedApartmentController.shared.saveApartment(named: name, phone: phone, address: address)
         }
-        
+        StepController.shared.steps[5].stepCompleted = true
         // Determine whether or not they came from Step 7.
         switch userDidComeFromStep7 {
             
