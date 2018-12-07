@@ -25,7 +25,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     
     var alarm: Alarm?
     
-   
+    
     // MARK: - OUTLETS
     
     @IBOutlet weak var stepImageView: UIImageView!
@@ -46,6 +46,12 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     let datePActionId = "datePickerNotifID"
     let datePCategoryId = "dateCatergoryID"
     var alarmIsOn: Bool = false
+    // seven day timer constants for notif func
+    let dissmissActionSdId = "SevenDayDissmissActionID"
+    let categorySdID = "sevenDayCatergoryID"
+    let requestSdId = "sevenDayRequestID"
+    let resourceSdID = "sevenDayResourceID"
+    let typePng = "png"
     
     // MARK: - VIEW DID LOAD & VIEW WILL APPEAR
     
@@ -56,11 +62,9 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
-      // Persistence
+        
+        // Persistence
         SelectedApartmentController.shared.loadSelectedApartment()
-        
-        
         RentController.shared.loadFromPersistentStorage()
         
         // Change title to specific step
@@ -70,6 +74,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             } else {
                 completeButtonStatus.setTitle(NSLocalizedString("completeButtonTextTapToMarkIncompleteA", comment: "") + " \(thisStep.stepNumber) " + NSLocalizedString("completeButtonTextTapToMarkIncompleteB", comment: ""), for: .normal)
             }
+            // Header labels and image
             self.stepNameLabel.text = thisStep.name
             self.stepNumberLabel.text = thisStep.stepNumber
             self.stepImageView.image = UIImage(named: thisStep.stepImageName)
@@ -93,6 +98,8 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         StepController.shared.persistCompletedSteps()
         navigationController?.popViewController(animated: true)
     }
+    
+    // MARK: - BUTTON FUNCTIONS
     
     func checkButtonStatusNotificationSet() {
         guard let unwrappedStep = selectedStep else {return}
@@ -127,8 +134,8 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         
         // Switch to choose which custom cell mataches the item format
         switch item.format {
-        
-        // MARK: CLICK LINK CUSTOM CELL
+            
+            // MARK: CLICK LINK CUSTOM CELL
             
         case .clickLink:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "clickLinkCell", for: indexPath) as? ClickLinkTVCell else { return UITableViewCell() }
@@ -145,18 +152,24 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
                 cell.url = URL(string: urlString)
             }
             return cell
-        
-        // MARK: DATA DISPLAY CUSTOM CELL
+            
+            // MARK: DATA DISPLAY CUSTOM CELL
             
         case .dataDisplay:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "dataDisplayCell", for: indexPath) as? DataDisplayTVCell, let rent = RentController.shared.rent else { return UITableViewCell() }
-            // Configure cell
-            cell.dataDisplayTitleLabel.text = item.title
-            cell.dataDisplayTextLabel?.text = item.text
-            cell.dataDisplayDataLabel?.text = "$\(rent.maxRent) per month or lower"
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "dataDisplayCell", for: indexPath) as? DataDisplayTVCell else { return UITableViewCell() }
+            if let rent = RentController.shared.rent {
+                cell.dataDisplayTitleLabel.text = item.title
+                cell.dataDisplayTextLabel?.text = item.text
+                cell.dataDisplayDataLabel?.text = "$\(rent.maxRent) per month or lower"
+            } else {
+                // Configure cell
+                cell.dataDisplayTitleLabel.text = item.title
+                cell.dataDisplayTextLabel?.text = item.text
+                cell.dataDisplayDataLabel?.text = "Maximum rent not yet calculated"
+            }
             return cell
             
-        // MARK: DATA INPUT CUSTOM CELL
+            // MARK: DATA INPUT CUSTOM CELL
             
         case .dataInput:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "dataInputCell", for: indexPath) as? DataInputTVCell else { return UITableViewCell() }
@@ -185,9 +198,9 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
                 cell.dataInputText2Field.text = ""
             }
             return cell
-        
-        // MARK: DATE PICKER CUSTOM CELL
-        
+            
+            // MARK: DATE PICKER CUSTOM CELL
+            
         case .datePicker:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "datePickerCell", for: indexPath) as? DatePickerTVCell else { return UITableViewCell() }
             
@@ -201,7 +214,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             cell.datePickerButton?.setTitle("\(item.buttonText ?? "CLICK TO SET DATE")", for: .normal)
             return cell
             
-        // MARK: PARAGRAPH CUSTOM CELL
+            // MARK: PARAGRAPH CUSTOM CELL
             
         case .paragraph:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "paragraphCell", for: indexPath) as? ParagraphTVCell else { return UITableViewCell() }
@@ -211,7 +224,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             cell.paragraphTextLabel?.text = item.text
             return cell
             
-        // MARK: TIP CUSTOM CELL
+            // MARK: TIP CUSTOM CELL
             
         case .tip:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "tipCell", for: indexPath) as? TipTVCell else { return UITableViewCell() }
@@ -234,8 +247,6 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         }
     }
 }
-
-
 
 // MARK: - CUSTOM CELL EXTENSIONS
 
@@ -299,7 +310,7 @@ extension StepDetailTVC {
     }
     
     func timerCompleted() {
-    
+        
         timerController.startTimer(time: 3)
         print("\nTimer hit zero and completed\n")
     }
@@ -320,6 +331,11 @@ extension StepDetailTVC {
         
         print("\n📅 7 day notification set\n")
         timerController.scheduleLocalNotificationOnTimer(identifier: sevenDayTimerID,actionTitle: NSLocalizedString("7DayDismiss", comment: ""), categoryID: categorySevenNotificationID, contentTitle: NSLocalizedString("7DayContentTitle", comment: ""), contentSubtitle: NSLocalizedString("7DayContentSubtitle", comment: ""), contentBody: NSLocalizedString("7DayContentBody", comment: ""), contentBadge: 1,contentSound: UNNotificationSound.default, contentLaunchImage: "", desiredTimeInterval: sevenDays, resourceName: NSLocalizedString("notificationBanner", comment: ""), extenstionType: "png")
+    }
+    
+    func scheduleSevenDayIntervalNotif() {
+        print("\n📅 7 day notification set\n")
+        timerController.scheduleLocalNotifInterval(dissmissActionID: dissmissActionSdId, actionTitle: NSLocalizedString("7DayDismiss", comment: ""), categoryID: categorySdID, contentTitle: NSLocalizedString("7DayContentTitle", comment: ""), contentSubtitle: NSLocalizedString("7DayContentSubtitle", comment: ""), contentBody: NSLocalizedString("7DayContentBody", comment: ""), contentBadge: 1, contentSound: UNNotificationSound.default, contentLaunchImage: "", desiredTimeInterval: sevenDays, resourceName: NSLocalizedString("notificationBanner", comment: ""), extenstionType: typePng, resourceID: resourceSdID, requestID: requestSdId)
     }
 }
 

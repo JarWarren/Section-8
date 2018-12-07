@@ -99,12 +99,15 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         for location in locations {
             if location.geometry.location.lat == marker.position.latitude && location.geometry.location.lng == marker.position.longitude {
                 
-                // Fetch image from ApartmentLocation, using the photoreference retrieved in setupMarkers function.
-                GoogleNetworkController.fetchPlaceImage(photoReference: location.photos?.first?.photo_reference ?? "") { (image) in
-                    DispatchQueue.main.async {
-                        self.currentImage = image
-                        self.markerViewIsVisible = true
+                if let photo = location.photos?.first?.photo_reference {
+                    // Fetch image from ApartmentLocation, using the photoreference retrieved in setupMarkers function.
+                    GoogleNetworkController.fetchPlaceImage(photoReference: photo) { (image) in
+                        DispatchQueue.main.async {
+                            self.currentImage = image
+                        }
                     }
+                } else {
+                    self.currentImage = UIImage(named: "noApartmentImage")
                 }
                 
                 // Fetch place details using the place_ID retrieved in setupMarkers function.
@@ -113,6 +116,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
                         self.currentName = name
                         self.currentPhone = phone
                         self.currentAddress = address
+                        self.markerViewIsVisible = true
                     }
                 }
             }
@@ -145,15 +149,15 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         if let name = currentName, let phone = currentPhone, let address = currentAddress {
             SelectedApartmentController.shared.saveApartment(named: name, phone: phone, address: address)
         }
-        
+        StepController.shared.steps[5].stepCompleted = true
         // Determine whether or not they came from Step 7.
         switch userDidComeFromStep7 {
             
-            // If they came from Step 7, pop the view controller.
+        // If they came from Step 7, pop the view controller.
         case true :
             self.navigationController?.popViewController(animated: true)
             
-            // If they came from the Home screen, display an instance of Step 7.
+        // If they came from the Home screen, display an instance of Step 7.
         case false :
             guard let stepDetailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "stepsDetailTVC") as? StepDetailTVC else { return }
             stepDetailVC.selectedStep = StepController.shared.steps[6]

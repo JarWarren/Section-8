@@ -133,7 +133,7 @@ class TimerController {
     
 
     // This is a reUsable schedul Notifc alert however it needs to be worked on
-    func scheduleLocalNotificationOnTimer(identifier: String, actionTitle: String, categoryID: String, contentTitle: String, contentSubtitle: String, contentBody: String, contentBadge: NSNumber, contentSound: UNNotificationSound, contentLaunchImage: String, desiredTimeInterval: Int, resourceName: String, extenstionType: String) {
+func scheduleLocalNotificationOnTimer(identifier: String, actionTitle: String, categoryID: String, contentTitle: String, contentSubtitle: String, contentBody: String, contentBadge: NSNumber, contentSound: UNNotificationSound, contentLaunchImage: String, desiredTimeInterval: Int, resourceName: String, extenstionType: String) {
         
         // The Alert Button options
         let action = UNNotificationAction(identifier: identifier, title: actionTitle, options: [])
@@ -171,6 +171,8 @@ class TimerController {
             }
         }
     }
+    
+    
     
     
     // MARK: - Calendar Notification
