@@ -6,16 +6,16 @@
 //  Copyright © 2018 Warren. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-class Section8Apartment: {
+class Section8Apartment {
     
     var name: String
     var address: String
     var phone: String
-    var apartmentPhoto: String
+    var apartmentPhoto: String?
     
-    init(name: String, address: String, phone: String, apartmentPhoto: String) {
+    init(name: String, address: String, phone: String, apartmentPhoto: String = "noApartmentImage") {
         self.name = name
         self.address = address
         self.phone = phone
