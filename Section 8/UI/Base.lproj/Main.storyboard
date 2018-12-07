@@ -241,7 +241,7 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="paragraphCell" rowHeight="67" id="Vu5-Gu-XPq" customClass="ParagraphTVCell" customModule="Section_8" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="paragraphCell" rowHeight="67" id="Vu5-Gu-XPq" customClass="ParagraphTVCell" customModule="Section_8" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="67"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vu5-Gu-XPq" id="9se-QW-JhD">
@@ -276,7 +276,7 @@
                                             <outlet property="paragraphTitleLabel" destination="jS7-1F-lyV" id="RDJ-86-yZw"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tipCell" rowHeight="66" id="3nD-if-ARc" customClass="TipTVCell" customModule="Section_8" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="tipCell" rowHeight="66" id="3nD-if-ARc" customClass="TipTVCell" customModule="Section_8" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="95" width="414" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3nD-if-ARc" id="5dh-xC-J46">
@@ -312,7 +312,7 @@
                                             <outlet property="tipTitleLabel" destination="kaH-ZF-E9z" id="amm-Sa-HT2"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="clickLinkCell" rowHeight="120" id="YIx-m9-db3" customClass="ClickLinkTVCell" customModule="Section_8" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="clickLinkCell" rowHeight="120" id="YIx-m9-db3" customClass="ClickLinkTVCell" customModule="Section_8" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="161" width="414" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YIx-m9-db3" id="Cxc-Ps-1dV">
@@ -376,7 +376,7 @@
                                             <outlet property="clickLinkTitleLabel" destination="2qp-93-MVI" id="Xpm-lU-F13"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="datePickerCell" rowHeight="263" id="uLJ-Na-7Mi" customClass="DatePickerTVCell" customModule="Section_8" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="datePickerCell" rowHeight="263" id="uLJ-Na-7Mi" customClass="DatePickerTVCell" customModule="Section_8" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="281" width="414" height="263"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uLJ-Na-7Mi" id="MsL-GV-v63">
@@ -465,7 +465,7 @@
                                             <outlet property="datePickerTitleLabel" destination="np2-6U-1I6" id="KQv-LG-GWa"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dataInputCell" rowHeight="257" id="R7b-2W-igQ" customClass="DataInputTVCell" customModule="Section_8" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="dataInputCell" rowHeight="257" id="R7b-2W-igQ" customClass="DataInputTVCell" customModule="Section_8" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="544" width="414" height="257"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R7b-2W-igQ" id="vAz-4s-Yaf">
@@ -581,7 +581,7 @@
                                             <outlet property="dataInputTitle2Label" destination="BjB-4h-Fhq" id="yeA-cG-c8r"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dataDisplayCell" rowHeight="125" id="GLG-jh-8u9" customClass="DataDisplayTVCell" customModule="Section_8" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="dataDisplayCell" rowHeight="125" id="GLG-jh-8u9" customClass="DataDisplayTVCell" customModule="Section_8" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="801" width="414" height="125"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GLG-jh-8u9" id="T2k-fR-qXN">

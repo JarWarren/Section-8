@@ -150,11 +150,17 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         // MARK: DATA DISPLAY CUSTOM CELL
             
         case .dataDisplay:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "dataDisplayCell", for: indexPath) as? DataDisplayTVCell, let rent = RentController.shared.rent else { return UITableViewCell() }
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "dataDisplayCell", for: indexPath) as? DataDisplayTVCell else { return UITableViewCell() }
+            if let rent = RentController.shared.rent {
+                cell.dataDisplayTitleLabel.text = item.title
+                cell.dataDisplayTextLabel?.text = item.text
+                cell.dataDisplayDataLabel?.text = "$\(rent.maxRent) per month or lower"
+            } else {
             // Configure cell
             cell.dataDisplayTitleLabel.text = item.title
             cell.dataDisplayTextLabel?.text = item.text
-            cell.dataDisplayDataLabel?.text = "$\(rent.maxRent) per month or lower"
+            cell.dataDisplayDataLabel?.text = "Maximum rent not yet calculated"
+            }
             return cell
             
         // MARK: DATA INPUT CUSTOM CELL
