@@ -38,6 +38,8 @@
 		818FC59E21B868D30084323E /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818FC59D21B868D30084323E /* UITextField+Extensions.swift */; };
 		81B7E94E21B1FEC1003A209F /* DatePickerTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B7E94D21B1FEC1003A209F /* DatePickerTVCell.swift */; };
 		81B7E95021B1FF0E003A209F /* ClickLinkTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B7E94F21B1FF0E003A209F /* ClickLinkTVCell.swift */; };
+		81CC955E21BB030100CB1B32 /* Section8Apartment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CC955D21BB030100CB1B32 /* Section8Apartment.swift */; };
+		81CC956221BB048700CB1B32 /* Section8ApartmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CC956121BB048700CB1B32 /* Section8ApartmentController.swift */; };
 		81DD083321AF1D470037F3AA /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DD083221AF1D470037F3AA /* Step.swift */; };
 		81DD083521AF1E880037F3AA /* StepController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DD083421AF1E880037F3AA /* StepController.swift */; };
 		81DD083721AF32F20037F3AA /* HomeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DD083621AF32F20037F3AA /* HomeTVC.swift */; };
@@ -89,6 +91,8 @@
 		818FC59D21B868D30084323E /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
 		81B7E94D21B1FEC1003A209F /* DatePickerTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTVCell.swift; sourceTree = "<group>"; };
 		81B7E94F21B1FF0E003A209F /* ClickLinkTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickLinkTVCell.swift; sourceTree = "<group>"; };
+		81CC955D21BB030100CB1B32 /* Section8Apartment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section8Apartment.swift; sourceTree = "<group>"; };
+		81CC956121BB048700CB1B32 /* Section8ApartmentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section8ApartmentController.swift; sourceTree = "<group>"; };
 		81DD083221AF1D470037F3AA /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
 		81DD083421AF1E880037F3AA /* StepController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepController.swift; sourceTree = "<group>"; };
 		81DD083621AF32F20037F3AA /* HomeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTVC.swift; sourceTree = "<group>"; };
@@ -203,6 +207,7 @@
 				47BD249221B7206700CC6192 /* Alarm.swift */,
 				818FC57B21B84A6C0084323E /* Rent.swift */,
 				7E686E1B21B85BB20005D5BB /* SelectedApartment.swift */,
+				81CC955D21BB030100CB1B32 /* Section8Apartment.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -215,6 +220,7 @@
 				47BD249421B742CC00CC6192 /* AlarmController.swift */,
 				818FC57D21B84A760084323E /* RentController.swift */,
 				7E686E1D21B85BCD0005D5BB /* SelectedApartmentController.swift */,
+				81CC956121BB048700CB1B32 /* Section8ApartmentController.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -403,6 +409,7 @@
 				47DF81F921B97E8000C0F0FE /* stepDetailExtension.swift in Sources */,
 				7E67E29421ADE777007E4103 /* AppDelegate.swift in Sources */,
 				81DD083321AF1D470037F3AA /* Step.swift in Sources */,
+				81CC955E21BB030100CB1B32 /* Section8Apartment.swift in Sources */,
 				8161D48321B8C3E300F44AC0 /* AttributesExpander.swift in Sources */,
 				81B7E95021B1FF0E003A209F /* ClickLinkTVCell.swift in Sources */,
 				81FF0A9721B09EAC004A7EDB /* ParagraphTVCell.swift in Sources */,
@@ -416,6 +423,7 @@
 				476654B121B2F32E00FC3663 /* AlertController.swift in Sources */,
 				47BD249321B7206700CC6192 /* Alarm.swift in Sources */,
 				7E1DF3F121B19FBE0012BFEE /* GoogleNetworkController.swift in Sources */,
+				81CC956221BB048700CB1B32 /* Section8ApartmentController.swift in Sources */,
 				81DD083721AF32F20037F3AA /* HomeTVC.swift in Sources */,
 				476654B321B2F38800FC3663 /* TimerController.swift in Sources */,
 				81FF0A9121B093B7004A7EDB /* Item.swift in Sources */,
