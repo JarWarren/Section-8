@@ -98,7 +98,7 @@ class TimerController {
     func scheduleLocalNotificationFor(identifier: String) {
         
         // The Alert Button options
-        let action = UNNotificationAction(identifier: identifier, title: "Dissmiss", options: [])
+        let action = UNNotificationAction(identifier: identifier, title: "Dismiss", options: [])
         let category = UNNotificationCategory(identifier: outOfAppNotifIdentifer, actions: [action], intentIdentifiers: [], options: [.customDismissAction])
         UNUserNotificationCenter.current().setNotificationCategories([category])
         
@@ -135,7 +135,7 @@ class TimerController {
     
     
     // This is a reUsable schedul Notifc alert however it needs to be worked on
-    func scheduleLocalNotificationOnTimer(identifier: String, actionTitle: String, categoryID: String, contentTitle: String, contentSubtitle: String, contentBody: String, contentBadge: NSNumber, contentSound: UNNotificationSound, contentLuanchImage: String, desiredTimeInterval: Int, resourceName: String, extenstionType: String) {
+    func scheduleLocalNotificationOnTimer(identifier: String, actionTitle: String, categoryID: String, contentTitle: String, contentSubtitle: String, contentBody: String, contentBadge: NSNumber, contentSound: UNNotificationSound, contentLaunchImage: String, desiredTimeInterval: Int, resourceName: String, extenstionType: String) {
         
         // The Alert Button options
         let action = UNNotificationAction(identifier: identifier, title: actionTitle, options: [])
@@ -149,7 +149,7 @@ class TimerController {
         content.body = contentBody
         content.badge = contentBadge
         content.sound = contentSound
-        content.launchImageName = contentLuanchImage
+        content.launchImageName = contentLaunchImage
         //This is the String ID for what we want to prseent to the user
         content.categoryIdentifier = categoryID
          /*When you schedule a notification request containing the attachment, the attachment’s file is moved to a new location to facilitate access by the appropriate processes. After the move, the only way to access the file is using the methods of the UNUserNotificationCenter object.*/

@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Google Maps
         GMSServices.provideAPIKey("AIzaSyAchY5OHlVXXQyaux0dO-kM0gVQz0T0rzE")
-        
+        StepController.shared.loadCompletedSteps()
         // User Notifcation
         // NOTE: - Ben from class suggested we educate the user and ask them to allow notifications before they are given the option to grant/deny permission
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
@@ -44,16 +44,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
     // Ivan - Not sure what this does just yet
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+         print("Test: \(response.notification.request.identifier)")
         
         defer {
             completionHandler()
         }
         
         switch response.actionIdentifier {
+            //The action that indicates the user explicitly dismissed the notification interface.
+            //This action is delivered only if the notification’s category object was configured with the customDismissAction option.
         case UNNotificationDismissActionIdentifier:
             print("/n🥶 dissmiss action tapped on the pop up notifcation/n")
+            //An action that indicates the user opened the app from the notification interface.
         case UNNotificationDefaultActionIdentifier:
             print("\n😜 UNNotificationDefaultActionIdentifier: User Tapped the Title area of the notifcation and was segued to the app \n")
+        case "EditNotifID":
+            print("\nUser Tapped on the edit option on the date picker notification")
         default:
             print("\nUser Tapped The Dississ Button")
         }

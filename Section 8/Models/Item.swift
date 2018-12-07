@@ -8,10 +8,10 @@
 
 import Foundation
 
-class Item {
+class Item: Codable {
     
     var title: String?
-    let text: String?
+    var text: String?
     let buttonText: String?
     let url: String?
     let graphicName: String?
@@ -29,12 +29,11 @@ class Item {
 
 // MARK: - FORMAT TYPE
 
-enum ItemFormat: String {
-    case tip = "tip"
-    case paragraph = "paragraph"
+enum ItemFormat: String, Codable {
     case clickLink = "clickLink"
-    case datePicker = "datePicker"
-    case dataInput = "dataInput"
     case dataDisplay = "datadisplay"
-    case map = "map"
+    case dataInput = "dataInput"
+    case datePicker = "datePicker"
+    case paragraph = "paragraph"
+    case tip = "tip"
 }

@@ -169,10 +169,6 @@ class StepController {
                 // Item 6a
                 ItemController.addNewItem(title: nil, text: NSLocalizedString("6aText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
-                // Item 6b
-                ItemController.addNewItem(title: nil, text: nil, buttonText: nil, url: nil, graphicName: nil, format: .map, step: step)
-                
-                
             // MARK: - STEP 7
                 
             case NSLocalizedString("STEP", comment: "") + " 7":
@@ -181,8 +177,9 @@ class StepController {
                 ItemController.addNewItem(title: nil, text: NSLocalizedString("7aText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
                 // Item 7b
-                ItemController.addNewItem(title: NSLocalizedString("7bTitle", comment: ""), text: NSLocalizedString("7bText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .tip, step: step)
-                
+
+                ItemController.addNewItem(title: NSLocalizedString("7bTitle", comment: ""), text: "", buttonText: nil, url: nil, graphicName: nil, format: .tip, step: step)
+
                 // Item 7c
                 ItemController.addNewItem(title: nil, text: NSLocalizedString("7cText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
@@ -353,6 +350,47 @@ class StepController {
             default:
             return
             }
+        }
+    }
+    
+    // MARK: - STEP PERSISTENCE
+    
+    func persistCompletedSteps() {
+
+        var completedStepsArray: [Bool] = []
+        
+        for step in steps {
+            completedStepsArray.append(step.stepCompleted)
+        }
+        
+        do {
+            let apartmentJSON = try JSONEncoder().encode(completedStepsArray)
+            try apartmentJSON.write(to: fileURL())
+        } catch {
+            print("FAILED TO PERSIST COMPLETED STEPS")
+        }
+    }
+    
+    private func fileURL() -> URL {
+        let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let fileName = "CompletedSteps.json"
+        let documentsDirectoryURL = urls[0].appendingPathComponent(fileName)
+        return documentsDirectoryURL
+    }
+    
+    func loadCompletedSteps() {
+        
+        var completedSteps: [Bool] = []
+        do {
+            let stepJSON = try Data(contentsOf: fileURL())
+            completedSteps = try JSONDecoder().decode([Bool].self, from: stepJSON)
+            var stepIndex = 0
+            for step in self.steps {
+                step.stepCompleted = completedSteps[stepIndex]
+                stepIndex += 1
+            }
+        } catch {
+            print("FAILED TO LOAD PREVIOUSLY COMPLETED STEPS")
         }
     }
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Step {
+class Step: Codable {
     
     let name: String
     let stepNumber: String

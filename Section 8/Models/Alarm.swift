@@ -11,11 +11,13 @@ import Foundation
 
 class Alarm: Codable {
     var fireDate: Date
+    var name: String
     var isOn: Bool
     var uuid: String
     
-    init(fireDate: Date, isOn: Bool = true, uuid: String = UUID().uuidString) {
+    init(fireDate: Date, name: String, isOn: Bool = true, uuid: String = UUID().uuidString) {
         self.fireDate = fireDate
+        self.name = name
         self.isOn = isOn
         self.uuid = uuid
     }
@@ -28,9 +30,9 @@ class Alarm: Codable {
     }
 }
 
-extension Alarm {
+extension Alarm: Equatable {
     static func == (lhs: Alarm, rhs: Alarm) -> Bool {
-        if lhs.uuid != rhs.uuid {return false}
+        if lhs.name != rhs.name && lhs.fireDate != rhs.fireDate {return false}
         return true 
     }
 }

@@ -1,10 +1,36 @@
-/* 
+/*
   Localizable.strings
   Section 8
 
   Created by Jared Warren on 12/3/18.
   Copyright © 2018 Warren. All rights reserved.
 */
+
+// MARK: - LAUNCH SCREEN
+
+    "LaunchScreenTitle" = "Section8";
+
+
+// MARK: - UI COMPONENTS
+
+    // Complete button
+    "completeButtonTextTapToMarkCompleteA" = "TAP WHEN";
+    "completeButtonTextTapToMarkCompleteB" = "IS COMPLETE";
+    "completeButtonTextTapToMarkIncompleteA" = "TAP TO CHANGE";
+    "completeButtonTextTapToMarkIncompleteB" = "TO INCOMPLETE";
+
+
+// MARK: - 7-DAY NOTIFICATIONS
+
+    // Text fields
+    "7DayDismiss" = "Dismiss";
+    "7DayContentTitle" = "Section 8 Housing Reminder";
+    "7DayContentSubtitle" = "";
+    "7DayContentBody" = "It's been a week since you worked on your application. Tap here to take the next step!";
+
+    // Images
+    "notificationBanner" = "notificationBannerEN";
+
 
 // MARK: - STEPS
 
@@ -127,7 +153,7 @@
     "4gText" = "After attending the briefing, click the “Complete” button below to move on to the next step!";
 
 
-// MARK: - STEP 5
+// MARK: - STEP 5 ITEMS
 
     // Step 5a
     "5aText" = "The Housing Authority will only let you rent an apartment within a certain price range. To calculate what you can afford to pay, you will need to provide a couple pieces of information:";
@@ -151,20 +177,19 @@
     "5eText" = "After calculating your maximum rent, click the “Complete” button below to move on to the next step!";
 
 
-// MARK: - STEP 6
+// MARK: - STEP 6 ITEMS
 
     // Step 6a
-    "6aText" = "Time to choose an apartment! Click on a marker to see apartment details. Choose one, and click “Complete” below.";
+    "6aText" = "Time to choose an apartment! Tap a marker for apartment details. Choose one, and tap the green button to move to the next step.";
 
 
-// MARK: - STEP 7
+// MARK: - STEP 7 ITEMS
 
     // Step 7a
     "7aText" = "Now that you have selected a possible apartment complex, it’s time to give them a call to find out more.";
 
     // Step 7b
     "7bTitle" = "THE APARTMENT YOU CHOSE:";
-    "7bText" = "Parc on Center Apartments (EXAMPLE) \n1042 Center St, Orem, UT 84057 \n(801) 335-5721";
 
     // Step 7c
     "7cText" = "You need to call the apartment complex to ask them if they accept Section 8 housing, and to find out what their prices are.";
@@ -194,7 +219,7 @@
     "7iText" = "Once you have found an apartment that is right for you, click on the “Complete” button below to move on to the next step!";
 
 
-// MARK: - STEP 8
+// MARK: - STEP 8 ITEMS
 
     // Step 8a
 "8aText" = "Once you’ve talked to the apartment complex and they’ve let you know that they do accept Section 8 housing, it’s time to go visit them. You will need them to complete FOUR forms: \n\n1. Tenancy Approval form \n2. Copy of proposed lease \n3. W-9 form \n4. Cover letter \n\nThey might be able to fill everything out while you wait, or they may tell you to come back on another day. \n\nIn the packet you received at your briefing, you should have a copy of each of these forms.";
@@ -230,7 +255,7 @@
 "8hText" = "Once you have the documents, click on the “Complete” button below to move on to the next step!";
 
 
-// MARK: - STEP 9
+// MARK: - STEP 9 ITEMS
 
     // Step 9a
 "9aText" = "Now that you have the four required documents from Step 8, you need to take them to the HAUC office:";
@@ -250,7 +275,7 @@
 "9eText" = "Once deliver the documents to the Housing Authority, click on the “Complete” button below to move on to the next step!";
 
 
-// MARK: - STEP 10
+// MARK: - STEP 10 ITEMS
 
     // Step 10a
     "10aText" = "Several days after you have submitted the required forms, you will either get a phone call, or receive a letter in the mail from the Housing Authority to set up an appointment to do a apartment inspection.";
@@ -271,7 +296,7 @@
     "10eText" = "Once the inspection has been scheduled with the apartment complex, and the Housing Authority, click on the “Complete” button below to move on to the next step!";
 
 
-// MARK: - STEP 11
+// MARK: - STEP 11 ITEMS
 
     // Step 11a
     "11aText" = "On the day of the inspection, make sure that there is an adult at the apartment when the inspector arrives. That can be you or someone from the apartment complex.";
@@ -288,7 +313,7 @@
     "11dText" = "Once the inspection is finished, click on the “Complete” button below to move on to the next step!";
 
 
-// MARK: - STEP 12
+// MARK: - STEP 12 ITEMS
 
     // Step 12a
     "12aText" = "After your unit passes an inspection, the Housing Authority will call you to make an appointment where you will visit them at their office.";
@@ -316,7 +341,7 @@
     "12gText" = "Once your final appointment is finished, click on the “Complete” button below to move on to the next step!";
 
 
-// MARK: - STEP 13
+// MARK: - STEP 13 ITEMS
 
     // Step 13a
     "13aText" = "After your final appointment, you will need to deliver the leases and contracts to the apartment complex, so they can be signed. Then you must return ALL copies to the Housing Authority:";
@@ -330,7 +355,7 @@
 ";
 
 
-// MARK: - STEP 14
+// MARK: - STEP 14 ITEMS
 
     // Step 14a
     "14aText" = "Once you have received signed copies of the contracts and leases in the mail, you can schedule a time with the apartment complex to move in.";
@@ -348,9 +373,6 @@
 
     // Step 14e
     "14eText" = "Click on the button below to complete the Section 8 Housing process!";
-
-
-// MARK: - NOTIFICATIONS
 
 
 
