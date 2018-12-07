@@ -105,7 +105,8 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         guard let unwrappedStep = selectedStep else {return}
         if unwrappedStep.stepNumber != "STEP 14"  {
             cancelSevenDayNotification()
-            scheduleSevenDayNotification()
+            
+            scheduleSevenDayIntervalNotif()
         }
     }
     
@@ -116,7 +117,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             UNUserNotificationCenter.current().removeAllDeliveredNotifications()
         } else {
             if unwrappedStep.stepNumber == "STEP 14" && unwrappedStep.stepCompleted != true {
-                scheduleSevenDayNotification()
+               scheduleSevenDayIntervalNotif()
             }
         }
     }
@@ -327,15 +328,10 @@ extension StepDetailTVC {
         print("\n🐙🗓  7 day notification canceled\n")
     }
     
-    func scheduleSevenDayNotification() {
-        
-        print("\n📅 7 day notification set\n")
-        timerController.scheduleLocalNotificationOnTimer(identifier: sevenDayTimerID,actionTitle: NSLocalizedString("7DayDismiss", comment: ""), categoryID: categorySevenNotificationID, contentTitle: NSLocalizedString("7DayContentTitle", comment: ""), contentSubtitle: NSLocalizedString("7DayContentSubtitle", comment: ""), contentBody: NSLocalizedString("7DayContentBody", comment: ""), contentBadge: 1,contentSound: UNNotificationSound.default, contentLaunchImage: "", desiredTimeInterval: sevenDays, resourceName: NSLocalizedString("notificationBanner", comment: ""), extenstionType: "png")
-    }
     
     func scheduleSevenDayIntervalNotif() {
-        print("\n📅 7 day notification set\n")
-        timerController.scheduleLocalNotifInterval(dissmissActionID: dissmissActionSdId, actionTitle: NSLocalizedString("7DayDismiss", comment: ""), categoryID: categorySdID, contentTitle: NSLocalizedString("7DayContentTitle", comment: ""), contentSubtitle: NSLocalizedString("7DayContentSubtitle", comment: ""), contentBody: NSLocalizedString("7DayContentBody", comment: ""), contentBadge: 1, contentSound: UNNotificationSound.default, contentLaunchImage: "", desiredTimeInterval: sevenDays, resourceName: NSLocalizedString("notificationBanner", comment: ""), extenstionType: typePng, resourceID: resourceSdID, requestID: requestSdId)
+        print("\nThe new 📅 7 day notification was set\n")
+        timerController.scheduleLocalNotifInterval(dissmissActionID: dissmissActionSdId, actionTitle: NSLocalizedString("7DayDismiss", comment: ""), categoryID: categorySdID, contentTitle: NSLocalizedString("7DayContentTitle", comment: ""), contentSubtitle: NSLocalizedString("7DayContentSubtitle", comment: ""), contentBody: NSLocalizedString("7DayContentBody", comment: ""), contentBadge: 1, contentSound: UNNotificationSound.default, contentLaunchImage: "", desiredTimeInterval: sevenDays, resourceName: NSLocalizedString("supermarioghost_1_copy", comment: ""), extenstionType: typePng, resourceID: resourceSdID, requestID: requestSdId)
     }
 }
 

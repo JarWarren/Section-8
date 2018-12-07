@@ -148,10 +148,9 @@ func scheduleLocalNotificationOnTimer(identifier: String, actionTitle: String, c
         content.badge = contentBadge
         content.sound = contentSound
         content.launchImageName = contentLaunchImage
-        //This is the String ID for what we want to prseent to the user
+   
         content.categoryIdentifier = categoryID
-         /*When you schedule a notification request containing the attachment, the attachment’s file is moved to a new location to facilitate access by the appropriate processes. After the move, the only way to access the file is using the methods of the UNUserNotificationCenter object.*/
-//        guard let url = Bundle.main.url(forResource: "homeFound", withExtension: "jpeg") else {return}
+
          guard let url = Bundle.main.url(forResource: resourceName, withExtension: extenstionType) else {return}
         do {
             let attachments =  try UNNotificationAttachment(identifier: categoryID, url: url, options: [:])
@@ -177,14 +176,12 @@ func scheduleLocalNotificationOnTimer(identifier: String, actionTitle: String, c
     
     // MARK: - Calendar Notification
     func scheduleLocalNotificationOnDate(schedulateDateNotifId: String, dissmissActionTitle: String, editDateActionTitle: String, editDateOption: UNNotificationActionOptions,  categoryID: String, contentTitle: String, contentSubtitle: String, contentBody: String, contentBadge: NSNumber, contentSound: UNNotificationSound, contentLuanchImage: String, desiredTimeInterval: Int, resourceName: String, extenstionType: String, alrmComponent: Date) {
-        
-        // The Alert Button options
+
         let dissmissAction = UNNotificationAction(identifier: schedulateDateNotifId, title: dissmissActionTitle, options: [])
         let editDateAction = UNNotificationAction(identifier: schedulateDateNotifId, title: editDateActionTitle, options: [editDateOption])
         let category = UNNotificationCategory(identifier: categoryID, actions: [dissmissAction, editDateAction], intentIdentifiers: [], options: [.customDismissAction])
         UNUserNotificationCenter.current().setNotificationCategories([category])
         
-        // MARK: - The notification payload
         let content = UNMutableNotificationContent()
         content.title = contentTitle
         content.subtitle = contentSubtitle
@@ -192,10 +189,9 @@ func scheduleLocalNotificationOnTimer(identifier: String, actionTitle: String, c
         content.badge = contentBadge
         content.sound = contentSound
         content.launchImageName = contentLuanchImage
-        //This is the String ID for what we want to prseent to the user
+  
         content.categoryIdentifier = categoryID
-        /*When you schedule a notification request containing the attachment, the attachment’s file is moved to a new location to facilitate access by the appropriate processes. After the move, the only way to access the file is using the methods of the UNUserNotificationCenter object.*/
-        //        guard let url = Bundle.main.url(forResource: "homeFound", withExtension: "jpeg") else {return}
+
         guard let url = Bundle.main.url(forResource: resourceName, withExtension: extenstionType) else {return}
         do {
             let attachments =  try UNNotificationAttachment(identifier: categoryID, url: url, options: [:])
@@ -211,6 +207,45 @@ func scheduleLocalNotificationOnTimer(identifier: String, actionTitle: String, c
         
         let request = UNNotificationRequest(identifier: schedulateDateNotifId, content: content, trigger: trigger)
         
+        UNUserNotificationCenter.current().add(request) { (error) in
+            if let error = error {
+                print("💩 There was an error in \(#function) ; (error) ; \(error.localizedDescription) 💩")
+            }
+        }
+    }
+    
+    // MARK: - as of Dec 7th this is the func we're using to call the Seven Day Interval Notification
+    func scheduleLocalNotifInterval(dissmissActionID: String, actionTitle: String, categoryID: String, contentTitle: String, contentSubtitle: String, contentBody: String, contentBadge: NSNumber, contentSound: UNNotificationSound, contentLaunchImage: String, desiredTimeInterval: Int, resourceName: String, extenstionType: String, resourceID: String, requestID: String) {
+        
+        // The Alert Button options
+        let dissMissAction = UNNotificationAction(identifier: dissmissActionID, title: actionTitle, options: [])
+        
+        let category = UNNotificationCategory(identifier: categoryID, actions: [dissMissAction], intentIdentifiers: [], options: [.customDismissAction])
+        UNUserNotificationCenter.current().setNotificationCategories([category])
+        
+        //Payload
+        let content = UNMutableNotificationContent()
+        content.title = contentTitle
+        content.subtitle = contentSubtitle
+        content.body = contentBody
+        content.badge = contentBadge
+        content.sound = contentSound
+        content.launchImageName = contentLaunchImage
+        content.categoryIdentifier = categoryID
+        
+        //Image
+        guard let url = Bundle.main.url(forResource: resourceName, withExtension: extenstionType) else {return}
+        do {
+            let attachments =  try UNNotificationAttachment(identifier: resourceID, url: url, options: [:])
+            
+            content.attachments = [attachments]
+        } catch {
+            print("\n\n🚀 There was an error with the attachment in: \(#file) \n\n \(#function); \n\n\(error); \n\n\(error.localizedDescription) 🚀\n\n")
+        }
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(desiredTimeInterval), repeats: true)
+        
+        let request = UNNotificationRequest(identifier: requestID, content: content, trigger: trigger)
         UNUserNotificationCenter.current().add(request) { (error) in
             if let error = error {
                 print("💩 There was an error in \(#function) ; (error) ; \(error.localizedDescription) 💩")
