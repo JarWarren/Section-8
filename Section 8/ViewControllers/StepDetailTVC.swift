@@ -60,7 +60,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
       // Persistence
         SelectedApartmentController.shared.loadSelectedApartment()
         
-        
+
         RentController.shared.loadFromPersistentStorage()
         
         // Change title to specific step
