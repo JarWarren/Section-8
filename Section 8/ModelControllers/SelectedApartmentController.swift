@@ -54,7 +54,7 @@ class SelectedApartmentController {
         if let unwrapped = selectedApartment {
             StepController.shared.steps[6].items[1].text = "\(unwrapped.name)\n\(unwrapped.address)\n\(unwrapped.phone)"
         } else {
-            StepController.shared.steps[6].items[1].text = "You can select an apartment from the map in Step 6."
+            StepController.shared.steps[6].items[1].text = "You still need to select an apartment in Step 6."
         }
     }
 }
