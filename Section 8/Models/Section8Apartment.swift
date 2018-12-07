@@ -13,7 +13,7 @@ class Section8Apartment {
     var name: String
     var address: String
     var phone: String
-    var apartmentPhoto: String?
+    var apartmentPhoto: String
     
     init(name: String, address: String, phone: String, apartmentPhoto: String = "noApartmentImage") {
         self.name = name
