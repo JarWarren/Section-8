@@ -51,18 +51,17 @@ class AlarmController {
     }
 }
 
-
-
 extension AlarmController {
     
-    
-    
+
     // MARK: - Calendar Notification
     func scheduleDatePickerUserNotifications(for alarm: Alarm, scheduleDissmissDateNotifId: String, dissmissActionTitle: String, scheduleEditNotifId: String, editDateActionTitle: String, editDateOption: UNNotificationActionOptions,  categoryID: String, contentTitle: String, contentSubtitle: String, contentBody: String, contentBadge: NSNumber, contentSound: UNNotificationSound, contentLuanchImage: String, resourceName: String, extenstionType: String) {
         
         // The Alert Button options
         let dissmissAction = UNNotificationAction(identifier: scheduleDissmissDateNotifId, title: dissmissActionTitle, options: [])
+        
         let editDateAction = UNNotificationAction(identifier: scheduleEditNotifId, title: editDateActionTitle, options: [editDateOption])
+        
         // NOTE: - CategoryID and ContentID have to match
         let category = UNNotificationCategory(identifier: categoryID, actions: [dissmissAction, editDateAction], intentIdentifiers: [], options: [.customDismissAction])
         UNUserNotificationCenter.current().setNotificationCategories([category])
@@ -78,7 +77,7 @@ extension AlarmController {
         //This is the String ID for what we want to prseent to the user
         content.categoryIdentifier = categoryID
         /*When you schedule a notification request containing the attachment, the attachment’s file is moved to a new location to facilitate access by the appropriate processes. After the move, the only way to access the file is using the methods of the UNUserNotificationCenter object.*/
-        //        guard let url = Bundle.main.url(forResource: "homeFound", withExtension: "jpeg") else {return}
+        
         guard let url = Bundle.main.url(forResource: resourceName, withExtension: extenstionType) else {return}
         do {
             let attachments =  try UNNotificationAttachment(identifier: categoryID, url: url, options: [:])
@@ -92,7 +91,7 @@ extension AlarmController {
         
         let trigger = UNCalendarNotificationTrigger(dateMatching: componets, repeats: false)
         
-        let request = UNNotificationRequest(identifier: scheduleDissmissDateNotifId, content: content, trigger: trigger)
+        let request = UNNotificationRequest(identifier: alarm.name, content: content, trigger: trigger)
         
         
         UNUserNotificationCenter.current().add(request) { (error) in
@@ -102,11 +101,9 @@ extension AlarmController {
         }
     }
     
-    func cancelUserNotifications(for alarm: Alarm) {
-//        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [alarm.uuid])
-        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [alarm.name])
+    func cancelUserNotificationsForAlarmWith(name: String) {
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [name])
     }
-    
 }
 
 extension AlarmController {
@@ -134,7 +131,6 @@ extension AlarmController {
             print("\nThere was an error in \(#function); \(error); \(error.localizedDescription)\n")
         }
     }
-    
     
     // Load Persistent
     func loadFromPersistentStore() {

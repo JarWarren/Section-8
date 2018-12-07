@@ -21,6 +21,10 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     
     var items: [Item] = []
     
+    
+    var alarm: Alarm?
+    
+   
     // MARK: - OUTLETS
     
     @IBOutlet weak var stepImageView: UIImageView!
