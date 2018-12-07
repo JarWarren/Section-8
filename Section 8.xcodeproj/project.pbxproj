@@ -43,7 +43,7 @@
 		81CC955E21BB030100CB1B32 /* Section8Apartment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CC955D21BB030100CB1B32 /* Section8Apartment.swift */; };
 		81CC956221BB048700CB1B32 /* Section8ApartmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CC956121BB048700CB1B32 /* Section8ApartmentController.swift */; };
 		81CC956421BB2A7A00CB1B32 /* notificationBanner.png in Resources */ = {isa = PBXBuildFile; fileRef = 81CC956321BB2A7A00CB1B32 /* notificationBanner.png */; };
-		81D5F9BE21BB2B2400BF465A /* notificationBanner.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D5F9BD21BB2B2400BF465A /* notificationBanner.png */; };
+		81D5F9C021BB2EC900BF465A /* notificationBanner.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D5F9BF21BB2EC900BF465A /* notificationBanner.png */; };
 		81DD083321AF1D470037F3AA /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DD083221AF1D470037F3AA /* Step.swift */; };
 		81DD083521AF1E880037F3AA /* StepController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DD083421AF1E880037F3AA /* StepController.swift */; };
 		81DD083721AF32F20037F3AA /* HomeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DD083621AF32F20037F3AA /* HomeTVC.swift */; };
@@ -100,7 +100,7 @@
 		81CC955D21BB030100CB1B32 /* Section8Apartment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section8Apartment.swift; sourceTree = "<group>"; };
 		81CC956121BB048700CB1B32 /* Section8ApartmentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section8ApartmentController.swift; sourceTree = "<group>"; };
 		81CC956321BB2A7A00CB1B32 /* notificationBanner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = notificationBanner.png; path = ../../../../Graphics/Notifications/notificationBanner.png; sourceTree = "<group>"; };
-		81D5F9BD21BB2B2400BF465A /* notificationBanner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = notificationBanner.png; path = ../../../../Graphics/Notifications/notificationBanner.png; sourceTree = "<group>"; };
+		81D5F9BF21BB2EC900BF465A /* notificationBanner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notificationBanner.png; sourceTree = "<group>"; };
 		81DD083221AF1D470037F3AA /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
 		81DD083421AF1E880037F3AA /* StepController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepController.swift; sourceTree = "<group>"; };
 		81DD083621AF32F20037F3AA /* HomeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTVC.swift; sourceTree = "<group>"; };
@@ -290,7 +290,7 @@
 		81CC956521BB2A8200CB1B32 /* NotificationAssets */ = {
 			isa = PBXGroup;
 			children = (
-				81D5F9BD21BB2B2400BF465A /* notificationBanner.png */,
+				81D5F9BF21BB2EC900BF465A /* notificationBanner.png */,
 				47C519F021B869870020BC7E /* supermarioghost_1_copy.png */,
 			);
 			path = NotificationAssets;
@@ -364,7 +364,7 @@
 				47C519F121B869870020BC7E /* supermarioghost_1_copy.png in Resources */,
 				7E1DF3F921B1A15F0012BFEE /* Map.storyboard in Resources */,
 				81CC956421BB2A7A00CB1B32 /* notificationBanner.png in Resources */,
-				81D5F9BE21BB2B2400BF465A /* notificationBanner.png in Resources */,
+				81D5F9C021BB2EC900BF465A /* notificationBanner.png in Resources */,
 				8161D47B21B8B30D00F44AC0 /* Launch Screen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
