@@ -57,10 +57,8 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
       
-      // Persistence
+        // Persistence
         SelectedApartmentController.shared.loadSelectedApartment()
-        
-        
         RentController.shared.loadFromPersistentStorage()
         
         // Change title to specific step
@@ -70,6 +68,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             } else {
                 completeButtonStatus.setTitle(NSLocalizedString("completeButtonTextTapToMarkIncompleteA", comment: "") + " \(thisStep.stepNumber) " + NSLocalizedString("completeButtonTextTapToMarkIncompleteB", comment: ""), for: .normal)
             }
+            // Header labels and image
             self.stepNameLabel.text = thisStep.name
             self.stepNumberLabel.text = thisStep.stepNumber
             self.stepImageView.image = UIImage(named: thisStep.stepImageName)
@@ -93,6 +92,8 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         StepController.shared.persistCompletedSteps()
         navigationController?.popViewController(animated: true)
     }
+    
+    // MARK: - BUTTON FUNCTIONS
     
     func checkButtonStatusNotificationSet() {
         guard let unwrappedStep = selectedStep else {return}
@@ -234,8 +235,6 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         }
     }
 }
-
-
 
 // MARK: - CUSTOM CELL EXTENSIONS
 
