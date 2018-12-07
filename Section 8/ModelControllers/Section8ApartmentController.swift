@@ -7,7 +7,7 @@
 //
 
 class Section8ApartmentController{
-    
+
     // Shared instance
     static let shared = Section8ApartmentController()
     

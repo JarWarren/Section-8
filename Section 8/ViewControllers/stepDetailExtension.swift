@@ -17,11 +17,7 @@ import UserNotifications
 extension StepDetailTVC: DatePickerTVCellDelegate {
     
     
-    func scheduleSevenDayNotificationTestFunc() {
-        
-        print("\n📅 7 day notification set\n")
-        timerController.scheduleLocalNotificationOnTimer(identifier: sevenDayTimerID,actionTitle: NSLocalizedString("7DayDismiss", comment: ""), categoryID: categorySevenNotificationID, contentTitle: NSLocalizedString("7DayContentTitle", comment: ""), contentSubtitle: NSLocalizedString("7DayContentSubtitle", comment: ""), contentBody: NSLocalizedString("7DayContentBody", comment: ""), contentBadge: 1,contentSound: UNNotificationSound.default, contentLaunchImage: "", desiredTimeInterval: sevenDays, resourceName: NSLocalizedString("notificationBanner", comment: ""), extenstionType: "png")
-    }
+   
     
     func datePickerButtonTapped(_ sender: DatePickerTVCell, _ picker: UIDatePicker) {
         print("\n\n🚀Set Time Button Tapped in: DatePickerTVCell\n")

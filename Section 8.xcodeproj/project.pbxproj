@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		475B206921BB10A900FB955E /* LocalizationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475B206821BB10A900FB955E /* LocalizationConstants.swift */; };
+		475B206B21BB1D6A00FB955E /* StepDetailDeleteOnceDone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475B206A21BB1D6A00FB955E /* StepDetailDeleteOnceDone.swift */; };
+		475B206D21BB1DC400FB955E /* timeControllerDeleteOnceDoneIvan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475B206C21BB1DC400FB955E /* timeControllerDeleteOnceDoneIvan.swift */; };
 		476654B121B2F32E00FC3663 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476654B021B2F32E00FC3663 /* AlertController.swift */; };
 		476654B321B2F38800FC3663 /* TimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476654B221B2F38800FC3663 /* TimerController.swift */; };
 		47BD249321B7206700CC6192 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BD249221B7206700CC6192 /* Alarm.swift */; };
@@ -56,6 +58,8 @@
 
 /* Begin PBXFileReference section */
 		475B206821BB10A900FB955E /* LocalizationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationConstants.swift; sourceTree = "<group>"; };
+		475B206A21BB1D6A00FB955E /* StepDetailDeleteOnceDone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepDetailDeleteOnceDone.swift; sourceTree = "<group>"; };
+		475B206C21BB1DC400FB955E /* timeControllerDeleteOnceDoneIvan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timeControllerDeleteOnceDoneIvan.swift; sourceTree = "<group>"; };
 		476654B021B2F32E00FC3663 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		476654B221B2F38800FC3663 /* TimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerController.swift; sourceTree = "<group>"; };
 		47BD249221B7206700CC6192 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
@@ -237,6 +241,7 @@
 				81FF0A9421B09BC6004A7EDB /* StepDetailTVC.swift */,
 				7E1DF3F621B1A0610012BFEE /* MapViewController.swift */,
 				47DF81F821B97E8000C0F0FE /* stepDetailExtension.swift */,
+				475B206A21BB1D6A00FB955E /* StepDetailDeleteOnceDone.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 				47F09D2E21B9BAE200542722 /* AlarmName.swift */,
 				47F09D3021B9CBB300542722 /* NotificationIDKey.swift */,
 				475B206821BB10A900FB955E /* LocalizationConstants.swift */,
+				475B206C21BB1DC400FB955E /* timeControllerDeleteOnceDoneIvan.swift */,
 			);
 			path = HelperFiles;
 			sourceTree = "<group>";
@@ -427,6 +433,7 @@
 				81CC955E21BB030100CB1B32 /* Section8Apartment.swift in Sources */,
 				8161D48321B8C3E300F44AC0 /* AttributesExpander.swift in Sources */,
 				81B7E95021B1FF0E003A209F /* ClickLinkTVCell.swift in Sources */,
+				475B206B21BB1D6A00FB955E /* StepDetailDeleteOnceDone.swift in Sources */,
 				81FF0A9721B09EAC004A7EDB /* ParagraphTVCell.swift in Sources */,
 				81212AED21B5AC5A0082C88B /* DataInputTVCell.swift in Sources */,
 				81FF0A9521B09BC6004A7EDB /* StepDetailTVC.swift in Sources */,
@@ -440,6 +447,7 @@
 				7E1DF3F121B19FBE0012BFEE /* GoogleNetworkController.swift in Sources */,
 				81CC956221BB048700CB1B32 /* Section8ApartmentController.swift in Sources */,
 				81DD083721AF32F20037F3AA /* HomeTVC.swift in Sources */,
+				475B206D21BB1DC400FB955E /* timeControllerDeleteOnceDoneIvan.swift in Sources */,
 				476654B321B2F38800FC3663 /* TimerController.swift in Sources */,
 				81FF0A9121B093B7004A7EDB /* Item.swift in Sources */,
 				81FF0A9921B09EBC004A7EDB /* TipTVCell.swift in Sources */,
