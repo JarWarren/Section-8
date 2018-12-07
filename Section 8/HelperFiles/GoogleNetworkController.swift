@@ -22,7 +22,7 @@ class GoogleNetworkController {
     
     static func fetchNearbyComplexes(completion: @escaping ([ApartmentLocation]) -> Void) {
         
-        guard let mainURL = URL(string: "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=40.0966,-111.5707&radius=30000&key=AIzaSyAchY5OHlVXXQyaux0dO-kM0gVQz0T0rzE&types=point_of_interest,establishment&keyword=apartment,lindon,orem,springville") else { completion([]); return }
+        guard let mainURL = URL(string: "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=40.2969,-111.6946&radius=10000&key=AIzaSyAchY5OHlVXXQyaux0dO-kM0gVQz0T0rzE&types=point_of_interest,establishment&keyword=apartment,orem") else { completion([]); return }
         
         //TODO: &language=en || &language=es || &language=pt
         //TODO: Attempt placeSearch or nearbySearch rather than textSearch.
@@ -64,7 +64,7 @@ class GoogleNetworkController {
     
     static func fetchPlaceImage(photoReference: String, completion: @escaping (UIImage?) -> Void) {
         
-        guard let mainURL = URL(string: "https://maps.googleapis.com/maps/api/place/photo?maxwidth=150&photoreference=\(photoReference)&key=AIzaSyAchY5OHlVXXQyaux0dO-kM0gVQz0T0rzE") else { completion(nil); return }
+        guard let mainURL = URL(string: "https://maps.googleapis.com/maps/api/place/photo?maxwidth=350&photoreference=\(photoReference)&key=AIzaSyAchY5OHlVXXQyaux0dO-kM0gVQz0T0rzE") else { completion(nil); return }
         
         let dataTask = URLSession.shared.dataTask(with: mainURL) { (data, _, error) in
             if let error = error { print("IMAGE ERROR: \(error)"); completion(nil); return }
