@@ -52,7 +52,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     let requestSdId = "sevenDayRequestID"
     let resourceSdID = "sevenDayResourceID"
     let typePng = "png"
-    
+    let bannerImageName = NSLocalizedString("notificationBanner", comment: "")
     // MARK: - VIEW DID LOAD & VIEW WILL APPEAR
     
     override func viewWillAppear(_ animated: Bool) {
@@ -117,7 +117,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             UNUserNotificationCenter.current().removeAllDeliveredNotifications()
         } else {
             if unwrappedStep.stepNumber == "STEP 14" && unwrappedStep.stepCompleted != true {
-               scheduleSevenDayIntervalNotif()
+                scheduleSevenDayIntervalNotif()
             }
         }
     }
@@ -331,7 +331,7 @@ extension StepDetailTVC {
     
     func scheduleSevenDayIntervalNotif() {
         print("\nThe new 📅 7 day notification was set\n")
-        timerController.scheduleLocalNotifInterval(dissmissActionID: dissmissActionSdId, actionTitle: NSLocalizedString("7DayDismiss", comment: ""), categoryID: categorySdID, contentTitle: NSLocalizedString("7DayContentTitle", comment: ""), contentSubtitle: NSLocalizedString("7DayContentSubtitle", comment: ""), contentBody: NSLocalizedString("7DayContentBody", comment: ""), contentBadge: 1, contentSound: UNNotificationSound.default, contentLaunchImage: "", desiredTimeInterval: sevenDays, resourceName: NSLocalizedString("supermarioghost_1_copy", comment: ""), extenstionType: typePng, resourceID: resourceSdID, requestID: requestSdId)
+        timerController.scheduleLocalNotifInterval(dissmissActionID: dissmissActionSdId, actionTitle: NSLocalizedString("7DayDismiss", comment: ""), categoryID: categorySdID, contentTitle: NSLocalizedString("7DayContentTitle", comment: ""), contentSubtitle: NSLocalizedString("7DayContentSubtitle", comment: ""), contentBody: NSLocalizedString("7DayContentBody", comment: ""), contentBadge: 1, contentSound: UNNotificationSound.default, contentLaunchImage: "", desiredTimeInterval: sevenDays, resourceName: bannerImageName, extenstionType: typePng, resourceID: resourceSdID, requestID: requestSdId)
     }
 }
 
