@@ -14,6 +14,8 @@
 		47BD249521B742CC00CC6192 /* AlarmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BD249421B742CC00CC6192 /* AlarmController.swift */; };
 		47C519F121B869870020BC7E /* supermarioghost_1_copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C519F021B869870020BC7E /* supermarioghost_1_copy.png */; };
 		47DF81F921B97E8000C0F0FE /* stepDetailExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DF81F821B97E8000C0F0FE /* stepDetailExtension.swift */; };
+		47F09D2F21B9BAE200542722 /* AlarmName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F09D2E21B9BAE200542722 /* AlarmName.swift */; };
+		47F09D3121B9CBB300542722 /* NotificationIDKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F09D3021B9CBB300542722 /* NotificationIDKey.swift */; };
 		7E1DF3F121B19FBE0012BFEE /* GoogleNetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DF3F021B19FBE0012BFEE /* GoogleNetworkController.swift */; };
 		7E1DF3F421B19FE70012BFEE /* ApartmentLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DF3F221B19FE70012BFEE /* ApartmentLocation.swift */; };
 		7E1DF3F521B19FE70012BFEE /* MapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DF3F321B19FE70012BFEE /* MapMarker.swift */; };
@@ -56,6 +58,8 @@
 		47BD249421B742CC00CC6192 /* AlarmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmController.swift; sourceTree = "<group>"; };
 		47C519F021B869870020BC7E /* supermarioghost_1_copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = supermarioghost_1_copy.png; sourceTree = "<group>"; };
 		47DF81F821B97E8000C0F0FE /* stepDetailExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stepDetailExtension.swift; sourceTree = "<group>"; };
+		47F09D2E21B9BAE200542722 /* AlarmName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmName.swift; sourceTree = "<group>"; };
+		47F09D3021B9CBB300542722 /* NotificationIDKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationIDKey.swift; sourceTree = "<group>"; };
 		7E1DF3F021B19FBE0012BFEE /* GoogleNetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleNetworkController.swift; sourceTree = "<group>"; };
 		7E1DF3F221B19FE70012BFEE /* ApartmentLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApartmentLocation.swift; sourceTree = "<group>"; };
 		7E1DF3F321B19FE70012BFEE /* MapMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapMarker.swift; sourceTree = "<group>"; };
@@ -246,6 +250,8 @@
 				476654B021B2F32E00FC3663 /* AlertController.swift */,
 				476654B221B2F38800FC3663 /* TimerController.swift */,
 				8161D48221B8C3E300F44AC0 /* AttributesExpander.swift */,
+				47F09D2E21B9BAE200542722 /* AlarmName.swift */,
+				47F09D3021B9CBB300542722 /* NotificationIDKey.swift */,
 			);
 			path = HelperFiles;
 			sourceTree = "<group>";
@@ -406,6 +412,7 @@
 				7E1DF3F721B1A0610012BFEE /* MapViewController.swift in Sources */,
 				81FF0A9321B095F6004A7EDB /* ItemController.swift in Sources */,
 				81B7E94E21B1FEC1003A209F /* DatePickerTVCell.swift in Sources */,
+				47F09D3121B9CBB300542722 /* NotificationIDKey.swift in Sources */,
 				476654B121B2F32E00FC3663 /* AlertController.swift in Sources */,
 				47BD249321B7206700CC6192 /* Alarm.swift in Sources */,
 				7E1DF3F121B19FBE0012BFEE /* GoogleNetworkController.swift in Sources */,
@@ -418,6 +425,7 @@
 				818FC57E21B84A760084323E /* RentController.swift in Sources */,
 				7EA8381A21B602D400E9B9CE /* Apartment.swift in Sources */,
 				818FC59E21B868D30084323E /* UITextField+Extensions.swift in Sources */,
+				47F09D2F21B9BAE200542722 /* AlarmName.swift in Sources */,
 				7E686E1E21B85BCD0005D5BB /* SelectedApartmentController.swift in Sources */,
 				81871F1121B7079700407E51 /* MapTVCell.swift in Sources */,
 				81212AEF21B5CCF90082C88B /* DataDisplayTVCell.swift in Sources */,
@@ -587,7 +595,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 466UYFDWDY;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Section 8/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -606,7 +614,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 466UYFDWDY;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Section 8/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
