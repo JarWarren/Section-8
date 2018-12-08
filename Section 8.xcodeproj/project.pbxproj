@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		474C289421BB7DBF00874B78 /* notificationBannerEN.png in Resources */ = {isa = PBXBuildFile; fileRef = 474C289221BB7DBF00874B78 /* notificationBannerEN.png */; };
+		474C289621BB81A900874B78 /* datePickerBannerEN.png in Resources */ = {isa = PBXBuildFile; fileRef = 474C289521BB81A900874B78 /* datePickerBannerEN.png */; };
 		475B206921BB10A900FB955E /* LocalizationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475B206821BB10A900FB955E /* LocalizationConstants.swift */; };
 		476654B121B2F32E00FC3663 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476654B021B2F32E00FC3663 /* AlertController.swift */; };
 		476654B321B2F38800FC3663 /* TimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476654B221B2F38800FC3663 /* TimerController.swift */; };
 		47BD249321B7206700CC6192 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BD249221B7206700CC6192 /* Alarm.swift */; };
 		47BD249521B742CC00CC6192 /* AlarmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BD249421B742CC00CC6192 /* AlarmController.swift */; };
-		47C519F121B869870020BC7E /* supermarioghost_1_copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C519F021B869870020BC7E /* supermarioghost_1_copy.png */; };
 		47DF81F921B97E8000C0F0FE /* stepDetailExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DF81F821B97E8000C0F0FE /* stepDetailExtension.swift */; };
 		47F09D2F21B9BAE200542722 /* AlarmName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F09D2E21B9BAE200542722 /* AlarmName.swift */; };
 		47F09D3121B9CBB300542722 /* NotificationIDKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F09D3021B9CBB300542722 /* NotificationIDKey.swift */; };
@@ -40,7 +41,6 @@
 		81B7E95021B1FF0E003A209F /* ClickLinkTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B7E94F21B1FF0E003A209F /* ClickLinkTVCell.swift */; };
 		81CC955E21BB030100CB1B32 /* Section8Apartment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CC955D21BB030100CB1B32 /* Section8Apartment.swift */; };
 		81CC956221BB048700CB1B32 /* Section8ApartmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CC956121BB048700CB1B32 /* Section8ApartmentController.swift */; };
-
 		81DD083321AF1D470037F3AA /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DD083221AF1D470037F3AA /* Step.swift */; };
 		81DD083521AF1E880037F3AA /* StepController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DD083421AF1E880037F3AA /* StepController.swift */; };
 		81DD083721AF32F20037F3AA /* HomeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DD083621AF32F20037F3AA /* HomeTVC.swift */; };
@@ -54,12 +54,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		474C289221BB7DBF00874B78 /* notificationBannerEN.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notificationBannerEN.png; sourceTree = "<group>"; };
+		474C289521BB81A900874B78 /* datePickerBannerEN.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = datePickerBannerEN.png; sourceTree = "<group>"; };
 		475B206821BB10A900FB955E /* LocalizationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationConstants.swift; sourceTree = "<group>"; };
 		476654B021B2F32E00FC3663 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		476654B221B2F38800FC3663 /* TimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerController.swift; sourceTree = "<group>"; };
 		47BD249221B7206700CC6192 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		47BD249421B742CC00CC6192 /* AlarmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmController.swift; sourceTree = "<group>"; };
-		47C519F021B869870020BC7E /* supermarioghost_1_copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = supermarioghost_1_copy.png; sourceTree = "<group>"; };
 		47DF81F821B97E8000C0F0FE /* stepDetailExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stepDetailExtension.swift; sourceTree = "<group>"; };
 		47F09D2E21B9BAE200542722 /* AlarmName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmName.swift; sourceTree = "<group>"; };
 		47F09D3021B9CBB300542722 /* NotificationIDKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationIDKey.swift; sourceTree = "<group>"; };
@@ -94,7 +95,6 @@
 		81B7E94F21B1FF0E003A209F /* ClickLinkTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickLinkTVCell.swift; sourceTree = "<group>"; };
 		81CC955D21BB030100CB1B32 /* Section8Apartment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section8Apartment.swift; sourceTree = "<group>"; };
 		81CC956121BB048700CB1B32 /* Section8ApartmentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section8ApartmentController.swift; sourceTree = "<group>"; };
-
 		81DD083221AF1D470037F3AA /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
 		81DD083421AF1E880037F3AA /* StepController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepController.swift; sourceTree = "<group>"; };
 		81DD083621AF32F20037F3AA /* HomeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTVC.swift; sourceTree = "<group>"; };
@@ -281,8 +281,8 @@
 		81CC956521BB2A8200CB1B32 /* NotificationAssets */ = {
 			isa = PBXGroup;
 			children = (
-
-				47C519F021B869870020BC7E /* supermarioghost_1_copy.png */,
+				474C289521BB81A900874B78 /* datePickerBannerEN.png */,
+				474C289221BB7DBF00874B78 /* notificationBannerEN.png */,
 			);
 			path = NotificationAssets;
 			sourceTree = "<group>";
@@ -352,9 +352,9 @@
 				7E59408921B5AC1100C02E61 /* Localizable.strings in Resources */,
 				7E67E29B21ADE778007E4103 /* Assets.xcassets in Resources */,
 				7E67E29921ADE777007E4103 /* Main.storyboard in Resources */,
-				47C519F121B869870020BC7E /* supermarioghost_1_copy.png in Resources */,
 				7E1DF3F921B1A15F0012BFEE /* Map.storyboard in Resources */,
-
+				474C289421BB7DBF00874B78 /* notificationBannerEN.png in Resources */,
+				474C289621BB81A900874B78 /* datePickerBannerEN.png in Resources */,
 				8161D47B21B8B30D00F44AC0 /* Launch Screen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
