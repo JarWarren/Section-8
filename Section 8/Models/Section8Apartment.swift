@@ -13,12 +13,16 @@ class Section8Apartment {
     var name: String
     var address: String
     var phone: String
+    var lat: Double
+    var lng: Double
     var apartmentPhoto: String
     
-    init(name: String, address: String, phone: String, apartmentPhoto: String = "noApartmentImage") {
+    init(name: String, address: String, phone: String, lat: Double, lng: Double, apartmentPhoto: String = "noApartmentImage") {
         self.name = name
         self.address = address
         self.phone = phone
+        self.lat = lat
+        self.lng = lng
         self.apartmentPhoto = apartmentPhoto
     }
 }
