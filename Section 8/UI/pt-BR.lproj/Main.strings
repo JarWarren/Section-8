@@ -5,8 +5,8 @@
 /* Class = "UILabel"; text = "Complete online application"; ObjectID = "ApV-zV-Lz3"; */
 "ApV-zV-Lz3.text" = "Complete online application";
 
-/* Class = "UILabel"; text = "Click on each step to see a list of instructions. When you finish, a green checkmark will appear on the right. Then move to the next step."; ObjectID = "N2i-QN-570"; */
-"N2i-QN-570.text" = "Click on each step to see a list of instructions. When you finish, a green checkmark will appear on the right. Then move to the next step.";
+/* Class = "UILabel"; text = "Tap on each step to see a list of instructions. When you finish, a green checkmark will appear on the right. Then move to the next step."; ObjectID = "N2i-QN-570"; */
+"N2i-QN-570.text" = "Tap on each step to see a list of instructions. When you finish, a green checkmark will appear on the right. Then move to the next step.";
 
 /* Class = "UIButton"; normalTitle = "(BUTTON TEXT)"; ObjectID = "P2A-Cj-pTm"; */
 "P2A-Cj-pTm.normalTitle" = "(BUTTON TEXT)";
@@ -23,8 +23,8 @@
 /* Class = "UIButton"; normalTitle = "(BUTTON TEXT)"; ObjectID = "byc-O9-kez"; */
 "byc-O9-kez.normalTitle" = "(BUTTON TEXT)";
 
-/* Class = "UIButton"; normalTitle = "CLICK WHEN STEP IS COMPLETE"; ObjectID = "e7e-Cx-6oI"; */
-"e7e-Cx-6oI.normalTitle" = "CLICK WHEN STEP IS COMPLETE";
+/* Class = "UIButton"; normalTitle = "TAP WHEN STEP IS COMPLETE"; ObjectID = "e7e-Cx-6oI"; */
+"e7e-Cx-6oI.normalTitle" = "TAP WHEN STEP IS COMPLETE";
 
 /* Class = "UILabel"; text = "ClickLink text"; ObjectID = "jwT-Wg-ryI"; */
 "jwT-Wg-ryI.text" = "ClickLink text";
