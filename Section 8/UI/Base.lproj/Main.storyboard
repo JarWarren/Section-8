@@ -208,7 +208,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jw4-aL-yHq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="326" y="107"/>
+            <point key="canvasLocation" x="-567" y="81"/>
         </scene>
         <!--Step DetailTVC-->
         <scene sceneID="rct-YF-PSe">
