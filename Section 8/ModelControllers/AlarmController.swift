@@ -54,13 +54,13 @@ extension AlarmController {
     
 
     // MARK: - Calendar Notification
-    func scheduleDatePickerUserNotifications(for alarm: Alarm, scheduleDissmissDateNotifId: String, dissmissActionTitle: String,  categoryID: String, contentTitle: String, contentSubtitle: String, contentBody: String, contentBadge: NSNumber, contentSound: UNNotificationSound, contentLuanchImage: String, resourceName: String, extenstionType: String) {
+    func scheduleDatePickerUserNotifications(for alarm: Alarm, scheduleDismissDateNotifId: String, dismissActionTitle: String,  categoryID: String, contentTitle: String, contentSubtitle: String, contentBody: String, contentBadge: NSNumber, contentSound: UNNotificationSound, contentLuanchImage: String, resourceName: String, extenstionType: String) {
         
         // The Alert Button options
-        let dissmissAction = UNNotificationAction(identifier: scheduleDissmissDateNotifId, title: dissmissActionTitle, options: [])
+        let dismissAction = UNNotificationAction(identifier: scheduleDismissDateNotifId, title: dismissActionTitle, options: [])
         
         
-        let category = UNNotificationCategory(identifier: categoryID, actions: [dissmissAction], intentIdentifiers: [], options: [])
+        let category = UNNotificationCategory(identifier: categoryID, actions: [dismissAction], intentIdentifiers: [], options: [])
         UNUserNotificationCenter.current().setNotificationCategories([category])
         
         
