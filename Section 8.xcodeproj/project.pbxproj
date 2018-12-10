@@ -12,6 +12,7 @@
 		475B206921BB10A900FB955E /* LocalizationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475B206821BB10A900FB955E /* LocalizationConstants.swift */; };
 		476654B121B2F32E00FC3663 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476654B021B2F32E00FC3663 /* AlertController.swift */; };
 		476654B321B2F38800FC3663 /* TimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476654B221B2F38800FC3663 /* TimerController.swift */; };
+		47B16FC721BB3D7600C6C2BE /* notificationBannerEN.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B16FC621BB3D7500C6C2BE /* notificationBannerEN.png */; };
 		47BD249321B7206700CC6192 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BD249221B7206700CC6192 /* Alarm.swift */; };
 		47BD249521B742CC00CC6192 /* AlarmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BD249421B742CC00CC6192 /* AlarmController.swift */; };
 		47DF81F921B97E8000C0F0FE /* stepDetailExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DF81F821B97E8000C0F0FE /* stepDetailExtension.swift */; };
@@ -59,6 +60,7 @@
 		475B206821BB10A900FB955E /* LocalizationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationConstants.swift; sourceTree = "<group>"; };
 		476654B021B2F32E00FC3663 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		476654B221B2F38800FC3663 /* TimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerController.swift; sourceTree = "<group>"; };
+		47B16FC621BB3D7500C6C2BE /* notificationBannerEN.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notificationBannerEN.png; sourceTree = "<group>"; };
 		47BD249221B7206700CC6192 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		47BD249421B742CC00CC6192 /* AlarmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmController.swift; sourceTree = "<group>"; };
 		47DF81F821B97E8000C0F0FE /* stepDetailExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stepDetailExtension.swift; sourceTree = "<group>"; };

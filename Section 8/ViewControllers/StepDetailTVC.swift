@@ -52,6 +52,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     let requestSdId = "sevenDayRequestID"
     let resourceSdID = "sevenDayResourceID"
     let typePng = "png"
+
     let sevenDayNotifBanner = NSString.localizedUserNotificationString(forKey: "notificationBanner", arguments: [])
         
     let sevenDayDissmissTitle = NSString.localizedUserNotificationString(forKey: "7DayDismiss", arguments: [])
@@ -62,7 +63,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     // date Banner
     let datePickerNotifBanner = NSString.localizedUserNotificationString(forKey: "datePickerBanner", arguments: [])
     
-    
+    let bannerImageName = NSLocalizedString("notificationBanner", comment: "")
     // MARK: - VIEW DID LOAD & VIEW WILL APPEAR
     
     override func viewWillAppear(_ animated: Bool) {
@@ -127,7 +128,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             UNUserNotificationCenter.current().removeAllDeliveredNotifications()
         } else {
             if unwrappedStep.stepNumber == "STEP 14" && unwrappedStep.stepCompleted != true {
-               scheduleSevenDayIntervalNotif()
+                scheduleSevenDayIntervalNotif()
             }
         }
     }
@@ -343,6 +344,7 @@ extension StepDetailTVC {
         print("\n7 day notification was set\n")
         
         timerController.scheduleLocalNotifInterval(dissmissActionID: dissmissActionSdId, actionTitle: sevenDayDissmissTitle, categoryID: categorySdID, contentTitle: sevenDayContentTitle, contentSubtitle: sevenDayContentSubtitle, contentBody: sevenDayContentBody, contentBadge: 1, contentSound: UNNotificationSound.default, contentLaunchImage: "", desiredTimeInterval: sevenDays, resourceName: sevenDayNotifBanner, extenstionType: typePng, resourceID: resourceSdID, requestID: requestSdId)
+
     }
 }
 
