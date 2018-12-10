@@ -176,11 +176,11 @@ func scheduleLocalNotificationOnTimer(identifier: String, actionTitle: String, c
     
     
     // MARK: - Calendar Notification
-    func scheduleLocalNotificationOnDate(schedulateDateNotifId: String, dissmissActionTitle: String, editDateActionTitle: String, editDateOption: UNNotificationActionOptions,  categoryID: String, contentTitle: String, contentSubtitle: String, contentBody: String, contentBadge: NSNumber, contentSound: UNNotificationSound, contentLuanchImage: String, desiredTimeInterval: Int, resourceName: String, extenstionType: String, alrmComponent: Date) {
+    func scheduleLocalNotificationOnDate(schedulateDateNotifId: String, dismissActionTitle: String, editDateActionTitle: String, editDateOption: UNNotificationActionOptions,  categoryID: String, contentTitle: String, contentSubtitle: String, contentBody: String, contentBadge: NSNumber, contentSound: UNNotificationSound, contentLuanchImage: String, desiredTimeInterval: Int, resourceName: String, extenstionType: String, alrmComponent: Date) {
 
-        let dissmissAction = UNNotificationAction(identifier: schedulateDateNotifId, title: dissmissActionTitle, options: [])
+        let dismissAction = UNNotificationAction(identifier: schedulateDateNotifId, title: dismissActionTitle, options: [])
         let editDateAction = UNNotificationAction(identifier: schedulateDateNotifId, title: editDateActionTitle, options: [editDateOption])
-        let category = UNNotificationCategory(identifier: categoryID, actions: [dissmissAction, editDateAction], intentIdentifiers: [], options: [.customDismissAction])
+        let category = UNNotificationCategory(identifier: categoryID, actions: [dismissAction, editDateAction], intentIdentifiers: [], options: [.customDismissAction])
         UNUserNotificationCenter.current().setNotificationCategories([category])
         
         let content = UNMutableNotificationContent()
@@ -216,12 +216,12 @@ func scheduleLocalNotificationOnTimer(identifier: String, actionTitle: String, c
     }
     
     // MARK: - as of Dec 7th this is the func we're using to call the Seven Day Interval Notification
-    func scheduleLocalNotifInterval(dissmissActionID: String, actionTitle: String, categoryID: String, contentTitle: String, contentSubtitle: String, contentBody: String, contentBadge: NSNumber, contentSound: UNNotificationSound, contentLaunchImage: String, desiredTimeInterval: Int, resourceName: String, extenstionType: String, resourceID: String, requestID: String) {
+    func scheduleLocalNotifInterval(dismissActionID: String, actionTitle: String, categoryID: String, contentTitle: String, contentSubtitle: String, contentBody: String, contentBadge: NSNumber, contentSound: UNNotificationSound, contentLaunchImage: String, desiredTimeInterval: Int, resourceName: String, extenstionType: String, resourceID: String, requestID: String) {
         
         // The Alert Button options
-        let dissMissAction = UNNotificationAction(identifier: dissmissActionID, title: actionTitle, options: [])
+        let dismissAction = UNNotificationAction(identifier: dismissActionID, title: actionTitle, options: [])
         
-        let category = UNNotificationCategory(identifier: categoryID, actions: [dissMissAction], intentIdentifiers: [], options: [.customDismissAction])
+        let category = UNNotificationCategory(identifier: categoryID, actions: [dismissAction], intentIdentifiers: [], options: [.customDismissAction])
         UNUserNotificationCenter.current().setNotificationCategories([category])
         
         //Payload

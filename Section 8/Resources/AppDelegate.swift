@@ -59,7 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             //The action that indicates the user explicitly dismissed the notification interface.
             //This action is delivered only if the notification’s category object was configured with the customDismissAction option.
         case UNNotificationDismissActionIdentifier:
-            print( "User tapped dissmissed the notification")
+            print( "User tapped dismissed the notification")
             //An action that indicates the user opened the app from the notification interface.
         case UNNotificationDefaultActionIdentifier:
             print("user segued into the app")

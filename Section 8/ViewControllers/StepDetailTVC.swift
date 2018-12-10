@@ -39,31 +39,8 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     let timerController = TimerController()
     let timeKeepingId = "timerID"
     //    let sevenDayCountDown = TimeInterval(5)
-    let sevenDays = 60
-    //    var boolValueToTestTimer = true
-    let sevenDayTimerID = "sevenDays"
-    let categorySevenNotificationID = "dismissActionKey"
-    let datePActionId = "datePickerNotifID"
-    let datePCategoryId = "dateCatergoryID"
-    var alarmIsOn: Bool = false
-    // seven day interval constants for notif func
-    let dissmissActionSdId = "SevenDayDissmissActionID"
-    let categorySdID = "sevenDayCatergoryID"
-    let requestSdId = "sevenDayRequestID"
-    let resourceSdID = "sevenDayResourceID"
-    let typePng = "png"
-
-    let sevenDayNotifBanner = NSString.localizedUserNotificationString(forKey: "notificationBanner", arguments: [])
-        
-    let sevenDayDissmissTitle = NSString.localizedUserNotificationString(forKey: "7DayDismiss", arguments: [])
-    let sevenDayContentTitle = NSString.localizedUserNotificationString(forKey: "7DayContentTitle", arguments: [])
-    let sevenDayContentSubtitle = NSString.localizedUserNotificationString(forKey: "7DayContentSubtitle", arguments: [])
-    let sevenDayContentBody = NSString.localizedUserNotificationString(forKey: "7DayContentBody", arguments: [])
+   
     
-    // date Banner
-    let datePickerNotifBanner = NSString.localizedUserNotificationString(forKey: "datePickerBanner", arguments: [])
-    
-    let bannerImageName = NSLocalizedString("notificationBanner", comment: "")
     // MARK: - VIEW DID LOAD & VIEW WILL APPEAR
     
     override func viewWillAppear(_ animated: Bool) {
@@ -335,7 +312,7 @@ extension StepDetailTVC {
     
     func cancelSevenDayNotification() {
         
-        timerController.cancelLocalNotificationWith(identifier: categorySevenNotificationID)
+        timerController.cancelLocalNotificationWith(identifier: Constants.categorySevenNotificationID)
         print("\n7 day notification canceled\n")
     }
     
@@ -343,7 +320,7 @@ extension StepDetailTVC {
     func scheduleSevenDayIntervalNotif() {
         print("\n7 day notification was set\n")
         
-        timerController.scheduleLocalNotifInterval(dissmissActionID: dissmissActionSdId, actionTitle: sevenDayDissmissTitle, categoryID: categorySdID, contentTitle: sevenDayContentTitle, contentSubtitle: sevenDayContentSubtitle, contentBody: sevenDayContentBody, contentBadge: 1, contentSound: UNNotificationSound.default, contentLaunchImage: "", desiredTimeInterval: sevenDays, resourceName: sevenDayNotifBanner, extenstionType: typePng, resourceID: resourceSdID, requestID: requestSdId)
+        timerController.scheduleLocalNotifInterval(dismissActionID: Constants.dismissActionSdId, actionTitle: Constants.sevenDayDismissTitle, categoryID: Constants.categorySdID, contentTitle: Constants.sevenDayContentTitle, contentSubtitle: Constants.sevenDayContentSubtitle, contentBody: Constants.sevenDayContentBody, contentBadge: 1, contentSound: UNNotificationSound.default, contentLaunchImage: "", desiredTimeInterval: Constants.sevenDays, resourceName: Constants.sevenDayNotifBanner, extenstionType: Constants.typePng, resourceID: Constants.resourceSdID, requestID: Constants.requestSdId)
 
     }
 }

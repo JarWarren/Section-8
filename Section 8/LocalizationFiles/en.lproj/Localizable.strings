@@ -20,19 +20,47 @@
     "completeButtonTextTapToMarkIncompleteB" = "TO INCOMPLETE";
 
 
-// MARK: - 7-DAY NOTIFICATIONS
+// MARK: - 7-DAY Notifications
 
-    // Text fields
+    // Seven Day Interval Text fields
     "7DayDismiss" = "Dismiss";
     "7DayContentTitle" = "Section 8 Housing Reminder";
     "7DayContentSubtitle" = "";
     "7DayContentBody" = "It's been a week since you worked on your application. Tap here to take the next step!";
 
-    // Images
-    // Seven Day Timer
+// Mark: - Date Picker Notifications
+
+// Step 3 - Intial Appointment Date
+"s3DatePickerDismissTitle" = "Dismiss";
+"s3DatePickerContentTitle" = "Today's The day";
+"s3DatePickercontentSubtitle" = "";
+"s3DatePickerContentBody" = "Make sure to take all your paper work to your initial appointment";
+
+// Step 4 - Attend Briefing
+"s4DatePickerDismissTitle" = "Dismiss";
+"s4DatePickerContentTitle" = "Today's The day";
+"s4DatePickercontentSubtitle" = "";
+"s4DatePickerContentBody" = "Make sure to take all your paper work to your briefing appointment";
+
+// Step 10 - Schedule Inspection
+"s10DatePickerDismissTitle" = "Dismiss";
+"s10DatePickerContentTitle" = "Today's The day";
+"s10DatePickercontentSubtitle" =  "";
+"s10DatePickerContentBody" = "Make sure to take all your paper work to your inspection appointment";
+
+// Step 12 - Final HAUC Appointment
+"s12DatePickerDismissTitle" = "Dismiss";
+"s12DatePickerContentTitle" = "Today's The day";
+"s12DatePickercontentSubtitle" = "";
+"s12DatePickerContentBody" = "Make sure to take all your paper work to your final appointment with HAUC";
+
+// MARK: - Notification Images
+
+    // Seven Day Banner Notifications
     "notificationBanner" = "notificationBannerEN";
 
-    // Date Picker Time Interval
+
+    // Date Picker Banner Notifications
     "datePickerBanner" = "datePickerBannerEN";
 
 // MARK: - STEPS
