@@ -98,14 +98,14 @@
 
     // Item 1d
     "1dTitle" = "FINISHED BUTTON";
-    "1dText" = "When are done, click on the “Finished” button near the bottom of the screen, and return to this page by clicking on the Section 8 link at the top-left of the screen.";
+    "1dText" = "When are done, tap on the “Finished” button near the bottom of the screen, and return to this page by tapping on the Section 8 link at the top-left of the screen.";
 
     // Item 1e
-    "1eText" = "Click here to start the online application on the Housing Authority (HAUC) website:";
+    "1eText" = "Tap here to start the online application on the Housing Authority (HAUC) website:";
     "1eButtonText" = "PRELIMINARY APPLICATION";
 
     // Item 1f
-    "1fText" = "Once you have completed the online application, click on the “Complete” button below to move on to the next step!";
+    "1fText" = "Once you have completed the online application, tap on the “Complete” button below to move on to the next step!";
 
 
 // MARK: - STEP 2 ITEMS
@@ -125,7 +125,7 @@
     "2dText" = "The wait time is from two months up to more than a year. Make sure to update your phone number and mailing address with the Housing Authority if anything changes!";
 
     // Step 2e
-    "2eText" = "Once the head of household has taken these two forms of identification in to the HAUC office, this step is complete! click on the “Complete” button below to move on to the next step.";
+    "2eText" = "Once the head of household has taken these two forms of identification in to the HAUC office, this step is complete! tap on the “Complete” button below to move on to the next step.";
 
 
 // MARK: - STEP 3 ITEMS
@@ -136,7 +136,7 @@
     // Step 3b
     "3bTitle" = "APPOINTMENT DATE";
     "3bText" = "Please enter your appointment date here, so we can send you a reminder notification:";
-    "3bButtonText" = "CLICK TO SAVE DATE";
+    "3bButtonText" = "TAP TO SAVE DATE";
 
     // Step 3c
     "3cText" = "Read the application carefully, and complete each section. Be sure to update household and income verification.";
@@ -153,7 +153,7 @@
     "3fText" = "240 E Center St, Provo, UT 84606 \nHours: Monday–Thursday, 7:30am–5:30pm \nPhone: 801-373-8333";
 
     // Step 3g
-    "3gText" = "Once the Housing Authority has let you know the application is complete, you have completed this step! In the next few days, you will be notified by the Housing Authority, and a briefing will be set up for you. \n\nClick the “Complete” button below to move on to the next step!";
+    "3gText" = "Once the Housing Authority has let you know the application is complete, you have completed this step! In the next few days, you will be notified by the Housing Authority, and a briefing will be set up for you. \n\nTap the “Complete” button below to move on to the next step!";
 
 
 // MARK: - STEP 4 ITEMS
@@ -171,17 +171,17 @@
     // Step 4d
     "4dTitle" = "BRIEFING DATE";
     "4dText" = "Please enter your briefing date here, so we can send you a reminder notification:";
-    "4dButtonText" = "CLICK TO SAVE DATE";
+    "4dButtonText" = "TAP TO SAVE DATE";
 
     // Step 4e
-    "4eText" = "Make sure to not miss your briefing, and if you need to reschedule, make sure to call the HAUC office to set up a new time. Then enter the new date in the box above, and click on the save button again.";
+    "4eText" = "Make sure to not miss your briefing, and if you need to reschedule, make sure to call the HAUC office to set up a new time. Then enter the new date in the box above, and tap on the save button again.";
 
     // Step 4f
     "4fTitle" = "IMPORTANT REMINDER";
     "4fText" = "Once you have attended the briefing, you only have 60 days to find a place to live, and to complete the remaining steps.";
 
     // Step 4g
-    "4gText" = "After attending the briefing, click the “Complete” button below to move on to the next step!";
+    "4gText" = "After attending the briefing, tap the “Complete” button below to move on to the next step!";
 
 
 // MARK: - STEP 5 ITEMS
@@ -194,7 +194,7 @@
     "5bText" = "In the first box below, include all income from everyone in the household. You can include: wages, salaries, unemployment benefits, child support, Social Security payments, interest and royalties, and financial assistance.";
     "5bUrl" = "HAUC VOUCHER AMOUNT";
     "5bGraphicName" = "In the second box, enter the amount that you qualify for from the Housing Authority voucher you received at your briefing.";
-    "5bButtonText" = "CLICK TO SUBMIT AMOUNTS";
+    "5bButtonText" = "TAP TO SUBMIT AMOUNTS";
 
     // Step 5c
     "5cTitle" = "YOUR MAXIMUM RENT AMOUNT";
@@ -243,11 +243,11 @@
 
     // Step 7h
     "7hTitle" = "WHAT IF THE APARTMENT ISN’T RIGHT FOR YOU?";
-    "7hText" = "Just click on this button to return to the “Choose Apartment” screen, select another complex, and try again:";
-    "7hButtonText" = "CLICK TO RETURN TO APARTMENT MAP";
+    "7hText" = "Just tap on this button to return to the “Choose Apartment” screen, select another complex, and try again:";
+    "7hButtonText" = "TAP TO RETURN TO APARTMENT MAP";
 
     // Step 7i
-    "7iText" = "Once you have found an apartment that is right for you, click on the “Complete” button below to move on to the next step!";
+    "7iText" = "Once you have found an apartment that is right for you, tap on the “Complete” button below to move on to the next step!";
 
 
 // MARK: - STEP 8 ITEMS
@@ -257,7 +257,7 @@
 
     // Step 8b
     "8bTitle" = "HELPFUL HINT";
-    "8bText" = "If you are missing these forms, most apartment complexes should have copies, but if for some reason they don’t, click on the links below, and share the forms by email address or mobile number. Then return to this page by clicking on the Section 8 link at the top-left of the screen.";
+    "8bText" = "If you are missing these forms, most apartment complexes should have copies, but if for some reason they don’t, tap on the links below, and share the forms by email address or mobile number. Then return to this page by tapping on the Section 8 link at the top-left of the screen.";
 
     // Step 8c
     "8cTitle" = "1. TENANCY APPROVAL FORM";
@@ -283,7 +283,7 @@
     "8gText" = "Make sure you get ALL FOUR of these documents, or you won’t be able to complete the next step.";
 
     // Step 8h
-"8hText" = "Once you have the documents, click on the “Complete” button below to move on to the next step!";
+"8hText" = "Once you have the documents, tap on the “Complete” button below to move on to the next step!";
 
 
 // MARK: - STEP 9 ITEMS
@@ -303,7 +303,7 @@
 "9dText" = "The Housing Authority will use the phone number and address you provided on your application to contact you, so when you deliver the documents, check with them to make sure your phone number and address are correct.";
 
 // Step 9e
-"9eText" = "Once deliver the documents to the Housing Authority, click on the “Complete” button below to move on to the next step!";
+"9eText" = "Once deliver the documents to the Housing Authority, tap on the “Complete” button below to move on to the next step!";
 
 
 // MARK: - STEP 10 ITEMS
@@ -321,10 +321,10 @@
     // Step 10d
     "10dTitle" = "INSPECTION DATE";
     "10dText" = "Please enter your inspection date here, so we can send you a reminder notification:";
-    "10dButtonText" = "CLICK TO SAVE DATE";
+    "10dButtonText" = "TAP TO SAVE DATE";
 
     // Step 10e
-    "10eText" = "Once the inspection has been scheduled with the apartment complex, and the Housing Authority, click on the “Complete” button below to move on to the next step!";
+    "10eText" = "Once the inspection has been scheduled with the apartment complex, and the Housing Authority, tap on the “Complete” button below to move on to the next step!";
 
 
 // MARK: - STEP 11 ITEMS
@@ -338,10 +338,10 @@
 
     // Step 11c
     "11cTitle" = "IF YOU NEED TO RESCHEDULE";
-    "11cText" = "If you miss your appointment, or need to schedule a re-inspection appointment, make sure to go back and change the inspection date on Step 10 and click on the “Set Inspection Date” button again, so we can remind you when it’s getting closer to inspection time.";
+    "11cText" = "If you miss your appointment, or need to schedule a re-inspection appointment, make sure to go back and change the inspection date on Step 10 and tap on the “Set Inspection Date” button again, so we can remind you when it’s getting closer to inspection time.";
 
     // Step 11d
-    "11dText" = "Once the inspection is finished, click on the “Complete” button below to move on to the next step!";
+    "11dText" = "Once the inspection is finished, tap on the “Complete” button below to move on to the next step!";
 
 
 // MARK: - STEP 12 ITEMS
@@ -352,7 +352,7 @@
     // Step 12b
     "12bTitle" = "FINAL APPOINTMENT DATE";
     "12bText" = "Please enter your final appointment date here, so we can send you a reminder notification:";
-    "12bButtonText" = "CLICK TO SAVE DATE";
+    "12bButtonText" = "TAP TO SAVE DATE";
 
     // Step 12c
     "12cText" = "Make sure to not forget your appointment. On the day of the appointment, plan ahead and arrive early.";
@@ -366,10 +366,10 @@
 
     // Step 12f
     "12fTitle" = "IF YOU NEED TO RESCHEDULE";
-    "12fText" = "If you miss your appointment, call the Housing Authority to schedule a new appointment, and then make sure to go back and change the appointment date above and click on the “Click to Save Date” button again, so we can remind you when it’s getting closer to inspection time.";
+    "12fText" = "If you miss your appointment, call the Housing Authority to schedule a new appointment, and then make sure to go back and change the appointment date above and tap on the “Tap to Save Date” button again, so we can remind you when it’s getting closer to inspection time.";
 
     // Step 12g
-    "12gText" = "Once your final appointment is finished, click on the “Complete” button below to move on to the next step!";
+    "12gText" = "Once your final appointment is finished, tap on the “Complete” button below to move on to the next step!";
 
 
 // MARK: - STEP 13 ITEMS
@@ -382,7 +382,7 @@
     "13bText" = "240 E Center St, Provo, UT 84606 \nHours: Monday–Thursday, 7:30am–5:30pm \nPhone: 801-373-8333";
 
     // Step 13c
-"13cText" = "When the paperwork has been processed, the Housing Authority will send you copies in the mail. \n\nOnce you have returned the signed leases and contracts to the Housing Authority, click on the “Complete” button below to move on to the next step!
+"13cText" = "When the paperwork has been processed, the Housing Authority will send you copies in the mail. \n\nOnce you have returned the signed leases and contracts to the Housing Authority, tap on the “Complete” button below to move on to the next step!
 ";
 
 
@@ -403,7 +403,7 @@
     "14dText" = "At some point in the future, you will have to go through the re-certification process. You will receive a letter two to three months before your re-certification deadline. That letter will contain instructions on what steps to take to complete the process.";
 
     // Step 14e
-    "14eText" = "Click on the button below to complete the Section 8 Housing process!";
+    "14eText" = "Tap on the button below to complete the Section 8 Housing process!";
 
 
 

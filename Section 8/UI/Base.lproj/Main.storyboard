@@ -47,7 +47,7 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2i-QN-570">
                                             <rect key="frame" x="20" y="18.5" width="374" height="52.5"/>
-                                            <string key="text">Click on each step to see a list of instructions. When you finish, a green checkmark will appear on the right. Then move to the next step.</string>
+                                            <string key="text">Tap on each step to see a list of instructions. When you finish, a green checkmark will appear on the right. Then move to the next step.</string>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -150,7 +150,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.29849177599999999" green="0.85634750130000004" blue="0.39206048850000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.0" green="0.87058823529411766" blue="0.32156862745098036" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="UQ5-zE-CN6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kR9-08-CDs" secondAttribute="trailing" constant="8" symbolic="YES" id="2Pv-2Y-sbG"/>
                             <constraint firstItem="yvj-mJ-s1X" firstAttribute="top" secondItem="byl-Kg-4dD" secondAttribute="top" id="6ab-NG-8Yf"/>
@@ -416,7 +416,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </datePicker>
-                                                <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byc-O9-kez">
+                                                <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="byc-O9-kez">
                                                     <rect key="frame" x="40" y="211.5" width="334" height="35"/>
                                                     <color key="backgroundColor" red="0.21224952050000001" green="0.60157132150000003" blue="0.18863901399999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -683,7 +683,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="CLICK WHEN STEP IS COMPLETE"/>
+                                        <state key="normal" title="TAP HERE WHEN STEP IS COMPLETE"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                 <real key="value" value="1"/>
@@ -4445,6 +4445,6 @@ AAAAA12iA
         </image>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="vc9-0t-CZl"/>
+        <segue reference="h8P-UY-m9h"/>
     </inferredMetricsTieBreakers>
 </document>
