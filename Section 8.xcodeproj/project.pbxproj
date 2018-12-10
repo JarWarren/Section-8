@@ -14,7 +14,7 @@
 		476654B321B2F38800FC3663 /* TimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476654B221B2F38800FC3663 /* TimerController.swift */; };
 		47BD249321B7206700CC6192 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BD249221B7206700CC6192 /* Alarm.swift */; };
 		47BD249521B742CC00CC6192 /* AlarmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BD249421B742CC00CC6192 /* AlarmController.swift */; };
-		47DF81F921B97E8000C0F0FE /* StepDetailExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DF81F821B97E8000C0F0FE /* StepDetailExtension.swift */; };
+		47DF81F921B97E8000C0F0FE /* stepDetailExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DF81F821B97E8000C0F0FE /* stepDetailExtension.swift */; };
 		47F09D2F21B9BAE200542722 /* AlarmName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F09D2E21B9BAE200542722 /* AlarmName.swift */; };
 		47F09D3121B9CBB300542722 /* NotificationIDKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F09D3021B9CBB300542722 /* NotificationIDKey.swift */; };
 		7E1DF3F121B19FBE0012BFEE /* GoogleNetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DF3F021B19FBE0012BFEE /* GoogleNetworkController.swift */; };
@@ -62,7 +62,7 @@
 		476654B221B2F38800FC3663 /* TimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerController.swift; sourceTree = "<group>"; };
 		47BD249221B7206700CC6192 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		47BD249421B742CC00CC6192 /* AlarmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmController.swift; sourceTree = "<group>"; };
-		47DF81F821B97E8000C0F0FE /* StepDetailExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepDetailExtension.swift; sourceTree = "<group>"; };
+		47DF81F821B97E8000C0F0FE /* stepDetailExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stepDetailExtension.swift; sourceTree = "<group>"; };
 		47F09D2E21B9BAE200542722 /* AlarmName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmName.swift; sourceTree = "<group>"; };
 		47F09D3021B9CBB300542722 /* NotificationIDKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationIDKey.swift; sourceTree = "<group>"; };
 		7E1DF3F021B19FBE0012BFEE /* GoogleNetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleNetworkController.swift; sourceTree = "<group>"; };
@@ -236,7 +236,7 @@
 				81DD083621AF32F20037F3AA /* HomeTVC.swift */,
 				81FF0A9421B09BC6004A7EDB /* StepDetailTVC.swift */,
 				7E1DF3F621B1A0610012BFEE /* MapViewController.swift */,
-				47DF81F821B97E8000C0F0FE /* StepDetailExtension.swift */,
+				47DF81F821B97E8000C0F0FE /* stepDetailExtension.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -420,7 +420,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47DF81F921B97E8000C0F0FE /* StepDetailExtension.swift in Sources */,
+				47DF81F921B97E8000C0F0FE /* stepDetailExtension.swift in Sources */,
 				7E67E29421ADE777007E4103 /* AppDelegate.swift in Sources */,
 				81DD083321AF1D470037F3AA /* Step.swift in Sources */,
 				81CC955E21BB030100CB1B32 /* Section8Apartment.swift in Sources */,
