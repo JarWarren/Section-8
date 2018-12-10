@@ -46,12 +46,23 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     let datePActionId = "datePickerNotifID"
     let datePCategoryId = "dateCatergoryID"
     var alarmIsOn: Bool = false
-    // seven day timer constants for notif func
+    // seven day interval constants for notif func
     let dissmissActionSdId = "SevenDayDissmissActionID"
     let categorySdID = "sevenDayCatergoryID"
     let requestSdId = "sevenDayRequestID"
     let resourceSdID = "sevenDayResourceID"
     let typePng = "png"
+
+    let sevenDayNotifBanner = NSString.localizedUserNotificationString(forKey: "notificationBanner", arguments: [])
+        
+    let sevenDayDissmissTitle = NSString.localizedUserNotificationString(forKey: "7DayDismiss", arguments: [])
+    let sevenDayContentTitle = NSString.localizedUserNotificationString(forKey: "7DayContentTitle", arguments: [])
+    let sevenDayContentSubtitle = NSString.localizedUserNotificationString(forKey: "7DayContentSubtitle", arguments: [])
+    let sevenDayContentBody = NSString.localizedUserNotificationString(forKey: "7DayContentBody", arguments: [])
+    
+    // date Banner
+    let datePickerNotifBanner = NSString.localizedUserNotificationString(forKey: "datePickerBanner", arguments: [])
+    
     let bannerImageName = NSLocalizedString("notificationBanner", comment: "")
     // MARK: - VIEW DID LOAD & VIEW WILL APPEAR
     
@@ -87,10 +98,10 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         guard let unwrappedStep = selectedStep else {return}
         switch unwrappedStep.stepCompleted {
         case false:
-            print("🔥Step # \(unwrappedStep.stepNumber) was originally set to inComplete but now its complete🤗")
+            print("Step # \(unwrappedStep.stepNumber) was originally set to inComplete but now its complete")
             unwrappedStep.stepCompleted = true
         case true:
-            print("🔥Step # \(unwrappedStep.stepNumber) was originally set to Complete but now its not compelted😭")
+            print("Step # \(unwrappedStep.stepNumber) was originally set to Complete but now its not compelted")
             unwrappedStep.stepCompleted = false
         }
         checkButtonStatusNotificationSet()
@@ -325,13 +336,15 @@ extension StepDetailTVC {
     func cancelSevenDayNotification() {
         
         timerController.cancelLocalNotificationWith(identifier: categorySevenNotificationID)
-        print("\n🐙🗓  7 day notification canceled\n")
+        print("\n7 day notification canceled\n")
     }
     
     
     func scheduleSevenDayIntervalNotif() {
-        print("\nThe new 📅 7 day notification was set\n")
-        timerController.scheduleLocalNotifInterval(dissmissActionID: dissmissActionSdId, actionTitle: NSLocalizedString("7DayDismiss", comment: ""), categoryID: categorySdID, contentTitle: NSLocalizedString("7DayContentTitle", comment: ""), contentSubtitle: NSLocalizedString("7DayContentSubtitle", comment: ""), contentBody: NSLocalizedString("7DayContentBody", comment: ""), contentBadge: 1, contentSound: UNNotificationSound.default, contentLaunchImage: "", desiredTimeInterval: sevenDays, resourceName: bannerImageName, extenstionType: typePng, resourceID: resourceSdID, requestID: requestSdId)
+        print("\n7 day notification was set\n")
+        
+        timerController.scheduleLocalNotifInterval(dissmissActionID: dissmissActionSdId, actionTitle: sevenDayDissmissTitle, categoryID: categorySdID, contentTitle: sevenDayContentTitle, contentSubtitle: sevenDayContentSubtitle, contentBody: sevenDayContentBody, contentBadge: 1, contentSound: UNNotificationSound.default, contentLaunchImage: "", desiredTimeInterval: sevenDays, resourceName: sevenDayNotifBanner, extenstionType: typePng, resourceID: resourceSdID, requestID: requestSdId)
+
     }
 }
 

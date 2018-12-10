@@ -41,13 +41,13 @@ extension StepDetailTVC: DatePickerTVCellDelegate {
                 
                 AlarmController.shared.updateAlarm(alarm: alarm, fireDate: fireDate, name: AlarmName.step3.rawValue, isOn: alarmIsOn)
                 
-                AlarmController.shared.scheduleDatePickerUserNotifications(for: alarm, scheduleDissmissDateNotifId: NotificationIDKey.dissmissButtonDateP.rawValue, dissmissActionTitle: "Localize: Dissmiss", scheduleEditNotifId: NotificationIDKey.editButtonDateP.rawValue, editDateActionTitle: "Localize: Edit Schedule", editDateOption: [.authenticationRequired, .foreground], categoryID: NotificationIDKey.categorySDKey.rawValue, contentTitle: "Localize: Content Title \(unwrappedStep.stepNumber)", contentSubtitle: "Localize:Content Subtitle\(alarm.fireDateString)", contentBody: "Localize: Content Body", contentBadge: 1, contentSound: .default, contentLuanchImage: "", resourceName: "supermarioghost_1_copy", extenstionType: "png")
+                AlarmController.shared.scheduleDatePickerUserNotifications(for: alarm, scheduleDissmissDateNotifId: NotificationIDKey.dissmissButtonDateP.rawValue, dissmissActionTitle: "Localize: Dissmiss", categoryID: NotificationIDKey.categorySDKey.rawValue, contentTitle: "Localize: Content Title \(unwrappedStep.stepNumber)", contentSubtitle: "Localize:Content Subtitle\(alarm.fireDateString)", contentBody: "Localize: Content Body", contentBadge: 1, contentSound: .default, contentLuanchImage: "", resourceName: datePickerNotifBanner, extenstionType: typePng)
                 
             } else  {
                 
                 let alarm = AlarmController.shared.addAlarm(fireDate: fireDate, alarm: AlarmName.step3.rawValue, isOn: alarmIsOn)
                 
-                AlarmController.shared.scheduleDatePickerUserNotifications(for: alarm, scheduleDissmissDateNotifId: NotificationIDKey.dissmissButtonDateP.rawValue, dissmissActionTitle: "Localize: Dissmiss", scheduleEditNotifId: NotificationIDKey.editButtonDateP.rawValue, editDateActionTitle: "Localize: Edit Schedule", editDateOption: [.authenticationRequired, .foreground], categoryID: NotificationIDKey.categorySDKey.rawValue, contentTitle: "Localize: Content Title \(unwrappedStep.stepNumber)", contentSubtitle: "Localize:Content Subtitle\(alarm.fireDateString)", contentBody: "Localize: Content Body", contentBadge: 1, contentSound: .default, contentLuanchImage: "", resourceName: "supermarioghost_1_copy", extenstionType: "png")
+                 AlarmController.shared.scheduleDatePickerUserNotifications(for: alarm, scheduleDissmissDateNotifId: NotificationIDKey.dissmissButtonDateP.rawValue, dissmissActionTitle: "Localize: Dissmiss", categoryID: NotificationIDKey.categorySDKey.rawValue, contentTitle: "Localize: Content Title \(unwrappedStep.stepNumber)", contentSubtitle: "Localize:Content Subtitle\(alarm.fireDateString)", contentBody: "Localize: Content Body", contentBadge: 1, contentSound: .default, contentLuanchImage: "", resourceName: datePickerNotifBanner, extenstionType: typePng)
             }
         case AlarmName.step4.rawValue:
             print(unwrappedStep.stepNumber)
@@ -61,13 +61,13 @@ extension StepDetailTVC: DatePickerTVCellDelegate {
                 AlarmController.shared.updateAlarm(alarm: alarm, fireDate: fireDate, name: AlarmName.step4.rawValue, isOn: alarmIsOn)
                 
                 
-                AlarmController.shared.scheduleDatePickerUserNotifications(for: alarm, scheduleDissmissDateNotifId: NotificationIDKey.dissmissButtonDateP.rawValue, dissmissActionTitle: "Localize: Dissmiss", scheduleEditNotifId: NotificationIDKey.editButtonDateP.rawValue, editDateActionTitle: "Localize: Edit Schedule", editDateOption: [.authenticationRequired, .foreground], categoryID: NotificationIDKey.categorySDKey.rawValue, contentTitle: "Localize: Content Title \(unwrappedStep.stepNumber)", contentSubtitle: "Localize:Content Subtitle\(alarm.fireDateString)", contentBody: "Localize: Content Body", contentBadge: 1, contentSound: .default, contentLuanchImage: "", resourceName: "supermarioghost_1_copy", extenstionType: "png")
+                 AlarmController.shared.scheduleDatePickerUserNotifications(for: alarm, scheduleDissmissDateNotifId: NotificationIDKey.dissmissButtonDateP.rawValue, dissmissActionTitle: "Localize: Dissmiss", categoryID: NotificationIDKey.categorySDKey.rawValue, contentTitle: "Localize: Content Title \(unwrappedStep.stepNumber)", contentSubtitle: "Localize:Content Subtitle\(alarm.fireDateString)", contentBody: "Localize: Content Body", contentBadge: 1, contentSound: .default, contentLuanchImage: "", resourceName: datePickerNotifBanner, extenstionType: typePng)
                 
             } else  {
                 
                 let alarm = AlarmController.shared.addAlarm(fireDate: fireDate, alarm: AlarmName.step4.rawValue, isOn: alarmIsOn)
                 
-                AlarmController.shared.scheduleDatePickerUserNotifications(for: alarm, scheduleDissmissDateNotifId: NotificationIDKey.dissmissButtonDateP.rawValue, dissmissActionTitle: "Localize: Dissmiss", scheduleEditNotifId: NotificationIDKey.editButtonDateP.rawValue, editDateActionTitle: "Localize: Edit Schedule", editDateOption: [.authenticationRequired, .foreground], categoryID: NotificationIDKey.categorySDKey.rawValue, contentTitle: "Localize: Content Title \(unwrappedStep.stepNumber)", contentSubtitle: "Localize:Content Subtitle\(alarm.fireDateString)", contentBody: "Localize: Content Body", contentBadge: 1, contentSound: .default, contentLuanchImage: "", resourceName: "supermarioghost_1_copy", extenstionType: "png")
+                 AlarmController.shared.scheduleDatePickerUserNotifications(for: alarm, scheduleDissmissDateNotifId: NotificationIDKey.dissmissButtonDateP.rawValue, dissmissActionTitle: "Localize: Dissmiss", categoryID: NotificationIDKey.categorySDKey.rawValue, contentTitle: "Localize: Content Title \(unwrappedStep.stepNumber)", contentSubtitle: "Localize:Content Subtitle\(alarm.fireDateString)", contentBody: "Localize: Content Body", contentBadge: 1, contentSound: .default, contentLuanchImage: "", resourceName: datePickerNotifBanner, extenstionType: typePng)
             }
         case AlarmName.step10.rawValue:
             print(unwrappedStep.stepNumber)
@@ -81,13 +81,13 @@ extension StepDetailTVC: DatePickerTVCellDelegate {
                 
                 AlarmController.shared.updateAlarm(alarm: alarm, fireDate: fireDate, name: AlarmName.step10.rawValue, isOn: alarmIsOn)
                 
-                AlarmController.shared.scheduleDatePickerUserNotifications(for: alarm, scheduleDissmissDateNotifId: NotificationIDKey.dissmissButtonDateP.rawValue, dissmissActionTitle: "Localize: Dissmiss", scheduleEditNotifId: NotificationIDKey.editButtonDateP.rawValue, editDateActionTitle: "Localize: Edit Schedule", editDateOption: [.authenticationRequired, .foreground], categoryID: NotificationIDKey.categorySDKey.rawValue, contentTitle: "Localize: Content Title \(unwrappedStep.stepNumber)", contentSubtitle: "Localize:Content Subtitle\(alarm.fireDateString)", contentBody: "Localize: Content Body", contentBadge: 1, contentSound: .default, contentLuanchImage: "", resourceName: "supermarioghost_1_copy", extenstionType: "png")
+                 AlarmController.shared.scheduleDatePickerUserNotifications(for: alarm, scheduleDissmissDateNotifId: NotificationIDKey.dissmissButtonDateP.rawValue, dissmissActionTitle: "Localize: Dissmiss", categoryID: NotificationIDKey.categorySDKey.rawValue, contentTitle: "Localize: Content Title \(unwrappedStep.stepNumber)", contentSubtitle: "Localize:Content Subtitle\(alarm.fireDateString)", contentBody: "Localize: Content Body", contentBadge: 1, contentSound: .default, contentLuanchImage: "", resourceName: datePickerNotifBanner, extenstionType: typePng)
                 
             } else  {
                 
                 let alarm = AlarmController.shared.addAlarm(fireDate: fireDate, alarm: AlarmName.step10.rawValue, isOn: alarmIsOn)
                 
-                AlarmController.shared.scheduleDatePickerUserNotifications(for: alarm, scheduleDissmissDateNotifId: NotificationIDKey.dissmissButtonDateP.rawValue, dissmissActionTitle: "Localize: Dissmiss", scheduleEditNotifId: NotificationIDKey.editButtonDateP.rawValue, editDateActionTitle: "Localize: Edit Schedule", editDateOption: [.authenticationRequired, .foreground], categoryID: NotificationIDKey.categorySDKey.rawValue, contentTitle: "Localize: Content Title \(unwrappedStep.stepNumber)", contentSubtitle: "Localize:Content Subtitle\(alarm.fireDateString)", contentBody: "Localize: Content Body", contentBadge: 1, contentSound: .default, contentLuanchImage: "", resourceName: "supermarioghost_1_copy", extenstionType: "png")
+                AlarmController.shared.scheduleDatePickerUserNotifications(for: alarm, scheduleDissmissDateNotifId: NotificationIDKey.dissmissButtonDateP.rawValue, dissmissActionTitle: "Localize: Dissmiss", categoryID: NotificationIDKey.categorySDKey.rawValue, contentTitle: "Localize: Content Title \(unwrappedStep.stepNumber)", contentSubtitle: "Localize:Content Subtitle\(alarm.fireDateString)", contentBody: "Localize: Content Body", contentBadge: 1, contentSound: .default, contentLuanchImage: "", resourceName: datePickerNotifBanner, extenstionType: typePng)
             }
         case AlarmName.step12.rawValue:
             print(unwrappedStep.stepNumber)
@@ -100,13 +100,13 @@ extension StepDetailTVC: DatePickerTVCellDelegate {
                 
                 AlarmController.shared.updateAlarm(alarm: alarm, fireDate: fireDate, name: AlarmName.step12.rawValue, isOn: alarmIsOn)
                 
-                AlarmController.shared.scheduleDatePickerUserNotifications(for: alarm, scheduleDissmissDateNotifId: NotificationIDKey.dissmissButtonDateP.rawValue, dissmissActionTitle: "Localize: Dissmiss", scheduleEditNotifId: NotificationIDKey.editButtonDateP.rawValue, editDateActionTitle: "Localize: Edit Schedule", editDateOption: [.authenticationRequired, .foreground], categoryID: NotificationIDKey.categorySDKey.rawValue, contentTitle: "Localize: Content Title \(unwrappedStep.stepNumber)", contentSubtitle: "Localize:Content Subtitle\(alarm.fireDateString)", contentBody: "Localize: Content Body", contentBadge: 1, contentSound: .default, contentLuanchImage: "", resourceName: "supermarioghost_1_copy", extenstionType: "png")
+                 AlarmController.shared.scheduleDatePickerUserNotifications(for: alarm, scheduleDissmissDateNotifId: NotificationIDKey.dissmissButtonDateP.rawValue, dissmissActionTitle: "Localize: Dissmiss", categoryID: NotificationIDKey.categorySDKey.rawValue, contentTitle: "Localize: Content Title \(unwrappedStep.stepNumber)", contentSubtitle: "Localize:Content Subtitle\(alarm.fireDateString)", contentBody: "Localize: Content Body", contentBadge: 1, contentSound: .default, contentLuanchImage: "", resourceName: datePickerNotifBanner, extenstionType: typePng)
                 
             } else  {
                 
                 let alarm = AlarmController.shared.addAlarm(fireDate: fireDate, alarm: AlarmName.step12.rawValue, isOn: alarmIsOn)
                 
-                AlarmController.shared.scheduleDatePickerUserNotifications(for: alarm, scheduleDissmissDateNotifId: NotificationIDKey.dissmissButtonDateP.rawValue, dissmissActionTitle: "Localize: Dissmiss", scheduleEditNotifId: NotificationIDKey.editButtonDateP.rawValue, editDateActionTitle: "Localize: Edit Schedule", editDateOption: [.authenticationRequired, .foreground], categoryID: NotificationIDKey.categorySDKey.rawValue, contentTitle: "Localize: Content Title \(unwrappedStep.stepNumber)", contentSubtitle: "Localize:Content Subtitle\(alarm.fireDateString)", contentBody: "Localize: Content Body", contentBadge: 1, contentSound: .default, contentLuanchImage: "", resourceName: "supermarioghost_1_copy", extenstionType: "png")
+                AlarmController.shared.scheduleDatePickerUserNotifications(for: alarm, scheduleDissmissDateNotifId: NotificationIDKey.dissmissButtonDateP.rawValue, dissmissActionTitle: "Localize: Dissmiss", categoryID: NotificationIDKey.categorySDKey.rawValue, contentTitle: "Localize: Content Title \(unwrappedStep.stepNumber)", contentSubtitle: "Localize:Content Subtitle\(alarm.fireDateString)", contentBody: "Localize: Content Body", contentBadge: 1, contentSound: .default, contentLuanchImage: "", resourceName: datePickerNotifBanner, extenstionType: typePng)
             }
             
         default: print("Unkown Button Tapped"); break

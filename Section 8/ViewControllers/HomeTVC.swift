@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class HomeTVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -18,16 +19,32 @@ class HomeTVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     let completedCheckBoxImage = UIImage(named: "home_checked")
     let incompleteCheckBoxImage = UIImage(named: "home_unchecked")
-    
+    private let locationManger = CLLocationManager()
+    private let geocoder = CLGeocoder()
     // MARK: - VIEW DID LOAD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
+        
+        switch CLLocationManager.authorizationStatus() {
+        case .notDetermined:
+            locationManger.requestAlwaysAuthorization()
+        case .restricted:
+            print("Users location is restricted")
+        case .denied:
+            AlertControllerManager.presentAlertControllerWith(title: "Location Services Disabled", message: "This device is not allowed to use location services. Section 8 app needs your location in order to properly display notification. If you wish to later change this it can be done in your phones settings.")
+        case .authorizedWhenInUse:
+            print("user granted authorizedWhenInUse")
+        default:
+            break
+        }
+        locationManger.startUpdatingLocation()
     }
     
     // MARK: - TABLE VIEW DATA SOURCE

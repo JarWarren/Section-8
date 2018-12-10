@@ -14,7 +14,9 @@ import UserNotifications
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
-
+    
+    static let geoCoder = CLGeocoder()
+    let locationManager = CLLocationManager()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Google Maps
@@ -27,6 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             if granted {
                 print("Permission for notificationw as granted by the user")
                       UNUserNotificationCenter.current().delegate = self
+                
+                
             }
             // Access granted
             if let error = error {
@@ -44,6 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
     // Ivan - Not sure what this does just yet
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        
          print("Test: \(response.notification.request.identifier)")
         
         defer {
@@ -54,14 +59,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             //The action that indicates the user explicitly dismissed the notification interface.
             //This action is delivered only if the notification’s category object was configured with the customDismissAction option.
         case UNNotificationDismissActionIdentifier:
-            print("/n🥶 User tapped the little 'x' on their notification pop/n")
+            print( "User tapped dissmissed the notification")
             //An action that indicates the user opened the app from the notification interface.
         case UNNotificationDefaultActionIdentifier:
-            print("\n😜 UNNotificationDefaultActionIdentifier: User tapped on the somewhere on the body of the notification and were segued into the app's main screen. Apple says this is An action that indicates the user opened the app from the notification interface \n")
-        case NotificationIDKey.editButtonDateP.rawValue:
-            print("\nUser Tapped on the edit option on the date picker notification")
+            print("user segued into the app")
         default:
-            print("\nUser Tapped The Dissmiss Button, however in the app delegate this print statment got fired under the default case not under Apple's UNNotificationDismissActionIdentifier case")
+            break
         }
     }
 
@@ -76,7 +79,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
         application.applicationIconBadgeNumber = 0;
 
     }

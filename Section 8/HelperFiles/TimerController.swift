@@ -95,6 +95,7 @@ class TimerController {
         return String(format: "%02d : %02d", arguments: [mintues, seconds]) // the % will get replaced by the argumetns you put in the line of code
     }
     
+    
     func scheduleLocalNotificationFor(identifier: String) {
         
         // The Alert Button options
@@ -122,7 +123,7 @@ class TimerController {
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
         UNUserNotificationCenter.current().add(request) { (error) in
             if let error = error {
-                print("💩 There was an error in \(#function) ; (error) ; \(error.localizedDescription) 💩")
+                print("There was an error in \(#function) ; (error) ; \(error.localizedDescription)")
             }
         }
     }
@@ -157,7 +158,7 @@ func scheduleLocalNotificationOnTimer(identifier: String, actionTitle: String, c
             
             content.attachments = [attachments]
         } catch {
-            print("\n\n🚀 There was an error with the attachment in: \(#file) \n\n \(#function); \n\n\(error); \n\n\(error.localizedDescription) 🚀\n\n")
+            print("\n\nThere was an error with the attachment in: \(#file) \n\n \(#function); \n\n\(error); \n\n\(error.localizedDescription)\n\n")
         }
         
         
@@ -166,7 +167,7 @@ func scheduleLocalNotificationOnTimer(identifier: String, actionTitle: String, c
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
         UNUserNotificationCenter.current().add(request) { (error) in
             if let error = error {
-                print("💩 There was an error in \(#function) ; (error) ; \(error.localizedDescription) 💩")
+                print("There was an error in \(#function) ; (error) ; \(error.localizedDescription)")
             }
         }
     }
@@ -198,7 +199,7 @@ func scheduleLocalNotificationOnTimer(identifier: String, actionTitle: String, c
             
             content.attachments = [attachments]
         } catch {
-            print("\n\n🚀 There was an error with the attachment in: \(#file) \n\n \(#function); \n\n\(error); \n\n\(error.localizedDescription) 🚀\n\n")
+            print("\n\nThere was an error with the attachment in: \(#file) \n\n \(#function); \n\n\(error); \n\n\(error.localizedDescription)\n\n")
         }
         
         let componets = Calendar.current.dateComponents([.hour, .minute], from: alrmComponent)
@@ -209,7 +210,7 @@ func scheduleLocalNotificationOnTimer(identifier: String, actionTitle: String, c
         
         UNUserNotificationCenter.current().add(request) { (error) in
             if let error = error {
-                print("💩 There was an error in \(#function) ; (error) ; \(error.localizedDescription) 💩")
+                print("There was an error in \(#function) ; (error) ; \(error.localizedDescription)")
             }
         }
     }
@@ -240,7 +241,7 @@ func scheduleLocalNotificationOnTimer(identifier: String, actionTitle: String, c
             
             content.attachments = [attachments]
         } catch {
-            print("\n\n🚀 There was an error with the attachment in: \(#file) \n\n \(#function); \n\n\(error); \n\n\(error.localizedDescription) 🚀\n\n")
+            print("\n\nThere was an error with the attachment in: \(#file) \n\n \(#function); \n\n\(error); \n\n\(error.localizedDescription)\n\n")
         }
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(desiredTimeInterval), repeats: true)
@@ -248,7 +249,7 @@ func scheduleLocalNotificationOnTimer(identifier: String, actionTitle: String, c
         let request = UNNotificationRequest(identifier: requestID, content: content, trigger: trigger)
         UNUserNotificationCenter.current().add(request) { (error) in
             if let error = error {
-                print("💩 There was an error in \(#function) ; (error) ; \(error.localizedDescription) 💩")
+                print("There was an error in \(#function) ; (error) ; \(error.localizedDescription)")
             }
         }
     }
