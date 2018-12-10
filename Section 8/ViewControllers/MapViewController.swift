@@ -27,9 +27,14 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     
     // MARK: - VARIABLES
     
-    var markerViewIsVisible = false
+    var markerWasTapped = false
+    var markerViewIsVisible = false {
+        didSet {
+            print("🤬\(self.markerViewIsVisible)")
+        }
+    }
     var userDidComeFromStep7 = false
-    var locations: [ApartmentLocation]?
+    var locations: [GMSMarker]?
     
     // Observers on all of the following properties allow them to both be stored for later persistance, as well as update our outlets automatically.
     var currentPhone: String? {
@@ -68,57 +73,37 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     func setupMap() {
         
         utahCountyMapView.delegate = self
-        // Current default camera position is at the "center" of Utah County.
-        utahCountyMapView.camera = GMSCameraPosition(target: CLLocationCoordinate2D(latitude: 40.2969, longitude: -111.6946), zoom: 12, bearing: 0, viewingAngle: 0)
+        // Current default camera position is at the "center" of Orem City.
+        utahCountyMapView.camera = GMSCameraPosition(target: CLLocationCoordinate2D(latitude: 40.2969, longitude: -111.6946), zoom: 10, bearing: 0, viewingAngle: 0)
         
     }
     
+    // Creates markers at CLLocations for each apartment complex in our internal database.
     func addMarkers() {
-        
-        GoogleNetworkController.fetchNearbyComplexes { (locations) in
-            
-            self.locations = locations
-            DispatchQueue.main.async {
-                for location in locations {
-                    let newMarker = ApartmentComplexMarker(apartmentLocation: location)
-                    newMarker.map = self.utahCountyMapView
-                }
-            }
+        var markerHolder = [GMSMarker]()
+        for apartment in Section8ApartmentController.shared.section8Apartments {
+            let newMarker = GMSMarker(position: CLLocationCoordinate2D(latitude: apartment.lat, longitude: apartment.lng))
+            newMarker.map = utahCountyMapView
+            markerHolder.append(newMarker)
         }
+        locations = markerHolder
     }
-    // TODO: Method that takes in a city and returns a CLLocationCoordinate2D in order to position camera.
-    // Said method will operate in synchrony with liquid menu button in lower right corner.
     
+    // Moves the map when a marker is tapped.
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        markerWasTapped = true
         
         // Move camera to display the tapped marker.
         utahCountyMapView.animate(to: GMSCameraPosition(target: CLLocationCoordinate2D(latitude: marker.position.latitude - 0.01, longitude: marker.position.longitude), zoom: utahCountyMapView.camera.zoom, bearing: 0, viewingAngle: 0))
         
         // Check to make sure that the ApartmentLocation and the marker we tapped are, in fact, the same place.
-        guard let locations = locations else { return false }
-        for location in locations {
-            if location.geometry.location.lat == marker.position.latitude && location.geometry.location.lng == marker.position.longitude {
-                
-                if let photo = location.photos?.first?.photo_reference {
-                    // Fetch image from ApartmentLocation, using the photoreference retrieved in setupMarkers function.
-                    GoogleNetworkController.fetchPlaceImage(photoReference: photo) { (image) in
-                        DispatchQueue.main.async {
-                            self.currentImage = image
-                        }
-                    }
-                } else {
-                    self.currentImage = UIImage(named: "noApartmentImage")
-                }
-                
-                // Fetch place details using the place_ID retrieved in setupMarkers function.
-                GoogleNetworkController.fetchPlaceDetails(placeID: location.place_id) { (name, phone, address) in
-                    DispatchQueue.main.async {
-                        self.currentName = name
-                        self.currentPhone = phone
-                        self.currentAddress = address
-                        self.markerViewIsVisible = true
-                    }
-                }
+        guard locations != nil else { return false }
+        for apartment in Section8ApartmentController.shared.section8Apartments {
+            if apartment.lat == marker.position.latitude && apartment.lng == marker.position.longitude {
+                self.currentImage = UIImage(named: apartment.apartmentPhoto)
+                self.currentName = apartment.name
+                self.currentPhone = apartment.phone
+                self.currentAddress = apartment.address
             }
         }
         return true
@@ -134,11 +119,15 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     
     // This method is called any time the map becomes stationary. Our markerView should become visible if we've tapped on a marker and the camera is centered on it - else it should stay invisible.
     func mapViewSnapshotReady(_ mapView: GMSMapView) {
-        
+    
+        if markerWasTapped == true {
+            markerViewIsVisible = !markerViewIsVisible
+        }
         guard markerViewIsVisible != false else { return }
         self.view.addSubview(markerView)
         self.markerView.center.x = self.view.center.x
         self.markerView.center.y = self.markerView.bounds.height
+        markerWasTapped = false
     }
     
     // MARK: - Actions
