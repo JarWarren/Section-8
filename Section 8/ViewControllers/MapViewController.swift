@@ -97,10 +97,13 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     // Moves the map when a marker is tapped.
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         markerWasTapped = true
+        currentPhotoReferences = nil
+        currentGalleryIndex = 0
         
         // Move camera to display the tapped marker.
         utahCountyMapView.animate(to: GMSCameraPosition(target: CLLocationCoordinate2D(latitude: marker.position.latitude - 0.01, longitude: marker.position.longitude), zoom: utahCountyMapView.camera.zoom, bearing: 0, viewingAngle: 0))
         
+        var googlePlaceID = ""
         // Check to make sure that the Section8Apartment and the marker we tapped are, in fact, the same place.
         guard locations != nil else { return false }
         for apartment in Section8ApartmentController.shared.section8Apartments {
@@ -110,10 +113,11 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
                 self.currentPhone = apartment.phone
                 self.currentAddress = apartment.address
                 self.imageRefHolder = apartment.apartmentPhoto
+                googlePlaceID = apartment.googlePlaceID
             }
-            GoogleNetworkController.fetchPlaceDetails(placeID: apartment.googlePlaceID) { (photoReferences) in
-                self.currentPhotoReferences = photoReferences
-            }
+        }
+        GoogleNetworkController.fetchPlaceDetails(placeID: googlePlaceID) { (photoReferences) in
+            self.currentPhotoReferences = photoReferences
         }
         return true
     }
@@ -128,7 +132,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     
     // This method is called any time the map becomes stationary. Our markerView should become visible if we've tapped on a marker and the camera is centered on it - else it should stay invisible.
     func mapViewSnapshotReady(_ mapView: GMSMapView) {
-    
+        
         if markerWasTapped == true {
             markerViewIsVisible = !markerViewIsVisible
         }
@@ -136,7 +140,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         self.view.addSubview(markerView)
         self.markerView.center.x = self.view.center.x
         self.markerView.center.y = self.markerView.bounds.height
-        if self.currentImage == UIImage(named: "noApartmentImage") {
+        if self.currentPhotoReferences == nil {
             leftButton.isHidden = true; rightButton.isHidden = true
         } else {
             leftButton.isHidden = false; rightButton.isHidden = false
@@ -199,7 +203,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         guard let refs = currentPhotoReferences else { return }
         switch currentGalleryIndex {
         case 0: currentGalleryIndex = refs.count - 1
-            currentImage = imageHolder
+        currentImage = imageHolder
             return
         default: currentGalleryIndex -= 1
         }

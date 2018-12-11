@@ -30,6 +30,7 @@ class GoogleNetworkController {
                     let newReference = reference.photo_reference
                     photoReferences.append(newReference)
                 }
+                print("\n👾\(placeID)👾\n")
                 completion(photoReferences)
             } catch {
                 print("Non-image result.")
