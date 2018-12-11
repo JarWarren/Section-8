@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AlertControllerManager {
+class AlertController {
     
     static func presentAlertControllerWith(title: String, message: String?) -> UIAlertController {
         
