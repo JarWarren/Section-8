@@ -41,20 +41,22 @@ class GoogleNetworkController {
         dataTask.resume()
     }
     
-    static func fetchPlaceDetails(placeID: String, completion: @escaping (Name, PhoneNumber, Address) -> Void) {
+    static func fetchPlaceDetails(placeID: String, completion: @escaping ([PhotoReference]) -> Void) {
         
-        guard let mainURL = URL(string: "https://maps.googleapis.com/maps/api/place/details/json?key=AIzaSyAchY5OHlVXXQyaux0dO-kM0gVQz0T0rzE&placeid=\(placeID)&fields=formatted_phone_number,formatted_address,name") else { completion("","",""); return }
+        guard let mainURL = URL(string: "https://maps.googleapis.com/maps/api/place/details/json?key=AIzaSyAchY5OHlVXXQyaux0dO-kM0gVQz0T0rzE&placeid=\(placeID)&fields=photo") else { completion([""]); return }
         
         let dataTask = URLSession.shared.dataTask(with: mainURL) { (data, _, error) in
-            if let error = error { print("Responded with error: \(error)."); completion("","",""); return }
-            guard let data = data else { print("No data."); completion("","",""); return }
+            if let error = error { print("Responded with error: \(error)."); completion([""]); return }
+            guard let data = data else { print("No data."); completion([""]); return }
             do {
                 let decodedData = try JSONDecoder().decode(TopLevelPhoneBook.self, from: data)
-                let phone = decodedData.result.phoneNumber
-                let address = decodedData.result.address
-                let name = decodedData.result.name
-                print("\n👾\(name)\n📞\(phone)\n📘\(address)")
-                completion(name, phone, address)
+                let photoBook = decodedData.result.photos
+                var photoReferences = [PhotoReference]()
+                for reference in photoBook {
+                    let newReference = reference.photo_reference
+                    photoReferences.append(newReference)
+                }
+                completion(photoReferences)
             } catch {
                 print("BAD DETAILS DECODE")
             }

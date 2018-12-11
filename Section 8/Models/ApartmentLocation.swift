@@ -36,17 +36,9 @@ struct TopLevelPhoneBook: Decodable {
 }
 
 struct PhotoDictionary: Decodable {
-    let photo_reference: String?
+    let photo_reference: String
 }
 
 struct PlaceDetail: Decodable {
-    let phoneNumber: String
-    let address: String
-    let name: String
-    
-    enum CodingKeys: String, CodingKey {
-        case phoneNumber = "formatted_phone_number"
-        case address = "formatted_address"
-        case name = "name"
-    }
+    let photos: [PhotoDictionary]
 }

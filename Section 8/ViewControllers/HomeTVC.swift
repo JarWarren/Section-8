@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import CoreLocation
 
 class HomeTVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
