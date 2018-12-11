@@ -51,22 +51,22 @@ class StepController {
                 
             case NSLocalizedString("STEP", comment: "") + " 1":
                 
-                // Item 1a
+                // Item 1a - Intro
                 ItemController.addNewItem(title: nil, text: NSLocalizedString("1aText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
-                // Item 1b
-                ItemController.addNewItem(title: NSLocalizedString("1bTitle", comment: ""), text: NSLocalizedString("1bText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .tip, step: step)
+                // Item 1b - Viewing tip
+                ItemController.addNewItem(title: NSLocalizedString("1bTitle", comment: ""), text: NSLocalizedString("1bText", comment: ""), buttonText: nil, url: nil, graphicName: "lightbulb", format: .tip, step: step)
                 
-                // Item 1c - photo
+                // Item 1c - Photo
                 ItemController.addNewItem(title: nil, text: nil, buttonText: nil, url: nil, graphicName: "OnlineApplication", format: .photo, step: step)
                 
-                // Item 1d
-                ItemController.addNewItem(title: NSLocalizedString("1dTitle", comment: ""), text: NSLocalizedString("1dText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .tip, step: step)
+                // Item 1d - Finished button
+                ItemController.addNewItem(title: NSLocalizedString("1dTitle", comment: ""), text: NSLocalizedString("1dText", comment: ""), buttonText: nil, url: nil, graphicName: "return", format: .tip, step: step)
                 
-                // Item 1e
+                // Item 1e - Online application
                 ItemController.addNewItem(title: nil, text: NSLocalizedString("1eText", comment: ""), buttonText: NSLocalizedString("1eButtonText", comment: ""), url: "https://www.waitlistcheck.com/application/form.php?ID=972-UT011", graphicName: nil, format: .clickLink, step: step)
                 
-                // Item 1f
+                // Item 1f - Completed
                 ItemController.addNewItem(title: nil, text: NSLocalizedString("1fText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
             
                 
@@ -74,22 +74,22 @@ class StepController {
                 
             case NSLocalizedString("STEP", comment: "") + " 2":
                 
-                // Item 2a
+                // Item 2a - Intro
                 ItemController.addNewItem(title: nil, text: NSLocalizedString("2aText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
-                // Item 2b
-                ItemController.addNewItem(title: NSLocalizedString("2bTitle", comment: ""), text: NSLocalizedString("2bText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .tip, step: step)
+                // Item 2b - Housing office info
+                ItemController.addNewItem(title: NSLocalizedString("2bTitle", comment: ""), text: NSLocalizedString("2bText", comment: ""), buttonText: nil, url: nil, graphicName: "home", format: .tip, step: step)
                 
-                // Item 2b - photo
+                // Item 2b - Photo
                 ItemController.addNewItem(title: nil, text: nil, buttonText: nil, url: nil, graphicName: "HAUCOffice", format: .photo, step: step)
                 
-                // Item 2c
+                // Item 2c - Waiting list paragraph
                 ItemController.addNewItem(title: nil, text: NSLocalizedString("2cText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
-                // Item 2d
-                ItemController.addNewItem(title: NSLocalizedString("2dTitle", comment: ""), text: NSLocalizedString("2dText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .tip, step: step)
+                // Item 2d - Waiting list tip
+                ItemController.addNewItem(title: NSLocalizedString("2dTitle", comment: ""), text: NSLocalizedString("2dText", comment: ""), buttonText: nil, url: nil, graphicName: "waitingList", format: .tip, step: step)
                 
-                // Item 2e
+                // Item 2e - Tap complete
                 ItemController.addNewItem(title: nil, text: NSLocalizedString("2eText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
                 
@@ -97,54 +97,54 @@ class StepController {
                 
             case NSLocalizedString("STEP", comment: "") + " 3":
                 
-                // Item 3a
+                // Item 3a - Intro
                 ItemController.addNewItem(title: nil, text: NSLocalizedString("3aText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
-                // Item 3b
+                // Item 3b - Appointment date picker
                 ItemController.addNewItem(title: NSLocalizedString("3bTitle", comment: ""), text: NSLocalizedString("3bText", comment: ""), buttonText: NSLocalizedString("3bButtonText", comment: ""), url: nil, graphicName: nil, format: .datePicker, step: step)
                 
-                // Item 3c
+                // Item 3c - Read carefully
                 ItemController.addNewItem(title: nil, text: NSLocalizedString("3cText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
-                // Item 3d
-                ItemController.addNewItem(title: NSLocalizedString("3dTitle", comment: ""), text: NSLocalizedString("3dText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .tip, step: step)
+                // Item 3d - Important reminder
+                ItemController.addNewItem(title: NSLocalizedString("3dTitle", comment: ""), text: NSLocalizedString("3dText", comment: ""), buttonText: nil, url: nil, graphicName: "lightbulb", format: .tip, step: step)
                 
-                // Item 3e
+                // Item 3e - Here is address
                 ItemController.addNewItem(title: nil, text: NSLocalizedString("3eText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
-                // Item 3f
-                ItemController.addNewItem(title: NSLocalizedString("3fTitle", comment: ""), text: NSLocalizedString("3fText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .tip, step: step)
+                // Item 3f - Housing office info
+                ItemController.addNewItem(title: NSLocalizedString("3fTitle", comment: ""), text: NSLocalizedString("3fText", comment: ""), buttonText: nil, url: nil, graphicName: "home", format: .tip, step: step)
                 
-                // Item 3f - photo
+                // Item 3g - Photo
                 ItemController.addNewItem(title: nil, text: nil, buttonText: nil, url: nil, graphicName: "HAUCOffice", format: .photo, step: step)
                 
-                // Item 3g
-                ItemController.addNewItem(title: nil, text: NSLocalizedString("3gText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
+                // Item 3h
+                ItemController.addNewItem(title: nil, text: NSLocalizedString("3hText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                
                 
             // MARK: - STEP 4
                 
             case NSLocalizedString("STEP", comment: "") + " 4":
                 
-                // Item 4a
+                // Item 4a - Intro
                 ItemController.addNewItem(title: nil, text: NSLocalizedString("4aText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
-                // Item 4b
-                ItemController.addNewItem(title: NSLocalizedString("4bTitle", comment: ""), text: NSLocalizedString("4bText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .tip, step: step)
+                // Item 4b - Housing office info
+                ItemController.addNewItem(title: NSLocalizedString("4bTitle", comment: ""), text: NSLocalizedString("4bText", comment: ""), buttonText: nil, url: nil, graphicName: "phone", format: .tip, step: step)
                 
-                // Item 4c
+                // Item 4c - Description of briefing
                 ItemController.addNewItem(title: nil, text: NSLocalizedString("4cText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
-                // Item 4d
+                // Item 4d - Briefing date picker
                 ItemController.addNewItem(title: NSLocalizedString("4dTitle", comment: ""), text: NSLocalizedString("4dText", comment: ""), buttonText: NSLocalizedString("4dButtonText", comment: ""), url: nil, graphicName: nil, format: .datePicker, step: step)
                 
-                // Item 4e
+                // Item 4e - If need to reschedule
                 ItemController.addNewItem(title: nil, text: NSLocalizedString("4eText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
-                // Item 4f
-                ItemController.addNewItem(title: NSLocalizedString("4fTitle", comment: ""), text: NSLocalizedString("4fText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .tip, step: step)
+                // Item 4f - Important reminder
+                ItemController.addNewItem(title: NSLocalizedString("4fTitle", comment: ""), text: NSLocalizedString("4fText", comment: ""), buttonText: nil, url: nil, graphicName: "lightbulb", format: .tip, step: step)
                 
-                // Item 4g
+                // Item 4g - Tap to complete
                 ItemController.addNewItem(title: nil, text: NSLocalizedString("4gText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
                 
