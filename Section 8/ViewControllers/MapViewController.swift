@@ -23,10 +23,13 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var callButton: UIButton!
+    @IBOutlet weak var rightButton: UIButton!
+    @IBOutlet weak var leftButton: UIButton!
     @IBOutlet weak var utahCountyMapView: GMSMapView!
     
     // MARK: - VARIABLES
     
+    var currentImageGallery = [UIImage]()
     var markerWasTapped = false
     var markerViewIsVisible = false {
         didSet {
@@ -37,6 +40,10 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     var locations: [GMSMarker]?
     
     // Observers on all of the following properties allow them to both be stored for later persistance, as well as update our outlets automatically.
+    var currentPhotoReferences: [String]?
+    var currentGallery: [UIImage]?
+    var imageHolder: UIImage?
+    var currentGalleryIndex = 0
     var currentPhone: String? {
         didSet {
             self.phoneLabel.text = currentPhone
@@ -100,10 +107,13 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         guard locations != nil else { return false }
         for apartment in Section8ApartmentController.shared.section8Apartments {
             if apartment.lat == marker.position.latitude && apartment.lng == marker.position.longitude {
-                self.currentImage = UIImage(named: apartment.apartmentPhoto)
+                self.currentImage = UIImage(named: apartment.apartmentPhoto); imageHolder = currentImage
                 self.currentName = apartment.name
                 self.currentPhone = apartment.phone
                 self.currentAddress = apartment.address
+            }
+            GoogleNetworkController.fetchPlaceDetails(placeID: apartment.googlePlaceID) { (photoReferences) in
+                self.currentPhotoReferences = photoReferences
             }
         }
         return true
@@ -127,6 +137,11 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         self.view.addSubview(markerView)
         self.markerView.center.x = self.view.center.x
         self.markerView.center.y = self.markerView.bounds.height
+        if self.currentImage == UIImage(named: "noApartmentImage") {
+            leftButton.isHidden = true; rightButton.isHidden = true
+        } else {
+            leftButton.isHidden = false; rightButton.isHidden = false
+        }
         markerWasTapped = false
     }
     
@@ -156,5 +171,38 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     }
     @IBAction func xButtonTapped(_ sender: UIButton) {
         markerView.isHidden = true
+    }
+    
+    @IBAction func rightButtonTapped(_ sender: Any) {
+        guard let refs = currentPhotoReferences else { return }
+        switch currentGalleryIndex {
+        case refs.count - 1:
+            currentGalleryIndex = 0
+            currentImage = imageHolder
+            return
+        default: currentGalleryIndex += 1
+        }
+        GoogleNetworkController.fetchPlaceImage(photoReference: refs[currentGalleryIndex - 1]) { (image) in
+            print(self.currentGalleryIndex - 1)
+            DispatchQueue.main.async {
+                self.currentImage = image
+            }
+        }
+    }
+    
+    @IBAction func leftButtonTapped(_ sender: Any) {
+        guard let refs = currentPhotoReferences else { return }
+        switch currentGalleryIndex {
+        case 0: currentGalleryIndex = refs.count - 1
+            currentImage = imageHolder
+            return
+        default: currentGalleryIndex -= 1
+        }
+        GoogleNetworkController.fetchPlaceImage(photoReference: refs[currentGalleryIndex]) { (image) in
+            print(self.currentGalleryIndex)
+            DispatchQueue.main.async {
+                self.currentImage = image
+            }
+        }
     }
 }
