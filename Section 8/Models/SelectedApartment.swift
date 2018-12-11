@@ -14,13 +14,8 @@ class SelectedApartment: Codable {
     var address: String
     var phone: String
     var photoRef: String?
-/*
-     var rating: Int
-     var open_hours: String
-     var etc: OtherFieldsWeFindUseful
-*/
     
-    init(name: String, address: String, phone: String, photoRef: String? = "noApartmentImage") { //ADD: apartmentPhoto: String,
+    init(name: String, address: String, phone: String, photoRef: String? = "noApartmentImage") {
     
         self.name = name
         self.address = address
