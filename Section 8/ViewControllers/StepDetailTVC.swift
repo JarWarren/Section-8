@@ -110,7 +110,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         checkButtonStatusNotificationSet()
         finalStepButtonTapped()
         StepController.shared.persistCompletedSteps()
-        navigationController?.popViewController(animated: true)
+        navigationController?.popToRootViewController(animated: true)
     }
     
     // MARK: - BUTTON FUNCTIONS
@@ -244,10 +244,17 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         case .photo:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "photoCell", for: indexPath) as? PhotoTVCell else { return UITableViewCell() }
             
-            let photo = item.graphicName
+            if let photoRef = SelectedApartmentController.shared.selectedApartment?.photoRef {
+                GoogleNetworkController.fetchPlaceImage(photoReference: photoRef) { (image) in
+                    DispatchQueue.main.async {
+                        cell.photoImageView.image = image
+                    }
+                }
+                return cell
+            }
             
             // Configure cell
-            cell.photoImageView?.image = UIImage(named: photo ?? "")
+            cell.photoImageView?.image = UIImage(named: "noApartmentImage")
             return cell
             
         // MARK: TIP CUSTOM CELL

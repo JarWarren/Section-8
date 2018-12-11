@@ -43,6 +43,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     var currentPhotoReferences: [String]?
     var currentGallery: [UIImage]?
     var imageHolder: UIImage?
+    var imageRefHolder: String?
     var currentGalleryIndex = 0
     var currentPhone: String? {
         didSet {
@@ -111,6 +112,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
                 self.currentName = apartment.name
                 self.currentPhone = apartment.phone
                 self.currentAddress = apartment.address
+                self.imageRefHolder = apartment.apartmentPhoto
             }
             GoogleNetworkController.fetchPlaceDetails(placeID: apartment.googlePlaceID) { (photoReferences) in
                 self.currentPhotoReferences = photoReferences
@@ -149,9 +151,18 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     
     @IBAction func callButtonTapped(_ sender: Any) {
         
+        let photoRef: String? = {
+            switch currentGalleryIndex {
+            case 0:
+                return imageRefHolder
+            default:
+                return currentPhotoReferences?[currentGalleryIndex - 1]
+            }
+        }()
+        
         // Tapping the call button saves their current apartment.
         if let name = currentName, let phone = currentPhone, let address = currentAddress {
-            SelectedApartmentController.shared.saveApartment(named: name, phone: phone, address: address)
+            SelectedApartmentController.shared.saveApartment(named: name, phone: phone, address: address, photoRef: photoRef ?? "noApartmentImage")
         }
         StepController.shared.steps[5].stepCompleted = true
         // Determine whether or not they came from Step 7.
