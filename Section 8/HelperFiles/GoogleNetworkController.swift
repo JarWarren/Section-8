@@ -11,36 +11,9 @@ import GoogleMaps
 
 class GoogleNetworkController {
     
-//    private var urlSessionDataTask: URLSessionDataTask?
-//    private var urlSession: URLSession {
-//        return URLSession.shared }
-    
-    typealias Name = String
-    typealias Address = String
-    typealias PhoneNumber = String
     typealias PhotoReference = String
     
-    static func fetchNearbyComplexes(completion: @escaping ([ApartmentLocation]) -> Void) {
-        
-        guard let mainURL = URL(string: "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=40.2969,-111.6946&radius=10000&key=AIzaSyAchY5OHlVXXQyaux0dO-kM0gVQz0T0rzE&types=point_of_interest,establishment&keyword=apartment,orem") else { completion([]); return }
-        
-        //TODO: &language=en || &language=es || &language=pt
-        //TODO: Attempt placeSearch or nearbySearch rather than textSearch.
-        
-        let dataTask = URLSession.shared.dataTask(with: mainURL) { (data, _, error) in
-            if let error = error { print("Responded with error: \(error)."); completion([]); return }
-            guard let data = data else { print("No data."); completion([]); return }
-            do {
-                let decodedData = try JSONDecoder().decode(TopLevelDictionary.self, from: data)
-                print(decodedData)
-                completion(decodedData.results)
-            } catch {
-                print("BAD DECODE")
-            }
-        }
-        dataTask.resume()
-    }
-    
+    // Each of our offline apartments has a Google Place ID. This method takes the Place ID and returns references for everey associated photo.
     static func fetchPlaceDetails(placeID: String, completion: @escaping ([PhotoReference]) -> Void) {
         
         guard let mainURL = URL(string: "https://maps.googleapis.com/maps/api/place/details/json?key=AIzaSyAchY5OHlVXXQyaux0dO-kM0gVQz0T0rzE&placeid=\(placeID)&fields=photo") else { completion([""]); return }
@@ -53,17 +26,20 @@ class GoogleNetworkController {
                 let photoBook = decodedData.result.photos
                 var photoReferences = [PhotoReference]()
                 for reference in photoBook {
+                    print("Image")
                     let newReference = reference.photo_reference
                     photoReferences.append(newReference)
                 }
+                print("\n👾\(placeID)👾\n")
                 completion(photoReferences)
             } catch {
-                print("BAD DETAILS DECODE")
+                print("Non-image result.")
             }
         }
         dataTask.resume()
     }
     
+    // Takes in one photo reference and returns a photo from Google.
     static func fetchPlaceImage(photoReference: String, completion: @escaping (UIImage?) -> Void) {
         
         guard let mainURL = URL(string: "https://maps.googleapis.com/maps/api/place/photo?maxwidth=350&photoreference=\(photoReference)&key=AIzaSyAchY5OHlVXXQyaux0dO-kM0gVQz0T0rzE") else { completion(nil); return }
@@ -77,30 +53,6 @@ class GoogleNetworkController {
         }
         dataTask.resume()
     }
-    
-    func fetchPlaceIDFor(address: String) {
-        
-        guard let mainURL = URL(string: "https://maps.googleapis.com/maps/api/geocode/json?address=\(address)&key=AIzaSyAchY5OHlVXXQyaux0dO-kM0gVQz0T0rzE") else { return }
-        
-        URLSession.shared.dataTask(with: mainURL) { (data, _, _) in
-            guard let data = data else { print("ERROR YOU MORON"); return }
-            
-        }
-    }
 }
 
 //TODO: Embed APIkey in propertyList.
-
-// NEARBYSEARCH
-// https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=40.0966,-111.5707&radius=30000&rankby=prominence&sensor=true&key=AIzaSyAchY5OHlVXXQyaux0dO-kM0gVQz0T0rzE&types=point_of_interest,establishment
-
-// TEXTSEARCH
-// https://maps.googleapis.com/maps/api/place/textsearch/json?query=springville%20apartments&location=40.0966,-111.5707&radius=30000&key=AIzaSyAchY5OHlVXXQyaux0dO-kM0gVQz0T0rzE
-
-// FIND PHOTO FROM REFERENCE
-// https://maps.googleapis.com/maps/api/place/photo?maxwidth=150&photoreference=\(photoReference)&key=AIzaSyAchY5OHlVXXQyaux0dO-kM0gVQz0T0rzE
-
-//https://maps.googleapis.com/maps/api/place/details/json?key=AIzaSyAchY5OHlVXXQyaux0dO-kM0gVQz0T0rzE&placeid=ChIJH5oAJvmDTYcRzb93-p3tQgk&fields=formatted_phone_number
-
-// https://maps.googleapis.com/maps/api/place/details/json?key=AIzaSyAchY5OHlVXXQyaux0dO-kM0gVQz0T0rzE&placeid=ChIJ4bLiLRubTYcRimX3xiHEN5Y&fields=formatted_phone_number,formatted_address,name
-
