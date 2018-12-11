@@ -512,7 +512,7 @@
                                                     </connections>
                                                 </button>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter total household income here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NGe-uE-Qry">
-                                                    <rect key="frame" x="20" y="59.5" width="374" height="35"/>
+                                                    <rect key="frame" x="20" y="59.5" width="324" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="idE-3o-yPc"/>
                                                     </constraints>
@@ -521,10 +521,13 @@
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter voucher amount here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3ke-g8-gtk">
-                                                    <rect key="frame" x="20" y="154" width="374" height="35"/>
+                                                    <rect key="frame" x="20" y="154" width="324" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="ld9-32-Roz"/>
                                                     </constraints>
@@ -533,6 +536,9 @@
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DATA INPUT URL" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BjB-4h-Fhq">
@@ -547,30 +553,48 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="money" translatesAutoresizingMaskIntoConstraints="NO" id="Ncl-Cm-0c8">
+                                                    <rect key="frame" x="352" y="63.5" width="42" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="42" id="36e-Qd-nIZ"/>
+                                                        <constraint firstAttribute="width" secondItem="Ncl-Cm-0c8" secondAttribute="height" multiplier="5:3" id="TAk-Kg-elc"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="voucher" translatesAutoresizingMaskIntoConstraints="NO" id="hOG-T9-Vaj">
+                                                    <rect key="frame" x="352" y="158" width="42" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="hOG-T9-Vaj" secondAttribute="height" multiplier="5:3" id="3y9-V2-5iS"/>
+                                                        <constraint firstAttribute="width" constant="42" id="E87-bV-2Bp"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="wTj-k5-Brj" secondAttribute="trailing" constant="20" id="1Kf-5R-NbX"/>
                                                 <constraint firstItem="BjB-4h-Fhq" firstAttribute="top" secondItem="NGe-uE-Qry" secondAttribute="bottom" constant="16" id="1zs-18-vrN"/>
                                                 <constraint firstAttribute="bottom" secondItem="rxY-g3-A8w" secondAttribute="bottom" constant="16" id="33d-Ub-LbA"/>
                                                 <constraint firstItem="NGe-uE-Qry" firstAttribute="leading" secondItem="vAz-4s-Yaf" secondAttribute="leading" constant="20" id="4jC-eS-WFI"/>
-                                                <constraint firstAttribute="trailing" secondItem="uT0-T3-QFm" secondAttribute="trailing" constant="20" id="5YX-ye-Nd4"/>
-                                                <constraint firstAttribute="trailing" secondItem="NGe-uE-Qry" secondAttribute="trailing" constant="20" id="6NO-Gu-fQj"/>
+                                                <constraint firstItem="Ncl-Cm-0c8" firstAttribute="top" secondItem="wTj-k5-Brj" secondAttribute="bottom" constant="12" id="5pN-UP-W6l"/>
                                                 <constraint firstItem="wTj-k5-Brj" firstAttribute="top" secondItem="uT0-T3-QFm" secondAttribute="bottom" id="778-Ux-cyf"/>
                                                 <constraint firstItem="OM6-tp-Caz" firstAttribute="leading" secondItem="vAz-4s-Yaf" secondAttribute="leading" constant="20" id="ADG-cC-FMz"/>
                                                 <constraint firstItem="uT0-T3-QFm" firstAttribute="leading" secondItem="vAz-4s-Yaf" secondAttribute="leading" constant="20" id="CD1-M6-zc0"/>
                                                 <constraint firstItem="OM6-tp-Caz" firstAttribute="top" secondItem="BjB-4h-Fhq" secondAttribute="bottom" id="CIK-Pf-xYg"/>
                                                 <constraint firstItem="3ke-g8-gtk" firstAttribute="top" secondItem="OM6-tp-Caz" secondAttribute="bottom" constant="8" id="CXI-UK-j4n"/>
+                                                <constraint firstItem="hOG-T9-Vaj" firstAttribute="leading" secondItem="3ke-g8-gtk" secondAttribute="trailing" constant="8" id="DmL-v1-ESh"/>
+                                                <constraint firstAttribute="trailing" secondItem="OM6-tp-Caz" secondAttribute="trailing" constant="20" id="J6L-LD-3Av"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ncl-Cm-0c8" secondAttribute="trailing" constant="20" id="JZm-Xh-Dga"/>
                                                 <constraint firstItem="BjB-4h-Fhq" firstAttribute="leading" secondItem="vAz-4s-Yaf" secondAttribute="leading" constant="20" id="O9y-S0-BRG"/>
+                                                <constraint firstItem="Ncl-Cm-0c8" firstAttribute="leading" secondItem="NGe-uE-Qry" secondAttribute="trailing" constant="8" id="UqM-qD-flR"/>
                                                 <constraint firstItem="uT0-T3-QFm" firstAttribute="top" secondItem="vAz-4s-Yaf" secondAttribute="top" constant="16" id="VM6-71-yfb"/>
-                                                <constraint firstAttribute="trailing" secondItem="BjB-4h-Fhq" secondAttribute="trailing" constant="20" id="WLz-79-JK4"/>
-                                                <constraint firstAttribute="trailing" secondItem="OM6-tp-Caz" secondAttribute="trailing" constant="20" id="WZl-OF-gXZ"/>
-                                                <constraint firstAttribute="trailing" secondItem="wTj-k5-Brj" secondAttribute="trailing" constant="20" id="YZa-9I-hnJ"/>
                                                 <constraint firstItem="rxY-g3-A8w" firstAttribute="leading" secondItem="vAz-4s-Yaf" secondAttribute="leading" constant="40" id="abR-ye-5Nf"/>
                                                 <constraint firstItem="rxY-g3-A8w" firstAttribute="top" secondItem="3ke-g8-gtk" secondAttribute="bottom" constant="16" id="hcQ-89-b6u"/>
+                                                <constraint firstAttribute="trailing" secondItem="uT0-T3-QFm" secondAttribute="trailing" constant="20" id="lFI-mU-PB9"/>
                                                 <constraint firstItem="NGe-uE-Qry" firstAttribute="top" secondItem="wTj-k5-Brj" secondAttribute="bottom" constant="8" id="nrv-vZ-H8d"/>
                                                 <constraint firstAttribute="trailing" secondItem="rxY-g3-A8w" secondAttribute="trailing" constant="40" id="nvu-oD-veK"/>
+                                                <constraint firstAttribute="trailing" secondItem="BjB-4h-Fhq" secondAttribute="trailing" constant="20" id="p03-am-5EU"/>
                                                 <constraint firstItem="3ke-g8-gtk" firstAttribute="leading" secondItem="vAz-4s-Yaf" secondAttribute="leading" constant="20" id="sRE-3d-Aj8"/>
+                                                <constraint firstItem="hOG-T9-Vaj" firstAttribute="top" secondItem="OM6-tp-Caz" secondAttribute="bottom" constant="12" id="vAg-Vi-kZZ"/>
                                                 <constraint firstItem="wTj-k5-Brj" firstAttribute="leading" secondItem="vAz-4s-Yaf" secondAttribute="leading" constant="20" id="xZ7-7a-kDP"/>
-                                                <constraint firstAttribute="trailing" secondItem="3ke-g8-gtk" secondAttribute="trailing" constant="20" id="ytf-pQ-r3j"/>
+                                                <constraint firstAttribute="trailing" secondItem="hOG-T9-Vaj" secondAttribute="trailing" constant="20" id="z65-29-8v7"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.92944163079999997" green="0.97314912080000004" blue="0.93725079300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -4489,6 +4513,8 @@ XWsAA11zAANddgADXXsAA12DAANdhgADXZgAA12bAANdoAAAAAAAAAQBAAAAAAAAAG0AAAAAAAAAAAAA
 AAAAA12iA
 </mutableData>
         </image>
+        <image name="money" width="54" height="32.25"/>
+        <image name="voucher" width="53.25" height="33"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="vc9-0t-CZl"/>

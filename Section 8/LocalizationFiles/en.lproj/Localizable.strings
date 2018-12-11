@@ -188,68 +188,70 @@
 
 // MARK: - STEP 5 ITEMS
 
-    // Step 5a
+    // Item 5a - Intro
     "5aText" = "The Housing Authority will only let you rent an apartment within a certain price range. To calculate what you can afford to pay, you will need to provide a couple pieces of information:";
 
-    // Step 5b
+    // Item 5b - Income/voucher inputs
     "5bTitle" = "OVERALL HOUSEHOLD INCOME";
     "5bText" = "In the first box below, include all income from everyone in the household. You can include: wages, salaries, unemployment benefits, child support, Social Security payments, interest and royalties, and financial assistance.";
     "5bUrl" = "HAUC VOUCHER AMOUNT";
     "5bGraphicName" = "In the second box, enter the amount that you qualify for from the Housing Authority voucher you received at your briefing.";
     "5bButtonText" = "TAP TO SUBMIT AMOUNTS";
 
-    // Step 5c
+    // Item 5c - Max rent amount
     "5cTitle" = "YOUR MAXIMUM RENT AMOUNT";
     "5cText" = "Based on your household income, your voucher amount, and utility allowance, you should NOT look at apartments with rent higher than this amount:";
 
-    // Step 5d
+    // Item 5d - How is this calculated
     "5dTitle" = "HOW IS THIS CALCULATED?";
     "5dText" = "In addition to the voucher amount you qualify for, you are only allowed to pay up to 40% of your household income for rent, and that includes utilities. The number above has subtracted an average cost of utilities from your total, because you will pay those in addition to your monthly rent payment.";
 
-    // Step 5e
+    // Item 5e - Tap to complete
     "5eText" = "After calculating your maximum rent, click the “Complete” button below to move on to the next step!";
 
 
 // MARK: - STEP 6 ITEMS
 
-    // Step 6a
+    // Item 6a - Map instructions
     "6aText" = "Time to choose an apartment! Tap a marker for apartment details. Choose one, and tap the green button to move to the next step.";
 
 
 // MARK: - STEP 7 ITEMS
 
-    // Step 7a
+    // Item 7a - Intro
     "7aText" = "Now that you have selected a possible apartment complex, it’s time to give them a call to find out more.";
 
-    // Step 7b
+    // Item 7b - Chosen apartment
     "7bTitle" = "THE APARTMENT YOU CHOSE:";
 
-    // Step 7c
-    "7cText" = "You need to call the apartment complex to ask them if they accept Section 8 housing, and to find out what their prices are.";
+    // Item 7c - Photo
 
-    // Step 7d
-    "7dTitle" = "IMPORTANT REMINDER";
-    "7dText" = "Check to see if the rental rates are within the amount you can afford.";
+    // Item 7d - Need to call
+    "7dText" = "You need to call the apartment complex to ask them if they accept Section 8 housing, and to find out what their rent prices are.";
 
-    // Step 7e
-    "7eTitle" = "YOUR MAXIMUM RENT AMOUNT";
-    "7eText" = "Based on your household income, your voucher amount, and utility allowance, you should NOT look at apartments with rent higher than this amount:";
+    // Item 7e - Important reminder
+    "7eTitle" = "IMPORTANT REMINDER";
+    "7eText" = "Check to see if the rental rates are within the amount you can afford.";
 
-    // Step 7f
-    "7fTitle" = "HELPFUL HINT";
-    "7fText" = "When you call, remember your two questions: (1) do they accept Section 8 applicants, and (2) what are their rates for the size apartment you are looking for.";
+    // Item 7f - Maximum rent
+    "7fTitle" = "YOUR MAXIMUM RENT AMOUNT";
+    "7fText" = "Based on your household income, your voucher amount, and utility allowance, you should NOT look at apartments with rent higher than this amount:";
 
-    // Step 7g
-    "7gText" = "Now it’s time to call the apartment complex: ";
-    "7gButtonText" = "CLICK TO CALL APARTMENT COMPLEX";
+    // Item 7g - Important reminder
+    "7gTitle" = "IMPORTANT REMINDER";
+    "7gText" = "When you call, remember your two questions: (1) do they accept Section 8 applicants, and (2) what are their rates for the size apartment you are looking for.";
 
-    // Step 7h
-    "7hTitle" = "WHAT IF THE APARTMENT ISN’T RIGHT FOR YOU?";
-    "7hText" = "Just tap on this button to return to the “Choose Apartment” screen, select another complex, and try again:";
-    "7hButtonText" = "TAP TO RETURN TO APARTMENT MAP";
+    // Item 7h - Call button
+    "7hText" = "Now it’s time to call the apartment complex: ";
+    "7hButtonText" = "CLICK TO CALL APARTMENT COMPLEX";
 
-    // Step 7i
-    "7iText" = "Once you have found an apartment that is right for you, tap on the “Complete” button below to move on to the next step!";
+    // Item 7i - What if isn't right
+    "7iTitle" = "WHAT IF THE APARTMENT ISN’T RIGHT FOR YOU?";
+    "7iText" = "Just tap on this button to return to the “Choose Apartment” screen, select another complex, and try again:";
+    "7iButtonText" = "TAP TO RETURN TO APARTMENT MAP";
+
+    // Item 7j - Tap to complete
+    "7jText" = "Once you have found an apartment that is right for you, tap on the “Complete” button below to move on to the next step!";
 
 
 // MARK: - STEP 8 ITEMS
