@@ -10,8 +10,6 @@ import UIKit
 import GoogleMaps
 import GooglePlaces
 
-
-// TODO: Implement marker clustering -> github.com/googlemaps/google-maps-ios-utils
 class MapViewController: UIViewController, GMSMapViewDelegate {
     
     // MARK: - OUTLETS
@@ -29,22 +27,21 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     
     // MARK: - VARIABLES
     
-    var currentImageGallery = [UIImage]()
-    var markerWasTapped = false
+    // Many of the following properties allow us to keep track of the current state of the map.
+    var markerWasTapped = false // Helps determine whether the markerView should be visible.
+    var userDidComeFromStep7 = false // Determines whether to segue to Step 7, or to pop the current view and display Step 7 underneath.
+    var locations: [GMSMarker]? // Array of all currently displayed markers.
+    var currentPhotoReferences: [String]? // Holds photo references for all photos on currently displayed marker.
+    var imageHolder: UIImage? // The image we display as default. (does not require a fetch)
+    var imageRefHolder: String? // Name of the asset to be displayed throughout the rest of the app.
+    var currentGalleryIndex = 0 // Keeps track of where we are in the image gallery when moving back and forth.
+    
+    // Observers on all of the following properties allow them to both be stored for later persistence, as well as update our outlets automatically.
     var markerViewIsVisible = false {
         didSet {
             print("🤬\(self.markerViewIsVisible)")
         }
     }
-    var userDidComeFromStep7 = false
-    var locations: [GMSMarker]?
-    
-    // Observers on all of the following properties allow them to both be stored for later persistance, as well as update our outlets automatically.
-    var currentPhotoReferences: [String]?
-    var currentGallery: [UIImage]?
-    var imageHolder: UIImage?
-    var imageRefHolder: String?
-    var currentGalleryIndex = 0
     var currentPhone: String? {
         didSet {
             self.phoneLabel.text = currentPhone
@@ -104,7 +101,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         // Move camera to display the tapped marker.
         utahCountyMapView.animate(to: GMSCameraPosition(target: CLLocationCoordinate2D(latitude: marker.position.latitude - 0.01, longitude: marker.position.longitude), zoom: utahCountyMapView.camera.zoom, bearing: 0, viewingAngle: 0))
         
-        // Check to make sure that the ApartmentLocation and the marker we tapped are, in fact, the same place.
+        // Check to make sure that the Section8Apartment and the marker we tapped are, in fact, the same place.
         guard locations != nil else { return false }
         for apartment in Section8ApartmentController.shared.section8Apartments {
             if apartment.lat == marker.position.latitude && apartment.lng == marker.position.longitude {
@@ -149,22 +146,15 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     
     // MARK: - Actions
     
+    // Saves the currently selected apartment for persistence and usage throughout the app. Moves user forward (or backward) to Step 7.
     @IBAction func callButtonTapped(_ sender: Any) {
         
-        let photoRef: String? = {
-            switch currentGalleryIndex {
-            case 0:
-                return imageRefHolder
-            default:
-                return currentPhotoReferences?[currentGalleryIndex - 1]
-            }
-        }()
-        
-        // Tapping the call button saves their current apartment.
+        // Saves their current apartment.
         if let name = currentName, let phone = currentPhone, let address = currentAddress {
-            SelectedApartmentController.shared.saveApartment(named: name, phone: phone, address: address, photoRef: photoRef ?? "noApartmentImage")
+            SelectedApartmentController.shared.saveApartment(named: name, phone: phone, address: address, photoRef: self.imageRefHolder ?? "noApartmentImage")
         }
         StepController.shared.steps[5].stepCompleted = true
+        
         // Determine whether or not they came from Step 7.
         switch userDidComeFromStep7 {
             
@@ -180,10 +170,13 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
             self.navigationController?.pushViewController(stepDetailVC, animated: true)
         }
     }
+    
+    // Hides the markerView.
     @IBAction func xButtonTapped(_ sender: UIButton) {
         markerView.isHidden = true
     }
     
+    // Displays the next image.
     @IBAction func rightButtonTapped(_ sender: Any) {
         guard let refs = currentPhotoReferences else { return }
         switch currentGalleryIndex {
@@ -201,6 +194,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         }
     }
     
+    // Displays the previous image.
     @IBAction func leftButtonTapped(_ sender: Any) {
         guard let refs = currentPhotoReferences else { return }
         switch currentGalleryIndex {

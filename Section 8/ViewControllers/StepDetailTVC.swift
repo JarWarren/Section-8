@@ -244,16 +244,13 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         case .photo:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "photoCell", for: indexPath) as? PhotoTVCell else { return UITableViewCell() }
             
+            // Display which apartment they've chosen.
             if let photoRef = SelectedApartmentController.shared.selectedApartment?.photoRef {
-                GoogleNetworkController.fetchPlaceImage(photoReference: photoRef) { (image) in
-                    DispatchQueue.main.async {
-                        cell.photoImageView.image = image
-                    }
-                }
+                cell.photoImageView.image = UIImage(named: photoRef)
                 return cell
             }
             
-            // Configure cell
+            // What to display if they haven't chosen one.
             cell.photoImageView?.image = UIImage(named: "noApartmentImage")
             return cell
             

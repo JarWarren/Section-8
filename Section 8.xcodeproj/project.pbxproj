@@ -19,8 +19,7 @@
 		47DF81F921B97E8000C0F0FE /* stepDetailExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DF81F821B97E8000C0F0FE /* stepDetailExtension.swift */; };
 		47F09D2F21B9BAE200542722 /* AlarmName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F09D2E21B9BAE200542722 /* AlarmName.swift */; };
 		7E1DF3F121B19FBE0012BFEE /* GoogleNetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DF3F021B19FBE0012BFEE /* GoogleNetworkController.swift */; };
-		7E1DF3F421B19FE70012BFEE /* ApartmentLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DF3F221B19FE70012BFEE /* ApartmentLocation.swift */; };
-		7E1DF3F521B19FE70012BFEE /* MapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DF3F321B19FE70012BFEE /* MapMarker.swift */; };
+		7E1DF3F421B19FE70012BFEE /* JSONDecodingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DF3F221B19FE70012BFEE /* JSONDecodingHelper.swift */; };
 		7E1DF3F721B1A0610012BFEE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DF3F621B1A0610012BFEE /* MapViewController.swift */; };
 		7E1DF3F921B1A15F0012BFEE /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E1DF3F821B1A15F0012BFEE /* Map.storyboard */; };
 		7E59408921B5AC1100C02E61 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E59408B21B5AC1100C02E61 /* Localizable.strings */; };
@@ -29,7 +28,6 @@
 		7E67E29B21ADE778007E4103 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E67E29A21ADE778007E4103 /* Assets.xcassets */; };
 		7E686E1C21B85BB20005D5BB /* SelectedApartment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E686E1B21B85BB20005D5BB /* SelectedApartment.swift */; };
 		7E686E1E21B85BCD0005D5BB /* SelectedApartmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E686E1D21B85BCD0005D5BB /* SelectedApartmentController.swift */; };
-		7EA8381A21B602D400E9B9CE /* Apartment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA8381921B602D400E9B9CE /* Apartment.swift */; };
 		810C0BA221BF11FA005B0FB5 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C0BA121BF11FA005B0FB5 /* UIButton+Extensions.swift */; };
 		810C0BA421BF1E9E005B0FB5 /* Onboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 810C0BA321BF1E9E005B0FB5 /* Onboard.storyboard */; };
 		810C0BAA21BF383B005B0FB5 /* PhotoTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C0BA921BF383B005B0FB5 /* PhotoTVCell.swift */; };
@@ -70,8 +68,7 @@
 		47DF81F821B97E8000C0F0FE /* stepDetailExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stepDetailExtension.swift; sourceTree = "<group>"; };
 		47F09D2E21B9BAE200542722 /* AlarmName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmName.swift; sourceTree = "<group>"; };
 		7E1DF3F021B19FBE0012BFEE /* GoogleNetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleNetworkController.swift; sourceTree = "<group>"; };
-		7E1DF3F221B19FE70012BFEE /* ApartmentLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApartmentLocation.swift; sourceTree = "<group>"; };
-		7E1DF3F321B19FE70012BFEE /* MapMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapMarker.swift; sourceTree = "<group>"; };
+		7E1DF3F221B19FE70012BFEE /* JSONDecodingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDecodingHelper.swift; sourceTree = "<group>"; };
 		7E1DF3F621B1A0610012BFEE /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		7E1DF3F821B1A15F0012BFEE /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		7E59408221B5ABAD00C02E61 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -86,7 +83,6 @@
 		7E67E29F21ADE778007E4103 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E686E1B21B85BB20005D5BB /* SelectedApartment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedApartment.swift; sourceTree = "<group>"; };
 		7E686E1D21B85BCD0005D5BB /* SelectedApartmentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedApartmentController.swift; sourceTree = "<group>"; };
-		7EA8381921B602D400E9B9CE /* Apartment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apartment.swift; sourceTree = "<group>"; };
 		810C0BA121BF11FA005B0FB5 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
 		810C0BA321BF1E9E005B0FB5 /* Onboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Onboard.storyboard; sourceTree = "<group>"; };
 		810C0BA921BF383B005B0FB5 /* PhotoTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTVCell.swift; sourceTree = "<group>"; };
@@ -204,7 +200,6 @@
 			children = (
 				81DD083A21AF3C010037F3AA /* StepTVCell.swift */,
 				81B7E95121B20236003A209F /* ItemFormats */,
-				7E1DF3F321B19FE70012BFEE /* MapMarker.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -214,8 +209,6 @@
 			children = (
 				81DD083221AF1D470037F3AA /* Step.swift */,
 				81FF0A9021B093B7004A7EDB /* Item.swift */,
-				7E1DF3F221B19FE70012BFEE /* ApartmentLocation.swift */,
-				7EA8381921B602D400E9B9CE /* Apartment.swift */,
 				47BD249221B7206700CC6192 /* Alarm.swift */,
 				818FC57B21B84A6C0084323E /* Rent.swift */,
 				7E686E1B21B85BB20005D5BB /* SelectedApartment.swift */,
@@ -265,6 +258,7 @@
 				818FC59D21B868D30084323E /* UITextField+Extensions.swift */,
 				810C0BA121BF11FA005B0FB5 /* UIButton+Extensions.swift */,
 				7E1DF3F021B19FBE0012BFEE /* GoogleNetworkController.swift */,
+				7E1DF3F221B19FE70012BFEE /* JSONDecodingHelper.swift */,
 				476654B021B2F32E00FC3663 /* AlertController.swift */,
 				476654B221B2F38800FC3663 /* TimerController.swift */,
 				8161D48221B8C3E300F44AC0 /* AttributesExpander.swift */,
@@ -458,7 +452,6 @@
 				47BD249521B742CC00CC6192 /* AlarmController.swift in Sources */,
 				81DD083B21AF3C010037F3AA /* StepTVCell.swift in Sources */,
 				818FC57E21B84A760084323E /* RentController.swift in Sources */,
-				7EA8381A21B602D400E9B9CE /* Apartment.swift in Sources */,
 				818FC59E21B868D30084323E /* UITextField+Extensions.swift in Sources */,
 				47F09D2F21B9BAE200542722 /* AlarmName.swift in Sources */,
 				7E686E1E21B85BCD0005D5BB /* SelectedApartmentController.swift in Sources */,
@@ -466,9 +459,8 @@
 				81212AEF21B5CCF90082C88B /* DataDisplayTVCell.swift in Sources */,
 				818FC57C21B84A6C0084323E /* Rent.swift in Sources */,
 				81DD083521AF1E880037F3AA /* StepController.swift in Sources */,
-				7E1DF3F421B19FE70012BFEE /* ApartmentLocation.swift in Sources */,
+				7E1DF3F421B19FE70012BFEE /* JSONDecodingHelper.swift in Sources */,
 				4716664821BEDBD90036ECB7 /* Constants.swift in Sources */,
-				7E1DF3F521B19FE70012BFEE /* MapMarker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
