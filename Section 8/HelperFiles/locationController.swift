@@ -13,6 +13,21 @@ import UserNotifications
 
 class locationController {
     
+    let utahCountyHousingID = "uCountyHousinginProvo"
+    
+    func locationNotification() {
+    
+//    let 
+//        
+//    var center = CLLocationCoordinate2D(latitude: 40.233250, longitude: -111.654472)
+//    
+//    let region = CLCircularRegion(center: center, radius: <#T##CLLocationDistance#>, identifier: utahCountyHousingID)
+//    
+//    region.notifyOnEntry = true
+//    region.notifyOnExit = false
+//        
+//        let trigger = UNLocationNotificationTrigger(region: region, repeats: false)
+//    
 //    let oneMile = Measurement(value: 1, unit: UnitLength.miles)
     
 //    let radius = oneMile
@@ -28,6 +43,6 @@ class locationController {
 //
 //    let trigger = UNLocationNotificationTrigger(region: region,
 //        repeats: false)
-
+    }
     
 }

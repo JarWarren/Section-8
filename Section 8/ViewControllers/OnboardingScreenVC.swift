@@ -17,7 +17,18 @@ class OnboardingScreenVC: UIViewController, CLLocationManagerDelegate, UNUserNot
     private let locationManger = CLLocationManager()
     private let geocoder = CLGeocoder()
     private let center = UNUserNotificationCenter.current()
+    private let deniedBoolKey = "disabledDeniedAlertBool"
+    private let restrictedBoolKey = "disabledRestrictedAlertBool"
+    private var disableDeniedAlertBool = false
+    private var disableRestrictedAlertBool = false
     
+    
+    
+    // MARK: - Life cyles
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        loadUserDefaults()
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         locationManger.delegate = self
@@ -28,9 +39,8 @@ class OnboardingScreenVC: UIViewController, CLLocationManagerDelegate, UNUserNot
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
             
             if granted {
-                print("Permission for notificationw as granted by the user")
+                print("Permission for notification was granted by the user")
                 UNUserNotificationCenter.current().delegate = self
-                
                 
             }
             // Access granted
@@ -41,19 +51,19 @@ class OnboardingScreenVC: UIViewController, CLLocationManagerDelegate, UNUserNot
             if !granted {
                 print("Notification Access Denied")
             }
+            switch CLLocationManager.authorizationStatus() {
+                
+            case .notDetermined:
+                
+                self.locationManger.requestAlwaysAuthorization()
+                
+            default:
+                break
+            }
+            
         }
+
         
-        // Location Permission
-        //Initial checking, the first time they load the app. CHeck than it will break to the default
-        switch CLLocationManager.authorizationStatus() {
-            
-        case .notDetermined:
-            
-            locationManger.requestAlwaysAuthorization()
-            
-        default:
-            presentMainView()
-        }
         locationManger.startUpdatingLocation()
     }
     
@@ -64,34 +74,59 @@ class OnboardingScreenVC: UIViewController, CLLocationManagerDelegate, UNUserNot
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {
         case .restricted:
-            let restrictedAlert = AlertControllerManager.presentAlertControllerWith(title: "Location Services Disabled", message: "This device is not alllowed to use location services.")
-            present(restrictedAlert, animated: true) {
-                self.presentMainView()
+            
+            if disableRestrictedAlertBool == false {
+                disableRestrictedAlertBool = true
+                
+                UserDefaults.standard.set(disableRestrictedAlertBool, forKey: restrictedBoolKey)
+
+                let restrictedAlertController = UIAlertController(title: "Location Services Denied", message: "This device is not alllowed to use location services. Section 8 app needs your location in order to properly display notification. If you wish to later change this it can be done in your phones settings.", preferredStyle: .alert)
+                
+                let dismissAction = UIAlertAction(title: "OK", style: .cancel) { (alert) in
+                    self.presentMainView()
+                }
+                
+                [dismissAction].forEach { restrictedAlertController.addAction($0)}
+                
+                present(restrictedAlertController, animated: true)
             }
-            print("Users location is restricted")
+            else {
+                presentMainView()
+            }
+            print("\nUsers location is restricted")
             
         case .denied:
-            let deniedAlert = AlertControllerManager.presentAlertControllerWith(title: "Location Services Denied", message: " Section 8 app needs your location in order to properly display notification. If you wish to later change this it can be done in your phones settings.")
-            present(deniedAlert, animated:  true) {
-                self.presentMainView()
+            
+            if disableDeniedAlertBool == false {
+                disableDeniedAlertBool = true
+                
+                UserDefaults.standard.set(disableDeniedAlertBool, forKey: deniedBoolKey)
+                
+                let deniedAlertController = UIAlertController(title: "Location Services Denied", message: "Section 8 app needs your location in order to properly display notification. If you wish to allow loaction services it can be done in your phone's settings.", preferredStyle: .alert)
+                
+                let dismissAction = UIAlertAction(title: "OK", style: .cancel) { (alert) in
+                    self.presentMainView()
+                }
+                
+                [dismissAction].forEach { deniedAlertController.addAction($0)}
+                
+                present(deniedAlertController, animated: true)
             }
-            print("User denied access to use their location")
+            else {
+                presentMainView()
+            }
+            print("\nUser denied access to use their location\n")
             
         case .authorizedWhenInUse:
-            print("user granted authorizedWhenInUse")
+            print("\nuser granted authorizedWhenInUse\n")
             presentMainView()
+            
         case .authorizedAlways:
-            print("user selected authorizedAlways")
+            print("\nuser selected authorizedAlways\n")
             presentMainView()
-        default: presentMainView()
+        default: break
         }
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-    
     
     // Ivan - Not sure what this does just yet
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
@@ -113,6 +148,11 @@ class OnboardingScreenVC: UIViewController, CLLocationManagerDelegate, UNUserNot
         default:
             break
         }
+    }
+    
+    func loadUserDefaults() {
+        disableDeniedAlertBool = UserDefaults.standard.bool(forKey: deniedBoolKey)
+        disableRestrictedAlertBool = UserDefaults.standard.bool(forKey: restrictedBoolKey)
     }
     
     func presentMainView() {
