@@ -20,8 +20,8 @@ class HomeTVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     let completedCheckBoxImage = UIImage(named: "home_checked")
     let incompleteCheckBoxImage = UIImage(named: "home_unchecked")
-    private let locationManger = CLLocationManager()
-    private let geocoder = CLGeocoder()
+//    private let locationManger = CLLocationManager()
+//    private let geocoder = CLGeocoder()
     
     // MARK: - VIEW DID LOAD
     

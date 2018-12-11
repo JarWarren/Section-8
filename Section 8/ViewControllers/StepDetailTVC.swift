@@ -265,6 +265,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             // Configure cell
             cell.tipTitleLabel?.text = item.title
             cell.tipTextLabel?.text = item.text
+            cell.tipImageView?.image = UIImage(named: item.graphicName ?? "")
             
             return cell
         }
