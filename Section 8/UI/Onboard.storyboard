@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sOf-5P-HbW">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--onboardingVC-->
+        <scene sceneID="Y3e-VK-qdo">
+            <objects>
+                <viewController storyboardIdentifier="Onboard" title="onboardingVC" id="sOf-5P-HbW" customClass="OnboardingScreenVC" customModule="Section_8" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T09-zF-uBD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launch - gradient green" translatesAutoresizingMaskIntoConstraints="NO" id="kbc-av-KRV">
+                                <rect key="frame" x="0.0" y="-24" width="375" height="725"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5lH-Vh-j5r">
+                                <rect key="frame" x="97" y="228.5" width="181.5" height="210"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launch - white logo only" translatesAutoresizingMaskIntoConstraints="NO" id="1Vx-qx-xVL">
+                                        <rect key="frame" x="15.5" y="0.0" width="150" height="129.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="Qtr-dg-A6u"/>
+                                            <constraint firstAttribute="width" secondItem="1Vx-qx-xVL" secondAttribute="height" multiplier="65:56" id="XtT-1Z-tbt"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="-2" translatesAutoresizingMaskIntoConstraints="NO" id="22j-iA-Hhf">
+                                        <rect key="frame" x="0.0" y="137.5" width="181.5" height="72.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Section8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yg7-Cr-t3A" propertyAccessControl="all">
+                                                <rect key="frame" x="24" y="0.0" width="133.5" height="38.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="32"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                                <attributedString key="userComments">
+                                                    <fragment content="LaunchScreenTitle"/>
+                                                </attributedString>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOW INCOME HOUSING" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGK-bP-yYM">
+                                                <rect key="frame" x="0.0" y="36.5" width="181.5" height="19"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ASSISTANT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOh-89-uBK">
+                                                <rect key="frame" x="48.5" y="53.5" width="84.5" height="19"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5lH-Vh-j5r" firstAttribute="centerX" secondItem="T09-zF-uBD" secondAttribute="centerX" id="Pbf-eo-wDf"/>
+                            <constraint firstItem="kbc-av-KRV" firstAttribute="top" secondItem="Dfs-uP-5C1" secondAttribute="top" constant="-44" id="Tkh-jI-IHA"/>
+                            <constraint firstItem="Dfs-uP-5C1" firstAttribute="trailing" secondItem="kbc-av-KRV" secondAttribute="trailing" id="fGC-ck-6vZ"/>
+                            <constraint firstItem="kbc-av-KRV" firstAttribute="leading" secondItem="Dfs-uP-5C1" secondAttribute="leading" id="nU1-p0-p5C"/>
+                            <constraint firstItem="Dfs-uP-5C1" firstAttribute="bottom" secondItem="kbc-av-KRV" secondAttribute="bottom" constant="-34" id="xEL-us-xzl"/>
+                            <constraint firstItem="5lH-Vh-j5r" firstAttribute="centerY" secondItem="T09-zF-uBD" secondAttribute="centerY" id="zPQ-v9-ZG3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Dfs-uP-5C1"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Moy-Gn-4We" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-437.68115942028987" y="106.47321428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Launch - gradient green" width="1242" height="2208"/>
+        <image name="Launch - white logo only" width="489.3599853515625" height="435.1199951171875"/>
+    </resources>
+</document>

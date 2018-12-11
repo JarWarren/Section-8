@@ -8,62 +8,25 @@
 
 import UIKit
 import GoogleMaps
-import UserNotifications
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    static let geoCoder = CLGeocoder()
+    let locationManager = CLLocationManager()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Google Maps
         GMSServices.provideAPIKey("AIzaSyAchY5OHlVXXQyaux0dO-kM0gVQz0T0rzE")
         StepController.shared.loadCompletedSteps()
-        // User Notifcation
-        // NOTE: - Ben from class suggested we educate the user and ask them to allow notifications before they are given the option to grant/deny permission
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
-            
-            if granted {
-                print("Permission for notificationw as granted by the user")
-                      UNUserNotificationCenter.current().delegate = self
-            }
-            // Access granted
-            if let error = error {
-                print("There was an error in \(#function) ; (error) ; \(error.localizedDescription)")
-            }
-            // Access to use notification was denied
-            if !granted {
-                print("Notification Access Denied")
-            }
-        }
+      
          
         return true
     }
     
 
-    // Ivan - Not sure what this does just yet
-    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-         print("Test: \(response.notification.request.identifier)")
-        
-        defer {
-            completionHandler()
-        }
-        
-        switch response.actionIdentifier {
-            //The action that indicates the user explicitly dismissed the notification interface.
-            //This action is delivered only if the notification’s category object was configured with the customDismissAction option.
-        case UNNotificationDismissActionIdentifier:
-            print("/n🥶 User tapped the little 'x' on their notification pop/n")
-            //An action that indicates the user opened the app from the notification interface.
-        case UNNotificationDefaultActionIdentifier:
-            print("\n😜 UNNotificationDefaultActionIdentifier: User tapped on the somewhere on the body of the notification and were segued into the app's main screen. Apple says this is An action that indicates the user opened the app from the notification interface \n")
-        case NotificationIDKey.editButtonDateP.rawValue:
-            print("\nUser Tapped on the edit option on the date picker notification")
-        default:
-            print("\nUser Tapped The Dissmiss Button, however in the app delegate this print statment got fired under the default case not under Apple's UNNotificationDismissActionIdentifier case")
-        }
-    }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -76,7 +39,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
         application.applicationIconBadgeNumber = 0;
 
     }

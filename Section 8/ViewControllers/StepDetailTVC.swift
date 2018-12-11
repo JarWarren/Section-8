@@ -38,20 +38,34 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     
     let timerController = TimerController()
     let timeKeepingId = "timerID"
-    //    let sevenDayCountDown = TimeInterval(5)
+    
+    // Let sevenDayCountDown = TimeInterval(5)
     let sevenDays = 60
-    //    var boolValueToTestTimer = true
+    
+    // BoolValueToTestTimer = true
     let sevenDayTimerID = "sevenDays"
     let categorySevenNotificationID = "dismissActionKey"
     let datePActionId = "datePickerNotifID"
     let datePCategoryId = "dateCatergoryID"
     var alarmIsOn: Bool = false
-    // seven day timer constants for notif func
+    
+    // seven day interval constants for notification function
     let dissmissActionSdId = "SevenDayDissmissActionID"
     let categorySdID = "sevenDayCatergoryID"
     let requestSdId = "sevenDayRequestID"
     let resourceSdID = "sevenDayResourceID"
     let typePng = "png"
+    
+    // 7-Day notification alert
+    let sevenDayNotifBanner = NSString.localizedUserNotificationString(forKey: "notificationBanner", arguments: [])
+    let sevenDayDissmissTitle = NSString.localizedUserNotificationString(forKey: "7DayDismiss", arguments: [])
+    let sevenDayContentTitle = NSString.localizedUserNotificationString(forKey: "7DayContentTitle", arguments: [])
+    let sevenDayContentSubtitle = NSString.localizedUserNotificationString(forKey: "7DayContentSubtitle", arguments: [])
+    let sevenDayContentBody = NSString.localizedUserNotificationString(forKey: "7DayContentBody", arguments: [])
+    
+    // date Banner
+    let datePickerNotifBanner = NSString.localizedUserNotificationString(forKey: "datePickerBanner", arguments: [])
+    let bannerImageName = NSLocalizedString("notificationBanner", comment: "")
     
     // MARK: - VIEW DID LOAD & VIEW WILL APPEAR
     
@@ -77,7 +91,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             // Header labels and image
             self.stepNameLabel.text = thisStep.name
             self.stepNumberLabel.text = thisStep.stepNumber
-            self.stepImageView.image = UIImage(named: thisStep.stepImageName)
+            self.stepImageView.image = UIImage(named: thisStep.homeImageName)
         }
     }
     
@@ -87,16 +101,16 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         guard let unwrappedStep = selectedStep else {return}
         switch unwrappedStep.stepCompleted {
         case false:
-            print("🔥Step # \(unwrappedStep.stepNumber) was originally set to inComplete but now its complete🤗")
+            print("Step # \(unwrappedStep.stepNumber) was originally set to inComplete but now its complete")
             unwrappedStep.stepCompleted = true
         case true:
-            print("🔥Step # \(unwrappedStep.stepNumber) was originally set to Complete but now its not compelted😭")
+            print("Step # \(unwrappedStep.stepNumber) was originally set to Complete but now its not compelted")
             unwrappedStep.stepCompleted = false
         }
         checkButtonStatusNotificationSet()
         finalStepButtonTapped()
         StepController.shared.persistCompletedSteps()
-        navigationController?.popViewController(animated: true)
+        navigationController?.popToRootViewController(animated: true)
     }
     
     // MARK: - BUTTON FUNCTIONS
@@ -105,7 +119,8 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         guard let unwrappedStep = selectedStep else {return}
         if unwrappedStep.stepNumber != "STEP 14"  {
             cancelSevenDayNotification()
-            scheduleSevenDayNotification()
+            
+            scheduleSevenDayIntervalNotif()
         }
     }
     
@@ -116,7 +131,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             UNUserNotificationCenter.current().removeAllDeliveredNotifications()
         } else {
             if unwrappedStep.stepNumber == "STEP 14" && unwrappedStep.stepCompleted != true {
-                scheduleSevenDayNotification()
+                scheduleSevenDayIntervalNotif()
             }
         }
     }
@@ -147,7 +162,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             // Configure cell
             cell.clickLinkTitleLabel?.text = item.title
             cell.clickLinkTextLabel?.text = item.text
-            cell.clickLinkButtonText?.setTitle("\(item.buttonText ?? "CLICK TO GO TO LINK")", for: .normal)
+            cell.clickLinkButtonText?.setTitle("\(item.buttonText ?? "TAP TO GO TO LINK")", for: .normal)
             if let urlString = item.url {
                 cell.url = URL(string: urlString)
             }
@@ -184,7 +199,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             cell.dataInputTitle2Label?.text = item.url
             cell.dataInputText2Label?.text = item.graphicName
             cell.dataInputText2Field?.text = String(describing: RentController.shared.rent?.voucherAmount)
-            cell.dataInputButtonTextLabel?.setTitle("\(item.buttonText ?? "CLICK TO SAVE")", for: .normal)
+            cell.dataInputButtonTextLabel?.setTitle("\(item.buttonText ?? "TAP TO SAVE")", for: .normal)
             
             // Passing through to fields household income and voucher amount, if entered previously
             if let householdIncome = RentController.shared.rent?.householdIncome {
@@ -211,7 +226,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             // Configure cell
             cell.datePickerTitleLabel?.text = item.title
             cell.datePickerTextLabel?.text = item.text
-            cell.datePickerButton?.setTitle("\(item.buttonText ?? "CLICK TO SET DATE")", for: .normal)
+            cell.datePickerButton?.setTitle("\(item.buttonText ?? "TAP TO SET DATE")", for: .normal)
             return cell
             
             // MARK: PARAGRAPH CUSTOM CELL
@@ -224,7 +239,25 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             cell.paragraphTextLabel?.text = item.text
             return cell
             
-            // MARK: TIP CUSTOM CELL
+        // MARK: PHOTO CUSTOM CELL
+            
+        case .photo:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "photoCell", for: indexPath) as? PhotoTVCell else { return UITableViewCell() }
+            
+            if let photoRef = SelectedApartmentController.shared.selectedApartment?.photoRef {
+                GoogleNetworkController.fetchPlaceImage(photoReference: photoRef) { (image) in
+                    DispatchQueue.main.async {
+                        cell.photoImageView.image = image
+                    }
+                }
+                return cell
+            }
+            
+            // Configure cell
+            cell.photoImageView?.image = UIImage(named: "noApartmentImage")
+            return cell
+            
+        // MARK: TIP CUSTOM CELL
             
         case .tip:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "tipCell", for: indexPath) as? TipTVCell else { return UITableViewCell() }
@@ -232,6 +265,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             // Configure cell
             cell.tipTitleLabel?.text = item.title
             cell.tipTextLabel?.text = item.text
+            cell.tipImageView?.image = UIImage(named: item.graphicName ?? "")
             
             return cell
         }
@@ -323,19 +357,16 @@ extension StepDetailTVC {
     
     func cancelSevenDayNotification() {
         
-        timerController.cancelLocalNotificationWith(identifier: categorySevenNotificationID)
-        print("\n🐙🗓  7 day notification canceled\n")
+        timerController.cancelLocalNotificationWith(identifier: Constants.categorySevenNotificationID)
+        print("\n7 day notification canceled\n")
     }
     
-    func scheduleSevenDayNotification() {
-        
-        print("\n📅 7 day notification set\n")
-        timerController.scheduleLocalNotificationOnTimer(identifier: sevenDayTimerID,actionTitle: NSLocalizedString("7DayDismiss", comment: ""), categoryID: categorySevenNotificationID, contentTitle: NSLocalizedString("7DayContentTitle", comment: ""), contentSubtitle: NSLocalizedString("7DayContentSubtitle", comment: ""), contentBody: NSLocalizedString("7DayContentBody", comment: ""), contentBadge: 1,contentSound: UNNotificationSound.default, contentLaunchImage: "", desiredTimeInterval: sevenDays, resourceName: NSLocalizedString("notificationBanner", comment: ""), extenstionType: "png")
-    }
     
     func scheduleSevenDayIntervalNotif() {
-        print("\n📅 7 day notification set\n")
-        timerController.scheduleLocalNotifInterval(dissmissActionID: dissmissActionSdId, actionTitle: NSLocalizedString("7DayDismiss", comment: ""), categoryID: categorySdID, contentTitle: NSLocalizedString("7DayContentTitle", comment: ""), contentSubtitle: NSLocalizedString("7DayContentSubtitle", comment: ""), contentBody: NSLocalizedString("7DayContentBody", comment: ""), contentBadge: 1, contentSound: UNNotificationSound.default, contentLaunchImage: "", desiredTimeInterval: sevenDays, resourceName: NSLocalizedString("notificationBanner", comment: ""), extenstionType: typePng, resourceID: resourceSdID, requestID: requestSdId)
+        print("\n7 day notification was set\n")
+        
+        timerController.scheduleLocalNotifInterval(dismissActionID: Constants.dismissActionSdId, actionTitle: Constants.sevenDayDismissTitle, categoryID: Constants.categorySdID, contentTitle: Constants.sevenDayContentTitle, contentSubtitle: Constants.sevenDayContentSubtitle, contentBody: Constants.sevenDayContentBody, contentBadge: 1, contentSound: UNNotificationSound.default, contentLaunchImage: "", desiredTimeInterval: Constants.sevenDays, resourceName: Constants.sevenDayNotifBanner, extenstionType: Constants.typePng, resourceID: Constants.resourceSdID, requestID: Constants.requestSdId)
+
     }
 }
 

@@ -17,9 +17,9 @@ class SelectedApartmentController {
     
     // TODO: CRUD or something? Need to make marverView info available for persistance and other uses throughout the app.
     
-    func saveApartment(named name: String, phone: String, address: String) {
+    func saveApartment(named name: String, phone: String, address: String, photoRef: String) {
         
-        let newApartment = SelectedApartment(name: name, address: address, phone: phone)
+        let newApartment = SelectedApartment(name: name, address: address, phone: phone, photoRef: photoRef)
         selectedApartment = newApartment
         persistSelectedApartment(asJSON: newApartment)
     }

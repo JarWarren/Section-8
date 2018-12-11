@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		475B206921BB10A900FB955E /* LocalizationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475B206821BB10A900FB955E /* LocalizationConstants.swift */; };
-		475B206B21BB1D6A00FB955E /* StepDetailDeleteOnceDone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475B206A21BB1D6A00FB955E /* StepDetailDeleteOnceDone.swift */; };
-		475B206D21BB1DC400FB955E /* timeControllerDeleteOnceDoneIvan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475B206C21BB1DC400FB955E /* timeControllerDeleteOnceDoneIvan.swift */; };
+		4716664821BEDBD90036ECB7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4716664721BEDBD90036ECB7 /* Constants.swift */; };
+		4716664A21BF11110036ECB7 /* locationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4716664921BF11110036ECB7 /* locationController.swift */; };
+		4716664C21BF17700036ECB7 /* OnboardingScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4716664B21BF17700036ECB7 /* OnboardingScreenVC.swift */; };
+		474C289421BB7DBF00874B78 /* notificationBannerEN.png in Resources */ = {isa = PBXBuildFile; fileRef = 474C289221BB7DBF00874B78 /* notificationBannerEN.png */; };
+		474C289621BB81A900874B78 /* datePickerBannerEN.png in Resources */ = {isa = PBXBuildFile; fileRef = 474C289521BB81A900874B78 /* datePickerBannerEN.png */; };
 		476654B121B2F32E00FC3663 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476654B021B2F32E00FC3663 /* AlertController.swift */; };
 		476654B321B2F38800FC3663 /* TimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476654B221B2F38800FC3663 /* TimerController.swift */; };
 		47BD249321B7206700CC6192 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BD249221B7206700CC6192 /* Alarm.swift */; };
 		47BD249521B742CC00CC6192 /* AlarmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BD249421B742CC00CC6192 /* AlarmController.swift */; };
-		47C519F121B869870020BC7E /* supermarioghost_1_copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C519F021B869870020BC7E /* supermarioghost_1_copy.png */; };
 		47DF81F921B97E8000C0F0FE /* stepDetailExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DF81F821B97E8000C0F0FE /* stepDetailExtension.swift */; };
 		47F09D2F21B9BAE200542722 /* AlarmName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F09D2E21B9BAE200542722 /* AlarmName.swift */; };
-		47F09D3121B9CBB300542722 /* NotificationIDKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F09D3021B9CBB300542722 /* NotificationIDKey.swift */; };
 		7E1DF3F121B19FBE0012BFEE /* GoogleNetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DF3F021B19FBE0012BFEE /* GoogleNetworkController.swift */; };
 		7E1DF3F421B19FE70012BFEE /* ApartmentLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DF3F221B19FE70012BFEE /* ApartmentLocation.swift */; };
 		7E1DF3F521B19FE70012BFEE /* MapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1DF3F321B19FE70012BFEE /* MapMarker.swift */; };
@@ -30,6 +30,9 @@
 		7E686E1C21B85BB20005D5BB /* SelectedApartment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E686E1B21B85BB20005D5BB /* SelectedApartment.swift */; };
 		7E686E1E21B85BCD0005D5BB /* SelectedApartmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E686E1D21B85BCD0005D5BB /* SelectedApartmentController.swift */; };
 		7EA8381A21B602D400E9B9CE /* Apartment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA8381921B602D400E9B9CE /* Apartment.swift */; };
+		810C0BA221BF11FA005B0FB5 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C0BA121BF11FA005B0FB5 /* UIButton+Extensions.swift */; };
+		810C0BA421BF1E9E005B0FB5 /* Onboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 810C0BA321BF1E9E005B0FB5 /* Onboard.storyboard */; };
+		810C0BAA21BF383B005B0FB5 /* PhotoTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C0BA921BF383B005B0FB5 /* PhotoTVCell.swift */; };
 		81212AED21B5AC5A0082C88B /* DataInputTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81212AEC21B5AC5A0082C88B /* DataInputTVCell.swift */; };
 		81212AEF21B5CCF90082C88B /* DataDisplayTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81212AEE21B5CCF90082C88B /* DataDisplayTVCell.swift */; };
 		8161D47B21B8B30D00F44AC0 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8161D47D21B8B30D00F44AC0 /* Launch Screen.storyboard */; };
@@ -42,8 +45,6 @@
 		81B7E95021B1FF0E003A209F /* ClickLinkTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B7E94F21B1FF0E003A209F /* ClickLinkTVCell.swift */; };
 		81CC955E21BB030100CB1B32 /* Section8Apartment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CC955D21BB030100CB1B32 /* Section8Apartment.swift */; };
 		81CC956221BB048700CB1B32 /* Section8ApartmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CC956121BB048700CB1B32 /* Section8ApartmentController.swift */; };
-		81CC956421BB2A7A00CB1B32 /* notificationBanner.png in Resources */ = {isa = PBXBuildFile; fileRef = 81CC956321BB2A7A00CB1B32 /* notificationBanner.png */; };
-		81D5F9BE21BB2B2400BF465A /* notificationBanner.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D5F9BD21BB2B2400BF465A /* notificationBanner.png */; };
 		81DD083321AF1D470037F3AA /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DD083221AF1D470037F3AA /* Step.swift */; };
 		81DD083521AF1E880037F3AA /* StepController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DD083421AF1E880037F3AA /* StepController.swift */; };
 		81DD083721AF32F20037F3AA /* HomeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DD083621AF32F20037F3AA /* HomeTVC.swift */; };
@@ -57,17 +58,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		475B206821BB10A900FB955E /* LocalizationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationConstants.swift; sourceTree = "<group>"; };
-		475B206A21BB1D6A00FB955E /* StepDetailDeleteOnceDone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepDetailDeleteOnceDone.swift; sourceTree = "<group>"; };
-		475B206C21BB1DC400FB955E /* timeControllerDeleteOnceDoneIvan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timeControllerDeleteOnceDoneIvan.swift; sourceTree = "<group>"; };
+		4716664721BEDBD90036ECB7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4716664921BF11110036ECB7 /* locationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locationController.swift; sourceTree = "<group>"; };
+		4716664B21BF17700036ECB7 /* OnboardingScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreenVC.swift; sourceTree = "<group>"; };
+		474C289221BB7DBF00874B78 /* notificationBannerEN.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notificationBannerEN.png; sourceTree = "<group>"; };
+		474C289521BB81A900874B78 /* datePickerBannerEN.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = datePickerBannerEN.png; sourceTree = "<group>"; };
 		476654B021B2F32E00FC3663 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		476654B221B2F38800FC3663 /* TimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerController.swift; sourceTree = "<group>"; };
 		47BD249221B7206700CC6192 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		47BD249421B742CC00CC6192 /* AlarmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmController.swift; sourceTree = "<group>"; };
-		47C519F021B869870020BC7E /* supermarioghost_1_copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = supermarioghost_1_copy.png; sourceTree = "<group>"; };
 		47DF81F821B97E8000C0F0FE /* stepDetailExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stepDetailExtension.swift; sourceTree = "<group>"; };
 		47F09D2E21B9BAE200542722 /* AlarmName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmName.swift; sourceTree = "<group>"; };
-		47F09D3021B9CBB300542722 /* NotificationIDKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationIDKey.swift; sourceTree = "<group>"; };
 		7E1DF3F021B19FBE0012BFEE /* GoogleNetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleNetworkController.swift; sourceTree = "<group>"; };
 		7E1DF3F221B19FE70012BFEE /* ApartmentLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApartmentLocation.swift; sourceTree = "<group>"; };
 		7E1DF3F321B19FE70012BFEE /* MapMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapMarker.swift; sourceTree = "<group>"; };
@@ -86,6 +87,9 @@
 		7E686E1B21B85BB20005D5BB /* SelectedApartment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedApartment.swift; sourceTree = "<group>"; };
 		7E686E1D21B85BCD0005D5BB /* SelectedApartmentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedApartmentController.swift; sourceTree = "<group>"; };
 		7EA8381921B602D400E9B9CE /* Apartment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apartment.swift; sourceTree = "<group>"; };
+		810C0BA121BF11FA005B0FB5 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
+		810C0BA321BF1E9E005B0FB5 /* Onboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Onboard.storyboard; sourceTree = "<group>"; };
+		810C0BA921BF383B005B0FB5 /* PhotoTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTVCell.swift; sourceTree = "<group>"; };
 		81212AEC21B5AC5A0082C88B /* DataInputTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInputTVCell.swift; sourceTree = "<group>"; };
 		81212AEE21B5CCF90082C88B /* DataDisplayTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDisplayTVCell.swift; sourceTree = "<group>"; };
 		8161D47C21B8B30D00F44AC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -99,8 +103,6 @@
 		81B7E94F21B1FF0E003A209F /* ClickLinkTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickLinkTVCell.swift; sourceTree = "<group>"; };
 		81CC955D21BB030100CB1B32 /* Section8Apartment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section8Apartment.swift; sourceTree = "<group>"; };
 		81CC956121BB048700CB1B32 /* Section8ApartmentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section8ApartmentController.swift; sourceTree = "<group>"; };
-		81CC956321BB2A7A00CB1B32 /* notificationBanner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = notificationBanner.png; path = ../../../../Graphics/Notifications/notificationBanner.png; sourceTree = "<group>"; };
-		81D5F9BD21BB2B2400BF465A /* notificationBanner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = notificationBanner.png; path = ../../../../Graphics/Notifications/notificationBanner.png; sourceTree = "<group>"; };
 		81DD083221AF1D470037F3AA /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
 		81DD083421AF1E880037F3AA /* StepController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepController.swift; sourceTree = "<group>"; };
 		81DD083621AF32F20037F3AA /* HomeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTVC.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 		7E67E2A521ADE895007E4103 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				810C0BA321BF1E9E005B0FB5 /* Onboard.storyboard */,
 				7E67E29721ADE777007E4103 /* Main.storyboard */,
 				7E1DF3F821B1A15F0012BFEE /* Map.storyboard */,
 				8161D47D21B8B30D00F44AC0 /* Launch Screen.storyboard */,
@@ -241,7 +244,7 @@
 				81FF0A9421B09BC6004A7EDB /* StepDetailTVC.swift */,
 				7E1DF3F621B1A0610012BFEE /* MapViewController.swift */,
 				47DF81F821B97E8000C0F0FE /* stepDetailExtension.swift */,
-				475B206A21BB1D6A00FB955E /* StepDetailDeleteOnceDone.swift */,
+				4716664B21BF17700036ECB7 /* OnboardingScreenVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -249,7 +252,6 @@
 		7E67E2AA21ADE8CE007E4103 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				81CC956321BB2A7A00CB1B32 /* notificationBanner.png */,
 				7E67E29A21ADE778007E4103 /* Assets.xcassets */,
 				7E67E29F21ADE778007E4103 /* Info.plist */,
 				7E67E29321ADE777007E4103 /* AppDelegate.swift */,
@@ -261,14 +263,14 @@
 			isa = PBXGroup;
 			children = (
 				818FC59D21B868D30084323E /* UITextField+Extensions.swift */,
+				810C0BA121BF11FA005B0FB5 /* UIButton+Extensions.swift */,
 				7E1DF3F021B19FBE0012BFEE /* GoogleNetworkController.swift */,
 				476654B021B2F32E00FC3663 /* AlertController.swift */,
 				476654B221B2F38800FC3663 /* TimerController.swift */,
 				8161D48221B8C3E300F44AC0 /* AttributesExpander.swift */,
 				47F09D2E21B9BAE200542722 /* AlarmName.swift */,
-				47F09D3021B9CBB300542722 /* NotificationIDKey.swift */,
-				475B206821BB10A900FB955E /* LocalizationConstants.swift */,
-				475B206C21BB1DC400FB955E /* timeControllerDeleteOnceDoneIvan.swift */,
+				4716664721BEDBD90036ECB7 /* Constants.swift */,
+				4716664921BF11110036ECB7 /* locationController.swift */,
 			);
 			path = HelperFiles;
 			sourceTree = "<group>";
@@ -283,6 +285,7 @@
 				81212AEC21B5AC5A0082C88B /* DataInputTVCell.swift */,
 				81212AEE21B5CCF90082C88B /* DataDisplayTVCell.swift */,
 				81871F1021B7079700407E51 /* MapTVCell.swift */,
+				810C0BA921BF383B005B0FB5 /* PhotoTVCell.swift */,
 			);
 			path = ItemFormats;
 			sourceTree = "<group>";
@@ -290,8 +293,8 @@
 		81CC956521BB2A8200CB1B32 /* NotificationAssets */ = {
 			isa = PBXGroup;
 			children = (
-				81D5F9BD21BB2B2400BF465A /* notificationBanner.png */,
-				47C519F021B869870020BC7E /* supermarioghost_1_copy.png */,
+				474C289521BB81A900874B78 /* datePickerBannerEN.png */,
+				474C289221BB7DBF00874B78 /* notificationBannerEN.png */,
 			);
 			path = NotificationAssets;
 			sourceTree = "<group>";
@@ -361,10 +364,10 @@
 				7E59408921B5AC1100C02E61 /* Localizable.strings in Resources */,
 				7E67E29B21ADE778007E4103 /* Assets.xcassets in Resources */,
 				7E67E29921ADE777007E4103 /* Main.storyboard in Resources */,
-				47C519F121B869870020BC7E /* supermarioghost_1_copy.png in Resources */,
 				7E1DF3F921B1A15F0012BFEE /* Map.storyboard in Resources */,
-				81CC956421BB2A7A00CB1B32 /* notificationBanner.png in Resources */,
-				81D5F9BE21BB2B2400BF465A /* notificationBanner.png in Resources */,
+				474C289421BB7DBF00874B78 /* notificationBannerEN.png in Resources */,
+				474C289621BB81A900874B78 /* datePickerBannerEN.png in Resources */,
+				810C0BA421BF1E9E005B0FB5 /* Onboard.storyboard in Resources */,
 				8161D47B21B8B30D00F44AC0 /* Launch Screen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,24 +433,25 @@
 				47DF81F921B97E8000C0F0FE /* stepDetailExtension.swift in Sources */,
 				7E67E29421ADE777007E4103 /* AppDelegate.swift in Sources */,
 				81DD083321AF1D470037F3AA /* Step.swift in Sources */,
+				4716664C21BF17700036ECB7 /* OnboardingScreenVC.swift in Sources */,
 				81CC955E21BB030100CB1B32 /* Section8Apartment.swift in Sources */,
 				8161D48321B8C3E300F44AC0 /* AttributesExpander.swift in Sources */,
 				81B7E95021B1FF0E003A209F /* ClickLinkTVCell.swift in Sources */,
-				475B206B21BB1D6A00FB955E /* StepDetailDeleteOnceDone.swift in Sources */,
 				81FF0A9721B09EAC004A7EDB /* ParagraphTVCell.swift in Sources */,
 				81212AED21B5AC5A0082C88B /* DataInputTVCell.swift in Sources */,
 				81FF0A9521B09BC6004A7EDB /* StepDetailTVC.swift in Sources */,
 				7E686E1C21B85BB20005D5BB /* SelectedApartment.swift in Sources */,
 				7E1DF3F721B1A0610012BFEE /* MapViewController.swift in Sources */,
 				81FF0A9321B095F6004A7EDB /* ItemController.swift in Sources */,
+				4716664A21BF11110036ECB7 /* locationController.swift in Sources */,
 				81B7E94E21B1FEC1003A209F /* DatePickerTVCell.swift in Sources */,
-				47F09D3121B9CBB300542722 /* NotificationIDKey.swift in Sources */,
 				476654B121B2F32E00FC3663 /* AlertController.swift in Sources */,
+				810C0BA221BF11FA005B0FB5 /* UIButton+Extensions.swift in Sources */,
 				47BD249321B7206700CC6192 /* Alarm.swift in Sources */,
 				7E1DF3F121B19FBE0012BFEE /* GoogleNetworkController.swift in Sources */,
 				81CC956221BB048700CB1B32 /* Section8ApartmentController.swift in Sources */,
+				810C0BAA21BF383B005B0FB5 /* PhotoTVCell.swift in Sources */,
 				81DD083721AF32F20037F3AA /* HomeTVC.swift in Sources */,
-				475B206D21BB1DC400FB955E /* timeControllerDeleteOnceDoneIvan.swift in Sources */,
 				476654B321B2F38800FC3663 /* TimerController.swift in Sources */,
 				81FF0A9121B093B7004A7EDB /* Item.swift in Sources */,
 				81FF0A9921B09EBC004A7EDB /* TipTVCell.swift in Sources */,
@@ -455,7 +459,6 @@
 				81DD083B21AF3C010037F3AA /* StepTVCell.swift in Sources */,
 				818FC57E21B84A760084323E /* RentController.swift in Sources */,
 				7EA8381A21B602D400E9B9CE /* Apartment.swift in Sources */,
-				475B206921BB10A900FB955E /* LocalizationConstants.swift in Sources */,
 				818FC59E21B868D30084323E /* UITextField+Extensions.swift in Sources */,
 				47F09D2F21B9BAE200542722 /* AlarmName.swift in Sources */,
 				7E686E1E21B85BCD0005D5BB /* SelectedApartmentController.swift in Sources */,
@@ -464,6 +467,7 @@
 				818FC57C21B84A6C0084323E /* Rent.swift in Sources */,
 				81DD083521AF1E880037F3AA /* StepController.swift in Sources */,
 				7E1DF3F421B19FE70012BFEE /* ApartmentLocation.swift in Sources */,
+				4716664821BEDBD90036ECB7 /* Constants.swift in Sources */,
 				7E1DF3F521B19FE70012BFEE /* MapMarker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -627,7 +631,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L7AYJDAX2C;
+				DEVELOPMENT_TEAM = 466UYFDWDY;
 				INFOPLIST_FILE = "$(SRCROOT)/Section 8/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -646,7 +650,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L7AYJDAX2C;
+				DEVELOPMENT_TEAM = 466UYFDWDY;
 				INFOPLIST_FILE = "$(SRCROOT)/Section 8/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -6,6 +6,8 @@
   Copyright © 2018 Warren. All rights reserved.
 */
 
+// MARK: - Spanish
+
 // MARK: - STEPS
 
 "STEP" = "PASO";
@@ -15,3 +17,46 @@
 
 // ITEMS
 "1a" = "Complete la solicitud preliminar haciendo clic en el botón de abajo, pero lea estas instrucciones primero:";
+
+// MARK: - 7-DAY Notifications
+
+// Seven Day Interval Text fields
+"7DayDismiss" = "Descartar";
+"7DayContentTitle" = "Recordatorio de Section 8 Housing";
+"7DayContentSubtitle" = "";
+"7DayContentBody" = "Ha pasado una semana desde que trabajaste en tu aplicación. Toque aquí para dar el siguiente paso!";
+
+// Mark: - Date Picker Notifications
+
+// Step 3 - Intial Appointment Date
+"s3DatePickerDismissTitle" = "Descartar";
+"s3DatePickerContentTitle" = "Hoy es el día";
+"s3DatePickercontentSubtitle" = "";
+"s3DatePickerContentBody" = "Asegúrese de llevar todo su papeleo a su cita inicial";
+
+// Step 4 - Attend Briefing
+"s4DatePickerDismissTitle" = "Descartar";
+"s4DatePickerContentTitle" = "Hoy es el día";
+"s4DatePickercontentSubtitle" = "";
+"s4DatePickerContentBody" = "Asegúrese de llevar todo su papeleo a su cita informativa";
+
+// Step 10 - Schedule Inspection
+"s10DatePickerDismissTitle" = "Descartar";
+"s10DatePickerContentTitle" = "Hoy es el día";
+"s10DatePickercontentSubtitle" =  "";
+"s10DatePickerContentBody" = "Asegúrese de llevar todo su papeleo a su cita de inspección";
+
+// Step 12 - Final HAUC Appointment
+"s12DatePickerDismissTitle" = "Descartar";
+"s12DatePickerContentTitle" = "Hoy es el día";
+"s12DatePickercontentSubtitle" = "";
+"s12DatePickerContentBody" = "Asegúrese de llevar todo su papeleo a su cita final con HAUC";
+
+// MARK: - Notification Images
+
+// Seven Day Banner Notifications
+"notificationBanner" = "notificationBannerEN";
+
+
+// Date Picker Banner Notifications
+"datePickerBanner" = "datePickerBannerEN";

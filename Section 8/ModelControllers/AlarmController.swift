@@ -15,7 +15,6 @@ class AlarmController {
     
     static let shared = AlarmController()
     
-    // NOTE: - Perhaps this array is holding the alarms and allow duplicates for the same datePicker
     var alarms: [Alarm] = []
     
     init(){
@@ -55,18 +54,16 @@ extension AlarmController {
     
 
     // MARK: - Calendar Notification
-    func scheduleDatePickerUserNotifications(for alarm: Alarm, scheduleDissmissDateNotifId: String, dissmissActionTitle: String, scheduleEditNotifId: String, editDateActionTitle: String, editDateOption: UNNotificationActionOptions,  categoryID: String, contentTitle: String, contentSubtitle: String, contentBody: String, contentBadge: NSNumber, contentSound: UNNotificationSound, contentLuanchImage: String, resourceName: String, extenstionType: String) {
+    func scheduleDatePickerUserNotifications(for alarm: Alarm, scheduleDismissDateNotifId: String, dismissActionTitle: String,  categoryID: String, contentTitle: String, contentSubtitle: String, contentBody: String, contentBadge: NSNumber, contentSound: UNNotificationSound, contentLuanchImage: String, resourceName: String, extenstionType: String) {
         
         // The Alert Button options
-        let dissmissAction = UNNotificationAction(identifier: scheduleDissmissDateNotifId, title: dissmissActionTitle, options: [])
+        let dismissAction = UNNotificationAction(identifier: scheduleDismissDateNotifId, title: dismissActionTitle, options: [])
         
-        let editDateAction = UNNotificationAction(identifier: scheduleEditNotifId, title: editDateActionTitle, options: [editDateOption])
         
-        // NOTE: - CategoryID and ContentID have to match
-        let category = UNNotificationCategory(identifier: categoryID, actions: [dissmissAction, editDateAction], intentIdentifiers: [], options: [.customDismissAction])
+        let category = UNNotificationCategory(identifier: categoryID, actions: [dismissAction], intentIdentifiers: [], options: [])
         UNUserNotificationCenter.current().setNotificationCategories([category])
         
-        // MARK: - The notification payload
+        
         let content = UNMutableNotificationContent()
         content.title = contentTitle
         content.subtitle = contentSubtitle
@@ -74,9 +71,8 @@ extension AlarmController {
         content.badge = contentBadge
         content.sound = contentSound
         content.launchImageName = contentLuanchImage
-        //This is the String ID for what we want to prseent to the user
+        
         content.categoryIdentifier = categoryID
-        /*When you schedule a notification request containing the attachment, the attachment’s file is moved to a new location to facilitate access by the appropriate processes. After the move, the only way to access the file is using the methods of the UNUserNotificationCenter object.*/
         
         guard let url = Bundle.main.url(forResource: resourceName, withExtension: extenstionType) else {return}
         do {

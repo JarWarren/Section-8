@@ -7,27 +7,33 @@
 //
 
 import UIKit
+import CoreLocation
 
 class HomeTVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // MARK: - OUTLETS
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var homeImageView: UIImageView!
     
-    // MARK: - Constants
+    // MARK: - CONSTANTS
     
     let completedCheckBoxImage = UIImage(named: "home_checked")
     let incompleteCheckBoxImage = UIImage(named: "home_unchecked")
+//    private let locationManger = CLLocationManager()
+//    private let geocoder = CLGeocoder()
     
     // MARK: - VIEW DID LOAD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        locationManger.delegate = self 
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
+    
     }
     
     // MARK: - TABLE VIEW DATA SOURCE

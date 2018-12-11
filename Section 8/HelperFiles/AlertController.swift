@@ -8,14 +8,14 @@
 
 import UIKit
 
-class AlertControllerManager {
+class AlertController {
     
     static func presentAlertControllerWith(title: String, message: String?) -> UIAlertController {
         
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let dissmissAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        let dismissAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         
-        [dissmissAction].forEach { alertController.addAction($0) }
+        [dismissAction].forEach { alertController.addAction($0) }
         
         return alertController
     }
