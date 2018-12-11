@@ -13,7 +13,7 @@
         <!--HomeTVC-->
         <scene sceneID="H57-Zj-3WO">
             <objects>
-                <viewController id="lUg-dc-wzV" customClass="HomeTVC" customModule="Section_8" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Main" id="lUg-dc-wzV" customClass="HomeTVC" customModule="Section_8" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L3v-eb-wmO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
