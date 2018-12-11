@@ -75,6 +75,16 @@ class GoogleNetworkController {
         }
         dataTask.resume()
     }
+    
+    func fetchPlaceIDFor(address: String) {
+        
+        guard let mainURL = URL(string: "https://maps.googleapis.com/maps/api/geocode/json?address=\(address)&key=AIzaSyAchY5OHlVXXQyaux0dO-kM0gVQz0T0rzE") else { return }
+        
+        URLSession.shared.dataTask(with: mainURL) { (data, _, _) in
+            guard let data = data else { print("ERROR YOU MORON"); return }
+            
+        }
+    }
 }
 
 //TODO: Embed APIkey in propertyList.
