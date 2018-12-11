@@ -57,8 +57,8 @@ class StepController {
                 // Item 1b
                 ItemController.addNewItem(title: NSLocalizedString("1bTitle", comment: ""), text: NSLocalizedString("1bText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .tip, step: step)
                 
-                // Item 1c
-                ItemController.addNewItem(title: NSLocalizedString("1cTitle", comment: ""), text: NSLocalizedString("1cText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .tip, step: step)
+                // Item 1c - photo
+                ItemController.addNewItem(title: nil, text: nil, buttonText: nil, url: nil, graphicName: "OnlineApplication", format: .photo, step: step)
                 
                 // Item 1d
                 ItemController.addNewItem(title: NSLocalizedString("1dTitle", comment: ""), text: NSLocalizedString("1dText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .tip, step: step)
@@ -79,6 +79,9 @@ class StepController {
                 
                 // Item 2b
                 ItemController.addNewItem(title: NSLocalizedString("2bTitle", comment: ""), text: NSLocalizedString("2bText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .tip, step: step)
+                
+                // Item 2b - photo
+                ItemController.addNewItem(title: nil, text: nil, buttonText: nil, url: nil, graphicName: "HAUCOffice", format: .photo, step: step)
                 
                 // Item 2c
                 ItemController.addNewItem(title: nil, text: NSLocalizedString("2cText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
@@ -111,6 +114,9 @@ class StepController {
                 
                 // Item 3f
                 ItemController.addNewItem(title: NSLocalizedString("3fTitle", comment: ""), text: NSLocalizedString("3fText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .tip, step: step)
+                
+                // Item 3f - photo
+                ItemController.addNewItem(title: nil, text: nil, buttonText: nil, url: nil, graphicName: "HAUCOffice", format: .photo, step: step)
                 
                 // Item 3g
                 ItemController.addNewItem(title: nil, text: NSLocalizedString("3gText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
@@ -180,6 +186,9 @@ class StepController {
 
                 ItemController.addNewItem(title: NSLocalizedString("7bTitle", comment: ""), text: "", buttonText: nil, url: nil, graphicName: nil, format: .tip, step: step)
 
+                // Item 7b - photo
+                ItemController.addNewItem(title: nil, text: nil, buttonText: nil, url: nil, graphicName: "DiamondFork", format: .photo, step: step)
+                
                 // Item 7c
                 ItemController.addNewItem(title: nil, text: NSLocalizedString("7cText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
@@ -208,26 +217,35 @@ class StepController {
                 // Item 8a
                 ItemController.addNewItem(title: nil, text: NSLocalizedString("8aText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
-                // Item 8b
-                ItemController.addNewItem(title: NSLocalizedString("8bTitle", comment: ""), text: NSLocalizedString("8bText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .tip, step: step)
+                // Item 8b (Selected apartment contact info)
+                ItemController.addNewItem(title: NSLocalizedString("8bTitle", comment: ""), text: "Hill Family Apartments \n6015 W Oakshade Ln, West Jordan, UT 84081 \n801-417-3005", buttonText: nil, url: nil, graphicName: nil, format: .tip, step: step)
                 
-                // Item 8c
-                ItemController.addNewItem(title: NSLocalizedString("8cTitle", comment: ""), text: NSLocalizedString("8cText", comment: ""), buttonText: NSLocalizedString("8cButtonText", comment: ""), url: "https://www.hud.gov/sites/documents/52517.PDF", graphicName: nil, format: .clickLink, step: step)
+                // Item 8c (Selected apartment photo) -- NEED TO INTERPOLATE SELECTED APARTMENT PHOTO
+                ItemController.addNewItem(title: nil, text: nil, buttonText: nil, url: nil, graphicName: "HillHouse", format: .photo, step: step)
                 
-                // Item 8d
-                ItemController.addNewItem(title: NSLocalizedString("8dTitle", comment: ""), text: NSLocalizedString("8dText", comment: ""), buttonText: NSLocalizedString("8dButtonText", comment: ""), url: "http://housinguc.org/pdf/W-9Form.pdf", graphicName: nil, format: .clickLink, step: step)
+                // Item 8d (List of four forms)
+                ItemController.addNewItem(title: nil, text: NSLocalizedString("8dText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
                 // Item 8e
-                ItemController.addNewItem(title: NSLocalizedString("8eTitle", comment: ""), text: NSLocalizedString("8eText", comment: ""), buttonText: NSLocalizedString("8eButtonText", comment: ""), url: "http://housinguc.org/pdf/W-9FormCoverLetter.pdf", graphicName: nil, format: .clickLink, step: step)
+                ItemController.addNewItem(title: NSLocalizedString("8eTitle", comment: ""), text: NSLocalizedString("8eText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .tip, step: step)
                 
                 // Item 8f
-                ItemController.addNewItem(title: NSLocalizedString("8fTitle", comment: ""), text: NSLocalizedString("8fText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
+                ItemController.addNewItem(title: NSLocalizedString("8fTitle", comment: ""), text: NSLocalizedString("8fText", comment: ""), buttonText: NSLocalizedString("8fButtonText", comment: ""), url: "https://www.hud.gov/sites/documents/52517.PDF", graphicName: nil, format: .clickLink, step: step)
                 
                 // Item 8g
-                ItemController.addNewItem(title: NSLocalizedString("8gTitle", comment: ""), text: NSLocalizedString("8gText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .tip, step: step)
+                ItemController.addNewItem(title: NSLocalizedString("8gTitle", comment: ""), text: NSLocalizedString("8gText", comment: ""), buttonText: NSLocalizedString("8gButtonText", comment: ""), url: "http://housinguc.org/pdf/W-9Form.pdf", graphicName: nil, format: .clickLink, step: step)
                 
                 // Item 8h
-                ItemController.addNewItem(title: nil, text: NSLocalizedString("8hText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
+                ItemController.addNewItem(title: NSLocalizedString("8hTitle", comment: ""), text: NSLocalizedString("8hText", comment: ""), buttonText: NSLocalizedString("8hButtonText", comment: ""), url: "http://housinguc.org/pdf/W-9FormCoverLetter.pdf", graphicName: nil, format: .clickLink, step: step)
+                
+                // Item 8i
+                ItemController.addNewItem(title: NSLocalizedString("8iTitle", comment: ""), text: NSLocalizedString("8iText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
+                
+                // Item 8j
+                ItemController.addNewItem(title: NSLocalizedString("8jTitle", comment: ""), text: NSLocalizedString("8jText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .tip, step: step)
+                
+                // Item 8k
+                ItemController.addNewItem(title: nil, text: NSLocalizedString("8kText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
                 
             // MARK: - STEP 9
@@ -239,6 +257,9 @@ class StepController {
                 
                 // Item 9b
                 ItemController.addNewItem(title: NSLocalizedString("9bTitle", comment: ""), text: NSLocalizedString("9bText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .tip, step: step)
+                
+                // Item 9b - photo
+                ItemController.addNewItem(title: nil, text: nil, buttonText: nil, url: nil, graphicName: "HAUCOffice", format: .photo, step: step)
                 
                 // Item 9c
                 ItemController.addNewItem(title: nil, text: NSLocalizedString("9cText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
@@ -277,14 +298,21 @@ class StepController {
                 // Item 11a
                 ItemController.addNewItem(title: nil, text: NSLocalizedString("11aText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
-                // Item 11b
-                ItemController.addNewItem(title: NSLocalizedString("11bTitle", comment: ""), text: NSLocalizedString("11bText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .tip, step: step)
+                // Item 11b (Selected apartment contact info)
+                ItemController.addNewItem(title: NSLocalizedString("11bTitle", comment: ""), text: "Hill Family Apartments \n6015 W Oakshade Ln, West Jordan, UT 84081 \n801-417-3005", buttonText: nil, url: nil, graphicName: nil, format: .tip, step: step)
                 
-                // Item 11c
-                ItemController.addNewItem(title: NSLocalizedString("11cTitle", comment: ""), text: NSLocalizedString("11cText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .tip, step: step)
+                // Item 11c (Selected apartment photo) -- NEED TO INTERPOLATE SELECTED APARTMENT PHOTO
+                ItemController.addNewItem(title: nil, text: nil, buttonText: nil, url: nil, graphicName: "HillHouse", format: .photo, step: step)
                 
                 // Item 11d
                 ItemController.addNewItem(title: nil, text: NSLocalizedString("11dText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
+
+                // Item 11e
+                ItemController.addNewItem(title: NSLocalizedString("11eTitle", comment: ""), text: NSLocalizedString("11eText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .tip, step: step)
+                
+                // Item 11f
+                ItemController.addNewItem(title: nil, text: NSLocalizedString("11fText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
+                
                 
             // MARK: - STEP 12
                 
@@ -301,6 +329,9 @@ class StepController {
                 
                 // Item 12d
                 ItemController.addNewItem(title: NSLocalizedString("12dTitle", comment: ""), text: NSLocalizedString("12dText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .tip, step: step)
+                
+                // Item 12d - photo
+                ItemController.addNewItem(title: nil, text: nil, buttonText: nil, url: nil, graphicName: "HAUCOffice", format: .photo, step: step)
                 
                 // Item 12e
                 ItemController.addNewItem(title: nil, text: NSLocalizedString("12eText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
@@ -323,6 +354,9 @@ class StepController {
                 ItemController.addNewItem(title: NSLocalizedString("13bTitle", comment: ""), text: NSLocalizedString("13bText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .tip
                     , step: step)
                 
+                // Item 13b - photo
+                ItemController.addNewItem(title: nil, text: nil, buttonText: nil, url: nil, graphicName: "HAUCOffice", format: .photo, step: step)
+                
                 // Item 13c
                 ItemController.addNewItem(title: nil, text: NSLocalizedString("13cText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
 
@@ -334,17 +368,20 @@ class StepController {
                 // Item 14a
                 ItemController.addNewItem(title: nil, text: NSLocalizedString("14aText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
-                // Item 14b
-                ItemController.addNewItem(title: NSLocalizedString("14bTitle", comment: ""), text: NSLocalizedString("14bText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .tip, step: step)
+                // Item 14b (Selected apartment contact info)
+                ItemController.addNewItem(title: NSLocalizedString("11bTitle", comment: ""), text: "Hill Family Apartments \n6015 W Oakshade Ln, West Jordan, UT 84081 \n801-417-3005", buttonText: nil, url: nil, graphicName: nil, format: .tip, step: step)
                 
-                // Item 14c
-                ItemController.addNewItem(title: nil, text: NSLocalizedString("14cText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
+                // Item 14c (Selected apartment photo) -- NEED TO INTERPOLATE SELECTED APARTMENT PHOTO
+                ItemController.addNewItem(title: nil, text: nil, buttonText: nil, url: nil, graphicName: "HillHouse", format: .photo, step: step)
                 
                 // Item 14d
-                ItemController.addNewItem(title: NSLocalizedString("14dTitle", comment: ""), text: NSLocalizedString("14dText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .tip, step: step)
+                ItemController.addNewItem(title: nil, text: NSLocalizedString("14dText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
                 // Item 14e
-                ItemController.addNewItem(title: nil, text: NSLocalizedString("14eText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
+                ItemController.addNewItem(title: NSLocalizedString("14eTitle", comment: ""), text: NSLocalizedString("14eText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .tip, step: step)
+                
+                // Item 14f
+                ItemController.addNewItem(title: nil, text: NSLocalizedString("14fText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
                 
             default:

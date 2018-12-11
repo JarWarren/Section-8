@@ -14,12 +14,15 @@ class HomeTVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     // MARK: - OUTLETS
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var homeImageView: UIImageView!
     
-    // MARK: - Constants
+    // MARK: - CONSTANTS
     
     let completedCheckBoxImage = UIImage(named: "home_checked")
     let incompleteCheckBoxImage = UIImage(named: "home_unchecked")
-   
+    private let locationManger = CLLocationManager()
+    private let geocoder = CLGeocoder()
+    
     // MARK: - VIEW DID LOAD
     
     override func viewDidLoad() {

@@ -91,7 +91,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             // Header labels and image
             self.stepNameLabel.text = thisStep.name
             self.stepNumberLabel.text = thisStep.stepNumber
-            self.stepImageView.image = UIImage(named: thisStep.stepImageName)
+            self.stepImageView.image = UIImage(named: thisStep.homeImageName)
         }
     }
     
@@ -239,7 +239,18 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             cell.paragraphTextLabel?.text = item.text
             return cell
             
-            // MARK: TIP CUSTOM CELL
+        // MARK: PHOTO CUSTOM CELL
+            
+        case .photo:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "photoCell", for: indexPath) as? PhotoTVCell else { return UITableViewCell() }
+            
+            let photo = item.graphicName
+            
+            // Configure cell
+            cell.photoImageView?.image = UIImage(named: photo ?? "")
+            return cell
+            
+        // MARK: TIP CUSTOM CELL
             
         case .tip:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "tipCell", for: indexPath) as? TipTVCell else { return UITableViewCell() }
