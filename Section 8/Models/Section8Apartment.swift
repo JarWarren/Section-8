@@ -16,13 +16,17 @@ class Section8Apartment {
     var lat: Double
     var lng: Double
     var apartmentPhoto: String
+    var googlePlaceID: String
+    var googlePhotoReferences: [String]?
+    var googleImagesArray: [UIImage]?
     
-    init(name: String, address: String, phone: String, lat: Double, lng: Double, apartmentPhoto: String = "noApartmentImage") {
+    init(name: String, address: String, phone: String, lat: Double, lng: Double, apartmentPhoto: String = "noApartmentImage", googlePlaceID: String) {
         self.name = name
         self.address = address
         self.phone = phone
         self.lat = lat
         self.lng = lng
         self.apartmentPhoto = apartmentPhoto
+        self.googlePlaceID = googlePlaceID
     }
 }
