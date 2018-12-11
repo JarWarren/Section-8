@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import CoreLocation
+
 
 class HomeTVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -27,26 +27,13 @@ class HomeTVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//        locationManger.delegate = self 
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
-        
-        switch CLLocationManager.authorizationStatus() {
-        case .notDetermined:
-            locationManger.requestAlwaysAuthorization()
-        case .restricted:
-            print("Users location is restricted")
-        case .denied:
-            AlertControllerManager.presentAlertControllerWith(title: "Location Services Disabled", message: "This device is not allowed to use location services. Section 8 app needs your location in order to properly display notification. If you wish to later change this it can be done in your phones settings.")
-        case .authorizedWhenInUse:
-            print("user granted authorizedWhenInUse")
-        default:
-            break
-        }
-        locationManger.startUpdatingLocation()
+    
     }
     
     // MARK: - TABLE VIEW DATA SOURCE

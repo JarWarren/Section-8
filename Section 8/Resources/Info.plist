@@ -22,10 +22,14 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>In order to know when you arrive at the target region.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>In order to know when you arrive at the target region.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>Launch Screen</string>
 	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
+	<string>Onboard</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
@@ -41,9 +45,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>In order to know when you arrive at the target region.</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>In order to know when you arrive at the target region.</string>
 </dict>
 </plist>
