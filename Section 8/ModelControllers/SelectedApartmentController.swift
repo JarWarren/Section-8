@@ -52,8 +52,14 @@ class SelectedApartmentController {
         self.selectedApartment = selectedApartment
         if let unwrapped = selectedApartment {
             StepController.shared.steps[6].items[1].text = "\(unwrapped.name)\n\(unwrapped.address)\n\(unwrapped.phone)"
+            StepController.shared.steps[7].items[1].text = "\(unwrapped.name)\n\(unwrapped.address)\n\(unwrapped.phone)"
+            StepController.shared.steps[10].items[1].text = "\(unwrapped.name)\n\(unwrapped.address)\n\(unwrapped.phone)"
+            StepController.shared.steps[13].items[1].text = "\(unwrapped.name)\n\(unwrapped.address)\n\(unwrapped.phone)"
         } else {
-            StepController.shared.steps[6].items[1].text = "You still need to select an apartment in Step 6."
+            StepController.shared.steps[6].items[1].text = NSLocalizedString("7bText", comment: "")
+            StepController.shared.steps[7].items[1].text = NSLocalizedString("8bText", comment: "")
+            StepController.shared.steps[10].items[1].text = NSLocalizedString("11bText", comment: "")
+            StepController.shared.steps[13].items[1].text = NSLocalizedString("14bText", comment: "")
         }
     }
 }

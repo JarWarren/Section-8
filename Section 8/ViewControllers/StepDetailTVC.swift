@@ -203,12 +203,12 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             
             // Passing through to fields household income and voucher amount, if entered previously
             if let householdIncome = RentController.shared.rent?.householdIncome {
-                cell.dataInputText1Field?.text = String(describing: householdIncome)
+                cell.dataInputText1Field?.text = "$" + String(describing: householdIncome)
             } else {
                 cell.dataInputText1Field.text = ""
             }
             if let voucherAmount = RentController.shared.rent?.voucherAmount {
-                cell.dataInputText2Field?.text = String(describing: voucherAmount)
+                cell.dataInputText2Field?.text = "$" + String(describing: voucherAmount)
             } else {
                 cell.dataInputText2Field.text = ""
             }
@@ -316,9 +316,9 @@ extension StepDetailTVC: DataInputTVCellDelegate {
     func dataInputButtonTapped(_ sender: DataInputTVCell, _ textField1: UITextField, _ textField2: UITextField) {
         
         // Unwrap
-        guard let householdIncomeAsString = textField1.text,
+        guard let householdIncomeAsString = textField1.text?.trimmingCharacters(in: .symbols),
+            let voucherAmountAsString = textField2.text?.trimmingCharacters(in: .symbols),
             let householdIncome = Int(householdIncomeAsString),
-            let voucherAmountAsString = textField2.text,
             let voucherAmount = Int(voucherAmountAsString) else { return }
         
         // Generate the max rent and reload the tableView to show amount
