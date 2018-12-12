@@ -12,10 +12,13 @@ extension UIButton {
     
     override open var isHighlighted: Bool {
         didSet {
-            if isHighlighted {
-                self.backgroundColor = UIColor(named: "highlightColor")
-            } else {
-                self.backgroundColor = UIColor(named: "mainColor")
+            if self.restorationIdentifier == "stepButton" || self.restorationIdentifier == "clickLinkButton" || self.restorationIdentifier == "dataPickerButton" || self.restorationIdentifier == "dataInputButton" {
+            
+                if isHighlighted {
+                    self.backgroundColor = UIColor(named: "highlightColor")
+                } else {
+                    self.backgroundColor = UIColor(named: "mainColor")
+                }
             }
         }
     }

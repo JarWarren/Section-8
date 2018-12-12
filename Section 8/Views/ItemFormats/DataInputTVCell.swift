@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DataInputTVCell: UITableViewCell, UITextFieldDelegate {
+class DataInputTVCell: UITableViewCell {
     
     static let shared = DataInputTVCell()
     
@@ -17,8 +17,13 @@ class DataInputTVCell: UITableViewCell, UITextFieldDelegate {
     // Set delegate to protocol in child
     // (Step 2 of 5 - 3 steps in child (this file), 2 in parent)
     
-    weak var delegate: DataInputTVCellDelegate?
-
+    weak var delegate: DataInputTVCellDelegate? {
+        didSet {
+            dataInputText1Field.delegate = self
+            dataInputText2Field.delegate = self
+        }
+    }
+    
     // MARK: - OUTLETS
     
     @IBOutlet weak var dataInputTitle1Label: UILabel!
@@ -55,4 +60,11 @@ class DataInputTVCell: UITableViewCell, UITextFieldDelegate {
 protocol DataInputTVCellDelegate: class {
     
     func dataInputButtonTapped(_ sender: DataInputTVCell, _ textField1: UITextField, _ textField2: UITextField)
+}
+
+extension DataInputTVCell : UITextFieldDelegate {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.text = ""
+    }
 }

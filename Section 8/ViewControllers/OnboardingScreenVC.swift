@@ -14,24 +14,42 @@ import UserNotifications
 //homeTVC
 class OnboardingScreenVC: UIViewController, CLLocationManagerDelegate, UNUserNotificationCenterDelegate {
     
+    var locationController: LocationController?
+    
     private let locationManger = CLLocationManager()
-    private let geocoder = CLGeocoder()
     private let center = UNUserNotificationCenter.current()
     private let deniedBoolKey = "disabledDeniedAlertBool"
     private let restrictedBoolKey = "disabledRestrictedAlertBool"
     private var disableDeniedAlertBool = false
     private var disableRestrictedAlertBool = false
-    
-    
-    
+    private let utahCountyHousingLatitude = 51.50998
+    private let utahCountyHousingLongitude = -0.1337
+    private let desiredRadius = 60.96
+    private let utahCountyHousingID = "uCountyHousinginProvo"
+    private let utahCountyHousingRequestID = "uCountyHousinginProvoRequestID"
     // MARK: - Life cyles
     override func viewDidLoad() {
         super.viewDidLoad()
         loadUserDefaults()
+        
+        locationManger.delegate = self
+//        37.33477977 -122.03369603
+        // NOTE: - The lines of code below, i put in in order to test the location tracking
+        let center = CLLocationCoordinate2D(latitude: utahCountyHousingLatitude, longitude: utahCountyHousingLongitude)
+        
+        let utahHousingActualregion = CLCircularRegion(center: center, radius: desiredRadius, identifier: utahCountyHousingID)
+        
+        locationManger.startMonitoring(for: utahHousingActualregion)
+     
+                locationManger.desiredAccuracy = kCLLocationAccuracyBest
+                locationManger.distanceFilter = 10
+        
+        // local notification
+         locationController?.utahCountyLocationNotification()
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        locationManger.delegate = self
         
         // Notification Permission
         // User Notifcation
@@ -62,15 +80,10 @@ class OnboardingScreenVC: UIViewController, CLLocationManagerDelegate, UNUserNot
             }
             
         }
-
-        
         locationManger.startUpdatingLocation()
     }
     
     
-    // delegate
-    
-    // This is one is responding to the "yes"/ "No"s that the user taps on
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {
         case .restricted:
@@ -79,7 +92,7 @@ class OnboardingScreenVC: UIViewController, CLLocationManagerDelegate, UNUserNot
                 disableRestrictedAlertBool = true
                 
                 UserDefaults.standard.set(disableRestrictedAlertBool, forKey: restrictedBoolKey)
-
+                
                 let restrictedAlertController = UIAlertController(title: "Location Services Denied", message: "This device is not alllowed to use location services. Section 8 app needs your location in order to properly display notification. If you wish to later change this it can be done in your phones settings.", preferredStyle: .alert)
                 
                 let dismissAction = UIAlertAction(title: "OK", style: .cancel) { (alert) in
@@ -128,7 +141,61 @@ class OnboardingScreenVC: UIViewController, CLLocationManagerDelegate, UNUserNot
         }
     }
     
-    // Ivan - Not sure what this does just yet
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(true)
+        print("\n🚨\(locationManger.monitoredRegions)")
+    }
+    
+    func loadUserDefaults() {
+        disableDeniedAlertBool = UserDefaults.standard.bool(forKey: deniedBoolKey)
+        disableRestrictedAlertBool = UserDefaults.standard.bool(forKey: restrictedBoolKey)
+    }
+    
+    // Segue programatically to home view controller
+    func presentMainView() {
+        let homeTVC = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()!
+        present(homeTVC, animated: true, completion: nil)
+    }
+ 
+}
+extension OnboardingScreenVC {
+    
+    // MARK: - Location Delegate Functions
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        
+        print("🚨🌎User Entered location")
+        
+       
+        
+        let content = UNMutableNotificationContent()
+        content.title = "You Got This"
+        content.body = "Dont Froget to ask questions at today's visit"
+        content.sound = UNNotificationSound.default
+
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2, repeats: false)
+
+        let request = UNNotificationRequest(identifier: "Hey", content: content, trigger: trigger)
+
+        UNUserNotificationCenter.current().add(request) { (error) in
+            if let error = error {
+                print("There was an error in \(#function) ; (error) ; \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didStartMonitoringFor region: CLRegion) {
+        print("🌎The monitored regions are: \(manager.monitoredRegions)")
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let locValue:CLLocationCoordinate2D = manager.location!.coordinate
+        print("🌎locations = \(locValue.latitude) \(locValue.longitude)")
+    }
+}
+
+extension OnboardingScreenVC {
+    
+    // MARK: - Notification Delegate Functions for testing
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         
         print("Test: \(response.notification.request.identifier)")
@@ -148,15 +215,5 @@ class OnboardingScreenVC: UIViewController, CLLocationManagerDelegate, UNUserNot
         default:
             break
         }
-    }
-    
-    func loadUserDefaults() {
-        disableDeniedAlertBool = UserDefaults.standard.bool(forKey: deniedBoolKey)
-        disableRestrictedAlertBool = UserDefaults.standard.bool(forKey: restrictedBoolKey)
-    }
-    
-    func presentMainView() {
-        let homeTVC = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()!
-        present(homeTVC, animated: true, completion: nil)
     }
 }

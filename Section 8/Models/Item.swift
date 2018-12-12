@@ -36,5 +36,6 @@ enum ItemFormat: String, Codable {
     case datePicker = "datePicker"
     case paragraph = "paragraph"
     case photo = "photo"
+    case apartmentPhoto = "apartmentPhoto"
     case tip = "tip"
 }
