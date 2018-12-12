@@ -15,6 +15,10 @@ class HomeTVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var homeImageView: UIImageView!
+    @IBOutlet weak var enButton: UIButton!
+    @IBOutlet weak var esButton: UIButton!
+    @IBOutlet weak var ptButton: UIButton!
+    var languageMenuVisible = false
     
     // MARK: - CONSTANTS
     
@@ -81,5 +85,34 @@ class HomeTVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         } else if segue.identifier == "toMapDetail" {
             // Do nothing
         }
+    }
+    
+    // MARK: - Localization
+    
+    @IBAction func languageToggleButtonTapped(_ sender: Any) {
+        
+        if languageMenuVisible == false {
+        UIView.animate(withDuration: 0.2, delay: 0, options: [.curveLinear], animations: {
+            self.enButton.center = CGPoint(x: self.enButton.center.x - 50, y: self.enButton.center.y)
+        }, completion: nil)
+        
+        UIView.animate(withDuration: 0.2, delay: 0.05, options: [.curveLinear], animations: {
+            self.esButton.center = CGPoint(x: self.esButton.center.x - 50, y: self.esButton.center.y)
+        }, completion: nil)
+        
+        UIView.animate(withDuration: 0.2, delay: 0.1, options: [.curveLinear], animations: {
+            self.ptButton.center = CGPoint(x: self.ptButton.center.x - 50, y: self.ptButton.center.y)
+        }, completion: nil)
+            languageMenuVisible = true
+        } else {
+            resetLanguageMenu()
+            languageMenuVisible = false
+        }
+    }
+    
+    func resetLanguageMenu() {
+        self.enButton.center.x += 50
+        self.esButton.center.x += 50
+        self.ptButton.center.x += 50
     }
 }

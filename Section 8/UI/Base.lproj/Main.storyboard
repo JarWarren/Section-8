@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -131,6 +132,51 @@
                                     <constraint firstAttribute="height" constant="30" id="ifm-yx-EwY"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVx-zT-S3Z">
+                                <rect key="frame" x="414" y="8" width="50" height="50"/>
+                                <color key="backgroundColor" name="highlightColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Zqc-Iu-mTE"/>
+                                    <constraint firstAttribute="width" secondItem="vVx-zT-S3Z" secondAttribute="height" multiplier="1:1" id="ioF-ZH-kGT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="🇺🇸"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w79-Wz-Q3r">
+                                <rect key="frame" x="414" y="66" width="50" height="50"/>
+                                <color key="backgroundColor" name="highlightColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="w79-Wz-Q3r" secondAttribute="height" multiplier="1:1" id="E3A-Im-3Rr"/>
+                                    <constraint firstAttribute="height" constant="50" id="Y0V-Cz-5h0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="🇲🇽"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Aj-j2-IaF">
+                                <rect key="frame" x="414" y="124" width="50" height="50"/>
+                                <color key="backgroundColor" name="highlightColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2Aj-j2-IaF" secondAttribute="height" multiplier="1:1" id="3YI-Ev-usT"/>
+                                    <constraint firstAttribute="height" constant="50" id="fx7-WV-6vI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="🇧🇷"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.92944163079999997" green="0.97314912080000004" blue="0.93725079300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
@@ -138,13 +184,19 @@
                             <constraint firstItem="urX-sJ-9ey" firstAttribute="leading" secondItem="byl-Kg-4dD" secondAttribute="leading" id="7cG-Rr-hQ7"/>
                             <constraint firstAttribute="trailing" secondItem="N2i-QN-570" secondAttribute="trailing" constant="20" id="8Ea-Bs-5gk"/>
                             <constraint firstItem="byl-Kg-4dD" firstAttribute="trailing" secondItem="F7p-1D-5wT" secondAttribute="trailing" constant="20" id="8zC-2a-oxL"/>
+                            <constraint firstItem="byl-Kg-4dD" firstAttribute="trailing" secondItem="vVx-zT-S3Z" secondAttribute="trailing" constant="-50" id="F9z-XY-V0j"/>
                             <constraint firstItem="0ql-OW-4y5" firstAttribute="leading" secondItem="byl-Kg-4dD" secondAttribute="leading" id="GF8-QF-euN"/>
+                            <constraint firstItem="byl-Kg-4dD" firstAttribute="trailing" secondItem="2Aj-j2-IaF" secondAttribute="trailing" constant="-50" id="Kyw-if-to2"/>
+                            <constraint firstItem="2Aj-j2-IaF" firstAttribute="top" secondItem="w79-Wz-Q3r" secondAttribute="bottom" constant="8" id="LOL-QR-bWe"/>
                             <constraint firstItem="0ql-OW-4y5" firstAttribute="leading" secondItem="byl-Kg-4dD" secondAttribute="leading" id="MA0-9i-zpV"/>
+                            <constraint firstItem="w79-Wz-Q3r" firstAttribute="top" secondItem="vVx-zT-S3Z" secondAttribute="bottom" constant="8" id="QcT-Ig-RP0"/>
                             <constraint firstItem="0ql-OW-4y5" firstAttribute="top" secondItem="N2i-QN-570" secondAttribute="bottom" constant="16" id="Td9-BX-QcQ"/>
+                            <constraint firstItem="byl-Kg-4dD" firstAttribute="top" secondItem="vVx-zT-S3Z" secondAttribute="top" constant="-8" id="YXE-fQ-frT"/>
                             <constraint firstItem="byl-Kg-4dD" firstAttribute="trailing" secondItem="urX-sJ-9ey" secondAttribute="trailing" id="fCZ-8A-n0s"/>
                             <constraint firstItem="byl-Kg-4dD" firstAttribute="trailing" secondItem="0ql-OW-4y5" secondAttribute="trailing" id="iHw-Jc-hUE"/>
                             <constraint firstItem="N2i-QN-570" firstAttribute="top" secondItem="urX-sJ-9ey" secondAttribute="bottom" constant="16" id="jMS-8r-cEc"/>
                             <constraint firstItem="urX-sJ-9ey" firstAttribute="top" secondItem="byl-Kg-4dD" secondAttribute="top" id="jND-BL-9Do"/>
+                            <constraint firstItem="byl-Kg-4dD" firstAttribute="trailing" secondItem="w79-Wz-Q3r" secondAttribute="trailing" constant="-50" id="n1h-m2-8Ko"/>
                             <constraint firstItem="N2i-QN-570" firstAttribute="top" secondItem="F7p-1D-5wT" secondAttribute="bottom" constant="32" id="pDz-uL-ePo"/>
                             <constraint firstAttribute="bottom" secondItem="0ql-OW-4y5" secondAttribute="bottom" id="wly-SU-7XK"/>
                             <constraint firstItem="N2i-QN-570" firstAttribute="leading" secondItem="byl-Kg-4dD" secondAttribute="leading" constant="20" id="xta-aE-nGz"/>
@@ -152,8 +204,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="byl-Kg-4dD"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Section8" id="9gf-XF-Ur2"/>
+                    <navigationItem key="navigationItem" title="Section8" id="9gf-XF-Ur2">
+                        <barButtonItem key="rightBarButtonItem" title="🌎" id="YYI-wt-9bz">
+                            <connections>
+                                <action selector="languageToggleButtonTapped:" destination="lUg-dc-wzV" id="ybZ-6O-xtJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="enButton" destination="vVx-zT-S3Z" id="Mf7-ZB-nFz"/>
+                        <outlet property="esButton" destination="w79-Wz-Q3r" id="8yj-g8-bak"/>
+                        <outlet property="ptButton" destination="2Aj-j2-IaF" id="o2U-Im-cuL"/>
                         <outlet property="tableView" destination="0ql-OW-4y5" id="dKE-vT-Yhq"/>
                         <segue destination="QMa-vk-bT6" kind="show" identifier="toStepDetail" id="FfI-HO-gAc"/>
                         <segue destination="c3P-Uc-vsQ" kind="show" identifier="toMapDetail" id="h8P-UY-m9h"/>
@@ -4541,8 +4602,11 @@ AAAAA12iA
         </image>
         <image name="money" width="54" height="32.25"/>
         <image name="voucher" width="53.25" height="33"/>
+        <namedColor name="highlightColor">
+            <color red="0.29800000786781311" green="0.85600000619888306" blue="0.3919999897480011" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="vc9-0t-CZl"/>
+        <segue reference="h8P-UY-m9h"/>
     </inferredMetricsTieBreakers>
 </document>
