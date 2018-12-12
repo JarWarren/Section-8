@@ -20,6 +20,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
+    
     @IBOutlet weak var callButton: UIButton!
     @IBOutlet weak var rightButton: UIButton!
     @IBOutlet weak var leftButton: UIButton!
