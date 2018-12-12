@@ -150,7 +150,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         // Switch to choose which custom cell mataches the item format
         switch item.format {
             
-            // MARK: CLICK LINK CUSTOM CELL
+        // MARK: CLICK LINK CUSTOM CELL
             
         case .clickLink:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "clickLinkCell", for: indexPath) as? ClickLinkTVCell else { return UITableViewCell() }
@@ -168,7 +168,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             }
             return cell
             
-            // MARK: DATA DISPLAY CUSTOM CELL
+        // MARK: DATA DISPLAY CUSTOM CELL
             
         case .dataDisplay:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "dataDisplayCell", for: indexPath) as? DataDisplayTVCell else { return UITableViewCell() }
@@ -184,7 +184,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             }
             return cell
             
-            // MARK: DATA INPUT CUSTOM CELL
+        // MARK: DATA INPUT CUSTOM CELL
             
         case .dataInput:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "dataInputCell", for: indexPath) as? DataInputTVCell else { return UITableViewCell() }
@@ -214,7 +214,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             }
             return cell
             
-            // MARK: DATE PICKER CUSTOM CELL
+        // MARK: DATE PICKER CUSTOM CELL
             
         case .datePicker:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "datePickerCell", for: indexPath) as? DatePickerTVCell else { return UITableViewCell() }
@@ -229,7 +229,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             cell.datePickerButton?.setTitle("\(item.buttonText ?? "TAP TO SET DATE")", for: .normal)
             return cell
             
-            // MARK: PARAGRAPH CUSTOM CELL
+        // MARK: PARAGRAPH CUSTOM CELL
             
         case .paragraph:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "paragraphCell", for: indexPath) as? ParagraphTVCell else { return UITableViewCell() }
@@ -244,14 +244,23 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         case .photo:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "photoCell", for: indexPath) as? PhotoTVCell else { return UITableViewCell() }
             
+            // Configure cell
+            cell.photoImageView.image = UIImage(named: item.graphicName ?? "")
+            return cell
+            
+        // MARK: PHOTO CUSTOM CELL
+            
+        case .apartmentPhoto:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "apartmentPhotoCell", for: indexPath) as? ApartmentPhotoTVCell else { return UITableViewCell() }
+            
             // Display which apartment they've chosen.
             if let photoRef = SelectedApartmentController.shared.selectedApartment?.photoRef {
-                cell.photoImageView.image = UIImage(named: photoRef)
+                cell.apartmentPhotoImageView.image = UIImage(named: photoRef)
                 return cell
             }
             
-            // What to display if they haven't chosen one.
-            cell.photoImageView?.image = UIImage(named: "noApartmentImage")
+            // What to display if they haven't chosen one
+            cell.apartmentPhotoImageView?.image = UIImage(named: "noApartmentImage")
             return cell
             
         // MARK: TIP CUSTOM CELL
@@ -290,14 +299,14 @@ extension StepDetailTVC: ClickLinkTVCellDelegate {
     func clickLinkButtonTapped(_ sender: ClickLinkTVCell) {
         
         // Step 7 - Item 7g - Button that calls apartment phone number
-        if sender.clickLinkButtonText?.titleLabel?.text == NSLocalizedString("7gButtonText", comment: "") {
+        if sender.clickLinkButtonText?.titleLabel?.text == NSLocalizedString("7hButtonText", comment: "") {
             guard let phone = SelectedApartmentController.shared.selectedApartment?.phone else { return }
             guard let url = URL(string: "telprompt://\(phone)") else { return }
             UIApplication.shared.open(url)
         }
         
         // Step 7 - Item 7h - Button that returns to Step 6
-        if sender.clickLinkButtonText?.titleLabel?.text == NSLocalizedString("7hButtonText", comment: "") {
+        if sender.clickLinkButtonText?.titleLabel?.text == NSLocalizedString("7iButtonText", comment: "") {
             if self.userDidComeFromStep6 == true{
                 self.navigationController?.popViewController(animated: true)
             } else {
