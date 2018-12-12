@@ -741,6 +741,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="240.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="240" id="6aS-Ry-ueV"/>
+                                                        <constraint firstAttribute="width" secondItem="rSS-e5-tCh" secondAttribute="height" multiplier="69:40" id="ysB-4l-8du"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
