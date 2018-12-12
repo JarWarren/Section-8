@@ -34,7 +34,22 @@ class DataInputTVCell: UITableViewCell {
     @IBOutlet weak var dataInputText2Field: UITextField!
     @IBOutlet weak var dataInputButtonTextLabel: UIButton!
     
+    // MARK: - Life Cyle
+    override func awakeFromNib() {
+        print("\nAwake from nib\n")
+    }
+    
+    
     // MARK: - ACTIONS
+    
+    
+    // Keyboard
+    @objc func keyboardWillChange(notificatin: Notification) {
+        print("\nKeyboard will show: \(notificatin.name.rawValue)\n")
+        
+        
+        
+    }
     
     func random(){
         
