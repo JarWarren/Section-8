@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4716664821BEDBD90036ECB7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4716664721BEDBD90036ECB7 /* Constants.swift */; };
-		4716664A21BF11110036ECB7 /* locationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4716664921BF11110036ECB7 /* locationController.swift */; };
+		4716664A21BF11110036ECB7 /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4716664921BF11110036ECB7 /* LocationController.swift */; };
 		4716664C21BF17700036ECB7 /* OnboardingScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4716664B21BF17700036ECB7 /* OnboardingScreenVC.swift */; };
 		474C289421BB7DBF00874B78 /* notificationBannerEN.png in Resources */ = {isa = PBXBuildFile; fileRef = 474C289221BB7DBF00874B78 /* notificationBannerEN.png */; };
 		474C289621BB81A900874B78 /* datePickerBannerEN.png in Resources */ = {isa = PBXBuildFile; fileRef = 474C289521BB81A900874B78 /* datePickerBannerEN.png */; };
@@ -58,7 +58,7 @@
 
 /* Begin PBXFileReference section */
 		4716664721BEDBD90036ECB7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		4716664921BF11110036ECB7 /* locationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locationController.swift; sourceTree = "<group>"; };
+		4716664921BF11110036ECB7 /* LocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
 		4716664B21BF17700036ECB7 /* OnboardingScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreenVC.swift; sourceTree = "<group>"; };
 		474C289221BB7DBF00874B78 /* notificationBannerEN.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notificationBannerEN.png; sourceTree = "<group>"; };
 		474C289521BB81A900874B78 /* datePickerBannerEN.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = datePickerBannerEN.png; sourceTree = "<group>"; };
@@ -266,7 +266,7 @@
 				8161D48221B8C3E300F44AC0 /* AttributesExpander.swift */,
 				47F09D2E21B9BAE200542722 /* AlarmName.swift */,
 				4716664721BEDBD90036ECB7 /* Constants.swift */,
-				4716664921BF11110036ECB7 /* locationController.swift */,
+				4716664921BF11110036ECB7 /* LocationController.swift */,
 			);
 			path = HelperFiles;
 			sourceTree = "<group>";
@@ -441,7 +441,7 @@
 				7E686E1C21B85BB20005D5BB /* SelectedApartment.swift in Sources */,
 				7E1DF3F721B1A0610012BFEE /* MapViewController.swift in Sources */,
 				81FF0A9321B095F6004A7EDB /* ItemController.swift in Sources */,
-				4716664A21BF11110036ECB7 /* locationController.swift in Sources */,
+				4716664A21BF11110036ECB7 /* LocationController.swift in Sources */,
 				81B7E94E21B1FEC1003A209F /* DatePickerTVCell.swift in Sources */,
 				476654B121B2F32E00FC3663 /* AlertController.swift in Sources */,
 				810C0BA221BF11FA005B0FB5 /* UIButton+Extensions.swift in Sources */,
@@ -627,7 +627,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 466UYFDWDY;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Section 8/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -646,7 +646,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 466UYFDWDY;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Section 8/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
