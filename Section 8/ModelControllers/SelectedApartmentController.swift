@@ -51,10 +51,10 @@ class SelectedApartmentController {
         }
         self.selectedApartment = selectedApartment
         if let unwrapped = selectedApartment {
-            StepController.shared.steps[6].items[1].text = "\(unwrapped.name)\n\(unwrapped.address)\n\(unwrapped.phone)"
-            StepController.shared.steps[7].items[1].text = "\(unwrapped.name)\n\(unwrapped.address)\n\(unwrapped.phone)"
-            StepController.shared.steps[10].items[1].text = "\(unwrapped.name)\n\(unwrapped.address)\n\(unwrapped.phone)"
-            StepController.shared.steps[13].items[1].text = "\(unwrapped.name)\n\(unwrapped.address)\n\(unwrapped.phone)"
+            StepController.shared.steps[6].items[1].text = "\(unwrapped.name)\n\(unwrapped.address1Split)\n\(unwrapped.address2Split)\n\(unwrapped.phone)"
+            StepController.shared.steps[7].items[1].text = "\(unwrapped.name)\n\(unwrapped.address1Split)\n\(unwrapped.address2Split)\n\(unwrapped.phone)"
+            StepController.shared.steps[10].items[1].text = "\(unwrapped.name)\n\(unwrapped.address1Split)\n\(unwrapped.address2Split)\n\(unwrapped.phone)"
+            StepController.shared.steps[13].items[1].text = "\(unwrapped.name)\n\(unwrapped.address1Split)\n\(unwrapped.address2Split)\n\(unwrapped.phone)"
         } else {
             StepController.shared.steps[6].items[1].text = NSLocalizedString("7bText", comment: "")
             StepController.shared.steps[7].items[1].text = NSLocalizedString("8bText", comment: "")
