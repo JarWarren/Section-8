@@ -45,6 +45,7 @@ class OnboardingScreenVC: UIViewController, CLLocationManagerDelegate, UNUserNot
                 locationManger.distanceFilter = 10
         
         // local notification
+        // NOTE: - this needs to be called somehow, perhaps in a button 
          locationController?.utahCountyLocationNotification()
     }
     
@@ -82,7 +83,7 @@ class OnboardingScreenVC: UIViewController, CLLocationManagerDelegate, UNUserNot
         }
         locationManger.startUpdatingLocation()
     }
-    
+    //Delete this test comment
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {
