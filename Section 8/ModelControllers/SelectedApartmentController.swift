@@ -16,9 +16,9 @@ class SelectedApartmentController {
     var selectedApartment: SelectedApartment?
     
     // Called on Step 6 when a user taps "Call Apartment" and segues to Step 7. Makes their selected apartment available through persistence.
-    func saveApartment(named name: String, phone: String, address: String, photoRef: String) {
+    func saveApartment(named name: String, phone: String, address: String, addressPart1: String, addressPart2: String, photoRef: String) {
         
-        let newApartment = SelectedApartment(name: name, address: address, phone: phone, photoRef: photoRef)
+        let newApartment = SelectedApartment(name: name, address: address, address1Split: addressPart1, address2Split: addressPart2, phone: phone, photoRef: photoRef)
         selectedApartment = newApartment
         persistSelectedApartment(asJSON: newApartment)
     }
@@ -51,15 +51,15 @@ class SelectedApartmentController {
         }
         self.selectedApartment = selectedApartment
         if let unwrapped = selectedApartment {
-            StepController.shared.steps[6].items[1].text = "\(unwrapped.name)\n\(unwrapped.address)\n\(unwrapped.phone)"
-            StepController.shared.steps[7].items[1].text = "\(unwrapped.name)\n\(unwrapped.address)\n\(unwrapped.phone)"
-            StepController.shared.steps[10].items[1].text = "\(unwrapped.name)\n\(unwrapped.address)\n\(unwrapped.phone)"
-            StepController.shared.steps[13].items[1].text = "\(unwrapped.name)\n\(unwrapped.address)\n\(unwrapped.phone)"
+            StepController.shared.steps[6].items[3].text = "\(unwrapped.name)\n\(unwrapped.address1Split)\n\(unwrapped.address2Split)\n\(unwrapped.phone)"
+            StepController.shared.steps[7].items[3].text = "\(unwrapped.name)\n\(unwrapped.address1Split)\n\(unwrapped.address2Split)\n\(unwrapped.phone)"
+            StepController.shared.steps[10].items[3].text = "\(unwrapped.name)\n\(unwrapped.address1Split)\n\(unwrapped.address2Split)\n\(unwrapped.phone)"
+            StepController.shared.steps[13].items[3].text = "\(unwrapped.name)\n\(unwrapped.address1Split)\n\(unwrapped.address2Split)\n\(unwrapped.phone)"
         } else {
-            StepController.shared.steps[6].items[1].text = NSLocalizedString("7bText", comment: "")
-            StepController.shared.steps[7].items[1].text = NSLocalizedString("8bText", comment: "")
-            StepController.shared.steps[10].items[1].text = NSLocalizedString("11bText", comment: "")
-            StepController.shared.steps[13].items[1].text = NSLocalizedString("14bText", comment: "")
+            StepController.shared.steps[6].items[3].text = NSLocalizedString("7bText", comment: "")
+            StepController.shared.steps[7].items[3].text = NSLocalizedString("8bText", comment: "")
+            StepController.shared.steps[10].items[3].text = NSLocalizedString("11bText", comment: "")
+            StepController.shared.steps[13].items[3].text = NSLocalizedString("14bText", comment: "")
         }
     }
 }

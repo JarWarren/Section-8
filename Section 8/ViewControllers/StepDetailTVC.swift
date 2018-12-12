@@ -77,6 +77,10 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Set navigation bar title
+        guard let unwrappedStep = selectedStep else { return }
+        self.navigationItem.title = unwrappedStep.name
+        
         // Persistence
         SelectedApartmentController.shared.loadSelectedApartment()
         RentController.shared.loadFromPersistentStorage()
@@ -88,10 +92,13 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             } else {
                 completeButtonStatus.setTitle(NSLocalizedString("completeButtonTextTapToMarkIncompleteA", comment: "") + " \(thisStep.stepNumber) " + NSLocalizedString("completeButtonTextTapToMarkIncompleteB", comment: ""), for: .normal)
             }
-            // Header labels and image
-            self.stepNameLabel.text = thisStep.name
-            self.stepNumberLabel.text = thisStep.stepNumber
-            self.stepImageView.image = UIImage(named: thisStep.homeImageName)
+//            // Header labels and image
+//            self.stepNameLabel.text = thisStep.name
+//            self.stepNumberLabel.text = thisStep.stepNumber
+//            self.stepImageView.image = UIImage(named: thisStep.homeImageName)
+            
+            // Set back button title
+            navigationItem.backBarButtonItem = UIBarButtonItem(title: "Home", style: .plain, target: nil, action: nil)
         }
     }
     
@@ -149,6 +156,21 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         
         // Switch to choose which custom cell mataches the item format
         switch item.format {
+            
+        // MARK: PHOTO CUSTOM CELL
+            
+        case .apartmentPhoto:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "apartmentPhotoCell", for: indexPath) as? ApartmentPhotoTVCell else { return UITableViewCell() }
+            
+            // Display which apartment they've chosen.
+            if let photoRef = SelectedApartmentController.shared.selectedApartment?.photoRef {
+                cell.apartmentPhotoImageView.image = UIImage(named: photoRef)
+                return cell
+            }
+            
+            // What to display if they haven't chosen one
+            cell.apartmentPhotoImageView?.image = UIImage(named: "noApartmentImage")
+            return cell
             
         // MARK: CLICK LINK CUSTOM CELL
             
@@ -248,21 +270,6 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             cell.photoImageView.image = UIImage(named: item.graphicName ?? "")
             return cell
             
-        // MARK: PHOTO CUSTOM CELL
-            
-        case .apartmentPhoto:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "apartmentPhotoCell", for: indexPath) as? ApartmentPhotoTVCell else { return UITableViewCell() }
-            
-            // Display which apartment they've chosen.
-            if let photoRef = SelectedApartmentController.shared.selectedApartment?.photoRef {
-                cell.apartmentPhotoImageView.image = UIImage(named: photoRef)
-                return cell
-            }
-            
-            // What to display if they haven't chosen one
-            cell.apartmentPhotoImageView?.image = UIImage(named: "noApartmentImage")
-            return cell
-            
         // MARK: TIP CUSTOM CELL
             
         case .tip:
@@ -272,7 +279,17 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             cell.tipTitleLabel?.text = item.title
             cell.tipTextLabel?.text = item.text
             cell.tipImageView?.image = UIImage(named: item.graphicName ?? "")
+            return cell
             
+        // MARK: TITLE CUSTOM CELL
+            
+        case .title:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "titleCell", for: indexPath) as? TitleTVCell else { return UITableViewCell() }
+            
+            // Configure cell
+            cell.stepNumberLabel?.text = item.title
+            cell.stepNameLabel?.text = item.text
+            cell.stepImageView?.image = UIImage(named: item.graphicName ?? "")
             return cell
         }
     }
@@ -298,14 +315,14 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
 extension StepDetailTVC: ClickLinkTVCellDelegate {
     func clickLinkButtonTapped(_ sender: ClickLinkTVCell) {
         
-        // Step 7 - Item 7g - Button that calls apartment phone number
+        // Step 7 - Item 7H - Button that calls apartment phone number
         if sender.clickLinkButtonText?.titleLabel?.text == NSLocalizedString("7hButtonText", comment: "") {
             guard let phone = SelectedApartmentController.shared.selectedApartment?.phone else { return }
             guard let url = URL(string: "telprompt://\(phone)") else { return }
             UIApplication.shared.open(url)
         }
         
-        // Step 7 - Item 7h - Button that returns to Step 6
+        // Step 7 - Item 7I - Button that returns to Step 6
         if sender.clickLinkButtonText?.titleLabel?.text == NSLocalizedString("7iButtonText", comment: "") {
             if self.userDidComeFromStep6 == true{
                 self.navigationController?.popViewController(animated: true)
@@ -371,7 +388,7 @@ extension StepDetailTVC {
     func scheduleSevenDayIntervalNotif() {
         print("\n7 day notification was set\n")
         
-        timerController.scheduleLocalNotifInterval(dismissActionID: Constants.dismissActionSdId, actionTitle: Constants.sevenDayDismissTitle, categoryID: Constants.categorySdID, contentTitle: Constants.sevenDayContentTitle, contentSubtitle: Constants.sevenDayContentSubtitle, contentBody: Constants.sevenDayContentBody, contentBadge: 1, contentSound: UNNotificationSound.default, contentLaunchImage: "", desiredTimeInterval: Constants.sevenDays, resourceName: Constants.sevenDayNotifBanner, extenstionType: Constants.typePng, resourceID: Constants.resourceSdID, requestID: Constants.requestSdId)
+        timerController.scheduleLocalNotifInterval(dismissActionID: Constants.dismissActionSdId, actionTitle: Constants.sevenDayDismissTitle, categoryID: Constants.categorySdID, contentTitle: Constants.sevenDayContentTitle, contentSubtitle: Constants.sevenDayContentSubtitle, contentBody: Constants.sevenDayContentBody, contentBadge: 1, contentSound: UNNotificationSound.default, contentLaunchImage: "", desiredTimeInterval: Constants.sevenDays, resourceName: Constants.sevenDayNotifBanner, extenstionType: Constants.typePng, resourceID: Constants.resourceSdID, requestID: Constants.requestSdId, doesItRepeat: true)
 
     }
 }

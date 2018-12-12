@@ -32,6 +32,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     var userDidComeFromStep7 = false // Determines whether to segue to Step 7, or to pop the current view and display Step 7 underneath.
     var locations: [GMSMarker]? // Array of all currently displayed markers.
     var currentPhotoReferences: [String]? // Holds photo references for all photos on currently displayed marker.
+    var addressPart1: String?; var addressPart2: String? // Holds split addresses for later display.
     var imageHolder: UIImage? // The image we display as default. (does not require a fetch)
     var imageRefHolder: String? // Name of the asset to be displayed throughout the rest of the app.
     var currentGalleryIndex = 0 // Keeps track of where we are in the image gallery when moving back and forth.
@@ -39,7 +40,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     // Observers on all of the following properties allow them to both be stored for later persistence, as well as update our outlets automatically.
     var markerViewIsVisible = false {
         didSet {
-            print("🤬\(self.markerViewIsVisible)")
+            print("MarkerView visible: 🤬\(self.markerViewIsVisible)")
         }
     }
     var currentPhone: String? {
@@ -113,11 +114,14 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
                 self.currentPhone = apartment.phone
                 self.currentAddress = apartment.address
                 self.imageRefHolder = apartment.apartmentPhoto
+                self.addressPart1 = apartment.address1Split
+                self.addressPart2 = apartment.address2Split
                 googlePlaceID = apartment.googlePlaceID
             }
         }
         GoogleNetworkController.fetchPlaceDetails(placeID: googlePlaceID) { (photoReferences) in
             self.currentPhotoReferences = photoReferences
+            print("\(photoReferences.count) total images\n")
         }
         return true
     }
@@ -154,8 +158,8 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     @IBAction func callButtonTapped(_ sender: Any) {
         
         // Saves their current apartment.
-        if let name = currentName, let phone = currentPhone, let address = currentAddress {
-            SelectedApartmentController.shared.saveApartment(named: name, phone: phone, address: address, photoRef: self.imageRefHolder ?? "noApartmentImage")
+        if let name = currentName, let phone = currentPhone, let address = currentAddress, let part1 = addressPart1, let part2 = addressPart2 {
+            SelectedApartmentController.shared.saveApartment(named: name, phone: phone, address: address, addressPart1: part1, addressPart2: part2, photoRef: self.imageRefHolder ?? "noApartmentImage")
         }
         StepController.shared.steps[5].stepCompleted = true
         
@@ -190,8 +194,8 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
             return
         default: currentGalleryIndex += 1
         }
-        GoogleNetworkController.fetchPlaceImage(photoReference: refs[currentGalleryIndex - 1]) { (image) in
-            print(self.currentGalleryIndex - 1)
+        GoogleNetworkController.fetchPlaceImage(photoReference: refs[currentGalleryIndex]) { (image) in
+            print(self.currentGalleryIndex)
             DispatchQueue.main.async {
                 self.currentImage = image
             }

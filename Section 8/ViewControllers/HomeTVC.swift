@@ -15,6 +15,10 @@ class HomeTVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var homeImageView: UIImageView!
+    @IBOutlet weak var enButton: UIButton!
+    @IBOutlet weak var esButton: UIButton!
+    @IBOutlet weak var ptButton: UIButton!
+    var languageMenuVisible = false
     
     // MARK: - CONSTANTS
     
@@ -27,7 +31,10 @@ class HomeTVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        locationManger.delegate = self 
+//        locationManger.delegate = self
+        
+        // Set back button title for StepDetailTVC
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -81,5 +88,44 @@ class HomeTVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         } else if segue.identifier == "toMapDetail" {
             // Do nothing
         }
+    }
+    
+    // MARK: - Localization
+    
+    @IBAction func languageMenuButtonTapped(_ sender: Any) {
+        
+        if languageMenuVisible == false {
+        UIView.animate(withDuration: 0.2, delay: 0, options: [.curveLinear], animations: {
+            self.enButton.center = CGPoint(x: self.enButton.center.x - self.enButton.frame.width - 8, y: self.enButton.center.y)
+        }, completion: nil)
+        
+        UIView.animate(withDuration: 0.2, delay: 0.05, options: [.curveLinear], animations: {
+            self.esButton.center = CGPoint(x: self.esButton.center.x - self.esButton.frame.width - 8, y: self.esButton.center.y)
+        }, completion: nil)
+        
+        UIView.animate(withDuration: 0.2, delay: 0.1, options: [.curveLinear], animations: {
+            self.ptButton.center = CGPoint(x: self.ptButton.center.x - self.ptButton.frame.width - 8, y: self.ptButton.center.y)
+        }, completion: nil)
+            languageMenuVisible = true
+        } else {
+            resetLanguageMenu()
+        }
+    }
+    
+    @IBAction func languageSelectorButtonTapped(_ sender: UIButton) {
+        
+        switch sender.tag {
+        case 1: LocalizationController.shared.establecerEnEspañol()
+        case 2: LocalizationController.shared.definirParaOPortuguês()
+        default: LocalizationController.shared.setToEnglish()
+        }
+        resetLanguageMenu()
+    }
+    
+    func resetLanguageMenu() {
+        self.enButton.center.x += self.enButton.frame.width + 8
+        self.esButton.center.x += self.esButton.frame.width + 8
+        self.ptButton.center.x += self.ptButton.frame.width + 8
+        languageMenuVisible = false
     }
 }
