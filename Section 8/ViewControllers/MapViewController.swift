@@ -39,7 +39,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     // Observers on all of the following properties allow them to both be stored for later persistence, as well as update our outlets automatically.
     var markerViewIsVisible = false {
         didSet {
-            print("🤬\(self.markerViewIsVisible)")
+            print("MarkerView visible: 🤬\(self.markerViewIsVisible)")
         }
     }
     var currentPhone: String? {
@@ -118,6 +118,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         }
         GoogleNetworkController.fetchPlaceDetails(placeID: googlePlaceID) { (photoReferences) in
             self.currentPhotoReferences = photoReferences
+            print("\(photoReferences.count) total images\n")
         }
         return true
     }
@@ -190,8 +191,8 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
             return
         default: currentGalleryIndex += 1
         }
-        GoogleNetworkController.fetchPlaceImage(photoReference: refs[currentGalleryIndex - 1]) { (image) in
-            print(self.currentGalleryIndex - 1)
+        GoogleNetworkController.fetchPlaceImage(photoReference: refs[currentGalleryIndex]) { (image) in
+            print(self.currentGalleryIndex)
             DispatchQueue.main.async {
                 self.currentImage = image
             }
