@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launch - gradient green" translatesAutoresizingMaskIntoConstraints="NO" id="uun-fP-av2">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="-45" width="375" height="763"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JZv-WH-RkE">
                                 <rect key="frame" x="97" y="228.5" width="181.5" height="210"/>
@@ -63,11 +63,11 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="JZv-WH-RkE" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="EgR-1B-Cv2"/>
-                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="bottom" secondItem="uun-fP-av2" secondAttribute="bottom" id="G02-Z8-sAy"/>
+                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="bottom" secondItem="uun-fP-av2" secondAttribute="bottom" constant="-51" id="G02-Z8-sAy"/>
                             <constraint firstItem="Bcu-3y-fUS" firstAttribute="trailing" secondItem="uun-fP-av2" secondAttribute="trailing" id="hHE-SR-je2"/>
                             <constraint firstItem="JZv-WH-RkE" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="jLe-HF-gxV"/>
                             <constraint firstItem="uun-fP-av2" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" id="u1X-tN-0LA"/>
-                            <constraint firstItem="uun-fP-av2" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" constant="-20" id="zOU-cp-UWq"/>
+                            <constraint firstItem="uun-fP-av2" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" constant="-65" id="zOU-cp-UWq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
                     </view>
