@@ -32,11 +32,11 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V80-Vl-D1W" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="140.5" width="375" height="560.5"/>
+                                <rect key="frame" x="0.0" y="132.5" width="375" height="568.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e7d-c2-vBi" userLabel="Instructions">
-                                <rect key="frame" x="0.0" y="88.5" width="375" height="52"/>
+                                <rect key="frame" x="0.0" y="80.5" width="375" height="52"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="(text)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXB-iS-EZQ">
                                         <rect key="frame" x="20" y="16" width="335" height="20"/>
@@ -66,7 +66,7 @@
                             <constraint firstItem="Eaj-hI-X1B" firstAttribute="trailing" secondItem="BxU-9Q-kyR" secondAttribute="trailing" constant="20" id="BfF-Uo-3kn"/>
                             <constraint firstItem="V80-Vl-D1W" firstAttribute="leading" secondItem="Eaj-hI-X1B" secondAttribute="leading" id="Oll-aW-iBf"/>
                             <constraint firstItem="V80-Vl-D1W" firstAttribute="trailing" secondItem="Eaj-hI-X1B" secondAttribute="trailing" id="PnV-l0-vGK"/>
-                            <constraint firstItem="e7d-c2-vBi" firstAttribute="top" secondItem="rgJ-2N-gGA" secondAttribute="bottom" constant="8" id="QMg-QQ-zBy"/>
+                            <constraint firstItem="e7d-c2-vBi" firstAttribute="top" secondItem="rgJ-2N-gGA" secondAttribute="bottom" id="QMg-QQ-zBy"/>
                             <constraint firstItem="BxU-9Q-kyR" firstAttribute="leading" secondItem="d3a-D9-ErU" secondAttribute="trailing" constant="8" id="TKX-ve-ani"/>
                             <constraint firstItem="d3a-D9-ErU" firstAttribute="top" secondItem="Eaj-hI-X1B" secondAttribute="top" constant="16" id="TV8-cO-Vg0"/>
                             <constraint firstItem="V80-Vl-D1W" firstAttribute="bottom" secondItem="Eaj-hI-X1B" secondAttribute="bottom" constant="34" id="Umz-bX-qaO"/>
