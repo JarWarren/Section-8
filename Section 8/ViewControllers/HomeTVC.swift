@@ -89,30 +89,40 @@ class HomeTVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // MARK: - Localization
     
-    @IBAction func languageToggleButtonTapped(_ sender: Any) {
+    @IBAction func languageMenuButtonTapped(_ sender: Any) {
         
         if languageMenuVisible == false {
         UIView.animate(withDuration: 0.2, delay: 0, options: [.curveLinear], animations: {
-            self.enButton.center = CGPoint(x: self.enButton.center.x - 50, y: self.enButton.center.y)
+            self.enButton.center = CGPoint(x: self.enButton.center.x - self.enButton.frame.width - 8, y: self.enButton.center.y)
         }, completion: nil)
         
         UIView.animate(withDuration: 0.2, delay: 0.05, options: [.curveLinear], animations: {
-            self.esButton.center = CGPoint(x: self.esButton.center.x - 50, y: self.esButton.center.y)
+            self.esButton.center = CGPoint(x: self.esButton.center.x - self.esButton.frame.width - 8, y: self.esButton.center.y)
         }, completion: nil)
         
         UIView.animate(withDuration: 0.2, delay: 0.1, options: [.curveLinear], animations: {
-            self.ptButton.center = CGPoint(x: self.ptButton.center.x - 50, y: self.ptButton.center.y)
+            self.ptButton.center = CGPoint(x: self.ptButton.center.x - self.ptButton.frame.width - 8, y: self.ptButton.center.y)
         }, completion: nil)
             languageMenuVisible = true
         } else {
             resetLanguageMenu()
-            languageMenuVisible = false
         }
     }
     
+    @IBAction func languageSelectorButtonTapped(_ sender: UIButton) {
+        
+        switch sender.tag {
+        case 1: LocalizationController.shared.establecerEnEspañol()
+        case 2: LocalizationController.shared.definirParaOPortuguês()
+        default: LocalizationController.shared.setToEnglish()
+        }
+        resetLanguageMenu()
+    }
+    
     func resetLanguageMenu() {
-        self.enButton.center.x += 50
-        self.esButton.center.x += 50
-        self.ptButton.center.x += 50
+        self.enButton.center.x += self.enButton.frame.width + 8
+        self.esButton.center.x += self.esButton.frame.width + 8
+        self.ptButton.center.x += self.ptButton.frame.width + 8
+        languageMenuVisible = false
     }
 }

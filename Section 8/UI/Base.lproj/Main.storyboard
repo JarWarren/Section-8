@@ -146,8 +146,11 @@
                                         <real key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="languageSelectorButtonTapped:" destination="lUg-dc-wzV" eventType="touchUpInside" id="APE-BT-L6y"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w79-Wz-Q3r">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w79-Wz-Q3r">
                                 <rect key="frame" x="414" y="66" width="50" height="50"/>
                                 <color key="backgroundColor" name="highlightColor"/>
                                 <constraints>
@@ -161,8 +164,11 @@
                                         <real key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="languageSelectorButtonTapped:" destination="lUg-dc-wzV" eventType="touchUpInside" id="6qZ-HT-uJJ"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Aj-j2-IaF">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Aj-j2-IaF">
                                 <rect key="frame" x="414" y="124" width="50" height="50"/>
                                 <color key="backgroundColor" name="highlightColor"/>
                                 <constraints>
@@ -176,6 +182,9 @@
                                         <real key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="languageSelectorButtonTapped:" destination="lUg-dc-wzV" eventType="touchUpInside" id="zaV-xJ-fC8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.92944163079999997" green="0.97314912080000004" blue="0.93725079300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -207,7 +216,7 @@
                     <navigationItem key="navigationItem" title="Section8" id="9gf-XF-Ur2">
                         <barButtonItem key="rightBarButtonItem" title="🌎" id="YYI-wt-9bz">
                             <connections>
-                                <action selector="languageToggleButtonTapped:" destination="lUg-dc-wzV" id="ybZ-6O-xtJ"/>
+                                <action selector="languageMenuButtonTapped:" destination="lUg-dc-wzV" id="4hK-n4-pDx"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

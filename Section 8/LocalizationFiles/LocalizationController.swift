@@ -8,19 +8,30 @@
 
 import Foundation
 
-class LocalizationHelper {
+class LocalizationController {
     
-    static let shared = LocalizationHelper()
+    static let shared = LocalizationController()
     private init() {}
     
     var activeLanguage: String = {
         if let preferred = NSLocale.preferredLanguages.first {
-            print(preferred)
             return preferred
         } else {
             return "en"
         }
     }()
+    
+    func setToEnglish() {
+        print("🇺🇸")
+    }
+    
+    func establecerEnEspañol() {
+        print("🇲🇽")
+    }
+    
+    func definirParaOPortuguês() {
+        print("🇧🇷")
+    }
 }
 
 /*
