@@ -30,12 +30,13 @@ class Item: Codable {
 // MARK: - FORMAT TYPE
 
 enum ItemFormat: String, Codable {
+    case apartmentPhoto = "apartmentPhoto"
     case clickLink = "clickLink"
     case dataDisplay = "datadisplay"
     case dataInput = "dataInput"
     case datePicker = "datePicker"
     case paragraph = "paragraph"
     case photo = "photo"
-    case apartmentPhoto = "apartmentPhoto"
     case tip = "tip"
+    case title = "title"
 }

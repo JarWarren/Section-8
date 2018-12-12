@@ -194,26 +194,28 @@
 
 // MARK: - STEP 5 ITEMS
 
-    // Item 5a - Intro
-    "5aText" = "The Housing Authority will only let you rent an apartment within a certain price range. To calculate what you can afford to pay, you will need to provide a couple pieces of information:";
+    // Item 5a - Photo
 
-    // Item 5b - Income/voucher inputs
-    "5bTitle" = "OVERALL HOUSEHOLD INCOME";
-    "5bText" = "In the first box below, include all income from everyone in the household. You can include: wages, salaries, unemployment benefits, child support, Social Security payments, interest and royalties, and financial assistance.";
-    "5bUrl" = "HAUC VOUCHER AMOUNT";
-    "5bGraphicName" = "In the second box, enter the amount that you qualify for from the Housing Authority voucher you received at your briefing.";
-    "5bButtonText" = "TAP TO SUBMIT AMOUNTS";
+    // Item 5b - Intro
+    "5bText" = "The Housing Authority will only let you rent an apartment within a certain price range. To calculate what you can afford to pay, you will need to provide a couple pieces of information:";
 
-    // Item 5c - Max rent amount
-    "5cTitle" = "YOUR MAXIMUM RENT AMOUNT";
-    "5cText" = "Based on your household income, your voucher amount, and utility allowance, you should NOT look at apartments with rent higher than this amount:";
+    // Item 5c - Income/voucher inputs
+    "5cTitle" = "OVERALL HOUSEHOLD INCOME";
+    "5cText" = "In the first box below, include all income from everyone in the household. You can include: wages, salaries, unemployment benefits, child support, Social Security payments, interest and royalties, and financial assistance.";
+    "5cUrl" = "HAUC VOUCHER AMOUNT";
+    "5cGraphicName" = "In the second box, enter the amount that you qualify for from the Housing Authority voucher you received at your briefing.";
+    "5cButtonText" = "TAP TO SUBMIT AMOUNTS";
 
-    // Item 5d - How is this calculated
-    "5dTitle" = "HOW IS THIS CALCULATED?";
-    "5dText" = "In addition to the voucher amount you qualify for, you are only allowed to pay up to 40% of your household income for rent, and that includes utilities. The number above has subtracted an average cost of utilities from your total, because you will pay those in addition to your monthly rent payment.";
+    // Item 5d - Max rent amount
+    "5dTitle" = "YOUR MAXIMUM RENT AMOUNT";
+    "5dText" = "Based on your household income, your voucher amount, and utility allowance, you should NOT look at apartments with rent higher than this amount:";
 
-    // Item 5e - Tap to complete
-    "5eText" = "After calculating your maximum rent, click the “Complete” button below to move on to the next step!";
+    // Item 5e - How is this calculated
+    "5eTitle" = "HOW IS THIS CALCULATED?";
+    "5eText" = "In addition to the voucher amount you qualify for, you are only allowed to pay up to 40% of your household income for rent, and that includes utilities. The number above has subtracted an average cost of utilities from your total, because you will pay those in addition to your monthly rent payment.";
+
+    // Item 5f - Tap to complete
+    "5fText" = "After calculating your maximum rent, click the “Complete” button below to move on to the next step!";
 
 
 // MARK: - STEP 6 ITEMS
@@ -225,10 +227,11 @@
 // MARK: - STEP 7 ITEMS
 
     // Item 7a - Intro
-    "7aText" = "Now that you have selected a possible apartment complex, it’s time to give them a call to find out more.";
+    "7aText" = "Now that you have selected a possible apartment complex, it’s time to give them a call to make sure that they do accept Section 8 applicants.";
 
-    // Item 7b - Chosen apartment
+    // Item 7b - Chosen apartment (IF ITEM KEY IS CHANGED, UPDATE CODE IN SELECTED APARTMENT CONTROLLER, INCLUDING INDEX)
     "7bTitle" = "THE APARTMENT YOU CHOSE:";
+    "7bText" = "You have not selected an apartment yet. Return to Step 6, and select an apartment before completing this step.";
 
     // Item 7c - Photo
 

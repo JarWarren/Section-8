@@ -31,7 +31,10 @@ class HomeTVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        locationManger.delegate = self 
+//        locationManger.delegate = self
+        
+        // Set back button title for StepDetailTVC
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
