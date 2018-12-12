@@ -14,6 +14,7 @@
 		474C289621BB81A900874B78 /* datePickerBannerEN.png in Resources */ = {isa = PBXBuildFile; fileRef = 474C289521BB81A900874B78 /* datePickerBannerEN.png */; };
 		476654B121B2F32E00FC3663 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476654B021B2F32E00FC3663 /* AlertController.swift */; };
 		476654B321B2F38800FC3663 /* TimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476654B221B2F38800FC3663 /* TimerController.swift */; };
+		478F60E121C0C5B50066900E /* LocationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478F60E021C0C5B50066900E /* LocationConstants.swift */; };
 		47BD249321B7206700CC6192 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BD249221B7206700CC6192 /* Alarm.swift */; };
 		47BD249521B742CC00CC6192 /* AlarmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BD249421B742CC00CC6192 /* AlarmController.swift */; };
 		47DF81F921B97E8000C0F0FE /* stepDetailExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DF81F821B97E8000C0F0FE /* stepDetailExtension.swift */; };
@@ -64,6 +65,7 @@
 		474C289521BB81A900874B78 /* datePickerBannerEN.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = datePickerBannerEN.png; sourceTree = "<group>"; };
 		476654B021B2F32E00FC3663 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		476654B221B2F38800FC3663 /* TimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerController.swift; sourceTree = "<group>"; };
+		478F60E021C0C5B50066900E /* LocationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationConstants.swift; sourceTree = "<group>"; };
 		47BD249221B7206700CC6192 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		47BD249421B742CC00CC6192 /* AlarmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmController.swift; sourceTree = "<group>"; };
 		47DF81F821B97E8000C0F0FE /* stepDetailExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stepDetailExtension.swift; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 				47F09D2E21B9BAE200542722 /* AlarmName.swift */,
 				4716664721BEDBD90036ECB7 /* Constants.swift */,
 				4716664921BF11110036ECB7 /* LocationController.swift */,
+				478F60E021C0C5B50066900E /* LocationConstants.swift */,
 			);
 			path = HelperFiles;
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 				81212AEF21B5CCF90082C88B /* DataDisplayTVCell.swift in Sources */,
 				818FC57C21B84A6C0084323E /* Rent.swift in Sources */,
 				81DD083521AF1E880037F3AA /* StepController.swift in Sources */,
+				478F60E121C0C5B50066900E /* LocationConstants.swift in Sources */,
 				7E1DF3F421B19FE70012BFEE /* JSONDecodingHelper.swift in Sources */,
 				4716664821BEDBD90036ECB7 /* Constants.swift in Sources */,
 			);
@@ -627,7 +631,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L7AYJDAX2C;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Section 8/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -646,7 +650,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L7AYJDAX2C;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Section 8/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
