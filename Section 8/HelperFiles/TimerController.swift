@@ -216,7 +216,7 @@ func scheduleLocalNotificationOnTimer(identifier: String, actionTitle: String, c
     }
     
     // MARK: - as of Dec 7th this is the func we're using to call the Seven Day Interval Notification
-    func scheduleLocalNotifInterval(dismissActionID: String, actionTitle: String, categoryID: String, contentTitle: String, contentSubtitle: String, contentBody: String, contentBadge: NSNumber, contentSound: UNNotificationSound, contentLaunchImage: String, desiredTimeInterval: Int, resourceName: String, extenstionType: String, resourceID: String, requestID: String) {
+    func scheduleLocalNotifInterval(dismissActionID: String, actionTitle: String, categoryID: String, contentTitle: String, contentSubtitle: String, contentBody: String, contentBadge: NSNumber, contentSound: UNNotificationSound, contentLaunchImage: String, desiredTimeInterval: Int, resourceName: String, extenstionType: String, resourceID: String, requestID: String, doesItRepeat: Bool) {
         
         // The Alert Button options
         let dismissAction = UNNotificationAction(identifier: dismissActionID, title: actionTitle, options: [])
@@ -244,7 +244,7 @@ func scheduleLocalNotificationOnTimer(identifier: String, actionTitle: String, c
             print("\n\nThere was an error with the attachment in: \(#file) \n\n \(#function); \n\n\(error); \n\n\(error.localizedDescription)\n\n")
         }
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(desiredTimeInterval), repeats: true)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(desiredTimeInterval), repeats: doesItRepeat)
         
         let request = UNNotificationRequest(identifier: requestID, content: content, trigger: trigger)
         UNUserNotificationCenter.current().add(request) { (error) in

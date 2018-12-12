@@ -14,7 +14,9 @@ import UserNotifications
 //homeTVC
 class OnboardingScreenVC: UIViewController, CLLocationManagerDelegate, UNUserNotificationCenterDelegate {
     
-    var locationController: LocationController?
+    // If true location notification worked, perhaps this line of code should be here
+//    var locationController: LocationController?
+    
     
     private let locationManger = CLLocationManager()
     private let center = UNUserNotificationCenter.current()
@@ -22,11 +24,13 @@ class OnboardingScreenVC: UIViewController, CLLocationManagerDelegate, UNUserNot
     private let restrictedBoolKey = "disabledRestrictedAlertBool"
     private var disableDeniedAlertBool = false
     private var disableRestrictedAlertBool = false
-    private let utahCountyHousingLatitude = 51.50998
-    private let utahCountyHousingLongitude = -0.1337
+    private let utahCountyHousingLatitude = 40.233250
+    private let utahCountyHousingLongitude = -111.654472
     private let desiredRadius = 60.96
     private let utahCountyHousingID = "uCountyHousinginProvo"
     private let utahCountyHousingRequestID = "uCountyHousinginProvoRequestID"
+   
+    
     // MARK: - Life cyles
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,11 +46,12 @@ class OnboardingScreenVC: UIViewController, CLLocationManagerDelegate, UNUserNot
         locationManger.startMonitoring(for: utahHousingActualregion)
      
                 locationManger.desiredAccuracy = kCLLocationAccuracyBest
+        
                 locationManger.distanceFilter = 10
         
         // local notification
         // NOTE: - this needs to be called somehow, perhaps in a button 
-         locationController?.utahCountyLocationNotification()
+//         locationController?.utahCountyLocationNotification()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -70,6 +75,7 @@ class OnboardingScreenVC: UIViewController, CLLocationManagerDelegate, UNUserNot
             if !granted {
                 print("Notification Access Denied")
             }
+            
             switch CLLocationManager.authorizationStatus() {
                 
             case .notDetermined:
@@ -144,7 +150,8 @@ class OnboardingScreenVC: UIViewController, CLLocationManagerDelegate, UNUserNot
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(true)
-        print("\n🚨\(locationManger.monitoredRegions)")
+        
+        print("\n📍viewDidDisappear: \(locationManger.monitoredRegions)🥶")
     }
     
     func loadUserDefaults() {
@@ -164,33 +171,19 @@ extension OnboardingScreenVC {
     // MARK: - Location Delegate Functions
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
         
-        print("🚨🌎User Entered location")
-        
-       
-        
-        let content = UNMutableNotificationContent()
-        content.title = "You Got This"
-        content.body = "Dont Froget to ask questions at today's visit"
-        content.sound = UNNotificationSound.default
+        print("🚀🚀🌎 didEnterRegion: User Entered location🌎🚀🚀")
+        scheduleLocationNotification() 
 
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2, repeats: false)
-
-        let request = UNNotificationRequest(identifier: "Hey", content: content, trigger: trigger)
-
-        UNUserNotificationCenter.current().add(request) { (error) in
-            if let error = error {
-                print("There was an error in \(#function) ; (error) ; \(error.localizedDescription)")
-            }
-        }
     }
     
     func locationManager(_ manager: CLLocationManager, didStartMonitoringFor region: CLRegion) {
-        print("🌎The monitored regions are: \(manager.monitoredRegions)")
+        print("🌎 didStartMonitoringFor: The monitored regions are: \(manager.monitoredRegions)")
+        
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let locValue:CLLocationCoordinate2D = manager.location!.coordinate
-        print("🌎locations = \(locValue.latitude) \(locValue.longitude)")
+        print("🌎 didUpdateLocations: locations = \(locValue.latitude) \(locValue.longitude)")
     }
 }
 
@@ -215,6 +208,47 @@ extension OnboardingScreenVC {
             print("user segued into the app")
         default:
             break
+        }
+    }
+}
+
+extension OnboardingScreenVC {
+    
+    // MARK: - Location Notification function that gets called when the user enteres the target region
+    
+    func scheduleLocationNotification() {
+        
+        let dismissAction = UNNotificationAction(identifier: LocationConstants.dissmissActionKey, title: LocationConstants.locationDismissButtonTitle, options: [])
+        
+        let category = UNNotificationCategory(identifier: LocationConstants.categoryKey, actions: [dismissAction], intentIdentifiers: [], options: [])
+        UNUserNotificationCenter.current().setNotificationCategories([category])
+        
+        let content = UNMutableNotificationContent()
+        content.title = LocationConstants.locationContentTitle
+        content.body = LocationConstants.locationConentBody
+        content.sound = UNNotificationSound.default
+        content.categoryIdentifier = LocationConstants.categoryKey
+        
+        guard let url = Bundle.main.url(forResource: LocationConstants.locationResourceName, withExtension: LocationConstants.pngType) else {return}
+        
+        do {
+            let attachments =  try UNNotificationAttachment(identifier: LocationConstants.resourceKey, url: url, options: [:])
+            
+            content.attachments = [attachments]
+            
+        } catch {
+            print("\n\nThere was an error with the attachment in: \(#file) \n\n \(#function); \n\n\(error); \n\n\(error.localizedDescription)\n\n")
+        }
+        
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: LocationConstants.requestKey, content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request) { (error) in
+            if let error = error {
+                print("There was an error in \(#function) ; (error) ; \(error.localizedDescription)")
+            }
         }
     }
 }
