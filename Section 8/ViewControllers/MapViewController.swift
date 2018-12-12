@@ -20,7 +20,6 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
-    
     @IBOutlet weak var callButton: UIButton!
     @IBOutlet weak var rightButton: UIButton!
     @IBOutlet weak var leftButton: UIButton!
@@ -33,6 +32,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     var userDidComeFromStep7 = false // Determines whether to segue to Step 7, or to pop the current view and display Step 7 underneath.
     var locations: [GMSMarker]? // Array of all currently displayed markers.
     var currentPhotoReferences: [String]? // Holds photo references for all photos on currently displayed marker.
+    var addressPart1: String?; var addressPart2: String? // Holds split addresses for later display.
     var imageHolder: UIImage? // The image we display as default. (does not require a fetch)
     var imageRefHolder: String? // Name of the asset to be displayed throughout the rest of the app.
     var currentGalleryIndex = 0 // Keeps track of where we are in the image gallery when moving back and forth.
@@ -114,6 +114,8 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
                 self.currentPhone = apartment.phone
                 self.currentAddress = apartment.address
                 self.imageRefHolder = apartment.apartmentPhoto
+                self.addressPart1 = apartment.address1Split
+                self.addressPart2 = apartment.address2Split
                 googlePlaceID = apartment.googlePlaceID
             }
         }
@@ -156,8 +158,8 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     @IBAction func callButtonTapped(_ sender: Any) {
         
         // Saves their current apartment.
-        if let name = currentName, let phone = currentPhone, let address = currentAddress {
-            SelectedApartmentController.shared.saveApartment(named: name, phone: phone, address: address, photoRef: self.imageRefHolder ?? "noApartmentImage")
+        if let name = currentName, let phone = currentPhone, let address = currentAddress, let part1 = addressPart1, let part2 = addressPart2 {
+            SelectedApartmentController.shared.saveApartment(named: name, phone: phone, address: address, addressPart1: part1, addressPart2: part2, photoRef: self.imageRefHolder ?? "noApartmentImage")
         }
         StepController.shared.steps[5].stepCompleted = true
         
