@@ -249,7 +249,7 @@
     // Item 7c - Photo
 
     // Item 7d - Important reminder
-    "7dTitle" = "RECORDATORIO IMPORTANTE"
+"7dTitle" = "RECORDATORIO IMPORTANTE";
 
 "7dText" = "Verifique para asegurarse de que el costo no sean más altas que el monto máximo de su alquiler, que se detalla a continuación:";
 

@@ -13,7 +13,7 @@
 // MARK: - UI COMPONENTS
 
     // Home introduction text
-    "homeIntroText" = "Este aplicativo simplifica o processo de encontrar Section 8 housing no Utah County. Toque em cada passo para ver o que fazer a seguir. Quando você terminar, uma marca de verificação verde aparecerá. Então vá para o próximo passo!";
+    "homeIntroText" = "Este aplicativo simplifica o processo de encontrar Section 8 housing no Utah County. Toque em cada etapa para ver o que fazer a seguir. Quando você terminar, uma marca de verificação verde aparecerá. Então vá para a próxima etapa!";
 
     // Complete button
     "completeButtonTextTapToMarkCompleteA" = "MARCAR O";
@@ -76,7 +76,7 @@
 
 // MARK: - STEPS
 
-    "STEP" = "PASSO";
+    "STEP" = "ETAPA";
 
     "step1" = "Formulário preliminares";
     "step2" = "Apresentar identificação";
@@ -106,14 +106,14 @@
 
     // Item 1d - Finished button
     "1dTitle" = "AO TERMINAR";
-    "1dText" = "Quando terminar, você verá uma tela \"Application Receipt\". Toque no botão \"Finished\" na parte inferior da tela e retorne a esta página tocando no link da Section8 no canto superior esquerdo da tela.";
+    "1dText" = "Quando terminar, você verá uma tela \"Application Receipt\". Toque no botão \"Finished\" na parte inferior da tela e retorne a esta página tocando no link do Section8 no canto superior esquerdo da tela.";
 
     // Item 1e - Online application
     "1eText" = "Toque aqui para iniciar o aplicativo on-line no site da Housing Authority of Utah County (HAUC):";
     "1eButtonText" = "FORMULÁRIO PRELIMINAR";
 
     // Item 1f - Tap complete
-    "1fText" = "Depois de ter concluído o pedido on-line, toque no botão abaixo para passar para o próximo passo!";
+    "1fText" = "Depois de ter concluído o pedido on-line, toque no botão abaixo para passar para a próxima etapa!";
 
 // MARK: - STEP 2 ITEMS
 
@@ -134,7 +134,7 @@
     "2eText" = "O tempo de espera é de dois meses até mais de um ano. Certifique-se de atualizar o seu número de telefone e endereço de correspondência com a Housing Authority, se alguma coisa mudar!";
 
     // Item 2f - Tap complete
-    "2fText" = "Uma vez que o chefe da família entregar estas duas formas de identificação ao Housing Authority, este passo está completo! Toque no botão abaixo para passar para o próximo passo.";
+    "2fText" = "Uma vez que o chefe da família entregar estas duas formas de identificação ao Housing Authority, esta etapa está completo! Toque no botão abaixo para passar para a próxima etapa.";
 
 // MARK: - STEP 3 ITEMS
 
@@ -163,7 +163,7 @@
     // Item 3g - Photo
 
     // Item 3h - Tap complete
-    "3hText" = "Vários dias após o seu compromisso, você será notificado pela Housing Authority, e um Uma reunião será configurada para você.\n\nDepois de ter concluído o seu compromisso de candidatura na oficina da Housing Authority, toque no botão \n\"Concluir\n\" abaixo para passar para o próximo passo!";
+    "3hText" = "Vários dias após o seu compromisso, você será notificado pela Housing Authority, e um Uma reunião será configurada para você.\n\nDepois de ter concluído o seu compromisso de candidatura na oficina da Housing Authority, toque no botão \n\"Concluir\n\" abaixo para passar para a próxima etapa!";
 
 // MARK: - STEP 4 ITEMS
 
@@ -187,10 +187,10 @@
 
     // Item 4f - Important reminder
     "4fTitle" = "LEMBRETE IMPORTANTE";
-    "4fText" = "Depois de participar da reunião, você tem apenas 60 dias para encontrar um lugar para morar e concluir os passos restantes.";
+    "4fText" = "Depois de participar da reunião, você tem apenas 60 dias para encontrar um lugar para morar e concluir as etapas restantes.";
 
     // Item 4g - Tap to complete
-    "4gText" = "Depois de participar da reunião, toque no botão abaixo para passar para o próximo passo!";
+    "4gText" = "Depois de participar da reunião, toque no botão abaixo para passar para a próxima etapa!";
 
 // MARK: - STEP 5 ITEMS
 
@@ -215,12 +215,12 @@
 "5eText" = "Além do valor do vale que você qualifica, você só tem permissão para pagar até 40% da sua renda familiar para aluguel. Além disso, um custo médio de serviços públicos foi subtraído do total porque você pagará aqueles além do seu pagamento de aluguel mensal.";
 
     // Item 5f - Tap to complete
-    "5fText" = "Depois de calcular seu aluguel máximo, clique no botão abaixo para passar para o próximo passo!";
+    "5fText" = "Depois de calcular seu aluguel máximo, clique no botão abaixo para passar para a próxima etapa!";
 
 // MARK: - STEP 6 ITEMS
 
     // Item 6a - Map instructions
-    "6aText" = "Hora de escolher um apartamento! Toque num marcador para detalhes do apartamento. Escolha um e toque no botão verde para passar para o próximo passo.";
+    "6aText" = "Hora de escolher um apartamento! Toque num marcador para detalhes do apartamento. Escolha um e toque no botão verde para passar para a próxima etapa.";
 
 // MARK: - STEP 7 ITEMS
 
@@ -229,7 +229,7 @@
 
     // Item 7b - Chosen apartment (IF ITEM KEY IS CHANGED, UPDATE CODE IN SELECTED APARTMENT CONTROLLER, INCLUDING INDEX)
     "7bTitle" = "O APARTAMENTO QUE VOCÊ ESCOLHEU:";
-    "7bText" = "Você ainda não selecionou um apartamento. Volte ao Passo 6 e selecione um apartamento antes de completar este passo.";
+    "7bText" = "Você ainda não selecionou um apartamento. Volte à Etapa 6 e selecione um apartamento antes de completar esta etapa.";
 
     // Item 7c - Photo
 
@@ -255,7 +255,7 @@
     "7hButtonText" = "TOQUE PARA RETORNAR AO MAPA";
 
     // Item 7i - Tap to complete
-    "7iText" = "Depois de ter encontrado um apartamento certo para você, toque no botão abaixo para passar para o próximo passo!";
+    "7iText" = "Depois de ter encontrado um apartamento certo para você, toque no botão abaixo para passar para a próxima etapa!";
 
 // MARK: - STEP 8 ITEMS
 
@@ -263,81 +263,81 @@
     "8aText" = "Depois de encontrar um apartamento que você acha que vai funcionar, e os chamar para descobrir \n(1) se eles aceitam os solicitantes da Seção 8 \n(2) e que eles estão em sua faixa de preço,\né hora de visitá-los:";
 
     // Item 8b - Selected apartment
-    "8bTitle" = "ADDRESS OF THE APARTMENT YOU CHOSE";
-    "8bText" = "You have not selected an apartment yet. Return to Step 6, and select an apartment before completing this step.";
+    "8bTitle" = "ENDEREÇO DO APARTAMENTO QUE VOCÊ ESCOLHEU";
+    "8bText" = "Você ainda não selecionou um apartamento. Volte à Etapa 6 e selecione um apartamento antes de completar esta etapa.";
 
     // Item 8c - Photo
 
     // Item 8d - List of four docs
-    "8dText" = "You will need them to complete four forms: \n\n– Tenancy Approval form \n– Copy of proposed lease \n– W-9 form \n– Cover letter \n\nIn the packet you received at your briefing, you should have a copy of each of these forms. \n\nThe apartment complex might be able to fill everything out while you wait, or they may tell you to come back on another day.";
+    "8dText" = "Você precisará deles para preencher quatro formulários: \n\n– Aprovação de tenancia (Tenancy Approval) \n– Cópia do contrato proposto \ n– Formulário W-9 \ n– Carta de apresentação (Cover Letter) \n \nNo pacote que você recebeu na sua reunião, você terá uma cópia de cada um desses formulários. \n \nO complexo de apartamentos pode ser capaz de preencher tudo enquanto você espera, ou eles podem dizer-lhe para voltar em outro dia.";
 
     // Item 8e - Helpful hint
-    "8eTitle" = "HELPFUL HINT";
-    "8eText" = "If you need to send a copy of these forms to the apartment complex, tap on the links below, and share the forms by email address or mobile number. Then return to this page by tapping on the Section 8 link at the top-left of your browser screen.";
+"8eTitle" = "DICA";
+    "8eText" = "Se você precisar enviar uma cópia desses formulários para o complexo de apartamentos, toque nos links abaixo e compartilhe os formulários por endereço de e-mail ou número de celular. Em seguida, retorne a esta página tocando no link do Section8 no canto superior esquerdo da tela do seu navegador.";
 
     // Item 8f - Tenancy approval
-    "8fTitle" = "TENANCY APPROVAL FORM";
-    "8fText" = "Make sure the form is filled out completely, and SIGNED:";
-    "8fButtonText" = "LINK TO TENANCY APPROVAL FORM";
+    "8fTitle" = "FORMULÁRUIO APROVAÇÃO DE TENANCIA";
+    "8fText" = "Certifique-se de que o formulário esteja preenchido completamente e ASSINADO:";
+    "8fButtonText" = "FORMULÁRIO DE APROVAÇÃO";
 
     // Item 8g - W-9
-    "8gTitle" = "W-9 FORM";
-    "8gText" = "Make sure the form is filled out completely, and SIGNED:";
-    "8gButtonText" = "LINK TO W-9 FORM";
+    "8gTitle" = "FORMULÁRIO W-9";
+    "8gText" = "Certifique-se de que o formulário esteja preenchido completamente e ASSINADO:";
+    "8gButtonText" = "FORMULÁRIO W-9";
 
     // Item 8h - Cover letter
-    "8hTitle" = "COVER LETTER FORM";
-    "8hText" = "Make sure the form is filled out completely, and SIGNED:";
-    "8hButtonText" = "LINK TO COVER LETTER FORM";
+    "8hTitle" = "CARTA DE APRESENTAÇÃO";
+    "8hText" = "Certifique-se de que o formulário esteja preenchido completamente e ASSINADO:";
+    "8hButtonText" = "CARTA DE APRESENTAÇÃO";
 
     // Item 8i - Copy of proposed lease
-    "8iTitle" = "COPY OF PROPOSED LEASE";
-    "8iText" = "Make sure the following is written somewhere on the lease: “The HUD Tenancy Addendum is hereby made a part of this lease.";
+    "8iTitle" = "CÓPIA DO CONTRATO PROPOSTO";
+    "8iText" = "Certifique-se de que o seguinte está escrito em Inglês em algum lugar no contrato: \“The HUD Tenancy Addendum is hereby made a part of this lease.\"";
 
     // Item 8j - Important reminder
-    "8jTitle" = "IMPORTANT REMINDER";
-    "8jText" = "Make sure you get ALL FOUR of these documents, or you won’t be able to complete the next step.";
+    "8jTitle" = "LEMBRETE IMPORTANTE";
+    "8jText" = "Certifique-se de obter TODOS OS QUATRO desses documentos, ou você não poderá continuar na próxima etapa.";
 
     // Item 8k - Top to complete
-    "8kText" = "Once you have the documents, tap on the “Complete” button below to move on to the next step!";
+    "8kText" = "Depois de ter os documentos, toque no botão abaixo para passar para a próxima etapa!";
 
 // MARK: - STEP 9 ITEMS
 
     // Item 9a - Intro
-    "9aText" = "Now that you have the four required documents from Step 8, you need to take them to the Housing Authority office:";
+    "9aText" = "Agora que você tem os quatro documentos necessários da Etapa 8, você precisa levá-los ao escritório da Housing Authority:";
 
     // Item 9b - Housing Authority office info
-    "9bTitle" = "HOUSING AUTHORITY INFORMATION";
-    "9bText" = "240 E Center St, Provo, UT 84606 \nMonday–Thursday, 7:30am–5:30pm \nPhone: 801-373-8333";
+    "9bTitle" = "INFORMAÇÕES DE CONTATO DA HOUSING AUTHORITY";
+    "9bText" = "240 E Center St, Provo, UT 84606 \nSegunda–Quinta, 7:30am–5:30pm \nTelefone: 801-373-8333";
 
     // Item 9c - Photo
 
     // Item 9d - After you deliver docs
-    "9dText" = "After you deliver these documents, the Housing Authority will process the paperwork, and then they will contact you.";
+    "9dText" = "Depois de entregar esses documentos, a Housing Authority processará a documentação e, em seguida, eles entrarão em contato com você.";
 
     // Item 9e - Important reminder
-    "9eTitle" = "IMPORTANT REMINDER";
-    "9eText" = "The Housing Authority will use the phone number and address you provided on your application to contact you, so when you deliver the documents, check with them to make sure your phone number and address are correct.";
+    "9eTitle" = "LEMBRETE IMPORTANTE";
+    "9eText" = "A Housing Authority usará o número de telefone e o endereço que você forneceu em seu aplicativo para contatá-lo, portanto, ao entregar os documentos, verifique com eles se o número de telefone e o endereço estão corretos.";
 
     // Item 9f - Tap to complete
-    "9fText" = "Once you deliver the documents to the Housing Authority, tap on the “Complete” button below to move on to the next step!";
+    "9fText" = "Depois de entregar os documentos à Housing Authority, toque no botão abaixo para passar para a próxima etapa!";
 
 // MARK: - STEP 10 ITEMS
 
     // Item 10a - Intro
-    "10aText" = "Several days after you have submitted the required forms, you will either get a phone call, or receive a letter in the mail from the Housing Authority to set up an appointment to do a apartment inspection.";
+    "10aText" = "Vários dias depois de ter enviado os formulários necessários, você receberá um telefonema ou receberá uma carta no correio da Housing Authority para marcar uma consulta para fazer uma inspeção do apartamento.";
 
     // Item 10b - Important reminder
-    "10bTitle" = "IMPORTANT REQUIREMENT";
-    "10bText" = "The apartment to be inspected must either be vacant, or it must be your current apartment. If it is your current apartment, all the utilities MUST be turned on.";
+    "10bTitle" = "LEMBRETE IMPORTANTE";
+    "10bText" = "O apartamento a ser inspecionado deve estar desocupado ou deve ser o seu apartamento atual. Se for o seu apartamento atual, todos os utilitários precisam ser LIGADOS.";
 
     // Item 10c - Talk to landlord and housing authority
-    "10cText" = "You will need to talk to the Housing Authority, as well as the apartment complex, to find a time that works for both. You will also need to make sure that an adult is at the until when the inspector arrives.";
+    "10cText" = "Você precisará falar com a Housing Authority, bem como com o complexo de apartamentos, para encontrar um horário que funcione para ambos. Você também precisa ter certeza de que um adulto está no até quando o inspetor chegar.";
 
     // Item 10d - Inspection date picker
-    "10dTitle" = "INSPECTION DATE";
-    "10dText" = "Please enter your inspection date here, so we can send you a reminder notification:";
-    "10dButtonText" = "TAP TO SAVE DATE";
+    "10dTitle" = "DATA DA INSPECÇÃO;
+    "10dText" = "Insira sua data de inspeção aqui para que possamos enviar uma notificação de lembrete:";
+    "10dButtonText" = "TOQUE PARA SALVAR DATA";
 
     // Item 10e - Tap to complete
     "10eText" = "Once the inspection has been scheduled with the apartment complex AND the Housing Authority, tap on the “Complete” button below to move on to the next step!";
