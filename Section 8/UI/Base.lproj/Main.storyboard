@@ -776,6 +776,7 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kgi-wo-aGq">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="240"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="width" secondItem="kgi-wo-aGq" secondAttribute="height" multiplier="69:40" id="330-sT-Lpj"/>
                                                         <constraint firstAttribute="height" constant="240" id="Spa-bx-023"/>
                                                     </constraints>
                                                 </imageView>
@@ -4630,6 +4631,6 @@ AAAAA12iA
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="h8P-UY-m9h"/>
+        <segue reference="vc9-0t-CZl"/>
     </inferredMetricsTieBreakers>
 </document>
