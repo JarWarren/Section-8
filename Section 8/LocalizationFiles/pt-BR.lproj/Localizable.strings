@@ -18,7 +18,7 @@
     // Complete button
     "completeButtonTextTapToMarkCompleteA" = "MARCAR O";
     "completeButtonTextTapToMarkCompleteB" = "COMPLETO";
-    "completeButtonTextTapToMarkIncompleteA" = "TOQUE PARA MARCAR O";
+    "completeButtonTextTapToMarkIncompleteA" = "MARCAR O";
     "completeButtonTextTapToMarkIncompleteB" = "INCOMPLETO";
 
     // No apartment image
@@ -80,9 +80,9 @@
 
     "step1" = "Formulário preliminares";
     "step2" = "Apresentar identificação";
-    "step3" = "Completar e enviar aplicação física";
-    "step4" = "Participar da reunião informativa";
-    "step5" = "Calcular o pagamento do aluguel";
+    "step3" = "Completar aplicação física";
+    "step4" = "Reunião informativa";
+    "step5" = "Pagamento do aluguel";
     "step6" = "Escolher apartamento";
     "step7" = "Ligar para o complexo";
     "step8" = "Formulários do proprietário";
@@ -121,7 +121,7 @@
     "2aText" = "Depois de enviar seu formulário preliminar on-line, o chefe da família deve levar um documento de identidade com foto e um cartão de segurança social ao escritório principal da Housing Authority.";
 
     // Item 2b - Housing office info
-    "2bTitle" = "INFORMAÇÕES DE CONTATO DA HOUSING AUTHORITY";
+    "2bTitle" = "ESCRITÓRIO DA HOUSING AUTHORITY";
     "2bText" = "240 E Center St, Provo, UT 84606 \nSegunda–Quinta, 7:30am–5:30pm \nTelefone: 801-373-8333";
 
     // Item 2c - Photo
@@ -157,13 +157,13 @@
     "3eText" = "Aqui está o endereço para o local do seu compromisso:";
 
     // Item 3f - Housing office info
-    "3fTitle" = "INFORMAÇÕES DE CONTATO DA HOUSING AUTHORITY";
+    "3fTitle" = "ESCRITÓRIO DA HOUSING AUTHORITY";
     "3fText" = "240 E Center St, Provo, UT 84606 \nSegunda–Quinta, 7:30am–5:30pm \nTelefone: 801-373-8333";
 
     // Item 3g - Photo
 
     // Item 3h - Tap complete
-    "3hText" = "Vários dias após o seu compromisso, você será notificado pela Housing Authority, e um Uma reunião será configurada para você.\n\nDepois de ter concluído o seu compromisso de candidatura na oficina da Housing Authority, toque no botão \n\"Concluir\n\" abaixo para passar para a próxima etapa!";
+    "3hText" = "Vários dias após o seu compromisso, você será notificado pela Housing Authority, e um Uma reunião será configurada para você.\n\nDepois de ter concluído o seu compromisso de candidatura na oficina da Housing Authority, toque no botão \"Concluir\" abaixo para passar para a próxima etapa!";
 
 // MARK: - STEP 4 ITEMS
 
@@ -171,7 +171,7 @@
     "4aText" = "Você receberá um convite para participar de uma reunião vários dias após o seu compromisso de inscrição. Se você não receber um convite, ligue para o escritório da Housing Authority para saber quando você pode assistir a uma reunião.";
 
     // Item 4b - Housing office info
-    "4bTitle" = "INFORMAÇÕES DE CONTATO DA HOUSING AUTHORITY";
+    "4bTitle" = "ESCRITÓRIO DA HOUSING AUTHORITY";
     "4bText" = "Segunda–Quinta, 7:30am–5:30pm \nTelefone: 801-373-8333";
 
     // Item 4c - Description of briefing
@@ -243,14 +243,14 @@
 
     // Item 7f - Important reminder
     "7fTitle" = "LEMBRETE IMPORTANTE";
-    "7fText" = "Quando você ligar, lembre-se de duas perguntas:\n(1) Eles aceitam os solicitantes da Seção 8?\n(2) Quais são suas tarifas para o tamanho do apartamento que você está procurando?";
+    "7fText" = "Quando você ligar, lembre-se de duas perguntas: (1) Eles aceitam os solicitantes da Seção 8, (2) Quais são suas tarifas para o tamanho do apartamento que você está procurando.";
 
     // Item 7g - Call button (IF KEY NAME IS CHANGED, ALSO CHANGE IN CLICKLINK DELEGATE EXTENSION IN STEPDETAILTVC)
     "7gText" = "Agora é hora de ligar para o complexo de apartamentos: ";
-    "7gButtonText" = "TOQUE PARA CHAMAR COMPLEXO DE APARTAMENTO";
+    "7gButtonText" = "CHAMAR OS APARTAMENTOS";
 
     // Item 7h - What if isn't right (IF KEY NAME IS CHANGED, ALSO CHANGE IN CLICKLINK DELEGATE EXTENSION IN STEPDETAILTVC)
-    "7hTitle" = "E SE O APARTAMENTO NÃO ESTÁ CERTO PARA VOCÊ?";
+    "7hTitle" = "SE O APARTAMENTO NÃO ESTÁ CERTO";
     "7hText" = "Depois de conversar com eles, se descobrir que o apartamento não é adequado para você, basta tocar neste botão para voltar à tela \"Escolher apartamento\". Selecione outro complexo e tente novamente:";
     "7hButtonText" = "TOQUE PARA RETORNAR AO MAPA";
 
@@ -260,7 +260,7 @@
 // MARK: - STEP 8 ITEMS
 
     // Item 8a - Intro
-    "8aText" = "Depois de encontrar um apartamento que você acha que vai funcionar, e os chamar para descobrir \n(1) se eles aceitam os solicitantes da Seção 8 \n(2) e que eles estão em sua faixa de preço,\né hora de visitá-los:";
+    "8aText" = "Depois de encontrar um apartamento que você acha que vai funcionar, e os chamar para descobrir (1) se eles aceitam os solicitantes da Seção 8, e (2) e que eles estão em sua faixa de preço,\né hora de visitá-los:";
 
     // Item 8b - Selected apartment
     "8bTitle" = "ENDEREÇO DO APARTAMENTO QUE VOCÊ ESCOLHEU";
@@ -269,7 +269,7 @@
     // Item 8c - Photo
 
     // Item 8d - List of four docs
-    "8dText" = "Você precisará deles para preencher quatro formulários: \n\n– Aprovação de tenancia (Tenancy Approval) \n– Cópia do contrato proposto \ n– Formulário W-9 \ n– Carta de apresentação (Cover Letter) \n \nNo pacote que você recebeu na sua reunião, você terá uma cópia de cada um desses formulários. \n \nO complexo de apartamentos pode ser capaz de preencher tudo enquanto você espera, ou eles podem dizer-lhe para voltar em outro dia.";
+    "8dText" = "Você precisará deles para preencher quatro formulários: \n\n– Aprovação de tenancia \n– Cópia do contrato proposto \n– Formulário W-9 \n– Carta de apresentação \n\nNo pacote que você recebeu na sua reunião, você terá uma cópia de cada um desses formulários. \n \nO complexo de apartamentos pode ser capaz de preencher tudo enquanto você espera, ou eles podem dizer-lhe para voltar em outro dia.";
 
     // Item 8e - Helpful hint
     "8eTitle" = "DICA";
@@ -307,7 +307,7 @@
     "9aText" = "Agora que você tem os quatro documentos necessários da Etapa 8, você precisa levá-los ao escritório da Housing Authority:";
 
     // Item 9b - Housing Authority office info
-    "9bTitle" = "INFORMAÇÕES DE CONTATO DA HOUSING AUTHORITY";
+    "9bTitle" = "ESCRITÓRIO DA HOUSING AUTHORITY";
     "9bText" = "240 E Center St, Provo, UT 84606 \nSegunda–Quinta, 7:30am–5:30pm \nTelefone: 801-373-8333";
 
     // Item 9c - Photo
@@ -377,7 +377,7 @@
     "12cText" = "Certifique-se de não esquecer o seu compromisso. No dia da consulta, planeje com antecedência e chegue cedo.";
 
     // Item 12d - Housing Authority office info
-    "12dTitle" = "INFORMAÇÕES DE CONTATO DA HOUSING AUTHORITY";
+    "12dTitle" = "ESCRITÓRIO DA HOUSING AUTHORITY";
     "12dText" = "240 E Center St, Provo, UT 84606 \nSegunda–Quinat, 7:30am–5:30pm \nTelefone: 801-373-8333";
 
     // Item 12d - Photo
@@ -407,7 +407,7 @@
     "13dText" = "Então você deve devolver todas as cópias para a Housing Authority:";
 
     // Item 13e - Housing Authority office info
-    "13eTitle" = "INFORMAÇÕES DE CONTATO DA HOUSING AUTHORITY";
+    "13eTitle" = "ESCRITÓRIO DA HOUSING AUTHORITY";
     "13eText" = "240 E Center St, Provo, UT 84606 \nSegunda-Quinta, 7:30am–5:30pm \nTelefone: 801-373-8333";
 
     // Item 13f - Photo
