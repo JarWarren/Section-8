@@ -37,9 +37,8 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     let timeKeepingId = "timerID"
     
     // Let sevenDayCountDown = TimeInterval(5)
-    // NOTE: - 604800 seconds is 7 days
-    // NOTE: - 1800 seconds is 30 minutes
-    let sevenDays = 1800
+   
+    
     
     // BoolValueToTestTimer = true
     let sevenDayTimerID = "sevenDays"
