@@ -13,10 +13,10 @@
 // MARK: - UI COMPONENTS
 
     // Complete button
-    "completeButtonTextTapToMarkCompleteA" = "TAP WHEN";
-    "completeButtonTextTapToMarkCompleteB" = "IS COMPLETE";
-    "completeButtonTextTapToMarkIncompleteA" = "TAP TO CHANGE";
-    "completeButtonTextTapToMarkIncompleteB" = "TO INCOMPLETE";
+    "completeButtonTextTapToMarkCompleteA" = "TOQUE QUANDO O";
+    "completeButtonTextTapToMarkCompleteB" = "ESTIVER COMPLETO";
+    "completeButtonTextTapToMarkIncompleteA" = "TOQUE PARA MARCAR O";
+    "completeButtonTextTapToMarkIncompleteB" = "INCOMPLETO";
 
 // MARK: LOCATION NOTIFICATION
 
@@ -72,42 +72,42 @@
 
     "STEP" = "PASSO";
 
-    "step1" = "Complete online application";
-    "step2" = "Bring in Identification";
-    "step3" = "Complete mailed application";
-    "step4" = "Attend briefing";
-    "step5" = "Calculate rent payment";
-    "step6" = "Choose apartment";
-    "step7" = "Call apartment complex";
-    "step8" = "Have landlord complete forms";
-    "step9" = "Return forms to HAUC";
-    "step10" = "Schedule inspection";
-    "step11" = "Apartment inspection";
-    "step12" = "Final HAUC appointment";
-    "step13" = "Return signed leases to HAUC";
-    "step14" = "Time to move in!";
+    "step1" = "Preencher o formuário online";
+    "step2" = "Apresentar identificação";
+    "step3" = "Completar e enviar aplicação física";
+    "step4" = "Participar da reunião informativa";
+    "step5" = "Calcular o pagamento do aluguel";
+    "step6" = "Escolher o apartamento";
+    "step7" = "Ligar para o complexo de apartamentos";
+    "step8" = "Formulários do proprietário";
+    "step9" = "Retorna os fomrulários do HUAC";
+    "step10" = "Programar uma inspecção";
+    "step11" = "Inspecção do apartamento";
+    "step12" = "Consulta final com o HUAC";
+    "step13" = "Retornar contratos assinados";
+    "step14" = "Bem-vindo à sua nova casa!";
 
 // MARK: - STEP 1 ITEMS
 
     // Item 1a - Intro
-    "1aText" = "Let's get started! You will start by filling out the preliminary application online, but before you start, read these instructions:";
+    "1aText" = "Vamos começar! Você começará preenchendo o requerimento preliminar online, mas antes de começar, leia estas instruções:";
 
     // Item 1b - Viewing tip
-    "1bTitle" = "VIEWING TIP";
-    "1bText" = "Once you open the online application, it might be easier to turn your phone sideways, to make it easier to read.";
+    "1bTitle" = "DICA";
+    "1bText" = "Depois de abrir o formulário on-line, talvez seja mais fácil virar o telefone para o lado, para facilitar a leitura.";
 
     // Item 1c - Photo
 
     // Item 1d - Finished button
-    "1dTitle" = "FINISHED BUTTON";
-    "1dText" = "When you are finished, you will see an “Application Receipt” screen. Tap on the “Finished” button near the bottom of the screen, and return to this page by tapping on the Section 8 link at the top-left of the screen.";
+    "1dTitle" = "AO TERMINAR";
+    "1dText" = "Quando terminar, você verá uma tela \"Recibo do aplicativo\". Toque no botão \"Concluído\" na parte inferior da tela e retorne a esta página tocando no link da Seção 8 no canto superior esquerdo da tela.";
 
     // Item 1e - Online application
-    "1eText" = "Tap here to start the online application on the Housing Authority of Utah County (HAUC) website:";
-    "1eButtonText" = "PRELIMINARY APPLICATION";
+    "1eText" = "Toque aqui para iniciar o aplicativo on-line no site da Housing Authority of Utah County (HAUC):";
+    "1eButtonText" = "FORMULÁRIO PRELIMINAR";
 
     // Item 1f - Tap complete
-    "1fText" = "Once you have completed the online application, tap on the “Complete” button below to move on to the next step!";
+    "1fText" = "Depois de ter concluído o pedido on-line, toque no botão abaixo para passar para a próxima etapa!";
 
 // MARK: - STEP 2 ITEMS
 
