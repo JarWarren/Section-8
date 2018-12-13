@@ -18,9 +18,9 @@ class StepController {
     // Source of truth
     var steps: [Step] = {
         
-        let step1 = Step(name: NSLocalizedString("step1", comment: ""), stepNumber: NSLocalizedString("STEP", comment: "") + " 1", stepCompleted: false, homeImageName: "home1", stepImageName: "step1")
+        let step1 = Step(name: "step1".localize, stepNumber: NSLocalizedString("STEP", comment: "") + " 1", stepCompleted: false, homeImageName: "home1", stepImageName: "step1")
         let step2 = Step(name: NSLocalizedString("step2", comment: ""), stepNumber: "STEP 2", stepCompleted: false, homeImageName: "home2", stepImageName: "step2")
-        let step3 = Step(name: NSLocalizedString("step3", comment: ""), stepNumber: "STEP 3", stepCompleted: false, homeImageName: "home3", stepImageName: "step3")
+        let step3 = Step(name: "step3".localize, stepNumber: "STEP 3", stepCompleted: false, homeImageName: "home3", stepImageName: "step3")
         let step4 = Step(name: NSLocalizedString("step4", comment: ""), stepNumber: "STEP 4", stepCompleted: false, homeImageName: "home4", stepImageName: "step4")
         let step5 = Step(name: NSLocalizedString("step5", comment: ""), stepNumber: "STEP 5", stepCompleted: false, homeImageName: "home5", stepImageName: "step5")
         let step6 = Step(name: NSLocalizedString("step6", comment: ""), stepNumber: "STEP 6", stepCompleted: false, homeImageName: "home6", stepImageName: "step6")
@@ -58,7 +58,7 @@ class StepController {
                 ItemController.addNewItem(title: "\(step.stepNumber)", text: "\(step.name)", buttonText: nil, url: nil, graphicName: "\(step.homeImageName)", format: .title, step: step)
                 
                 // Item 1a - Intro
-                ItemController.addNewItem(title: nil, text: NSLocalizedString("1aText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
+                ItemController.addNewItem(title: nil, text: "1aText".localize, buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
                 // Item 1b - Viewing tip
                 ItemController.addNewItem(title: NSLocalizedString("1bTitle", comment: ""), text: NSLocalizedString("1bText", comment: ""), buttonText: nil, url: nil, graphicName: "lightbulb", format: .tip, step: step)
