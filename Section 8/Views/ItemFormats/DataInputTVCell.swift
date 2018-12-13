@@ -51,8 +51,6 @@ class DataInputTVCell: UITableViewCell {
         
         // Reload view after changing input data
         self.superview?.reloadInputViews()
-        
-//        NSLocalizedString(<#T##key: String##String#>, tableName: <#T##String?#>, bundle: <#T##Bundle#>, value: <#T##String#>, comment: <#T##String#>)
     }
 }
 
