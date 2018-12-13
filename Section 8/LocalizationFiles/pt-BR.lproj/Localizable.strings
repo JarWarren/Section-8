@@ -69,10 +69,10 @@
 
     // Seven-day banner notifications
     // NOTE: - This "notificationBanner" key is also being called in the location notification resource name, in order to not have to avoid recreating another banner key value pair
-    "notificationBanner" = "notificationBannerEN";
+    "notificationBanner" = "notificationBannerPT";
 
     // Date picker banner notifications
-    "datePickerBanner" = "datePickerBannerEN";
+    "datePickerBanner" = "datePickerBannerPT";
 
 // MARK: - STEPS
 
