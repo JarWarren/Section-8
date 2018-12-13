@@ -78,57 +78,57 @@
     "step4" = "Asistir a la reunión informativa";
     "step5" = "Calcular el pago del alquiler";
     "step6" = "Escojer un apartamento";
-    "step7" = "Llamar al complejo de apartamentos";
-    "step8" = "Hacer que el propietario complete los formularios";
-    "step9" = "Devolver los formularios a HAUC";
-    "step10" = "Programar una ispección";
+    "step7" = "Llamar al dueño";
+    "step8" = "Formularios para el dueño";
+    "step9" = "Devolver los formularios";
+    "step10" = "Programar una inspección";
     "step11" = "Inspección del apartamento";
     "step12" = "Cita final con HUAC";
-    "step13" = "Devolver los contratos firmados a HAUC";
+    "step13" = "Devolver contratos firmados";
     "step14" = "¡Bienvenido a su nuevo hogar!";
 
 // MARK: - STEP 1 ITEMS
 
     // Item 1a - Intro
-    "1aText" = "Let's get started! You will start by filling out the preliminary application online, but before you start, read these instructions:";
+    "1aText" = "¡Empecemos! Primero, necesita completar la aplicación preliminar línea, pero antes de que empiece, lea estas instrucciones:";
 
     // Item 1b - Viewing tip
-    "1bTitle" = "VIEWING TIP";
-    "1bText" = "Once you open the online application, it might be easier to turn your phone sideways, to make it easier to read.";
+    "1bTitle" = "Sugerencia de visualización";
+    "1bText" = "Una vez que abres la aplicación, podría ser más fácil girar tu teléfono de lado, para que sea más fácil de leer.";
 
     // Item 1c - Photo
 
     // Item 1d - Finished button
-    "1dTitle" = "FINISHED BUTTON";
-    "1dText" = "When you are finished, you will see an “Application Receipt” screen. Tap on the “Finished” button near the bottom of the screen, and return to this page by tapping on the Section 8 link at the top-left of the screen.";
+    "1dTitle" = "BOTÓN COMPLETO";
+    "1dText" = "Cuando haya terminado, verá una pantalla de \"Recibo de solicitud\". Toque el botón \"Terminado\" cerca de la parte inferior de la pantalla, y regrese a esta página tocando el enlace de la Sección 8 en la parte superior izquierda de la pantalla.";
 
     // Item 1e - Online application
-    "1eText" = "Tap here to start the online application on the Housing Authority of Utah County (HAUC) website:";
-    "1eButtonText" = "PRELIMINARY APPLICATION";
+    "1eText" = "Toque aquí para iniciar la solicitud en línea en el sitio web de la Autoridad de Vivienda del Condado de Utah (HAUC):";
+    "1eButtonText" = "APLICACION PRELIMINAR";
 
     // Item 1f - Tap complete
-    "1fText" = "Once you have completed the online application, tap on the “Complete” button below to move on to the next step!";
+    "1fText" = "Una vez que haya completado la solicitud en línea, toque el botón \"Completar\" a continuación para pasar al siguiente paso.";
 
 // MARK: - STEP 2 ITEMS
 
     // Item 2a - Intro
-    "2aText" = "After submitting your preliminary application online, the head of household must take a photo ID and social security card to the Housing Authority main office.";
+    "2aText" = "Después de presentar su solicitud preliminar en línea, el jefe de familia debe llevar una identificación con foto y una tarjeta de seguridad social a la oficina principal de la Autoridad de Vivienda.";
 
     // Item 2b - Housing office info
-    "2bTitle" = "HOUSING AUTHORITY OFFICE INFORMATION";
-    "2bText" = "240 E Center St, Provo, UT 84606 \nMonday–Thursday, 7:30am–5:30pm \nPhone: 801-373-8333";
+    "2bTitle" = "INFORMACIÓN DE LA OFICINA DE AUTORIDAD DE VIVIENDA";
+    "2bText" = "240 E Center St, Provo, UT 84606 \nLunes–Jueves, 7:30am–5:30pm \nTeléfono: 801-373-8333";
 
     // Item 2c - Photo
 
     // Item 2d - Waiting list paragraph
-    "2dText" = "Once you have submitted your identification, you will be placed on a waiting list.";
+    "2dText" = "Una vez que haya enviado su identificación, se lo colocará en una lista de espera.";
 
     // Item 2e - Waiting list tip
-    "2eTitle" = "WAITING LIST";
-    "2eText" = "The wait time is from two months up to more than a year. Make sure to update your phone number and mailing address with the Housing Authority if anything changes!";
+    "2eTitle" = "LISTA DE ESPERA";
+    "2eText" = "El tiempo de espera es de dos meses a más de un año. Asegúrese de actualizar su número de teléfono y dirección postal con la Autoridad de Vivienda si algo cambia";
 
     // Item 2f - Tap complete
-    "2fText" = "Once the head of household has delivered these two forms of identification to the housing office, this step is complete! Tap on the “Complete” button below to move on to the next step.";
+    "2fText" = "Una vez que el jefe de familia ha entregado estas dos formas de identificación a la oficina de vivienda, ¡este paso está completo! Toque el botón \"Completar\" a continuación para pasar al siguiente paso.";
 
 // MARK: - STEP 3 ITEMS
 
