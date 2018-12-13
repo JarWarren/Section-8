@@ -212,7 +212,7 @@
 
     // Item 5e - How is this calculated
     "5eTitle" = "COMO ESTÁ CALCULADO?";
-"5eText" = "Além do valor do vale que você qualifica, você só tem permissão para pagar até 40% da sua renda familiar para aluguel. Além disso, um custo médio de serviços públicos foi subtraído do total porque você pagará aqueles além do seu pagamento de aluguel mensal.";
+    "5eText" = "Além do valor do vale que você qualifica, você só tem permissão para pagar até 40% da sua renda familiar para aluguel. Além disso, um custo médio de serviços públicos foi subtraído do total porque você pagará aqueles além do seu pagamento de aluguel mensal.";
 
     // Item 5f - Tap to complete
     "5fText" = "Depois de calcular seu aluguel máximo, clique no botão abaixo para passar para a próxima etapa!";
@@ -272,7 +272,7 @@
     "8dText" = "Você precisará deles para preencher quatro formulários: \n\n– Aprovação de tenancia (Tenancy Approval) \n– Cópia do contrato proposto \ n– Formulário W-9 \ n– Carta de apresentação (Cover Letter) \n \nNo pacote que você recebeu na sua reunião, você terá uma cópia de cada um desses formulários. \n \nO complexo de apartamentos pode ser capaz de preencher tudo enquanto você espera, ou eles podem dizer-lhe para voltar em outro dia.";
 
     // Item 8e - Helpful hint
-"8eTitle" = "DICA";
+    "8eTitle" = "DICA";
     "8eText" = "Se você precisar enviar uma cópia desses formulários para o complexo de apartamentos, toque nos links abaixo e compartilhe os formulários por endereço de e-mail ou número de celular. Em seguida, retorne a esta página tocando no link do Section8 no canto superior esquerdo da tela do seu navegador.";
 
     // Item 8f - Tenancy approval
