@@ -25,7 +25,7 @@ class Section8Apartment {
     var googlePhotoReferences: [String]?
     var googleImagesArray: [UIImage]?
     
-    init(name: String, address: String, address1Split: String, address2Split: String, phone: String, lat: Double, lng: Double, apartmentPhoto: String = "noApartmentImage", googlePlaceID: String) {
+    init(name: String, address: String, address1Split: String, address2Split: String, phone: String, lat: Double, lng: Double, apartmentPhoto: String = "noApartmentImage".localize, googlePlaceID: String) {
         self.name = name
         self.address = address
         self.address1Split = address1Split

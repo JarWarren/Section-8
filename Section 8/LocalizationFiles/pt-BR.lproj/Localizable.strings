@@ -21,6 +21,9 @@
     "completeButtonTextTapToMarkIncompleteA" = "TOQUE PARA MARCAR O";
     "completeButtonTextTapToMarkIncompleteB" = "INCOMPLETO";
 
+    // No apartment image
+    "noApartmentImage" = "noApartmentImagePT";
+
 // MARK: LOCATION NOTIFICATION
 
     //Note "locationDismissButtonTitle" and "locationResourceName" are using key value pairs associated with other constants in order to avoid having to re-create them

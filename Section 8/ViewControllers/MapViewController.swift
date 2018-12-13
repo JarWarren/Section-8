@@ -163,7 +163,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         
         // Saves their current apartment.
         if let name = currentName, let phone = currentPhone, let address = currentAddress, let part1 = addressPart1, let part2 = addressPart2 {
-            SelectedApartmentController.shared.saveApartment(named: name, phone: phone, address: address, addressPart1: part1, addressPart2: part2, photoRef: self.imageRefHolder ?? "noApartmentImage")
+            SelectedApartmentController.shared.saveApartment(named: name, phone: phone, address: address, addressPart1: part1, addressPart2: part2, photoRef: self.imageRefHolder ?? "noApartmentImage".localize)
         }
         StepController.shared.steps[5].stepCompleted = true
         

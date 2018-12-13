@@ -20,7 +20,7 @@ class SelectedApartment: Codable {
     var phone: String
     var photoRef: String?
     
-    init(name: String, address: String, address1Split: String, address2Split: String, phone: String, photoRef: String? = "noApartmentImage") {
+    init(name: String, address: String, address1Split: String, address2Split: String, phone: String, photoRef: String? = "noApartmentImage".localize) {
     
         self.name = name
         self.address = address
