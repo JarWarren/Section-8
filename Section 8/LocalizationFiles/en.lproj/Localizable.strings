@@ -100,7 +100,7 @@
 
     // Item 1d - Finished button
     "1dTitle" = "FINISHED BUTTON";
-    "1dText" = "When you are finished, you will see an “Application Receipt” screen. Tap on the “Finished” button near the bottom of the screen, and return to this page by tapping on the Section 8 link at the top-left of the screen.";
+    "1dText" = "When you are finished, you will see an “Application Receipt” screen. Tap on the “Finished” button near the bottom of the screen, and return to this page by tapping on the Section8 link at the top-left of the screen.";
 
     // Item 1e - Online application
     "1eText" = "Tap here to start the online application on the Housing Authority of Utah County (HAUC) website:";

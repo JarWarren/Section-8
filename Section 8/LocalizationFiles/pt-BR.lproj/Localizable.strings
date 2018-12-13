@@ -72,7 +72,7 @@
 
     "STEP" = "PASSO";
 
-    "step1" = "Preencher o formuário online";
+    "step1" = "Preencher o formulário on-line";
     "step2" = "Apresentar identificação";
     "step3" = "Completar e enviar aplicação física";
     "step4" = "Participar da reunião informativa";
@@ -90,7 +90,7 @@
 // MARK: - STEP 1 ITEMS
 
     // Item 1a - Intro
-    "1aText" = "Vamos começar! Você começará preenchendo o requerimento preliminar online, mas antes de começar, leia estas instruções:";
+    "1aText" = "Vamos começar! Você começará preenchendo o requerimento preliminar on-line, mas antes de começar, leia estas instruções:";
 
     // Item 1b - Viewing tip
     "1bTitle" = "DICA";
@@ -100,84 +100,84 @@
 
     // Item 1d - Finished button
     "1dTitle" = "AO TERMINAR";
-    "1dText" = "Quando terminar, você verá uma tela \"Recibo do aplicativo\". Toque no botão \"Concluído\" na parte inferior da tela e retorne a esta página tocando no link da Seção 8 no canto superior esquerdo da tela.";
+    "1dText" = "Quando terminar, você verá uma tela \"Application Receipt\". Toque no botão \"Finished\" na parte inferior da tela e retorne a esta página tocando no link da Section8 no canto superior esquerdo da tela.";
 
     // Item 1e - Online application
     "1eText" = "Toque aqui para iniciar o aplicativo on-line no site da Housing Authority of Utah County (HAUC):";
     "1eButtonText" = "FORMULÁRIO PRELIMINAR";
 
     // Item 1f - Tap complete
-    "1fText" = "Depois de ter concluído o pedido on-line, toque no botão abaixo para passar para a próxima etapa!";
+    "1fText" = "Depois de ter concluído o pedido on-line, toque no botão abaixo para passar para o próximo passo!";
 
 // MARK: - STEP 2 ITEMS
 
     // Item 2a - Intro
-    "2aText" = "After submitting your preliminary application online, the head of household must take a photo ID and social security card to the Housing Authority main office.";
+    "2aText" = "Depois de enviar seu formulário preliminar on-line, o chefe da família deve levar um documento de identidade com foto e um cartão de segurança social ao escritório principal da Housing Authority.";
 
     // Item 2b - Housing office info
-    "2bTitle" = "HOUSING AUTHORITY OFFICE INFORMATION";
-    "2bText" = "240 E Center St, Provo, UT 84606 \nMonday–Thursday, 7:30am–5:30pm \nPhone: 801-373-8333";
+    "2bTitle" = "INFORMAÇÕES DE CONTATO DA HOUSING AUTHORITY";
+    "2bText" = "240 E Center St, Provo, UT 84606 \nSegunda–Quinta, 7:30am–5:30pm \nTelefone: 801-373-8333";
 
     // Item 2c - Photo
 
     // Item 2d - Waiting list paragraph
-    "2dText" = "Once you have submitted your identification, you will be placed on a waiting list.";
+    "2dText" = "Depois de enviar sua identificação, você será colocado em uma lista de espera.";
 
     // Item 2e - Waiting list tip
-    "2eTitle" = "WAITING LIST";
-    "2eText" = "The wait time is from two months up to more than a year. Make sure to update your phone number and mailing address with the Housing Authority if anything changes!";
+    "2eTitle" = "LISTA DE ESPERA";
+    "2eText" = "O tempo de espera é de dois meses até mais de um ano. Certifique-se de atualizar o seu número de telefone e endereço de correspondência com a Housing Authority, se alguma coisa mudar!";
 
     // Item 2f - Tap complete
-    "2fText" = "Once the head of household has delivered these two forms of identification to the housing office, this step is complete! Tap on the “Complete” button below to move on to the next step.";
+    "2fText" = "Uma vez que o chefe da família entregar estas duas formas de identificação ao Housing Authority, este passo está completo! Toque no botão abaixo para passar para o próximo passo.";
 
 // MARK: - STEP 3 ITEMS
 
     // Item 3a - Intro
-    "3aText" = "When your name reaches the top of the waiting list, you will receive a full application in the mail. You will also receive a scheduled appointment date, letting you know when to bring in your application to the Housing Authority main office.";
+    "3aText" = "Quando seu nome chegar ao topo da lista de espera, você receberá uma inscrição completa no correio. Você também receberá uma data de agendamento, informando o momento de apresentar sua inscrição no escritório principal da Housing Authority.";
 
     // Item 3b - Appointment date picker
-    "3bTitle" = "APPOINTMENT DATE";
-    "3bText" = "Please enter your appointment date here, so we can send you a reminder notification:";
-    "3bButtonText" = "TAP TO SAVE DATE";
+    "3bTitle" = "DATA DE COMPROMISSO";
+    "3bText" = "Por favor, insira sua data de compromisso aqui, para que possamos enviar uma notificação de lembrete:";
+    "3bButtonText" = "TOQUE PARA SALVAR DATA";
 
     // Item 3c - Read carefully
-    "3cText" = "Read the application carefully, and complete each section. Be sure to update household and income verification.";
+    "3cText" = "Leia atentamente inscrição e preencha cada seção. Certifique-se de atualizar a verificação do domicílio e da renda.";
 
     // Item 3d - Important reminder
-    "3dTitle" = "IMPORTANT REMINDER";
-    "3dText" = "When you go in for your appointment, make sure to take in the following: \n– Your completed application, \n– Income verifications, \n– Birth certificates and \n– Social Security Cards.";
+    "3dTitle" = "LEMBRETE IMPORTANTE";
+    "3dText" = "Quando você for à sua consulta, lembre-se de: \n– Seu formulário preenchido, \n– Verificações de renda, \n– Certidões de nascimento e \n– Cartões de segurança social.";
 
     // Item 3e - Here is address
-    "3eText" = "Here is the address for the location of your appointment:";
+    "3eText" = "Aqui está o endereço para o local do seu compromisso:";
 
     // Item 3f - Housing office info
-    "3fTitle" = "HOUSING AUTHORITY INFORMATION";
-    "3fText" = "240 E Center St, Provo, UT 84606 \nMonday–Thursday, 7:30am–5:30pm \nPhone: 801-373-8333";
+    "3fTitle" = "INFORMAÇÕES DE CONTATO DA HOUSING AUTHORITY";
+    "3fText" = "240 E Center St, Provo, UT 84606 \nSegunda–Quinta, 7:30am–5:30pm \nTelefone: 801-373-8333";
 
     // Item 3g - Photo
 
     // Item 3h - Tap complete
-    "3hText" = "Several days after your appointment, you will be notified by the Housing Authority, and a briefing will be set up for you. \n\nOnce you have completed your application appointment at the Housing Authority office, tap the “Complete” button below to move on to the next step!";
+    "3hText" = "Vários dias após o seu compromisso, você será notificado pela Housing Authority, e um Uma reunião será configurada para você.\n\nDepois de ter concluído o seu compromisso de candidatura na oficina da Housing Authority, toque no botão \n\"Concluir\n\" abaixo para passar para o próximo passo!";
 
 // MARK: - STEP 4 ITEMS
 
     // Item 4a - Intro
-    "4aText" = "You should receive an invitation to attend a briefing several days after your application appointment. If you don’t receive an invitation, call the Housing Authority office to find out when you can come to a briefing.";
+    "4aText" = "Você receberá um convite para participar de uma reunião vários dias após o seu compromisso de inscrição. Se você não receber um convite, ligue para o escritório da Housing Authority para saber quando você pode assistir a uma reunião.";
 
     // Item 4b - Housing office info
-    "4bTitle" = "HOUSING AUTHORITY INFORMATION";
-    "4bText" = "Monday–Thursday, 7:30am–5:30pm \nPhone: 801-373-8333";
+    "4bTitle" = "INFORMAÇÕES DE CONTATO DA HOUSING AUTHORITY";
+    "4bText" = "Segunda–Quinta, 7:30am–5:30pm \nTelefone: 801-373-8333";
 
     // Item 4c - Description of briefing
-    "4cText" = "In the briefing, program procedures are explained, and you will be taught how to begin receiving assistance.";
+    "4cText" = "Na reunião, os procedimentos do programa são explicados e você aprenderá como começar a receber assistência.";
 
     // Item 4d - Briefing date picker
-    "4dTitle" = "BRIEFING DATE";
-    "4dText" = "Please enter your briefing date here, so we can send you a reminder notification:";
-    "4dButtonText" = "TAP TO SAVE DATE";
+    "4dTitle" = "DATA DA REUNIÃO INFORMATIVA";
+    "4dText" = "Por favor, insira a data da reunião aqui, para que possamos enviar uma notificação de lembrete:";
+    "4dButtonText" = "TOQUE PARA SALVAR DATA";
 
     // Item 4e - If need to reschedule
-    "4eText" = "Make that you don't miss your briefing, and if you need to reschedule, call the Housing Authority office to set up a new time. Then enter the new date in the box above, and tap on the green button again.";
+    "4eText" = "Faça com que você não perca a reunião e, se precisar reagendar, ligue para o escritório da Housing Authority para marcar um novo horário. Em seguida, insira a nova data na caixa acima e toque no botão verde novamente.";
 
     // Item 4f - Important reminder
     "4fTitle" = "IMPORTANT REMINDER";
@@ -191,17 +191,17 @@
     // Item 5a - Photo
 
     // Item 5b - Intro
-    "5bText" = "The Housing Authority will only let you rent an apartment within a certain price range. To calculate what you can afford to pay, you will need to provide a couple pieces of information:";
+    "5bText" = "A Housing Authority só lhe permitirá alugar um apartamento dentro de uma determinada faixa de preço. Para calcular o que você pode pagar, você precisará fornecer algumas informações:";
 
     // Item 5c - Income/voucher inputs
-    "5cTitle" = "OVERALL HOUSEHOLD INCOME";
-    "5cText" = "In the first box below, include all income from everyone in the household. You can include: wages, salaries, unemployment benefits, child support, Social Security payments, interest and royalties, and financial assistance.";
-    "5cUrl" = "HOUSING AUTHORITY VOUCHER AMOUNT";
-    "5cGraphicName" = "In the second box, enter the amount that you qualify for from the Housing Authority voucher you received at your briefing.";
-    "5cButtonText" = "TAP TO SUBMIT AMOUNTS";
+    "5cTitle" = "RENDIMENTO TOTAL DO AGREGADO FAMILIAR";
+    "5cText" = "Na primeira caixa abaixo, inclua todas as receitas de todos os membros da família. Você pode incluir: salários, subsídios de desemprego, pensão alimentícia, pagamentos de seguridade social, juros e direitos autorais e assistência financeira.";
+    "5cUrl" = "VALOR DO VALE HOUSING AUTHORITY";
+    "5cGraphicName" = "Na segunda caixa, insira o valor que você qualifica para o vale da Housing Authority que você recebeu na sua reunião";
+    "5cButtonText" = "TOQUE PARA CALCULAR TOTAL";
 
     // Item 5d - Max rent amount
-    "5dTitle" = "YOUR MAXIMUM RENT AMOUNT";
+    "5dTitle" = "SEU VALOR MÁXIMO DE ALUGUEL";
     "5dText" = "Based on your household income, your voucher amount, and an average utility allowance, you should NOT look at apartments with rent higher than this amount:";
 
     // Item 5e - How is this calculated
