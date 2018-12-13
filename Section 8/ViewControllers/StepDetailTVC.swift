@@ -21,10 +21,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     
     var items: [Item] = []
     var userDidComeFromStep6 = false
-    
-    
     var alarm: Alarm?
-    
     
     // MARK: - OUTLETS
     
@@ -65,7 +62,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     let sevenDayContentSubtitle = NSString.localizedUserNotificationString(forKey: "7DayContentSubtitle", arguments: [])
     let sevenDayContentBody = NSString.localizedUserNotificationString(forKey: "7DayContentBody", arguments: [])
     
-    // date Banner
+    // Date banner
     let datePickerNotifBanner = NSString.localizedUserNotificationString(forKey: "datePickerBanner", arguments: [])
     let bannerImageName = NSLocalizedString("notificationBanner", comment: "")
     
@@ -83,26 +80,22 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         guard let unwrappedStep = selectedStep else { return }
         self.navigationItem.title = unwrappedStep.name
         
+        // Set back button title
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Home", style: .plain, target: nil, action: nil)
+        
         // Persistence
         SelectedApartmentController.shared.loadSelectedApartment()
         RentController.shared.loadFromPersistentStorage()
         
-        // Change title to specific step
+        // Change step buttons to specific step
         if let thisStep = selectedStep {
             if !thisStep.stepCompleted {
                 completeButtonStatus.setTitle(NSLocalizedString("completeButtonTextTapToMarkCompleteA", comment: "") + " \(thisStep.stepNumber) " + NSLocalizedString("completeButtonTextTapToMarkCompleteB", comment: ""), for: .normal)
             } else {
                 completeButtonStatus.setTitle(NSLocalizedString("completeButtonTextTapToMarkIncompleteA", comment: "") + " \(thisStep.stepNumber) " + NSLocalizedString("completeButtonTextTapToMarkIncompleteB", comment: ""), for: .normal)
             }
-            //            // Header labels and image
-            //            self.stepNameLabel.text = thisStep.name
-            //            self.stepNumberLabel.text = thisStep.stepNumber
-            //            self.stepImageView.image = UIImage(named: thisStep.homeImageName)
-            
-            // Set back button title
-            navigationItem.backBarButtonItem = UIBarButtonItem(title: "Home", style: .plain, target: nil, action: nil)
-            
         }
+        
         //Listening for certain events related to the keyboard
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         
@@ -110,34 +103,33 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         
     }
     
-    //Stop listening for certain events related to the keybaord such as hide/show
+    // MARK: - KEYBOARD
+    
+    //Stop listening for certain events reltated to the keybaord such as hide/show
     deinit {
         
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-    // MARK: - ACTIONS
+    // MARK: - KEYBOARD ACTIONS
     
     @objc func keyboardWillShow(notification: Notification) {
-        
         var userInfo = notification.userInfo!
         var keyboardFrame: CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
         keyboardFrame = self.view.convert(keyboardFrame, from: nil)
-        
         var contentInset: UIEdgeInsets = self.tableView.contentInset
         contentInset.bottom = keyboardFrame.size.height + 50
         tableView.contentInset = contentInset
-        
     }
     
     @objc func keyboardWillHide(notification: NSNotification) {
         
         let contentInset = UIEdgeInsets.zero
         tableView.contentInset = contentInset
-        
     }
     
+    // MARK: - ACTIONS
     
     @IBAction func completeButton(_ sender: UIButton) {
         guard let unwrappedStep = selectedStep else {return}
@@ -192,7 +184,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         // Switch to choose which custom cell mataches the item format
         switch item.format {
             
-            // MARK: PHOTO CUSTOM CELL
+        // MARK: APARTMENT PHOTO CUSTOM CELL
             
         case .apartmentPhoto:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "apartmentPhotoCell", for: indexPath) as? ApartmentPhotoTVCell else { return UITableViewCell() }
@@ -207,7 +199,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             cell.apartmentPhotoImageView?.image = UIImage(named: "noApartmentImage")
             return cell
             
-            // MARK: CLICK LINK CUSTOM CELL
+        // MARK: CLICK LINK CUSTOM CELL
             
         case .clickLink:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "clickLinkCell", for: indexPath) as? ClickLinkTVCell else { return UITableViewCell() }
@@ -225,7 +217,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             }
             return cell
             
-            // MARK: DATA DISPLAY CUSTOM CELL
+        // MARK: DATA DISPLAY CUSTOM CELL
             
         case .dataDisplay:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "dataDisplayCell", for: indexPath) as? DataDisplayTVCell else { return UITableViewCell() }
@@ -241,7 +233,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             }
             return cell
             
-            // MARK: DATA INPUT CUSTOM CELL
+        // MARK: DATA INPUT CUSTOM CELL
             
         case .dataInput:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "dataInputCell", for: indexPath) as? DataInputTVCell else { return UITableViewCell() }
@@ -271,7 +263,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             }
             return cell
             
-            // MARK: DATE PICKER CUSTOM CELL
+        // MARK: DATE PICKER CUSTOM CELL
             
         case .datePicker:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "datePickerCell", for: indexPath) as? DatePickerTVCell else { return UITableViewCell() }
@@ -286,7 +278,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             cell.datePickerButton?.setTitle("\(item.buttonText ?? "TAP TO SET DATE")", for: .normal)
             return cell
             
-            // MARK: PARAGRAPH CUSTOM CELL
+        // MARK: PARAGRAPH CUSTOM CELL
             
         case .paragraph:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "paragraphCell", for: indexPath) as? ParagraphTVCell else { return UITableViewCell() }
@@ -296,7 +288,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             cell.paragraphTextLabel?.text = item.text
             return cell
             
-            // MARK: PHOTO CUSTOM CELL
+        // MARK: PHOTO CUSTOM CELL
             
         case .photo:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "photoCell", for: indexPath) as? PhotoTVCell else { return UITableViewCell() }
@@ -305,7 +297,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             cell.photoImageView.image = UIImage(named: item.graphicName ?? "")
             return cell
             
-            // MARK: TIP CUSTOM CELL
+        // MARK: TIP CUSTOM CELL
             
         case .tip:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "tipCell", for: indexPath) as? TipTVCell else { return UITableViewCell() }
@@ -316,7 +308,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             cell.tipImageView?.image = UIImage(named: item.graphicName ?? "")
             return cell
             
-            // MARK: TITLE CUSTOM CELL
+        // MARK: TITLE CUSTOM CELL
             
         case .title:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "titleCell", for: indexPath) as? TitleTVCell else { return UITableViewCell() }
