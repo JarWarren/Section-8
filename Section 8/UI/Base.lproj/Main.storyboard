@@ -122,6 +122,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FamilyHouse" translatesAutoresizingMaskIntoConstraints="NO" id="urX-sJ-9ey">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="240"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" secondItem="urX-sJ-9ey" secondAttribute="height" multiplier="69:40" id="4C8-8z-rrc"/>
                                     <constraint firstAttribute="height" constant="240" id="FQN-fZ-T9g"/>
                                 </constraints>
                             </imageView>

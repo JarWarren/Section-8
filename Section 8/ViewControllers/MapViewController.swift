@@ -77,7 +77,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         mapInstructionsLabel.text = "6aText".localize
         
         // Add step title to navigation bar
-        self.title = NSLocalizedString("step6", comment: "")
+        self.title = "step6".localize
     }
     
     func setupMap() {
