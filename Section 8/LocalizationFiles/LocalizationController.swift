@@ -10,10 +10,12 @@ import Foundation
 
 class LocalizationController {
     
+    let langChangedNotif = Notification.Name("langChangedNotif")
+    
     static let shared = LocalizationController()
     private init() {}
     
-    var activeLanguage = ["en"]
+    var activeLanguage = ["en"] 
     
     func setToEnglish() {
         LocalizationController.shared.activeLanguage = ["en"]
@@ -28,13 +30,6 @@ class LocalizationController {
     func definirParaOPortuguês() {
         LocalizationController.shared.activeLanguage = ["pt-BR"]
         print("🇧🇷")
-    }
-    
-    private func fileURL() -> URL {
-        let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        let fileName = "ActiveLanguage.json"
-        let documentsDirectoryURL = urls[0].appendingPathComponent(fileName)
-        return documentsDirectoryURL
     }
     
     func saveLanguage() {
@@ -53,6 +48,13 @@ class LocalizationController {
         } catch {
             print("Language set to English.")
         }
+    }
+    
+    private func fileURL() -> URL {
+        let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let fileName = "ActiveLanguage.json"
+        let documentsDirectoryURL = urls[0].appendingPathComponent(fileName)
+        return documentsDirectoryURL
     }
 }
 
