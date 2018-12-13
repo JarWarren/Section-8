@@ -277,7 +277,9 @@
     // Item 8c - Photo
 
     // Item 8d - List of four docs
+
     "8dText" = "Los necesitará para completar cuatro formularios: \n\n– Aprobación de arrendamiento \n– Formulario W-9 \n– Carta de presentación \n– Contrato de arrendamiento propuesto \n\nEn el paquete que recibió en su sesión informativa, debe Tenga una copia de cada uno de estos formularios. \n\nEl complejo de apartamentos podría completar todo mientras usted espera, o pueden pedirle que regrese otro día.";
+
 
     // Item 8e - Helpful hint
     "8eTitle" = "CONSEJO ÚTIL";
@@ -321,8 +323,9 @@
     // Item 9c - Photo
 
     // Item 9d - After you deliver docs
+
     "9dText" = "Después de entregar estos documentos, a Housing Authority procesará la documentación y luego se comunicarán con usted.";
-    
+
     // Item 9e - Important reminder
     "9eTitle" = "RECORDATORIO IMPORTANTE";
     "9eText" = "Housing Authority utilizará el número de teléfono y la dirección que proporcionó en su solicitud para contactarlo, de modo que cuando entregue los documentos, verifique con ellos para asegurarse de que su número de teléfono y dirección sean correctos.";
