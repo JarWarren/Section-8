@@ -51,14 +51,37 @@ class SelectedApartmentController {
         }
         self.selectedApartment = selectedApartment
         if let unwrapped = selectedApartment {
+            
+            // Selected apartment contact info displayed in Step 7
             StepController.shared.steps[6].items[3].text = "\(unwrapped.name)\n\(unwrapped.address1Split)\n\(unwrapped.address2Split)\n\(unwrapped.phone)"
+            
+            // Selected apartment contact info displayed in Step 8
             StepController.shared.steps[7].items[3].text = "\(unwrapped.name)\n\(unwrapped.address1Split)\n\(unwrapped.address2Split)\n\(unwrapped.phone)"
+            
+            // Selected apartment contact info displayed in Step 11
             StepController.shared.steps[10].items[3].text = "\(unwrapped.name)\n\(unwrapped.address1Split)\n\(unwrapped.address2Split)\n\(unwrapped.phone)"
+            
+            // Selected apartment contact info displayed in Step 13
+            StepController.shared.steps[12].items[3].text = "\(unwrapped.name)\n\(unwrapped.address1Split)\n\(unwrapped.address2Split)\n\(unwrapped.phone)"
+            
+            // Selected apartment contact info displayed in Step 14
             StepController.shared.steps[13].items[3].text = "\(unwrapped.name)\n\(unwrapped.address1Split)\n\(unwrapped.address2Split)\n\(unwrapped.phone)"
+            
         } else {
+            
+            // When selected apartment contact info is not available in Step 7
             StepController.shared.steps[6].items[3].text = NSLocalizedString("7bText", comment: "")
+            
+            // When selected apartment contact info is not available in Step 8
             StepController.shared.steps[7].items[3].text = NSLocalizedString("8bText", comment: "")
+            
+            // When selected apartment contact info is not available in Step 11
             StepController.shared.steps[10].items[3].text = NSLocalizedString("11bText", comment: "")
+            
+            // When selected apartment contact info is not available in Step 13
+            StepController.shared.steps[12].items[3].text = NSLocalizedString("13bText", comment: "")
+            
+            // When selected apartment contact info is not available in Step 14
             StepController.shared.steps[13].items[3].text = NSLocalizedString("14bText", comment: "")
         }
     }

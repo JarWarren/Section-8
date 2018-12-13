@@ -395,15 +395,15 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
 extension StepDetailTVC: ClickLinkTVCellDelegate {
     func clickLinkButtonTapped(_ sender: ClickLinkTVCell) {
         
-        // Step 7 - Item 7H - Button that calls apartment phone number
-        if sender.clickLinkButtonText?.titleLabel?.text == NSLocalizedString("7hButtonText", comment: "") {
+        // Step 7 - Item 7g - Button that calls apartment phone number
+        if sender.clickLinkButtonText?.titleLabel?.text == NSLocalizedString("7gButtonText", comment: "") {
             guard let phone = SelectedApartmentController.shared.selectedApartment?.phone else { return }
             guard let url = URL(string: "telprompt://\(phone)") else { return }
             UIApplication.shared.open(url)
         }
         
-        // Step 7 - Item 7I - Button that returns to Step 6
-        if sender.clickLinkButtonText?.titleLabel?.text == NSLocalizedString("7iButtonText", comment: "") {
+        // Step 7 - Item 7h - Button that returns to Step 6
+        if sender.clickLinkButtonText?.titleLabel?.text == NSLocalizedString("7hButtonText", comment: "") {
             if self.userDidComeFromStep6 == true{
                 self.navigationController?.popViewController(animated: true)
             } else {
@@ -432,7 +432,6 @@ extension StepDetailTVC: DataInputTVCellDelegate {
         tableView.reloadData()
     }
 }
-
 
 // MARK: - 7-DAY NOTIFICATION EXTENSION
 
@@ -463,7 +462,6 @@ extension StepDetailTVC {
         timerController.cancelLocalNotificationWith(identifier: Constants.categorySevenNotificationID)
         print("\n7 day notification canceled\n")
     }
-    
     
     func scheduleSevenDayIntervalNotif() {
         print("\n7 day notification was set\n")
