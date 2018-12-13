@@ -21,7 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Google Maps
         GMSServices.provideAPIKey("AIzaSyAchY5OHlVXXQyaux0dO-kM0gVQz0T0rzE")
         StepController.shared.loadCompletedSteps()
-        print("\n🌐 active language: \(LocalizationController.shared.activeLanguage) 🌐\n")
         
         return true
     }

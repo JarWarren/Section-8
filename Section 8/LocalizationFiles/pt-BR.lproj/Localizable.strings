@@ -9,12 +9,13 @@
 // MARK: - Portugues
 
 "STEP" = "PASSO";
-"step1" = "Encher o applicação online";
+"step1" = "Encher o aplicação online";
 "step2" = "Photo ID & Social Security Card";
-"step3" = "Attend briefing";
+"step3" = "Completar e enviar aplicação física";
  
 // ITEMS
 "1a" = "Fill out the preliminary application by clicking the button below, but read these instructions first:";
+"1aText" = "Português";
 
 
 // MARK: - 7-DAY Notifications
