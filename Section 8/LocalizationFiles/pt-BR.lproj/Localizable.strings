@@ -16,8 +16,8 @@
     "homeIntroText" = "Este aplicativo simplifica o processo de encontrar Section 8 housing no Utah County. Toque em cada passo para ver o que fazer a seguir. Quando você terminar, uma marca de verificação verde aparecerá. Então vá para o próximo passo!";
 
     // Complete button
-    "completeButtonTextTapToMarkCompleteA" = "TOQUE QUANDO O";
-    "completeButtonTextTapToMarkCompleteB" = "ESTIVER COMPLETO";
+    "completeButtonTextTapToMarkCompleteA" = "MARCAR O";
+    "completeButtonTextTapToMarkCompleteB" = "COMPLETO";
     "completeButtonTextTapToMarkIncompleteA" = "TOQUE PARA MARCAR O";
     "completeButtonTextTapToMarkIncompleteB" = "INCOMPLETO";
 
@@ -78,15 +78,15 @@
 
     "STEP" = "PASSO";
 
-    "step1" = "Preencher o formulário on-line";
+    "step1" = "Formulário preliminares";
     "step2" = "Apresentar identificação";
-    "step3" = "Completar e enviar aplicação física";
-    "step4" = "Participar da reunião informativa";
-    "step5" = "Calcular o pagamento do aluguel";
+    "step3" = "Completar aplicação física";
+    "step4" = "Reunião informativa";
+    "step5" = "Calcular aluguel";
     "step6" = "Escolher o apartamento";
-    "step7" = "Ligar para o complexo de apartamentos";
+    "step7" = "Ligar para o senhorio";
     "step8" = "Formulários do proprietário";
-    "step9" = "Retorna os fomrulários do HUAC";
+    "step9" = "Retorna os fomrulários";
     "step10" = "Programar uma inspecção";
     "step11" = "Inspecção do apartamento";
     "step12" = "Consulta final com o HUAC";

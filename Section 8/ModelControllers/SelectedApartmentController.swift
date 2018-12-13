@@ -69,19 +69,19 @@ class SelectedApartmentController {
         } else {
             
             // When selected apartment contact info is not available in Step 7
-            StepController.shared.steps[6].items[3].text = NSLocalizedString("7bText", comment: "")
+            StepController.shared.steps[6].items[3].text = "7bText".localize
             
             // When selected apartment contact info is not available in Step 8
-            StepController.shared.steps[7].items[3].text = NSLocalizedString("8bText", comment: "")
+            StepController.shared.steps[7].items[3].text = "8bText".localize
             
             // When selected apartment contact info is not available in Step 11
-            StepController.shared.steps[10].items[3].text = NSLocalizedString("11bText", comment: "")
+            StepController.shared.steps[10].items[3].text = "11bText".localize
             
             // When selected apartment contact info is not available in Step 13
-            StepController.shared.steps[12].items[3].text = NSLocalizedString("13bText", comment: "")
+            StepController.shared.steps[12].items[3].text = "13bText".localize
             
             // When selected apartment contact info is not available in Step 14
-            StepController.shared.steps[13].items[3].text = NSLocalizedString("14bText", comment: "")
+            StepController.shared.steps[13].items[3].text = "14bText".localize
         }
     }
 }

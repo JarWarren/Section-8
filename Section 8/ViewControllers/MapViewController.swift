@@ -74,10 +74,10 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         setupMap()
         addMarkers()
         utahCountyMapView.delegate = self
-        mapInstructionsLabel.text = NSLocalizedString("6aText", comment: "")
+        mapInstructionsLabel.text = "6aText".localize
         
         // Add step title to navigation bar
-        self.title = NSLocalizedString("step6", comment: "")
+        self.title = "step6".localize
     }
     
     func setupMap() {

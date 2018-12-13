@@ -63,7 +63,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     
     // Date banner
     let datePickerNotifBanner = NSString.localizedUserNotificationString(forKey: "datePickerBanner", arguments: [])
-    let bannerImageName = NSLocalizedString("notificationBanner", comment: "")
+    let bannerImageName = "notificationBanner".localize
     
     // MARK: - VIEW DID LOAD & VIEW WILL APPEAR
     
@@ -89,9 +89,9 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         // Change step buttons to specific step
         if let thisStep = selectedStep {
             if !thisStep.stepCompleted {
-                completeButtonStatus.setTitle(NSLocalizedString("completeButtonTextTapToMarkCompleteA", comment: "") + " \(thisStep.stepNumber) " + NSLocalizedString("completeButtonTextTapToMarkCompleteB", comment: ""), for: .normal)
+                completeButtonStatus.setTitle("completeButtonTextTapToMarkCompleteA".localize + " \(thisStep.stepNumber) " + "completeButtonTextTapToMarkCompleteB".localize, for: .normal)
             } else {
-                completeButtonStatus.setTitle(NSLocalizedString("completeButtonTextTapToMarkIncompleteA", comment: "") + " \(thisStep.stepNumber) " + NSLocalizedString("completeButtonTextTapToMarkIncompleteB", comment: ""), for: .normal)
+                completeButtonStatus.setTitle("completeButtonTextTapToMarkIncompleteA".localize + " \(thisStep.stepNumber) " + "completeButtonTextTapToMarkIncompleteB".localize, for: .normal)
             }
         }
         
@@ -342,14 +342,14 @@ extension StepDetailTVC: ClickLinkTVCellDelegate {
     func clickLinkButtonTapped(_ sender: ClickLinkTVCell) {
         
         // Step 7 - Item 7g - Button that calls apartment phone number
-        if sender.clickLinkButtonText?.titleLabel?.text == NSLocalizedString("7gButtonText", comment: "") {
+        if sender.clickLinkButtonText?.titleLabel?.text == "7gButtonText".localize {
             guard let phone = SelectedApartmentController.shared.selectedApartment?.phone else { return }
             guard let url = URL(string: "telprompt://\(phone)") else { return }
             UIApplication.shared.open(url)
         }
         
         // Step 7 - Item 7h - Button that returns to Step 6
-        if sender.clickLinkButtonText?.titleLabel?.text == NSLocalizedString("7hButtonText", comment: "") {
+        if sender.clickLinkButtonText?.titleLabel?.text == "7hButtonText".localize {
             if self.userDidComeFromStep6 == true{
                 self.navigationController?.popViewController(animated: true)
             } else {
