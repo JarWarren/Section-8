@@ -12,6 +12,9 @@
 
 // MARK: - UI COMPONENTS
 
+    // Home introduction text
+    "homeIntroText" = "Este aplicativo simplifica o processo de encontrar Section 8 housing no Utah County. Toque em cada passo para ver o que fazer a seguir. Quando você terminar, uma marca de verificação verde aparecerá. Então vá para o próximo passo!";
+
     // Complete button
     "completeButtonTextTapToMarkCompleteA" = "TOQUE QUANDO O";
     "completeButtonTextTapToMarkCompleteB" = "ESTIVER COMPLETO";

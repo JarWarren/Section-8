@@ -12,6 +12,9 @@
 
 // MARK: - UI COMPONENTS
 
+    // Home introduction text
+    "homeIntroText" = "This app simplifies the process of finding affordable Section 8 housing in Utah County. Tap on each step to see what to do next. When you finish, a green checkmark will appear. Then move to the next step!";
+
     // Complete button
     "completeButtonTextTapToMarkCompleteA" = "TAP WHEN";
     "completeButtonTextTapToMarkCompleteB" = "IS COMPLETE";
