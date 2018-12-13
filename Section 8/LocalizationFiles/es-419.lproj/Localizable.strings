@@ -275,7 +275,8 @@
     "7hButtonText" = "PULSAR PARA VOLVER AL MAPA DEL APARTAMENTO";
 
     // Item 7i - Tap to complete
-    "7iText" = "Una vez que haya encontrado un apartamento adecuado para usted, pulse el botón \"Completar\" a continuación para pasar al siguiente paso.";
+
+"7iText" = "Una vez que haya encontrado un apartamento adecuado para usted, pulsar el botón \"Completar\" a continuación para pasar al siguiente paso.";
 
 // MARK: - STEP 8 ITEMS
 
@@ -285,177 +286,199 @@
     // Item 8b - Selected apartment
     "8bTitle" = "DIRECCION DEL APARTAMENTO QUE ELIGAS";
 
-    "8bText" = "You have not selected an apartment yet. Return to Step 6, and select an apartment before completing this step.";
+"8bText" = "Aún no has seleccionado un apartamento. Vuelva al paso 6 y seleccione un apartamento antes de completar este paso.";
 
     // Item 8c - Photo
 
     // Item 8d - List of four docs
-    "8dText" = "You will need them to complete four forms: \n\n– Tenancy Approval form \n– Copy of proposed lease \n– W-9 form \n– Cover letter \n\nIn the packet you received at your briefing, you should have a copy of each of these forms. \n\nThe apartment complex might be able to fill everything out while you wait, or they may tell you to come back on another day.";
+"8dText" = "Los necesitará para completar cuatro formularios: \n\n– Formulario de aprobación de arrendamiento \n– Copia del contrato de arrendamiento propuesto \n– Formulario W-9 \n– Carta de presentación \n\nEn el paquete que recibió en su sesión informativa, debe Tenga una copia de cada uno de estos formularios. \n\nEl complejo de apartamentos podría completar todo mientras usted espera, o pueden pedirle que regrese otro día.
+";
 
     // Item 8e - Helpful hint
-    "8eTitle" = "HELPFUL HINT";
-    "8eText" = "If you need to send a copy of these forms to the apartment complex, tap on the links below, and share the forms by email address or mobile number. Then return to this page by tapping on the Section 8 link at the top-left of your browser screen.";
+"8eTitle" = "CONSEJO ÚTIL";
+"8eText" = "Si necesita enviar una copia de estos formularios al complejo de apartamentos, toque en los enlaces a continuación y comparta los formularios por correo electrónico o número de teléfono móvil. Luego regrese a esta página tocando el enlace de la Sección 8 en la parte superior izquierda de la pantalla de su navegador.";
 
     // Item 8f - Tenancy approval
-    "8fTitle" = "TENANCY APPROVAL FORM";
-    "8fText" = "Make sure the form is filled out completely, and SIGNED:";
-    "8fButtonText" = "LINK TO TENANCY APPROVAL FORM";
+"8fTitle" = "FORMULARIO DE APROBACIÓN DE LA TENENCIA";
+
+"8fText" = "Asegúrese de que el formulario esté completo y FIRMADO:";
+
+"8fButtonText" = "ENLACE AL FORMULARIO DE APROBACIÓN DE LA TENENCIA";
 
     // Item 8g - W-9
-    "8gTitle" = "W-9 FORM";
-    "8gText" = "Make sure the form is filled out completely, and SIGNED:";
-    "8gButtonText" = "LINK TO W-9 FORM";
+    "8gTitle" = "FORMULARIO W-9";
+
+    "8gText" = "Asegúrese de que el formulario esté completo y FIRMADO:";
+
+    "8gButtonText" = "ENLACE AL FORMULARIO W-9";
 
     // Item 8h - Cover letter
-    "8hTitle" = "COVER LETTER FORM";
-    "8hText" = "Make sure the form is filled out completely, and SIGNED:";
-    "8hButtonText" = "LINK TO COVER LETTER FORM";
+"8hTitle" = "FORMULARIO DE CARTA DE PRESENTATCION";
+
+    "8hText" = "Asegúrese de que el formulario esté completo y FIRMADO:";
+
+    "8hButtonText" = "ENLACE AL FORMULARIO DE CARTA DE PRESENTATCION";
 
     // Item 8i - Copy of proposed lease
-    "8iTitle" = "COPY OF PROPOSED LEASE";
-    "8iText" = "Make sure the following is written somewhere on the lease: “The HUD Tenancy Addendum is hereby made a part of this lease.";
+    "8iTitle" = "COPIA DEL ARRENDAMIENTO PROPUESTO";
+
+    "8iText" = "Asegúrese de que lo siguiente esté escrito en alguna parte del contrato de arrendamiento: \“The HUD Tenancy Addendum is hereby made a part of this lease.\"";
 
     // Item 8j - Important reminder
-    "8jTitle" = "IMPORTANT REMINDER";
-    "8jText" = "Make sure you get ALL FOUR of these documents, or you won’t be able to complete the next step.";
+"8jTitle" = "RECORDATORIO IMPORTANTE";
+
+"8jText" = "Asegúrese de obtener TODOS los cuatro documentos o no podrá completar el siguiente paso.";
 
     // Item 8k - Top to complete
-    "8kText" = "Once you have the documents, tap on the “Complete” button below to move on to the next step!";
+"8kText" = "Una vez que tenga los documentos, toque el botón \"Completar\" a continuación para pasar al siguiente paso.";
 
 // MARK: - STEP 9 ITEMS
 
     // Item 9a - Intro
-    "9aText" = "Now that you have the four required documents from Step 8, you need to take them to the Housing Authority office:";
+"9aText" = "Ahora que tiene los cuatro documentos requeridos del Paso 8, debe llevarlos a la oficina de Housing Authority:";
 
     // Item 9b - Housing Authority office info
-    "9bTitle" = "HOUSING AUTHORITY INFORMATION";
-    "9bText" = "240 E Center St, Provo, UT 84606 \nMonday–Thursday, 7:30am–5:30pm \nPhone: 801-373-8333";
+    "9bTitle" = "INFORMACIÓN DE HOUSING AUTHORITY";
+
+    "9bText" = "240 E Center St, Provo, UT 84606 \nLunes-Jueves, 7:30am–5:30pm \nteléfono: 801-373-8333";
 
     // Item 9c - Photo
 
     // Item 9d - After you deliver docs
-    "9dText" = "After you deliver these documents, the Housing Authority will process the paperwork, and then they will contact you.";
+"9dText" = "Después de entregar estos documentos, a Housing Authority procesará la documentación y luego se comunicarán con usted".;
 
     // Item 9e - Important reminder
-    "9eTitle" = "IMPORTANT REMINDER";
-    "9eText" = "The Housing Authority will use the phone number and address you provided on your application to contact you, so when you deliver the documents, check with them to make sure your phone number and address are correct.";
+    "9eTitle" = "RECORDATORIO IMPORTANTE";
+
+    "9eText" = "Housing Authority utilizará el número de teléfono y la dirección que proporcionó en su solicitud para contactarlo, de modo que cuando entregue los documentos, verifique con ellos para asegurarse de que su número de teléfono y dirección sean correctos.";
 
     // Item 9f - Tap to complete
-    "9fText" = "Once you deliver the documents to the Housing Authority, tap on the “Complete” button below to move on to the next step!";
+"9fText" = "Una vez que entregue los documentos a Housing Authority, toque el botón \"Completar\" a continuación para pasar al siguiente paso.";
 
 // MARK: - STEP 10 ITEMS
 
     // Item 10a - Intro
-    "10aText" = "Several days after you have submitted the required forms, you will either get a phone call, or receive a letter in the mail from the Housing Authority to set up an appointment to do a apartment inspection.";
+"10aText" = "Varios días después de que haya enviado los formularios requeridos, recibirá una llamada telefónica o recibirá una carta por correo de Housing Authority para programar una cita para hacer una inspección del apartamento.";
 
     // Item 10b - Important reminder
-    "10bTitle" = "IMPORTANT REQUIREMENT";
-    "10bText" = "The apartment to be inspected must either be vacant, or it must be your current apartment. If it is your current apartment, all the utilities MUST be turned on.";
+"10bTitle" = "REQUISITO IMPORTANTE";
+
+"10bText" = "El apartamento a inspeccionar debe estar vacío o debe ser su apartamento actual. Si es su apartamento actual, todas las utilidades DEBEN estar encendidas.";
 
     // Item 10c - Talk to landlord and housing authority
-    "10cText" = "You will need to talk to the Housing Authority, as well as the apartment complex, to find a time that works for both. You will also need to make sure that an adult is at the until when the inspector arrives.";
+"10cText" = "Tiene que hablar con Housing Authoirty y el dueño del apartamento, para programar un horario que funcione para ambos. También asegurarse de que haya un adulto en el apartamento cuando llegue el inspector de Housing Authority.";
 
     // Item 10d - Inspection date picker
-    "10dTitle" = "INSPECTION DATE";
-    "10dText" = "Please enter your inspection date here, so we can send you a reminder notification:";
-    "10dButtonText" = "TAP TO SAVE DATE";
+"10dTitle" = "FECHA DE INSPECCIÓN";
+
+"10dText" = "Ingrese su fecha de inspección aquí, para que podamos enviarle una notificación de recordatorio:";
+
+    "10dButtonText" = "PULSAR PARA GUARDAR LA FECHA";
 
     // Item 10e - Tap to complete
-    "10eText" = "Once the inspection has been scheduled with the apartment complex AND the Housing Authority, tap on the “Complete” button below to move on to the next step!";
+"10eText" = "Una vez que se haya programado la inspección con el complejo de apartamentos Y Housing Authority, toque el botón \"Completar\" a continuación para pasar al siguiente paso.";
 
 // MARK: - STEP 11 ITEMS
 
     // Item 11a - Intro
-    "11aText" = "On the day of the inspection, make sure that there is an adult at the apartment when the inspector arrives. That can be you or someone from the apartment complex.";
+"11aText" = "El día de la inspección, asegúrese de que haya un adulto en el apartamento cuando llegue el inspector. Eso puede ser usted o alguien del complejo de apartamentos.";
 
     // Item 11b - Selected aparmentment (IF ITEM KEY IS CHANGED, UPDATE CODE IN SELECTED APARTMENT CONTROLLER)
-    "11bTitle" = "THE APARTMENT YOU CHOSE";
-    "11bText" = "You have not selected an apartment yet. Return to Step 6, and select an apartment before completing this step.";
+"11bTitle" = "EL APARTAMENTO QUE ELIJAS";
+
+"11bText" = "Aún no has seleccionado un apartamento. Vuelva al paso 6 y seleccione un apartamento antes de completar este paso.";
 
     // Item 11c - Photo
 
     // Item 11d - If it doesn't pass
-    "11dText" = "If unit does not pass inspection, necessary repairs must be made. When repairs are completed, call the Housing Authority at 801-373-8333, extension 117 to schedule a re-inspection appointment.";
+"11dText" = "Si la unidad no pasa la inspección, se deben hacer las reparaciones necesarias. Cuando se completen las reparaciones, llame a la Autoridad de Vivienda al 801-373-8333, extensión 117 para programar una cita de reinspección.";
 
     // Item 11e - If you need to reschedule
-    "11eTitle" = "IF YOU NEED TO RESCHEDULE";
-    "11eText" = "If you need to schedule a re-inspection appointment, go back and change the inspection date on Step 10, so we can remind you when it’s getting closer to inspection time.";
+"11eTitle" = "SI USTED NECESITA RESCHEDULE";
+
+"11eText" = "Si necesita programar una cita de reinspección, regrese y cambie la fecha de inspección en el Paso 10, para que podamos recordarle cuándo se acerca el momento de la inspección..";
 
     // Item 11f - Tap to complete
-    "11fText" = "Once the inspection is finished, tap on the “Complete” button below to move on to the next step!";
+"11fText" = "Una vez que finalice la inspección, toque el botón \"Completar\" a continuación para pasar al siguiente paso.";
 
 // MARK: - STEP 12 ITEMS
 
     // Item 12a - Intro
-    "12aText" = "After your unit passes an inspection, the Housing Authority will call you to make an appointment where you will visit them at their office.";
+"12aText" = "Después de que su apartamento haya pasado una inspección, Housing Authority lo llamará para concertar una cita donde los visitará en su oficina.";
 
     // Item 12b - Final appointment date picker
-    "12bTitle" = "FINAL APPOINTMENT DATE";
-    "12bText" = "Please enter your final appointment date here, so we can send you a reminder notification:";
-    "12bButtonText" = "TAP TO SAVE DATE";
+"12bTitle" = "FECHA FINAL DE LA CITA";
+
+"12bText" = "Ingrese la fecha de su cita final aquí, para que podamos enviarle una notificación de recordatorio:";
+
+"12bButtonText" = "PULSAR PARA GUARDAR LA FECHA";
 
     // Item 12c - Don't forget appointment
-    "12cText" = "Make sure to not forget your appointment. On the day of the appointment, plan ahead and arrive early.";
+"12cText" = "Asegúrate de no olvidar tu cita. En el día de la cita, planificar con anticipación y llegar temprano.";
 
     // Item 12d - Housing Authority office info
-    "12dTitle" = "HOUSING AUTHORITY INFORMATION";
-    "12dText" = "240 E Center St, Provo, UT 84606 \nMonday–Thursday, 7:30am–5:30pm \nPhone: 801-373-8333";
+"12dTitle" = "INFORMACIÓN DE HOUSING AUTHORITY";
+
+    "12dText" = "240 E Center St, Provo, UT 84606 \nLunes-Jueves, 7:30am–5:30pm \nPhone: 801-373-8333";
 
     // Item 12d - Photo
 
     // Item 12e - At appointment
-    "12eText" = "At this appointment, the Housing Authority will have you sign final paperwork.";
+"12eText" = "En esta cita, Housing Authority le hará firmar la documentación final.";
 
     // Item 12f - If you need to reschedule
-    "12fTitle" = "IF YOU NEED TO RESCHEDULE";
-    "12fText" = "If you need to re-schedule your final appointment, go back and change the appointment date above, so we can remind you when it’s getting closer to inspection time.";
+"12fTitle" = "SI USTED NECESITA RESCHEDULE";
+
+"12fText" = "Si necesita volver a programar su cita final, regrese y cambie la fecha de la cita anterior, para que podamos recordarle cuándo se acerca el momento de la inspección.";
 
     // Item 12g - Tap to complete
-    "12gText" = "Once your final appointment is finished, tap on the “Complete” button below to move on to the next step!";
+"12gText" = "Una vez que finalice su cita final, toque el botón \"Completar\" a continuación para pasar al siguiente paso.";
 
 // MARK: - STEP 13 ITEMS
 
     // Item 13a - Intro
-    "13aText" = "After your final appointment, you will need to deliver the leases and contracts to the apartment complex, so they can be signed.";
+"13aText" = "Después de su cita final, deberá entregar los contratos de arrendamiento y los contratos al complejo de apartamentos, para que puedan ser firmados.";
 
     // Item 13b - Selected aparmentment (IF ITEM KEY IS CHANGED, UPDATE CODE IN SELECTED APARTMENT CONTROLLER)
-    "13bTitle" = "THE APARTMENT YOU CHOSE";
-    "13bText" = "You have not selected an apartment yet. Return to Step 6, and select an apartment before completing this step.";
+"13bTitle" = "El apartamento que escogiste";
+"13bText" = "Aún no has seleccionado un apartamento. Vuelva al paso 6 y seleccione un apartamento antes de completar este paso.";
 
     // Item 13c - Photo
 
     // Item 13d - Then return copies to HAUC
-    "13dText" = "Then you must return ALL copies to the Housing Authority:";
+"13dText" = "Luego debes devolver TODAS las copias a Housing Authority:";
 
     // Item 13e - Housing Authority office info
-    "13eTitle" = "HOUSING AUTHORITY INFORMATION";
-    "13eText" = "240 E Center St, Provo, UT 84606 \nMonday–Thursday, 7:30am–5:30pm \nPhone: 801-373-8333";
+    "13eTitle" = "INFORMACIÓN DE HOUSING AUTHORITY";
+    "13eText" = "240 E Center St, Provo, UT 84606 \nLunes-Jueves, 7:30am–5:30pm \nteléfono: 801-373-8333";
 
     // Item 13f - Photo
 
     // Item 13g - When paperwork is processed & Tap to complete
-    "13gText" = "When the paperwork has been processed, the Housing Authority will send you copies in the mail. \n\nOnce you have returned the signed leases and contracts to the Housing Authority, tap on the “Complete” button below to move on to the next step!";
+"13gText" = "Cuando se haya procesado el papeleo, Housing Authority le enviará copias por correo. \n\n¡Una vez que haya devuelto los contratos y contratos firmados a Housing Authority, pulse el botón \"Completar\" a continuación para pasar al siguiente paso!";
 
 // MARK: - STEP 14 ITEMS
 
     // Item 14a - Intro
-    "14aText" = "Once you have received signed copies of the contracts and leases in the mail, you can schedule a time with the apartment complex to move in.";
+"14aText" = "Una vez que haya recibido copias firmadas de los contratos y arrendamientos por correo, puede programar una hora con el complejo de apartamentos para mudarse.";
 
     // Item 14b - Selected apartment
-    "14bTitle" = "WELCOME TO YOUR NEW HOME!";
-    "14bText" = "You have not selected an apartment yet. Return to Step 6, and select an apartment before completing this step.";
+"14bTitle" = "¡BIENVENIDO A TU NUEVO HOGAR!";
+
+"14bText" = "Aún no has seleccionado un apartamento. Vuelva al paso 6 y seleccione un apartamento antes de completar este paso.";
 
     // Item 14c - Photo
 
     // Item 14d - Recertification process
-    "14dText" = "For now, this process is complete! \n\nAt some point in the future, you will have to go through the re-certification process. You will receive a letter two to three months before your re-certification deadline. That letter will contain instructions on what steps to take to complete the process.";
+"14dText" = "Por ahora, este proceso está completo! \n\nEn algún momento en el futuro, tendrá que pasar por el proceso de re-certificación. Recibirá una carta dos o tres meses antes de la fecha límite de recertificación. Esa carta contendrá instrucciones sobre los pasos a seguir para completar el proceso.";
 
     // Item 14e - Important reminder
-    "14eTitle" = "IMPORTANT REMINDER";
-    "14eText" = "Remember to inform the Housing Authority when any changes occur, either in your household income, or in the number of people living in your apartment.";
+"14eTitle" = "RECORDATORIO IMPORTANTE";
+
+"14eText" = "Recuerde informar a Housing Authority cuando se produzcan cambios, ya sea en los ingresos de su hogar o en el número de personas que viven en su apartamento.";
 
     // Item 14f - Tap to complete
-    "14fText" = "Congratulations! You have now completed the process of obtaining affordable Section 8 housing! It is a long and difficult process, and you have done a great job! \n\nTap on the button below to complete the Section 8 Housing process.";
+"14fText" = "¡Felicidades! ¡Ya ha completado el proceso de obtención de viviendas asequibles de Section 8! Es un proceso largo y difícil, ¡y has hecho un gran trabajo! \n\nPresione el botón a continuación para completar el proceso de Vivienda de Section 8.";
 
 
 
