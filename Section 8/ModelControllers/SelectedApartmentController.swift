@@ -50,7 +50,6 @@ class SelectedApartmentController {
             print("FAILED TO LOAD PREVIOUSLY SELECTED APARTMENT")
         }
         self.selectedApartment = selectedApartment
-        StepController.shared.addItemsToSteps()
         if let unwrapped = selectedApartment {
             // Selected apartment contact info displayed in Step 7
             StepController.shared.steps[6].items[3].text = "\(unwrapped.name)\n\(unwrapped.address1Split)\n\(unwrapped.address2Split)\n\(unwrapped.phone)"
