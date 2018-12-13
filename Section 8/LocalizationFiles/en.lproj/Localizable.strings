@@ -10,7 +10,6 @@
 
     "LaunchScreenTitle" = "Section8";
 
-
 // MARK: - UI COMPONENTS
 
     // Complete button
@@ -19,54 +18,54 @@
     "completeButtonTextTapToMarkIncompleteA" = "TAP TO CHANGE";
     "completeButtonTextTapToMarkIncompleteB" = "TO INCOMPLETE";
 
-// MARK: Location Notification
-//Note "locationDismissButtonTitle" and "locationResourceName" are using key value pairs associated with other constants in order to avoid having to re-create them
-"locationContentTitle" = "Good Luck Today";
-"locationConentBody" = "Make sure to get all your questions answered";
+// MARK: LOCATION NOTIFICATION
 
-// MARK: - 7-DAY Notifications
+    //Note "locationDismissButtonTitle" and "locationResourceName" are using key value pairs associated with other constants in order to avoid having to re-create them
+    "locationContentTitle" = "Headed to the Housing Authority office?";
+    "locationConentBody" = "Good Luck Today! Use the Section8 app to help you remember what you need to do.";
 
-    // Seven Day Interval Text fields
-// NOTE: - location notification dissmiss button is using the 7 day interval text field's "7DayDismiss" key in order to avoid having to recreate this key value pair. due to both having a "Dismiss" title.
+// MARK: - SEVEN-DAY NOTIFICATIONS
+
+    // Seven-day interval text fields
+    // NOTE: - location notification dissmiss button is using the 7 day interval text field's "7DayDismiss" key in order to avoid having to recreate this key value pair. due to both having a "Dismiss" title.
     "7DayDismiss" = "Dismiss";
     "7DayContentTitle" = "Section 8 Housing Reminder";
     "7DayContentSubtitle" = "";
     "7DayContentBody" = "It's been a week since you worked on your application. Tap here to take the next step!";
 
-// Mark: - Date Picker Notifications
+// MARK: - DATE PICKER NOTIFICATIONS
 
-// Step 3 - Intial Appointment Date
-"s3DatePickerDismissTitle" = "Dismiss";
-"s3DatePickerContentTitle" = "Today's The day";
-"s3DatePickercontentSubtitle" = "";
-"s3DatePickerContentBody" = "Make sure to take all your paper work to your initial appointment";
+    // Step 3 - Intial appointment date
+    "s3DatePickerDismissTitle" = "Dismiss";
+    "s3DatePickerContentTitle" = "Appointment Reminder";
+    "s3DatePickercontentSubtitle" = "";
+    "s3DatePickerContentBody" = "Today's The day! Make sure to take all your paper work to your initial appointment";
 
-// Step 4 - Attend Briefing
-"s4DatePickerDismissTitle" = "Dismiss";
-"s4DatePickerContentTitle" = "Today's The day";
-"s4DatePickercontentSubtitle" = "";
-"s4DatePickerContentBody" = "Make sure to take all your paper work to your briefing appointment";
+    // Step 4 - Attend briefing
+    "s4DatePickerDismissTitle" = "Dismiss";
+    "s4DatePickerContentTitle" = "Appointment Reminder";
+    "s4DatePickercontentSubtitle" = "";
+    "s4DatePickerContentBody" = "Today's The day! Make sure to take all your paper work to your briefing appointment";
 
-// Step 10 - Schedule Inspection
-"s10DatePickerDismissTitle" = "Dismiss";
-"s10DatePickerContentTitle" = "Today's The day";
-"s10DatePickercontentSubtitle" =  "";
-"s10DatePickerContentBody" = "Make sure to take all your paper work to your inspection appointment";
+    // Step 10 - Schedule inspection
+    "s10DatePickerDismissTitle" = "Dismiss";
+    "s10DatePickerContentTitle" = "Appointment Reminder";
+    "s10DatePickercontentSubtitle" =  "";
+    "s10DatePickerContentBody" = "Today's The day! Make sure to take all your paper work to your inspection appointment";
 
-// Step 12 - Final HAUC Appointment
-"s12DatePickerDismissTitle" = "Dismiss";
-"s12DatePickerContentTitle" = "Today's The day";
-"s12DatePickercontentSubtitle" = "";
-"s12DatePickerContentBody" = "Make sure to take all your paper work to your final appointment with HAUC";
+    // Step 12 - Final appointment
+    "s12DatePickerDismissTitle" = "Dismiss";
+    "s12DatePickerContentTitle" = "Appointment Reminder";
+    "s12DatePickercontentSubtitle" = "";
+    "s12DatePickerContentBody" = "Today's The day! Make sure to take all your paper work to your final appointment.";
 
-// MARK: - Notification Images
+// MARK: - NOTIFICATION IMAGES
 
-    // Seven Day Banner Notifications
-// NOTE: - This "notificationBanner" key is also being called in the location notification resource name, in order to not have to avoid recreating another banner key value pair
+    // Seven-day banner notifications
+    // NOTE: - This "notificationBanner" key is also being called in the location notification resource name, in order to not have to avoid recreating another banner key value pair
     "notificationBanner" = "notificationBannerEN";
 
-
-    // Date Picker Banner Notifications
+    // Date picker banner notifications
     "datePickerBanner" = "datePickerBannerEN";
 
 // MARK: - STEPS
@@ -87,7 +86,6 @@
     "step12" = "Final HAUC appointment";
     "step13" = "Return signed leases to HAUC";
     "step14" = "Time to move in!";
-
 
 // MARK: - STEP 1 ITEMS
 
@@ -111,7 +109,6 @@
     // Item 1f - Tap complete
     "1fText" = "Once you have completed the online application, tap on the “Complete” button below to move on to the next step!";
 
-
 // MARK: - STEP 2 ITEMS
 
     // Item 2a - Intro
@@ -133,7 +130,6 @@
     // Item 2f - Tap complete
     "2fText" = "Once the head of household has delivered these two forms of identification to the housing office, this step is complete! Tap on the “Complete” button below to move on to the next step.";
 
-
 // MARK: - STEP 3 ITEMS
 
     // Item 3a - Intro
@@ -149,7 +145,7 @@
 
     // Item 3d - Important reminder
     "3dTitle" = "IMPORTANT REMINDER";
-"3dText" = "When you go in for your appointment, make sure to take in the following: \n– Your completed application, \n– Income verifications, \n– Birth certificates and \n– Social Security Cards.";
+    "3dText" = "When you go in for your appointment, make sure to take in the following: \n– Your completed application, \n– Income verifications, \n– Birth certificates and \n– Social Security Cards.";
 
     // Item 3e - Here is address
     "3eText" = "Here is the address for the location of your appointment:";
@@ -162,7 +158,6 @@
 
     // Item 3h - Tap complete
     "3hText" = "Several days after your appointment, you will be notified by the Housing Authority, and a briefing will be set up for you. \n\nOnce you have completed your application appointment at the Housing Authority office, tap the “Complete” button below to move on to the next step!";
-
 
 // MARK: - STEP 4 ITEMS
 
@@ -191,7 +186,6 @@
     // Item 4g - Tap to complete
     "4gText" = "After attending the briefing, tap the “Complete” button below to move on to the next step!";
 
-
 // MARK: - STEP 5 ITEMS
 
     // Item 5a - Photo
@@ -217,12 +211,10 @@
     // Item 5f - Tap to complete
     "5fText" = "After calculating your maximum rent, click the “Complete” button below to move on to the next step!";
 
-
 // MARK: - STEP 6 ITEMS
 
     // Item 6a - Map instructions
     "6aText" = "Time to choose an apartment! Tap a marker for apartment details. Choose one, and tap the green button to move to the next step.";
-
 
 // MARK: - STEP 7 ITEMS
 
@@ -258,7 +250,6 @@
 
     // Item 7i - Tap to complete
     "7iText" = "Once you have found an apartment that is right for you, tap on the “Complete” button below to move on to the next step!";
-
 
 // MARK: - STEP 8 ITEMS
 
@@ -304,7 +295,6 @@
     // Item 8k - Top to complete
     "8kText" = "Once you have the documents, tap on the “Complete” button below to move on to the next step!";
 
-
 // MARK: - STEP 9 ITEMS
 
     // Item 9a - Intro
@@ -326,7 +316,6 @@
     // Item 9f - Tap to complete
     "9fText" = "Once you deliver the documents to the Housing Authority, tap on the “Complete” button below to move on to the next step!";
 
-
 // MARK: - STEP 10 ITEMS
 
     // Item 10a - Intro
@@ -346,7 +335,6 @@
 
     // Item 10e - Tap to complete
     "10eText" = "Once the inspection has been scheduled with the apartment complex AND the Housing Authority, tap on the “Complete” button below to move on to the next step!";
-
 
 // MARK: - STEP 11 ITEMS
 
@@ -368,7 +356,6 @@
 
     // Item 11f - Tap to complete
     "11fText" = "Once the inspection is finished, tap on the “Complete” button below to move on to the next step!";
-
 
 // MARK: - STEP 12 ITEMS
 
@@ -399,7 +386,6 @@
     // Item 12g - Tap to complete
     "12gText" = "Once your final appointment is finished, tap on the “Complete” button below to move on to the next step!";
 
-
 // MARK: - STEP 13 ITEMS
 
     // Item 13a - Intro
@@ -422,7 +408,6 @@
 
     // Item 13g - When paperwork is processed & Tap to complete
     "13gText" = "When the paperwork has been processed, the Housing Authority will send you copies in the mail. \n\nOnce you have returned the signed leases and contracts to the Housing Authority, tap on the “Complete” button below to move on to the next step!";
-
 
 // MARK: - STEP 14 ITEMS
 

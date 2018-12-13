@@ -1,0 +1,27 @@
+
+/* Class = "UILabel"; text = "STEP 6"; ObjectID = "BxU-9Q-kyR"; */
+"BxU-9Q-kyR.text" = "STEP 6";
+
+/* Class = "UILabel"; text = "(address)"; ObjectID = "H6N-AP-vyM"; */
+"H6N-AP-vyM.text" = "(address)";
+
+/* Class = "UIButton"; normalTitle = "▶"; ObjectID = "J7i-QP-qgA"; */
+"J7i-QP-qgA.normalTitle" = "▶";
+
+/* Class = "UILabel"; text = "(name)"; ObjectID = "ViN-5v-7E4"; */
+"ViN-5v-7E4.text" = "(name)";
+
+/* Class = "UIButton"; normalTitle = "TAP TO CHOOSE THIS APARTMENT"; ObjectID = "ZTd-3G-N7w"; */
+"ZTd-3G-N7w.normalTitle" = "TAP TO CHOOSE THIS APARTMENT";
+
+/* Class = "UILabel"; text = "(text)"; ObjectID = "gXB-iS-EZQ"; */
+"gXB-iS-EZQ.text" = "(text)";
+
+/* Class = "UILabel"; text = "(phone)"; ObjectID = "lWM-vo-tKk"; */
+"lWM-vo-tKk.text" = "(phone)";
+
+/* Class = "UILabel"; text = "Choose apartment"; ObjectID = "rgJ-2N-gGA"; */
+"rgJ-2N-gGA.text" = "Choose apartment";
+
+/* Class = "UIButton"; normalTitle = "◀"; ObjectID = "y77-UP-bpU"; */
+"y77-UP-bpU.normalTitle" = "◀";
