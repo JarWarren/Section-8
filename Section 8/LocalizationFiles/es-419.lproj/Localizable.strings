@@ -15,49 +15,49 @@
     // Complete button
     "completeButtonTextTapToMarkCompleteA" = "PULSAR CUANDO";
     "completeButtonTextTapToMarkCompleteB" = "CUANDO TERMINE";
-    "completeButtonTextTapToMarkIncompleteA" = "TAP TO CHANGE";
-    "completeButtonTextTapToMarkIncompleteB" = "TO INCOMPLETE";
+"completeButtonTextTapToMarkIncompleteA" = "PRESIONE PARA COMBIAR";
+    "completeButtonTextTapToMarkIncompleteB" = "INCOMPLETAR";
 
 // MARK: LOCATION NOTIFICATION
 
     //Note "locationDismissButtonTitle" and "locationResourceName" are using key value pairs associated with other constants in order to avoid having to re-create them
-    "locationContentTitle" = "Headed to the Housing Authority office?";
-    "locationConentBody" = "Good Luck Today! Use the Section8 app to help you remember what you need to do.";
+    "locationContentTitle" = "¿Está usted en camino a la oficina de Housing Authority?";
+    "locationConentBody" = "¡Buena suerte hoy! Usa la aplicación Section8 para ayudarte a recordar lo que debes hacer.";
 
 // MARK: - SEVEN-DAY NOTIFICATIONS
 
     // Seven-day interval text fields
     // NOTE: - location notification dissmiss button is using the 7 day interval text field's "7DayDismiss" key in order to avoid having to recreate this key value pair. due to both having a "Dismiss" title.
-    "7DayDismiss" = "Dismiss";
-    "7DayContentTitle" = "Section 8 Housing Reminder";
+    "7DayDismiss" = "Descartar";
+    "7DayContentTitle" = "Recordatorio de Section 8 Housing";
     "7DayContentSubtitle" = "";
-    "7DayContentBody" = "It's been a week since you worked on your application. Tap here to take the next step!";
+    "7DayContentBody" = "Ha pasado una semana desde que trabajaste en tu aplicación. Presione aquí para dar el siguiente paso!";
 
 // MARK: - DATE PICKER NOTIFICATIONS
 
     // Step 3 - Intial appointment date
-    "s3DatePickerDismissTitle" = "Dismiss";
-    "s3DatePickerContentTitle" = "Appointment Reminder";
+    "s3DatePickerDismissTitle" = "Descartar";
+    "s3DatePickerContentTitle" = "Recordatorio de cita";
     "s3DatePickercontentSubtitle" = "";
-    "s3DatePickerContentBody" = "Today's The day! Make sure to take all your paper work to your initial appointment";
+    "s3DatePickerContentBody" = "¡Hoy es el día! Asegúrese de llevar todo su papeleo a su cita inicial";
 
     // Step 4 - Attend briefing
-    "s4DatePickerDismissTitle" = "Dismiss";
-    "s4DatePickerContentTitle" = "Appointment Reminder";
+    "s4DatePickerDismissTitle" = "Descartar";
+    "s4DatePickerContentTitle" = "Recordatorio de cita";
     "s4DatePickercontentSubtitle" = "";
-    "s4DatePickerContentBody" = "Today's The day! Make sure to take all your paper work to your briefing appointment";
+    "s4DatePickerContentBody" = "¡Hoy es el día! Asegúrese de llevar todos sus documentos a su cita informativa";
 
     // Step 10 - Schedule inspection
-    "s10DatePickerDismissTitle" = "Dismiss";
-    "s10DatePickerContentTitle" = "Appointment Reminder";
+    "s10DatePickerDismissTitle" = "Descartar";
+    "s10DatePickerContentTitle" = "Recordatorio de cita";
     "s10DatePickercontentSubtitle" =  "";
-    "s10DatePickerContentBody" = "Today's The day! Make sure to take all your paper work to your inspection appointment";
+    "s10DatePickerContentBody" = "¡Hoy es el día! Asegúrese de llevar todo su papeleo a su cita de inspección";
 
     // Step 12 - Final appointment
-    "s12DatePickerDismissTitle" = "Dismiss";
-    "s12DatePickerContentTitle" = "Appointment Reminder";
+    "s12DatePickerDismissTitle" = "Descartar";
+    "s12DatePickerContentTitle" = "Recordatorio de cita";
     "s12DatePickercontentSubtitle" = "";
-    "s12DatePickerContentBody" = "Today's The day! Make sure to take all your paper work to your final appointment.";
+    "s12DatePickerContentBody" = "¡Hoy es el día! Asegúrate de llevar todo tu papeleo a tu cita final";
 
 // MARK: - NOTIFICATION IMAGES
 
