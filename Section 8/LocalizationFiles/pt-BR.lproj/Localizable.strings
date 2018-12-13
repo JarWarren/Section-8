@@ -335,7 +335,7 @@
     "10cText" = "Você precisará falar com a Housing Authority, bem como com o complexo de apartamentos, para encontrar um horário que funcione para ambos. Você também precisa ter certeza de que um adulto está no até quando o inspetor chegar.";
 
     // Item 10d - Inspection date picker
-    "10dTitle" = "DATA DA INSPECÇÃO;
+    "10dTitle" = "DATA DA INSPECÇÃO";
     "10dText" = "Insira sua data de inspeção aqui para que possamos enviar uma notificação de lembrete:";
     "10dButtonText" = "TOQUE PARA SALVAR DATA";
 
