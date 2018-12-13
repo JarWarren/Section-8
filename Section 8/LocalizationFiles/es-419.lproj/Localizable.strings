@@ -28,6 +28,7 @@
 
     //Note "locationDismissButtonTitle" and "locationResourceName" are using key value pairs associated with other constants in order to avoid having to re-create them
     "locationContentTitle" = "¿Está usted en camino a la oficina de Housing Authority?";
+
     "locationConentBody" = "¡Buena suerte hoy! Usa la aplicación Section8 para ayudarte a recordar lo que debes hacer.";
 
 // MARK: - SEVEN-DAY NOTIFICATIONS
@@ -291,8 +292,7 @@
     // Item 8c - Photo
 
     // Item 8d - List of four docs
-"8dText" = "Los necesitará para completar cuatro formularios: \n\n– Formulario de aprobación de arrendamiento \n– Copia del contrato de arrendamiento propuesto \n– Formulario W-9 \n– Carta de presentación \n\nEn el paquete que recibió en su sesión informativa, debe Tenga una copia de cada uno de estos formularios. \n\nEl complejo de apartamentos podría completar todo mientras usted espera, o pueden pedirle que regrese otro día.
-";
+"8dText" = "Los necesitará para completar cuatro formularios: \n\n– Formulario de aprobación de arrendamiento \n– Copia del contrato de arrendamiento propuesto \n– Formulario W-9 \n– Carta de presentación \n\nEn el paquete que recibió en su sesión informativa, debe Tenga una copia de cada uno de estos formularios. \n\nEl complejo de apartamentos podría completar todo mientras usted espera, o pueden pedirle que regrese otro día.";
 
     // Item 8e - Helpful hint
 "8eTitle" = "CONSEJO ÚTIL";
@@ -345,7 +345,7 @@
     // Item 9c - Photo
 
     // Item 9d - After you deliver docs
-"9dText" = "Después de entregar estos documentos, a Housing Authority procesará la documentación y luego se comunicarán con usted".;
+"9dText" = "Después de entregar estos documentos, a Housing Authority procesará la documentación y luego se comunicarán con usted.";
 
     // Item 9e - Important reminder
     "9eTitle" = "RECORDATORIO IMPORTANTE";
