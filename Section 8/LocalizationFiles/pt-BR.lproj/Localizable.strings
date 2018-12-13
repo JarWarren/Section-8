@@ -145,6 +145,7 @@
     "3bTitle" = "DATA DE COMPROMISSO";
     "3bText" = "Por favor, insira sua data de compromisso aqui, para que possamos enviar uma notificação de lembrete:";
     "3bButtonText" = "TOQUE PARA SALVAR DATA";
+    "3bButtonTextChanged" = "TOQUE PARA MUDAR DATA";
 
     // Item 3c - Read carefully
     "3cText" = "Leia atentamente inscrição e preencha cada seção. Certifique-se de atualizar a verificação do domicílio e da renda.";

@@ -54,8 +54,7 @@ class DatePickerTVCell: UITableViewCell {
         // (Step 3 of 5 - 3 steps in child (this file), 2 in parent)
         
         delegate?.datePickerButtonTapped(self, datePicker)
-        datePickerButton.setTitle("TAP HERE TO CHANGE DATE", for: .normal)
-        
+        datePickerButton.setTitle("3bButtonTextChanged".localize, for: .normal)
         
         print("\n\nSet Time Button Tapped in: DatePickerTVCell\n")
         // when this gets tapped, the work thats in the parent Detail VC code for Date INput BUtton Tapped gets called 

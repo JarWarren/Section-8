@@ -149,6 +149,7 @@
     "3bTitle" = "DÍA DE LA CITA";
     "3bText" = "Ingrese la fecha de su cita aquí, para que podamos enviarle una notificación de recordatorio:";
     "3bButtonText" = "PULSAR PARA GUARDAR LA FECHA";
+    "3bButtonTextChanged" = "TOQUE PARA CAMBIAR DATA";
 
     // Item 3c - Read carefully
     "3cText" = "Lea la solicitud cuidadosamente y complete cada sección. Asegúrese de actualizar el hogar y la verificación de ingresos.";
