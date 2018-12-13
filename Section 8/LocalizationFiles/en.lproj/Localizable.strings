@@ -22,7 +22,7 @@
 // MARK: Location Notification
 //Note "locationDismissButtonTitle" and "locationResourceName" are using key value pairs associated with other constants in order to avoid having to re-create them
 "locationContentTitle" = "Good Luck Today";
-"locationConentBody" = "Make sure to have get all your questions answered";
+"locationConentBody" = "Make sure to get all your questions answered";
 
 // MARK: - 7-DAY Notifications
 
