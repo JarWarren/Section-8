@@ -31,12 +31,13 @@ struct Constants {
     
     // Date Picker Constants
     static let dismissButtonDatePickerID = "dismissID"
-    
+
     // Seven Day Notification Localization Banners
     static let sevenDayNotifBanner = NSString.localizedUserNotificationString(forKey: "notificationBanner", arguments: [])
     
     // Seven Day Notification Localization Strings
-    static let sevenDayDismissTitle = NSString.localizedUserNotificationString(forKey: "7DayDismiss", arguments: [])
+    // NOTE: - Notification localized string use "NSString.localizedUserNotificationString"
+    static let sevenDayDismissTitle =  NSString.localizedUserNotificationString(forKey: "7DayDismiss", arguments: [])
     static let sevenDayContentTitle = NSString.localizedUserNotificationString(forKey: "7DayContentTitle", arguments: [])
     static let sevenDayContentSubtitle = NSString.localizedUserNotificationString(forKey: "7DayContentSubtitle", arguments: [])
     static let sevenDayContentBody = NSString.localizedUserNotificationString(forKey: "7DayContentBody", arguments: [])
