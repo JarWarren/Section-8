@@ -145,6 +145,7 @@
     "3bTitle" = "APPOINTMENT DATE";
     "3bText" = "Please enter your appointment date here, so we can send you a reminder notification:";
     "3bButtonText" = "TAP TO SAVE DATE";
+    "3bButtonTextChanged" = "TAP HERE TO CHANGE DATE";
 
     // Item 3c - Read carefully
     "3cText" = "Read the application carefully, and complete each section. Be sure to update household and income verification.";
