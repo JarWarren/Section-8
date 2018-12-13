@@ -198,7 +198,7 @@ class StepController {
             case "step6":
               
                 // Item 6a - Map instructions
-                ItemController.addNewItem(title: nil, text: "6aText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
+                ItemController.addNewItem(title: nil, text: "6aText".localize, buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
             // MARK: - STEP 7
                 
@@ -235,7 +235,7 @@ class StepController {
                 ItemController.addNewItem(title: "7hTitle".localize, text: "7hText".localize, buttonText: "7hButtonText".localize, url: nil, graphicName: nil, format: .clickLink, step: step)
                 
                 // Item 7i - Tap to complete
-                ItemController.addNewItem(title: nil, text: "7iText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
+                ItemController.addNewItem(title: nil, text: "7iText".localize, buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
             // MARK: - STEP 8
                 
