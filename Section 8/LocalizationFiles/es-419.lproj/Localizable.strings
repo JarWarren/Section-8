@@ -11,9 +11,20 @@
 // MARK: - STEPS
 
 "STEP" = "PASO";
-"step1" = "Completar aplicación enlínea";
-"step2" = "Traer Identificación";
-"step3" = "Completar aplicación enviado";
+"step1" = "Completar solicitud en línea";
+"step2" = "Traer identificación";
+"step3" = "Completar y enviar aplicación física";
+"step4" = "Asistir a la reunión informativa";
+"step5" = "Calcular el pago del alquiler";
+"step6" = "Escojer un apartamento";
+"step7" = "Llamar al complejo de apartamentos";
+"step8" = "Hacer que el propietario complete los formularios";
+"step9" = "Devolver los formularios a HAUC";
+"step10" = "Programar una ispección";
+"step11" = "Inspección del apartamento";
+"step12" = "Cita final con HUAC";
+"step13" = "Devolver los contratos firmados a HAUC";
+"step14" = "¡Bienvenido a su nuevo hogar!";
 
 // ITEMS
 "1a" = "Complete la solicitud preliminar haciendo clic en el botón de abajo, pero lea estas instrucciones primero:";

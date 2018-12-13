@@ -12,6 +12,17 @@
 "step1" = "Encher o aplicação online";
 "step2" = "Photo ID & Social Security Card";
 "step3" = "Completar e enviar aplicação física";
+"step4" = "Asistir a la reunión informativa";
+"step5" = "Calcular o pagamento do aluguel";
+"step6" = "Escolher o apartamento";
+"step7" = "Ligar para o complexo de apartamentos";
+"step8" = "Fazer o proprietário completar os formulários";
+"step9" = "Retorna os formuários para o HAUC";
+"step10" = "Programar uma ispecção";
+"step11" = "Inspecção do apartamento";
+"step12" = "Consulta final com o HUAC";
+"step13" = "Retornar contratos assinados para o HAUC";
+"step14" = "Bem-vindo à sua nova casa!";
  
 // ITEMS
 "1a" = "Fill out the preliminary application by clicking the button below, but read these instructions first:";

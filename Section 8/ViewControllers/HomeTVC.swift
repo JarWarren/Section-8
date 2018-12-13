@@ -35,8 +35,12 @@ class HomeTVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         // Set back button title for StepDetailTVC
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshTableView), name: LocalizationController.shared.langChangedNotif, object: nil)
     }
-    
+    @objc func refreshTableView() {
+        tableView.reloadData()
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
@@ -120,6 +124,8 @@ class HomeTVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         default: LocalizationController.shared.setToEnglish()
         }
         resetLanguageMenu()
+        StepController.shared.refreshSteps()
+        tableView.reloadData()
     }
     
     func resetLanguageMenu() {
