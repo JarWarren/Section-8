@@ -69,11 +69,15 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Map functions
         SelectedApartmentController.shared.loadSelectedApartment()
         setupMap()
         addMarkers()
         utahCountyMapView.delegate = self
         mapInstructionsLabel.text = NSLocalizedString("6aText", comment: "")
+        
+        // Add step title to navigation bar
+        self.title = NSLocalizedString("step6", comment: "")
     }
     
     func setupMap() {

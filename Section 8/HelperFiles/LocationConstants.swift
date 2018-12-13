@@ -10,8 +10,8 @@ import Foundation
 
 struct LocationConstants {
     
-   static let categoryKey = "categoryKey"
-   static let dissmissActionKey = "dissmissActionKey"
+    static let categoryKey = "categoryKey"
+    static let dissmissActionKey = "dissmissActionKey"
     static let requestKey = "request Key"
     static let pngType = "png"
     static let resourceKey = "resourceKey"

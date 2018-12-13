@@ -132,15 +132,14 @@
                                     <constraint firstAttribute="height" constant="30" id="ifm-yx-EwY"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVx-zT-S3Z">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVx-zT-S3Z">
                                 <rect key="frame" x="414" y="8" width="50" height="50"/>
                                 <color key="backgroundColor" name="highlightColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Zqc-Iu-mTE"/>
                                     <constraint firstAttribute="width" secondItem="vVx-zT-S3Z" secondAttribute="height" multiplier="1:1" id="ioF-ZH-kGT"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="🇺🇸"/>
+                                <state key="normal" image="english"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="25"/>
@@ -150,15 +149,14 @@
                                     <action selector="languageSelectorButtonTapped:" destination="lUg-dc-wzV" eventType="touchUpInside" id="APE-BT-L6y"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w79-Wz-Q3r">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w79-Wz-Q3r">
                                 <rect key="frame" x="414" y="66" width="50" height="50"/>
                                 <color key="backgroundColor" name="highlightColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="w79-Wz-Q3r" secondAttribute="height" multiplier="1:1" id="E3A-Im-3Rr"/>
                                     <constraint firstAttribute="height" constant="50" id="Y0V-Cz-5h0"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="🇲🇽"/>
+                                <state key="normal" image="spanish"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="25"/>
@@ -168,15 +166,14 @@
                                     <action selector="languageSelectorButtonTapped:" destination="lUg-dc-wzV" eventType="touchUpInside" id="6qZ-HT-uJJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Aj-j2-IaF">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Aj-j2-IaF">
                                 <rect key="frame" x="414" y="124" width="50" height="50"/>
                                 <color key="backgroundColor" name="highlightColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2Aj-j2-IaF" secondAttribute="height" multiplier="1:1" id="3YI-Ev-usT"/>
                                     <constraint firstAttribute="height" constant="50" id="fx7-WV-6vI"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="🇧🇷"/>
+                                <state key="normal" image="portuguese"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="25"/>
@@ -930,6 +927,7 @@
         <image name="Section8 logo - white" width="845.33331298828125" height="751.66668701171875"/>
         <image name="TipLightBulb" width="61.25" height="60.25"/>
         <image name="calendar" width="60.25" height="58.75"/>
+        <image name="english" width="512.15997314453125" height="512.15997314453125"/>
         <image name="globe-small" width="24" height="24"/>
         <image name="home_unchecked" width="41.25" height="41.25"/>
         <image name="imageView:lTZ-2E-mJo:image" width="60.5" height="60.25">
@@ -4622,6 +4620,8 @@ AAAAA12iA
 </mutableData>
         </image>
         <image name="money" width="54" height="32.25"/>
+        <image name="portuguese" width="512.15997314453125" height="512.15997314453125"/>
+        <image name="spanish" width="512.15997314453125" height="512.15997314453125"/>
         <image name="voucher" width="53.25" height="33"/>
         <namedColor name="highlightColor">
             <color red="0.29800000786781311" green="0.85600000619888306" blue="0.3919999897480011" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
