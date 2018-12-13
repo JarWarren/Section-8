@@ -106,7 +106,7 @@
 
     // Item 1d - Finished button
     "1dTitle" = "BOTÓN COMPLETO";
-    "1dText" = "Cuando haya terminado, verá una pantalla de \"Recibo de solicitud\". Toque el botón \"Terminado\" cerca de la parte inferior de la pantalla, y regrese a esta página tocando el enlace de la Sección 8 en la parte superior izquierda de la pantalla.";
+    "1dText" = "Cuando haya terminado, verá una pantalla de \"Recibo de solicitud\". Toque el botón \"Terminado\" cerca de la parte inferior de la pantalla, y regrese a esta página tocando el enlace de la Section8 en la parte superior izquierda de la pantalla.";
 
     // Item 1e - Online application
     "1eText" = "Toque aquí para iniciar la solicitud en línea en el sitio web de la Autoridad de Vivienda del Condado de Utah (HAUC):";
