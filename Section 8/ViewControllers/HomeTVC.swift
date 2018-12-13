@@ -15,6 +15,9 @@ class HomeTVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var homeImageView: UIImageView!
+    @IBOutlet weak var introTextLabel: UILabel!
+    
+    // Localization buttons
     @IBOutlet weak var enButton: UIButton!
     @IBOutlet weak var esButton: UIButton!
     @IBOutlet weak var ptButton: UIButton!
@@ -24,23 +27,30 @@ class HomeTVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     let completedCheckBoxImage = UIImage(named: "home_checked")
     let incompleteCheckBoxImage = UIImage(named: "home_unchecked")
-//    private let locationManger = CLLocationManager()
-//    private let geocoder = CLGeocoder()
+    //    private let locationManger = CLLocationManager()
+    //    private let geocoder = CLGeocoder()
     
     // MARK: - VIEW DID LOAD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        locationManger.delegate = self
+        //        locationManger.delegate = self
+        
+        // Set introduction to localization key
+        introTextLabel.text? = "homeIntroText".localize
         
         // Set back button title for StepDetailTVC
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshTableView), name: LocalizationController.shared.langChangedNotif, object: nil)
     }
-    
+    @objc func refreshTableView() {
+        tableView.reloadData()
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
-    
+        
     }
     
     // MARK: - TABLE VIEW DATA SOURCE
@@ -95,17 +105,17 @@ class HomeTVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBAction func languageMenuButtonTapped(_ sender: Any) {
         
         if languageMenuVisible == false {
-        UIView.animate(withDuration: 0.2, delay: 0, options: [.curveLinear], animations: {
-            self.enButton.center = CGPoint(x: self.enButton.center.x - self.enButton.frame.width - 8, y: self.enButton.center.y)
-        }, completion: nil)
-        
-        UIView.animate(withDuration: 0.2, delay: 0.05, options: [.curveLinear], animations: {
-            self.esButton.center = CGPoint(x: self.esButton.center.x - self.esButton.frame.width - 8, y: self.esButton.center.y)
-        }, completion: nil)
-        
-        UIView.animate(withDuration: 0.2, delay: 0.1, options: [.curveLinear], animations: {
-            self.ptButton.center = CGPoint(x: self.ptButton.center.x - self.ptButton.frame.width - 8, y: self.ptButton.center.y)
-        }, completion: nil)
+            UIView.animate(withDuration: 0.2, delay: 0, options: [.curveLinear], animations: {
+                self.enButton.center = CGPoint(x: self.enButton.center.x - self.enButton.frame.width - 8, y: self.enButton.center.y)
+            }, completion: nil)
+            
+            UIView.animate(withDuration: 0.2, delay: 0.05, options: [.curveLinear], animations: {
+                self.esButton.center = CGPoint(x: self.esButton.center.x - self.esButton.frame.width - 8, y: self.esButton.center.y)
+            }, completion: nil)
+            
+            UIView.animate(withDuration: 0.2, delay: 0.1, options: [.curveLinear], animations: {
+                self.ptButton.center = CGPoint(x: self.ptButton.center.x - self.ptButton.frame.width - 8, y: self.ptButton.center.y)
+            }, completion: nil)
             languageMenuVisible = true
         } else {
             resetLanguageMenu()
@@ -120,12 +130,16 @@ class HomeTVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         default: LocalizationController.shared.setToEnglish()
         }
         resetLanguageMenu()
+        StepController.shared.refreshSteps()
+        tableView.reloadData()
+        self.introTextLabel?.text = "homeIntroText".localize
     }
     
     func resetLanguageMenu() {
         self.enButton.center.x += self.enButton.frame.width + 8
         self.esButton.center.x += self.esButton.frame.width + 8
         self.ptButton.center.x += self.ptButton.frame.width + 8
+        LocalizationController.shared.saveLanguage()
         languageMenuVisible = false
     }
 }

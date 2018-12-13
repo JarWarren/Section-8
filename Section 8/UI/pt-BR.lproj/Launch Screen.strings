@@ -1,9 +1,9 @@
 
 /* Class = "UILabel"; text = "LOW INCOME HOUSING"; ObjectID = "7cl-t3-C9f"; */
-"7cl-t3-C9f.text" = "AYUDA PARA VIVIENDA";
+"7cl-t3-C9f.text" = "LOW INCOME HOUSING";
 
 /* Class = "UILabel"; text = "Section8"; ObjectID = "fiA-sX-JLq"; Note = "LaunchScreenTitle"; */
-"fiA-sX-JLq.text" = "Sección8";
+"fiA-sX-JLq.text" = "Section8";
 
 /* Class = "UILabel"; text = "ASSISTANT"; ObjectID = "iFc-7L-hGx"; */
-"iFc-7L-hGx.text" = "DE BAJOS INGRESOS";
+"iFc-7L-hGx.text" = "ASSISTANT";

@@ -69,11 +69,15 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Map functions
         SelectedApartmentController.shared.loadSelectedApartment()
         setupMap()
         addMarkers()
         utahCountyMapView.delegate = self
-        mapInstructionsLabel.text = NSLocalizedString("6aText", comment: "")
+        mapInstructionsLabel.text = "6aText".localize
+        
+        // Add step title to navigation bar
+        self.title = "step6".localize
     }
     
     func setupMap() {
@@ -159,7 +163,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         
         // Saves their current apartment.
         if let name = currentName, let phone = currentPhone, let address = currentAddress, let part1 = addressPart1, let part2 = addressPart2 {
-            SelectedApartmentController.shared.saveApartment(named: name, phone: phone, address: address, addressPart1: part1, addressPart2: part2, photoRef: self.imageRefHolder ?? "noApartmentImage")
+            SelectedApartmentController.shared.saveApartment(named: name, phone: phone, address: address, addressPart1: part1, addressPart2: part2, photoRef: self.imageRefHolder ?? "noApartmentImage".localize)
         }
         StepController.shared.steps[5].stepCompleted = true
         

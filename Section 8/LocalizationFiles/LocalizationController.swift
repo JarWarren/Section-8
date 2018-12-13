@@ -10,32 +10,60 @@ import Foundation
 
 class LocalizationController {
     
+    let langChangedNotif = Notification.Name("langChangedNotif")
+    
     static let shared = LocalizationController()
     private init() {}
     
-    var activeLanguage: String = {
-        if let preferred = NSLocale.preferredLanguages.first {
-            return preferred
-        } else {
-            return "en"
-        }
-    }()
+    var activeLanguage = ["en"] 
     
     func setToEnglish() {
+        LocalizationController.shared.activeLanguage = ["en"]
         print("🇺🇸")
     }
     
     func establecerEnEspañol() {
+        LocalizationController.shared.activeLanguage = ["es-419"]
         print("🇲🇽")
     }
     
     func definirParaOPortuguês() {
+        LocalizationController.shared.activeLanguage = ["pt-BR"]
         print("🇧🇷")
+    }
+    
+    func saveLanguage() {
+        do {
+            let savedLanguage = try JSONEncoder().encode(self.activeLanguage)
+            try savedLanguage.write(to: fileURL())
+        } catch {
+            print("\(error, error.localizedDescription)")
+        }
+    }
+    
+    func loadLanguage() {
+        do {
+            let decodedLanguage = try JSONDecoder().decode([String].self, from: Data(contentsOf: fileURL()))
+            self.activeLanguage = decodedLanguage
+        } catch {
+            print("Language set to English.")
+        }
+    }
+    
+    private func fileURL() -> URL {
+        let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let fileName = "ActiveLanguage.json"
+        let documentsDirectoryURL = urls[0].appendingPathComponent(fileName)
+        return documentsDirectoryURL
     }
 }
 
-/*
- In general, you should not change the iOS system language (via use of the AppleLanguages pref key) from within your application.
- This goes against the basic iOS user model for switching languages in the Settings app.
- It also uses a preference key that is not documented, meaning that at some point in the future, the key name could change, which would break your application.
- */
+public extension String {
+    
+    var localize: String {
+        LocalizationController.shared.loadLanguage()
+        let path = Bundle.main.path(forResource: LocalizationController.shared.activeLanguage[0], ofType: "lproj")
+        let localizedBundle = Bundle(path: path!)
+        return NSLocalizedString(self, tableName: nil, bundle: localizedBundle!, value: "", comment: "")
+    }
+}

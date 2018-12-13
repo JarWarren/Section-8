@@ -37,7 +37,8 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     let timeKeepingId = "timerID"
     
     // Let sevenDayCountDown = TimeInterval(5)
-    let sevenDays = 60
+   
+    
     
     // BoolValueToTestTimer = true
     let sevenDayTimerID = "sevenDays"
@@ -62,7 +63,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     
     // Date banner
     let datePickerNotifBanner = NSString.localizedUserNotificationString(forKey: "datePickerBanner", arguments: [])
-    let bannerImageName = NSLocalizedString("notificationBanner", comment: "")
+    let bannerImageName = "notificationBanner".localize
     
     // MARK: - VIEW DID LOAD & VIEW WILL APPEAR
     
@@ -88,9 +89,9 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         // Change step buttons to specific step
         if let thisStep = selectedStep {
             if !thisStep.stepCompleted {
-                completeButtonStatus.setTitle(NSLocalizedString("completeButtonTextTapToMarkCompleteA", comment: "") + " \(thisStep.stepNumber) " + NSLocalizedString("completeButtonTextTapToMarkCompleteB", comment: ""), for: .normal)
+                completeButtonStatus.setTitle("completeButtonTextTapToMarkCompleteA".localize + " \(thisStep.stepNumber) " + "completeButtonTextTapToMarkCompleteB".localize, for: .normal)
             } else {
-                completeButtonStatus.setTitle(NSLocalizedString("completeButtonTextTapToMarkIncompleteA", comment: "") + " \(thisStep.stepNumber) " + NSLocalizedString("completeButtonTextTapToMarkIncompleteB", comment: ""), for: .normal)
+                completeButtonStatus.setTitle("completeButtonTextTapToMarkIncompleteA".localize + " \(thisStep.stepNumber) " + "completeButtonTextTapToMarkIncompleteB".localize, for: .normal)
             }
         }
         
@@ -99,7 +100,6 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         
-        //        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
     
     // MARK: - KEYBOARD
@@ -109,68 +109,23 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
     
     // MARK: - KEYBOARD ACTIONS
     
     @objc func keyboardWillShow(notification: Notification) {
-        print("\n ✈️ Keyboard will show: \(notification.name.rawValue)\n")
-        print("🎢 Before the Change: \(String(describing: view.frame.origin.y))")
-        
-        //        guard let keyboardRet = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue else {
-        //            return
-        //        }
-        //
-        //        if notification.name == UIResponder.keyboardWillShowNotification || notification.name == UIResponder.keyboardWillChangeFrameNotification {
-        //            self.view.frame.origin.y = -keyboardRet.height
-        //        } else {
-        //            self.view.frame.origin.y = 0
-        //        }
-        //        self.view.frame.origin.y = -180
-        /**/
-        
-        /**/
-        
-        /**/
-        
-        // MARK: - Erics Code
         var userInfo = notification.userInfo!
         var keyboardFrame: CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
         keyboardFrame = self.view.convert(keyboardFrame, from: nil)
-        
-        // var contentInset: UIEdgeInsets = self.scrollView.contentInset
         var contentInset: UIEdgeInsets = self.tableView.contentInset
         contentInset.bottom = keyboardFrame.size.height + 50
         tableView.contentInset = contentInset
-        
-        /**/ /**/
-        // MARK: - Alternative
-        //        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-        //            UIView.animate(withDuration: 1) {
-        //
-        //                self.view.bounds.origin.y += keyboardSize.height
-        //            }
-        //        }
-        /**/ /**/
-        /**/
-        
-        print("🚧 View's Frame Origin: \(view.frame.origin as Any)")
-        print("🚢 After the change: \(String(describing: view.frame.origin.y))")
     }
     
     @objc func keyboardWillHide(notification: NSNotification) {
-        //        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-        
-        print("⛽️ keyboardWillHide: was called")
         
         let contentInset = UIEdgeInsets.zero
         tableView.contentInset = contentInset
-        
-        //            UIView.animate(withDuration: 1) {
-        //
-        //                self.view.bounds.origin.y -= keyboardSize.height
-        //            }
     }
     
     // MARK: - ACTIONS
@@ -240,7 +195,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             }
             
             // What to display if they haven't chosen one
-            cell.apartmentPhotoImageView?.image = UIImage(named: "noApartmentImage")
+            cell.apartmentPhotoImageView?.image = UIImage(named: "noApartmentImage".localize)
             return cell
             
         // MARK: CLICK LINK CUSTOM CELL
@@ -387,14 +342,14 @@ extension StepDetailTVC: ClickLinkTVCellDelegate {
     func clickLinkButtonTapped(_ sender: ClickLinkTVCell) {
         
         // Step 7 - Item 7g - Button that calls apartment phone number
-        if sender.clickLinkButtonText?.titleLabel?.text == NSLocalizedString("7gButtonText", comment: "") {
+        if sender.clickLinkButtonText?.titleLabel?.text == "7gButtonText".localize {
             guard let phone = SelectedApartmentController.shared.selectedApartment?.phone else { return }
             guard let url = URL(string: "telprompt://\(phone)") else { return }
             UIApplication.shared.open(url)
         }
         
         // Step 7 - Item 7h - Button that returns to Step 6
-        if sender.clickLinkButtonText?.titleLabel?.text == NSLocalizedString("7hButtonText", comment: "") {
+        if sender.clickLinkButtonText?.titleLabel?.text == "7hButtonText".localize {
             if self.userDidComeFromStep6 == true{
                 self.navigationController?.popViewController(animated: true)
             } else {
@@ -443,22 +398,17 @@ extension StepDetailTVC {
     }
     
     func timerStopped() {
-        
         // This func will completely stop the on going 7 day timer
         timerController.timer?.invalidate()
     }
     
     func cancelSevenDayNotification() {
-        
         timerController.cancelLocalNotificationWith(identifier: Constants.categorySevenNotificationID)
-        print("\n7 day notification canceled\n")
     }
     
     func scheduleSevenDayIntervalNotif() {
-        print("\n7 day notification was set\n")
         
         timerController.scheduleLocalNotifInterval(dismissActionID: Constants.dismissActionSdId, actionTitle: Constants.sevenDayDismissTitle, categoryID: Constants.categorySdID, contentTitle: Constants.sevenDayContentTitle, contentSubtitle: Constants.sevenDayContentSubtitle, contentBody: Constants.sevenDayContentBody, contentBadge: 1, contentSound: UNNotificationSound.default, contentLaunchImage: "", desiredTimeInterval: Constants.sevenDays, resourceName: Constants.sevenDayNotifBanner, extenstionType: Constants.typePng, resourceID: Constants.resourceSdID, requestID: Constants.requestSdId, doesItRepeat: true)
-        
     }
 }
 

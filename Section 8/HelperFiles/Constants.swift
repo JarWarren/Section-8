@@ -10,7 +10,9 @@ import Foundation
 
 struct Constants {
     
-    static let sevenDays = 60
+    // NOTE: - 604800 seconds is 7 days
+    // NOTE: - 1800 seconds is 30 minutes
+    static let sevenDays = 1800
     //    var boolValueToTestTimer = true
     static let sevenDayTimerID = "sevenDays"
     static let categorySevenNotificationID = "dismisActionKey"
@@ -29,12 +31,13 @@ struct Constants {
     
     // Date Picker Constants
     static let dismissButtonDatePickerID = "dismissID"
-    
+
     // Seven Day Notification Localization Banners
     static let sevenDayNotifBanner = NSString.localizedUserNotificationString(forKey: "notificationBanner", arguments: [])
     
     // Seven Day Notification Localization Strings
-    static let sevenDayDismissTitle = NSString.localizedUserNotificationString(forKey: "7DayDismiss", arguments: [])
+    // NOTE: - Notification localized string use "NSString.localizedUserNotificationString"
+    static let sevenDayDismissTitle =  NSString.localizedUserNotificationString(forKey: "7DayDismiss", arguments: [])
     static let sevenDayContentTitle = NSString.localizedUserNotificationString(forKey: "7DayContentTitle", arguments: [])
     static let sevenDayContentSubtitle = NSString.localizedUserNotificationString(forKey: "7DayContentSubtitle", arguments: [])
     static let sevenDayContentBody = NSString.localizedUserNotificationString(forKey: "7DayContentBody", arguments: [])
