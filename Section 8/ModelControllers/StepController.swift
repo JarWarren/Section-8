@@ -45,10 +45,11 @@ class StepController {
         
         for step in steps {
             
-            switch step.stepNumber {
-                // MARK: - STEP 1
+            switch step.stepImageName {
+            
+            // MARK: - STEP 1
                 
-            case "STEP".localize + " 1":
+            case "step1":
                 
             // Step 1 Photo
             ItemController.addNewItem(title: nil, text: nil, buttonText: nil, url: nil, graphicName: "step1", format: .photo, step: step)
@@ -74,10 +75,9 @@ class StepController {
                 // Item 1f - Completed
                 ItemController.addNewItem(title: nil, text: "1fText".localize, buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
+            // MARK: - STEP 2
                 
-                // MARK: - STEP 2
-                
-            case NSLocalizedString("STEP", comment: "") + " 2":
+            case "step2":
                 
             // Step 2 Photo
             ItemController.addNewItem(title: nil, text: nil, buttonText: nil, url: nil, graphicName: "step2", format: .photo, step: step)
@@ -103,14 +103,13 @@ class StepController {
                 // Item 2f - Tap complete
                 ItemController.addNewItem(title: nil, text: "2fText".localize, buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
-                
-                // MARK: - STEP 3
-                
-            case NSLocalizedString("STEP", comment: "") + " 3":
-                
+            // MARK: - STEP 3
+            
+            case "step3":
+              
             // Step 3 Photo
             ItemController.addNewItem(title: nil, text: nil, buttonText: nil, url: nil, graphicName: "step3", format: .photo, step: step)
-            
+                
             // Step 3 Title
             ItemController.addNewItem(title: "\(step.stepNumber)", text: "\(step.name)", buttonText: nil, url: nil, graphicName: "\(step.homeImageName)", format: .title, step: step)
                 
@@ -138,14 +137,13 @@ class StepController {
                 // Item 3h - Tap complete
                 ItemController.addNewItem(title: nil, text: "3hText".localize, buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
+            // MARK: - STEP 4
                 
-                // MARK: - STEP 4
-                
-            case NSLocalizedString("STEP", comment: "") + " 4":
-                
+            case "step4":
+              
             // Step 4 Photo
             ItemController.addNewItem(title: nil, text: nil, buttonText: nil, url: nil, graphicName: "step4", format: .photo, step: step)
-            
+                
             // Step 4 Title
             ItemController.addNewItem(title: "\(step.stepNumber)", text: "\(step.name)", buttonText: nil, url: nil, graphicName: "\(step.homeImageName)", format: .title, step: step)
                 
@@ -170,14 +168,13 @@ class StepController {
                 // Item 4g - Tap to complete
                 ItemController.addNewItem(title: nil, text: "4gText".localize, buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
-                
             // MARK: - STEP 5
                 
-            case NSLocalizedString("STEP", comment: "") + " 5":
-                
+            case "step5":
+              
             // Step 5 Photo
             ItemController.addNewItem(title: nil, text: nil, buttonText: nil, url: nil, graphicName: "step5", format: .photo, step: step)
-            
+                
             // Step 5 Title
             ItemController.addNewItem(title: "\(step.stepNumber)", text: "\(step.name)", buttonText: nil, url: nil, graphicName: "\(step.homeImageName)", format: .title, step: step)
                 
@@ -196,21 +193,20 @@ class StepController {
                 // Item 5f - Tap to complete
                 ItemController.addNewItem(title: nil, text: "5fText".localize, buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
-                
             // MARK: - STEP 6
                 
-            case NSLocalizedString("STEP", comment: "") + " 6":
-                
+            case "step6":
+              
                 // Item 6a - Map instructions
                 ItemController.addNewItem(title: nil, text: "6aText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
             // MARK: - STEP 7
                 
-            case NSLocalizedString("STEP", comment: "") + " 7":
-                
+            case "step7":
+          
             // Step 7 Photo
             ItemController.addNewItem(title: nil, text: nil, buttonText: nil, url: nil, graphicName: "step7", format: .photo, step: step)
-            
+                
             // Step 7 Title
             ItemController.addNewItem(title: "\(step.stepNumber)", text: "\(step.name)", buttonText: nil, url: nil, graphicName: "\(step.homeImageName)", format: .title, step: step)
                 
@@ -243,11 +239,11 @@ class StepController {
                 
             // MARK: - STEP 8
                 
-            case NSLocalizedString("STEP", comment: "") + " 8":
-                
+            case "step8":
+      
             // Step 8 Photo
             ItemController.addNewItem(title: nil, text: nil, buttonText: nil, url: nil, graphicName: "step8", format: .photo, step: step)
-            
+                
             // Step 8 Title
             ItemController.addNewItem(title: "\(step.stepNumber)", text: "\(step.name)", buttonText: nil, url: nil, graphicName: "\(step.homeImageName)", format: .title, step: step)
                 
@@ -284,14 +280,13 @@ class StepController {
                 // Item 8k - Top to complete
                 ItemController.addNewItem(title: nil, text: "8kText".localize, buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
-                
             // MARK: - STEP 9
-                
-            case NSLocalizedString("STEP", comment: "") + " 9":
-                
+
+            case "step9":
+      
             // Step 9 Photo
             ItemController.addNewItem(title: nil, text: nil, buttonText: nil, url: nil, graphicName: "step9", format: .photo, step: step)
-            
+                
             // Step 9 Title
             ItemController.addNewItem(title: "\(step.stepNumber)", text: "\(step.name)", buttonText: nil, url: nil, graphicName: "\(step.homeImageName)", format: .title, step: step)
                 
@@ -313,14 +308,13 @@ class StepController {
                 // Item 9f - Tap to complete
                 ItemController.addNewItem(title: nil, text: "9fText".localize, buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
-                
             // MARK: - STEP 10
                 
-            case NSLocalizedString("STEP", comment: "") + " 10":
-                
+            case "step10":
+      
             // Step 10 Photo
             ItemController.addNewItem(title: nil, text: nil, buttonText: nil, url: nil, graphicName: "step10", format: .photo, step: step)
-            
+                
             // Step 10 Title
             ItemController.addNewItem(title: "\(step.stepNumber)", text: "\(step.name)", buttonText: nil, url: nil, graphicName: "\(step.homeImageName)", format: .title, step: step)
                 
@@ -339,14 +333,13 @@ class StepController {
                 // Item 10e - Tap to complete
                 ItemController.addNewItem(title: nil, text: "10eText".localize, buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
-                
             // MARK: - STEP 11
                 
-            case NSLocalizedString("STEP", comment: "") + " 11":
-                
+            case "step11":
+      
             // Step 11 Photo
             ItemController.addNewItem(title: nil, text: nil, buttonText: nil, url: nil, graphicName: "step11", format: .photo, step: step)
-            
+                
             // Step 11 Title
             ItemController.addNewItem(title: "\(step.stepNumber)", text: "\(step.name)", buttonText: nil, url: nil, graphicName: "\(step.homeImageName)", format: .title, step: step)
                 
@@ -368,14 +361,13 @@ class StepController {
                 // Item 11f - Tap to complete
                 ItemController.addNewItem(title: nil, text: "11fText".localize, buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
-                
             // MARK: - STEP 12
                 
-            case NSLocalizedString("STEP", comment: "") + " 12":
-                
+            case "step12":
+      
             // Step 12 Photo
             ItemController.addNewItem(title: nil, text: nil, buttonText: nil, url: nil, graphicName: "step12", format: .photo, step: step)
-            
+                
             // Step 12 Title
             ItemController.addNewItem(title: "\(step.stepNumber)", text: "\(step.name)", buttonText: nil, url: nil, graphicName: "\(step.homeImageName)", format: .title, step: step)
                 
@@ -403,14 +395,13 @@ class StepController {
                 // Item 12g - Tap to complete
                 ItemController.addNewItem(title: nil, text: "12gText".localize, buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
-                
             // MARK: - STEP 13
                 
-            case NSLocalizedString("STEP", comment: "") + " 13":
-                
+            case "step13":
+      
             // Step 13 Photo
             ItemController.addNewItem(title: nil, text: nil, buttonText: nil, url: nil, graphicName: "step13", format: .photo, step: step)
-            
+                
             // Step 13 Title
             ItemController.addNewItem(title: "\(step.stepNumber)", text: "\(step.name)", buttonText: nil, url: nil, graphicName: "\(step.homeImageName)", format: .title, step: step)
                 
@@ -436,14 +427,12 @@ class StepController {
                 // Item 13g - When paperwork is processed & Tap to complete
                 ItemController.addNewItem(title: nil, text: "13gText".localize, buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
                 
-                
             // MARK: - STEP 14
                 
-            case NSLocalizedString("STEP", comment: "") + " 14":
-                
+            case "step14":
             // Step 14 Photo
             ItemController.addNewItem(title: nil, text: nil, buttonText: nil, url: nil, graphicName: "step14", format: .photo, step: step)
-            
+                
             // Step 14 Title
             ItemController.addNewItem(title: "\(step.stepNumber)", text: "\(step.name)", buttonText: nil, url: nil, graphicName: "\(step.homeImageName)", format: .title, step: step)
                 

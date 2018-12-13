@@ -70,7 +70,7 @@
 
 // MARK: - STEPS
 
-    "STEP" = "STEP";
+    "STEP" = "PASSO";
 
     "step1" = "Complete online application";
     "step2" = "Bring in Identification";

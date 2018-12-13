@@ -13,8 +13,8 @@
 // MARK: - UI COMPONENTS
 
     // Complete button
-    "completeButtonTextTapToMarkCompleteA" = "TAP WHEN";
-    "completeButtonTextTapToMarkCompleteB" = "IS COMPLETE";
+    "completeButtonTextTapToMarkCompleteA" = "PULSAR CUANDO";
+    "completeButtonTextTapToMarkCompleteB" = "CUANDO TERMINE";
     "completeButtonTextTapToMarkIncompleteA" = "TAP TO CHANGE";
     "completeButtonTextTapToMarkIncompleteB" = "TO INCOMPLETE";
 
