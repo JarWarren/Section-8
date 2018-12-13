@@ -220,6 +220,7 @@
                     <connections>
                         <outlet property="enButton" destination="vVx-zT-S3Z" id="Mf7-ZB-nFz"/>
                         <outlet property="esButton" destination="w79-Wz-Q3r" id="8yj-g8-bak"/>
+                        <outlet property="introTextLabel" destination="N2i-QN-570" id="gKg-Fz-Vda"/>
                         <outlet property="ptButton" destination="2Aj-j2-IaF" id="o2U-Im-cuL"/>
                         <outlet property="tableView" destination="0ql-OW-4y5" id="dKE-vT-Yhq"/>
                         <segue destination="QMa-vk-bT6" kind="show" identifier="toStepDetail" id="FfI-HO-gAc"/>

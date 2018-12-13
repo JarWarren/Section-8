@@ -15,6 +15,9 @@ class HomeTVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var homeImageView: UIImageView!
+    @IBOutlet weak var introTextLabel: UILabel!
+    
+    // Localization buttons
     @IBOutlet weak var enButton: UIButton!
     @IBOutlet weak var esButton: UIButton!
     @IBOutlet weak var ptButton: UIButton!
@@ -32,6 +35,9 @@ class HomeTVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         //        locationManger.delegate = self
+        
+        // Set introduction to localization key
+        introTextLabel.text? = "homeIntroText".localize
         
         // Set back button title for StepDetailTVC
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
@@ -126,6 +132,7 @@ class HomeTVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         resetLanguageMenu()
         StepController.shared.refreshSteps()
         tableView.reloadData()
+        self.introTextLabel?.text = "homeIntroText".localize
     }
     
     func resetLanguageMenu() {
