@@ -38,23 +38,7 @@ class DataInputTVCell: UITableViewCell {
             dataInputText2Field.delegate = self
         }
     }
-    // MARK: - Life Cyle
-    override func awakeFromNib() {
-        print("\nDataInputTVCell Awake from nib\n")
-        
-        // MARK: - Delte this commented out code once textfields work properly
-        
-        //Listening for certain events related to the keyboard
-//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notificatin:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-//
-//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notificatin:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-//
-//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notificatin:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
-    }
-    
-   
-    
-    
+
     // MARK: - ACTIONS
     
 
@@ -87,35 +71,6 @@ extension DataInputTVCell : UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.text = ""
     }
-    
-     // MARK: - Delte this commented out code once textfields work properly
-    // Keyboard
-//    @objc func keyboardWillChange(notificatin: Notification) {
-//        print("\n ✈️ Keyboard will show: \(notificatin.name.rawValue)\n")
-//
-//        print("🎢 Before the Change: \(String(describing: stepDetailVC?.view.frame.origin.y))")
-//
-//
-//        self.stepDetailVC?.view.frame.origin.y = -3000
-//
-//
-//        print("🚧 View's Frame Origin: \(stepDetailVC?.view.frame.origin as Any)")
-//
-//        print("🚢 After the change: \(String(describing: stepDetailVC?.view.frame.origin.y))")
-//    }
-    
-    
-    // keyboard does not pop up all the way
-//        @objc func keyboardWillShow(notification: NSNotification) {
-    //        //The key for an NSValue object containing a CGRect that identifies the starting frame rectangle of the keyboard in screen coordinates. The frame rectangle reflects the current orientation of the device.
-//            if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-//                UIView.animate(withDuration: 1) {
-//
-//                    self.stepDetailVC?.view.bounds.origin.y += keyboardSize.height
-//                }
-//
-//            }
-//        }
 }
 
 
