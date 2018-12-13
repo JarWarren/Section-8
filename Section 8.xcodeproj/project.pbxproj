@@ -36,6 +36,10 @@
 		81212AED21B5AC5A0082C88B /* DataInputTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81212AEC21B5AC5A0082C88B /* DataInputTVCell.swift */; };
 		81212AEF21B5CCF90082C88B /* DataDisplayTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81212AEE21B5CCF90082C88B /* DataDisplayTVCell.swift */; };
 		812E863921C0853E001BDF07 /* ApartmentPhotoTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812E863821C0853E001BDF07 /* ApartmentPhotoTVCell.swift */; };
+		814FCE7E21C2EB3B009F7239 /* datePickerBannerES.png in Resources */ = {isa = PBXBuildFile; fileRef = 814FCE7A21C2EB3A009F7239 /* datePickerBannerES.png */; };
+		814FCE7F21C2EB3B009F7239 /* notificationBannerES.png in Resources */ = {isa = PBXBuildFile; fileRef = 814FCE7B21C2EB3B009F7239 /* notificationBannerES.png */; };
+		814FCE8021C2EB3B009F7239 /* notificationBannerPT.png in Resources */ = {isa = PBXBuildFile; fileRef = 814FCE7C21C2EB3B009F7239 /* notificationBannerPT.png */; };
+		814FCE8121C2EB3B009F7239 /* datePickerBannerPT.png in Resources */ = {isa = PBXBuildFile; fileRef = 814FCE7D21C2EB3B009F7239 /* datePickerBannerPT.png */; };
 		8161D47B21B8B30D00F44AC0 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8161D47D21B8B30D00F44AC0 /* Launch Screen.storyboard */; };
 		8161D48321B8C3E300F44AC0 /* AttributesExpander.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8161D48221B8C3E300F44AC0 /* AttributesExpander.swift */; };
 		81871F1121B7079700407E51 /* MapTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81871F1021B7079700407E51 /* MapTVCell.swift */; };
@@ -89,14 +93,15 @@
 		810C0BA321BF1E9E005B0FB5 /* Onboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Onboard.storyboard; sourceTree = "<group>"; };
 		810C0BA921BF383B005B0FB5 /* PhotoTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTVCell.swift; sourceTree = "<group>"; };
 		811AE08A21C2BE2B00F51C4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Map.storyboard; sourceTree = "<group>"; };
-		811AE08D21C2BE3800F51C4A /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Map.strings"; sourceTree = "<group>"; };
-		811AE08F21C2BE4400F51C4A /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Map.strings"; sourceTree = "<group>"; };
 		811AE09121C2BE7000F51C4A /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Launch Screen.strings"; sourceTree = "<group>"; };
 		81212AEC21B5AC5A0082C88B /* DataInputTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInputTVCell.swift; sourceTree = "<group>"; };
 		81212AEE21B5CCF90082C88B /* DataDisplayTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDisplayTVCell.swift; sourceTree = "<group>"; };
 		812E863821C0853E001BDF07 /* ApartmentPhotoTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApartmentPhotoTVCell.swift; sourceTree = "<group>"; };
 		814FCE7821C2C459009F7239 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Launch Screen.strings"; sourceTree = "<group>"; };
-		814FCE7921C2E7D2009F7239 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
+		814FCE7A21C2EB3A009F7239 /* datePickerBannerES.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = datePickerBannerES.png; sourceTree = "<group>"; };
+		814FCE7B21C2EB3B009F7239 /* notificationBannerES.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notificationBannerES.png; sourceTree = "<group>"; };
+		814FCE7C21C2EB3B009F7239 /* notificationBannerPT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notificationBannerPT.png; sourceTree = "<group>"; };
+		814FCE7D21C2EB3B009F7239 /* datePickerBannerPT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = datePickerBannerPT.png; sourceTree = "<group>"; };
 		8161D47C21B8B30D00F44AC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		8161D48221B8C3E300F44AC0 /* AttributesExpander.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributesExpander.swift; sourceTree = "<group>"; };
 		81871F1021B7079700407E51 /* MapTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTVCell.swift; sourceTree = "<group>"; };
@@ -106,6 +111,7 @@
 		81ACB76321C19AE3004202D5 /* TitleTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTVCell.swift; sourceTree = "<group>"; };
 		81B7E94D21B1FEC1003A209F /* DatePickerTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTVCell.swift; sourceTree = "<group>"; };
 		81B7E94F21B1FF0E003A209F /* ClickLinkTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickLinkTVCell.swift; sourceTree = "<group>"; };
+		81C3580D21C2F16C0075B6B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		81CC955D21BB030100CB1B32 /* Section8Apartment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section8Apartment.swift; sourceTree = "<group>"; };
 		81CC956121BB048700CB1B32 /* Section8ApartmentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section8ApartmentController.swift; sourceTree = "<group>"; };
 		81DD083221AF1D470037F3AA /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
@@ -301,7 +307,11 @@
 			isa = PBXGroup;
 			children = (
 				474C289521BB81A900874B78 /* datePickerBannerEN.png */,
+				814FCE7A21C2EB3A009F7239 /* datePickerBannerES.png */,
+				814FCE7D21C2EB3B009F7239 /* datePickerBannerPT.png */,
 				474C289221BB7DBF00874B78 /* notificationBannerEN.png */,
+				814FCE7B21C2EB3B009F7239 /* notificationBannerES.png */,
+				814FCE7C21C2EB3B009F7239 /* notificationBannerPT.png */,
 			);
 			path = NotificationAssets;
 			sourceTree = "<group>";
@@ -368,11 +378,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				814FCE8021C2EB3B009F7239 /* notificationBannerPT.png in Resources */,
 				7E59408921B5AC1100C02E61 /* Localizable.strings in Resources */,
 				7E67E29B21ADE778007E4103 /* Assets.xcassets in Resources */,
+				814FCE8121C2EB3B009F7239 /* datePickerBannerPT.png in Resources */,
+				814FCE7E21C2EB3B009F7239 /* datePickerBannerES.png in Resources */,
 				7E67E29921ADE777007E4103 /* Main.storyboard in Resources */,
 				811AE08921C2BE2B00F51C4A /* Map.storyboard in Resources */,
 				474C289421BB7DBF00874B78 /* notificationBannerEN.png in Resources */,
+				814FCE7F21C2EB3B009F7239 /* notificationBannerES.png in Resources */,
 				474C289621BB81A900874B78 /* datePickerBannerEN.png in Resources */,
 				810C0BA421BF1E9E005B0FB5 /* Onboard.storyboard in Resources */,
 				8161D47B21B8B30D00F44AC0 /* Launch Screen.storyboard in Resources */,
@@ -497,7 +511,7 @@
 		7E67E29721ADE777007E4103 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				814FCE7921C2E7D2009F7239 /* en */,
+				81C3580D21C2F16C0075B6B2 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -506,8 +520,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				811AE08A21C2BE2B00F51C4A /* Base */,
-				811AE08D21C2BE3800F51C4A /* es-419 */,
-				811AE08F21C2BE4400F51C4A /* pt-BR */,
 			);
 			name = Map.storyboard;
 			sourceTree = "<group>";
@@ -649,7 +661,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 466UYFDWDY;
 				INFOPLIST_FILE = "$(SRCROOT)/Section 8/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -668,7 +680,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 466UYFDWDY;
 				INFOPLIST_FILE = "$(SRCROOT)/Section 8/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

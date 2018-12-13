@@ -18,8 +18,11 @@
     // Complete button
     "completeButtonTextTapToMarkCompleteA" = "PULSAR CUANDO";
     "completeButtonTextTapToMarkCompleteB" = "CUANDO TERMINE";
-"completeButtonTextTapToMarkIncompleteA" = "PRESIONE PARA COMBIAR";
+    "completeButtonTextTapToMarkIncompleteA" = "PRESIONE PARA COMBIAR";
     "completeButtonTextTapToMarkIncompleteB" = "INCOMPLETAR";
+
+    // No apartment image
+    "noApartmentImage" = "noApartmentImageES";
 
 // MARK: LOCATION NOTIFICATION
 

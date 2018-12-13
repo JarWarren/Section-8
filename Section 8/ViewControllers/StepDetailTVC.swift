@@ -195,7 +195,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             }
             
             // What to display if they haven't chosen one
-            cell.apartmentPhotoImageView?.image = UIImage(named: "noApartmentImage")
+            cell.apartmentPhotoImageView?.image = UIImage(named: "noApartmentImage".localize)
             return cell
             
         // MARK: CLICK LINK CUSTOM CELL

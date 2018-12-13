@@ -254,7 +254,7 @@ class StepController {
                 ItemController.addNewItem(title: "8bTitle".localize, text: "8bText".localize, buttonText: nil, url: nil, graphicName: "home", format: .tip, step: step)
                 
                 // Item 8c - Photo
-                ItemController.addNewItem(title: nil, text: nil, buttonText: nil, url: nil, graphicName: "noApartmentImage", format: .apartmentPhoto, step: step)
+                ItemController.addNewItem(title: nil, text: nil, buttonText: nil, url: nil, graphicName: "noApartmentImage".localize, format: .apartmentPhoto, step: step)
                 
                 // Item 8d - List of four docs
                 ItemController.addNewItem(title: nil, text: "8dText".localize, buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
@@ -350,7 +350,7 @@ class StepController {
                 ItemController.addNewItem(title: "11bTitle".localize, text: "11bText".localize, buttonText: nil, url: nil, graphicName: "home", format: .tip, step: step)
                 
                 // Item 11c - Photo
-                ItemController.addNewItem(title: nil, text: nil, buttonText: nil, url: nil, graphicName: "noApartmentImage", format: .apartmentPhoto, step: step)
+                ItemController.addNewItem(title: nil, text: nil, buttonText: nil, url: nil, graphicName: "noApartmentImage".localize, format: .apartmentPhoto, step: step)
                 
                 // Item 11d - If it doesn't pass
                 ItemController.addNewItem(title: nil, text: "11dText".localize, buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
@@ -412,7 +412,7 @@ class StepController {
                 ItemController.addNewItem(title: "13bTitle".localize, text: "13bText".localize, buttonText: nil, url: nil, graphicName: "home", format: .tip, step: step)
                 
                 // Item 13c - Photo
-                ItemController.addNewItem(title: nil, text: nil, buttonText: nil, url: nil, graphicName: "noApartmentImage", format: .apartmentPhoto, step: step)
+                ItemController.addNewItem(title: nil, text: nil, buttonText: nil, url: nil, graphicName: "noApartmentImage".localize, format: .apartmentPhoto, step: step)
                 
                 // Item 13d - Then return copies to HAUC
                 ItemController.addNewItem(title: nil, text: "13dText".localize, buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
@@ -443,7 +443,7 @@ class StepController {
                 ItemController.addNewItem(title: "14bTitle".localize, text: "14bText".localize, buttonText: nil, url: nil, graphicName: "home", format: .tip, step: step)
                 
                 // Item 14c - Photo
-                ItemController.addNewItem(title: nil, text: nil, buttonText: nil, url: nil, graphicName: "noApartmentImage", format: .apartmentPhoto, step: step)
+                ItemController.addNewItem(title: nil, text: nil, buttonText: nil, url: nil, graphicName: "noApartmentImage".localize, format: .apartmentPhoto, step: step)
                 
                 // Item 14d - Recertification process
                 ItemController.addNewItem(title: nil, text: "14dText".localize, buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
