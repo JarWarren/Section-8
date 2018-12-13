@@ -28,6 +28,7 @@
 
     //Note "locationDismissButtonTitle" and "locationResourceName" are using key value pairs associated with other constants in order to avoid having to re-create them
     "locationContentTitle" = "¿Está usted en camino a la oficina de Housing Authority?";
+
     "locationConentBody" = "¡Buena suerte hoy! Usa la aplicación Section8 para ayudarte a recordar lo que debes hacer.";
 
 // MARK: - SEVEN-DAY NOTIFICATIONS
@@ -321,7 +322,7 @@
 
     // Item 9d - After you deliver docs
     "9dText" = "Después de entregar estos documentos, a Housing Authority procesará la documentación y luego se comunicarán con usted.";
-
+    
     // Item 9e - Important reminder
     "9eTitle" = "RECORDATORIO IMPORTANTE";
     "9eText" = "Housing Authority utilizará el número de teléfono y la dirección que proporcionó en su solicitud para contactarlo, de modo que cuando entregue los documentos, verifique con ellos para asegurarse de que su número de teléfono y dirección sean correctos.";
