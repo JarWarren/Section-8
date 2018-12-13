@@ -1,62 +1,434 @@
-/* 
-  Localizable.strings
-  Section 8
+/*
+ Localizable.strings
+ Section 8
+ 
+ Created by Jared Warren on 12/3/18.
+ Copyright © 2018 Warren. All rights reserved.
+ */
 
-  Created by Jared Warren on 12/3/18.
-  Copyright © 2018 Warren. All rights reserved.
-*/
+// MARK: - LAUNCH SCREEN
 
-// MARK: - Spanish
+    "LaunchScreenTitle" = "Section8";
+
+// MARK: - UI COMPONENTS
+
+    // Complete button
+    "completeButtonTextTapToMarkCompleteA" = "TAP WHEN";
+    "completeButtonTextTapToMarkCompleteB" = "IS COMPLETE";
+    "completeButtonTextTapToMarkIncompleteA" = "TAP TO CHANGE";
+    "completeButtonTextTapToMarkIncompleteB" = "TO INCOMPLETE";
+
+// MARK: LOCATION NOTIFICATION
+
+    //Note "locationDismissButtonTitle" and "locationResourceName" are using key value pairs associated with other constants in order to avoid having to re-create them
+    "locationContentTitle" = "Headed to the Housing Authority office?";
+    "locationConentBody" = "Good Luck Today! Use the Section8 app to help you remember what you need to do.";
+
+// MARK: - SEVEN-DAY NOTIFICATIONS
+
+    // Seven-day interval text fields
+    // NOTE: - location notification dissmiss button is using the 7 day interval text field's "7DayDismiss" key in order to avoid having to recreate this key value pair. due to both having a "Dismiss" title.
+    "7DayDismiss" = "Dismiss";
+    "7DayContentTitle" = "Section 8 Housing Reminder";
+    "7DayContentSubtitle" = "";
+    "7DayContentBody" = "It's been a week since you worked on your application. Tap here to take the next step!";
+
+// MARK: - DATE PICKER NOTIFICATIONS
+
+    // Step 3 - Intial appointment date
+    "s3DatePickerDismissTitle" = "Dismiss";
+    "s3DatePickerContentTitle" = "Appointment Reminder";
+    "s3DatePickercontentSubtitle" = "";
+    "s3DatePickerContentBody" = "Today's The day! Make sure to take all your paper work to your initial appointment";
+
+    // Step 4 - Attend briefing
+    "s4DatePickerDismissTitle" = "Dismiss";
+    "s4DatePickerContentTitle" = "Appointment Reminder";
+    "s4DatePickercontentSubtitle" = "";
+    "s4DatePickerContentBody" = "Today's The day! Make sure to take all your paper work to your briefing appointment";
+
+    // Step 10 - Schedule inspection
+    "s10DatePickerDismissTitle" = "Dismiss";
+    "s10DatePickerContentTitle" = "Appointment Reminder";
+    "s10DatePickercontentSubtitle" =  "";
+    "s10DatePickerContentBody" = "Today's The day! Make sure to take all your paper work to your inspection appointment";
+
+    // Step 12 - Final appointment
+    "s12DatePickerDismissTitle" = "Dismiss";
+    "s12DatePickerContentTitle" = "Appointment Reminder";
+    "s12DatePickercontentSubtitle" = "";
+    "s12DatePickerContentBody" = "Today's The day! Make sure to take all your paper work to your final appointment.";
+
+// MARK: - NOTIFICATION IMAGES
+
+    // Seven-day banner notifications
+    // NOTE: - This "notificationBanner" key is also being called in the location notification resource name, in order to not have to avoid recreating another banner key value pair
+    "notificationBanner" = "notificationBannerEN";
+
+    // Date picker banner notifications
+    "datePickerBanner" = "datePickerBannerEN";
 
 // MARK: - STEPS
 
-"STEP" = "PASO";
-"step1" = "Completar aplicación enlínea";
-"step2" = "Traer Identificación";
-"step3" = "Completar aplicación enviado";
+    "STEP" = "PASO";
 
-// ITEMS
-"1a" = "Complete la solicitud preliminar haciendo clic en el botón de abajo, pero lea estas instrucciones primero:";
+    "step1" = "Completar solicitud preliminar";
+    "step2" = "Traer identificación";
+    "step3" = "Completar aplicación enviado";
+    "step4" = "Asistir a la reunión informativa";
+    "step5" = "Calcular el pago del alquiler";
+    "step6" = "Escojer un apartamento";
+    "step7" = "Llamar al complejo de apartamentos";
+    "step8" = "Hacer que el propietario complete los formularios";
+    "step9" = "Devolver los formularios a HAUC";
+    "step10" = "Programar una ispección";
+    "step11" = "Inspección del apartamento";
+    "step12" = "Cita final con HUAC";
+    "step13" = "Devolver los contratos firmados a HAUC";
+    "step14" = "¡Bienvenido a su nuevo hogar!";
 
-// MARK: - 7-DAY Notifications
+// MARK: - STEP 1 ITEMS
 
-// Seven Day Interval Text fields
-"7DayDismiss" = "Descartar";
-"7DayContentTitle" = "Recordatorio de Section 8 Housing";
-"7DayContentSubtitle" = "";
-"7DayContentBody" = "Ha pasado una semana desde que trabajaste en tu aplicación. Toque aquí para dar el siguiente paso!";
+    // Item 1a - Intro
+    "1aText" = "Let's get started! You will start by filling out the preliminary application online, but before you start, read these instructions:";
 
-// Mark: - Date Picker Notifications
+    // Item 1b - Viewing tip
+    "1bTitle" = "VIEWING TIP";
+    "1bText" = "Once you open the online application, it might be easier to turn your phone sideways, to make it easier to read.";
 
-// Step 3 - Intial Appointment Date
-"s3DatePickerDismissTitle" = "Descartar";
-"s3DatePickerContentTitle" = "Hoy es el día";
-"s3DatePickercontentSubtitle" = "";
-"s3DatePickerContentBody" = "Asegúrese de llevar todo su papeleo a su cita inicial";
+    // Item 1c - Photo
 
-// Step 4 - Attend Briefing
-"s4DatePickerDismissTitle" = "Descartar";
-"s4DatePickerContentTitle" = "Hoy es el día";
-"s4DatePickercontentSubtitle" = "";
-"s4DatePickerContentBody" = "Asegúrese de llevar todo su papeleo a su cita informativa";
+    // Item 1d - Finished button
+    "1dTitle" = "FINISHED BUTTON";
+    "1dText" = "When you are finished, you will see an “Application Receipt” screen. Tap on the “Finished” button near the bottom of the screen, and return to this page by tapping on the Section 8 link at the top-left of the screen.";
 
-// Step 10 - Schedule Inspection
-"s10DatePickerDismissTitle" = "Descartar";
-"s10DatePickerContentTitle" = "Hoy es el día";
-"s10DatePickercontentSubtitle" =  "";
-"s10DatePickerContentBody" = "Asegúrese de llevar todo su papeleo a su cita de inspección";
+    // Item 1e - Online application
+    "1eText" = "Tap here to start the online application on the Housing Authority of Utah County (HAUC) website:";
+    "1eButtonText" = "PRELIMINARY APPLICATION";
 
-// Step 12 - Final HAUC Appointment
-"s12DatePickerDismissTitle" = "Descartar";
-"s12DatePickerContentTitle" = "Hoy es el día";
-"s12DatePickercontentSubtitle" = "";
-"s12DatePickerContentBody" = "Asegúrese de llevar todo su papeleo a su cita final con HAUC";
+    // Item 1f - Tap complete
+    "1fText" = "Once you have completed the online application, tap on the “Complete” button below to move on to the next step!";
 
-// MARK: - Notification Images
+// MARK: - STEP 2 ITEMS
 
-// Seven Day Banner Notifications
-"notificationBanner" = "notificationBannerEN";
+    // Item 2a - Intro
+    "2aText" = "After submitting your preliminary application online, the head of household must take a photo ID and social security card to the Housing Authority main office.";
+
+    // Item 2b - Housing office info
+    "2bTitle" = "HOUSING AUTHORITY OFFICE INFORMATION";
+    "2bText" = "240 E Center St, Provo, UT 84606 \nMonday–Thursday, 7:30am–5:30pm \nPhone: 801-373-8333";
+
+    // Item 2c - Photo
+
+    // Item 2d - Waiting list paragraph
+    "2dText" = "Once you have submitted your identification, you will be placed on a waiting list.";
+
+    // Item 2e - Waiting list tip
+    "2eTitle" = "WAITING LIST";
+    "2eText" = "The wait time is from two months up to more than a year. Make sure to update your phone number and mailing address with the Housing Authority if anything changes!";
+
+    // Item 2f - Tap complete
+    "2fText" = "Once the head of household has delivered these two forms of identification to the housing office, this step is complete! Tap on the “Complete” button below to move on to the next step.";
+
+// MARK: - STEP 3 ITEMS
+
+    // Item 3a - Intro
+    "3aText" = "When your name reaches the top of the waiting list, you will receive a full application in the mail. You will also receive a scheduled appointment date, letting you know when to bring in your application to the Housing Authority main office.";
+
+    // Item 3b - Appointment date picker
+    "3bTitle" = "APPOINTMENT DATE";
+    "3bText" = "Please enter your appointment date here, so we can send you a reminder notification:";
+    "3bButtonText" = "TAP TO SAVE DATE";
+
+    // Item 3c - Read carefully
+    "3cText" = "Read the application carefully, and complete each section. Be sure to update household and income verification.";
+
+    // Item 3d - Important reminder
+    "3dTitle" = "IMPORTANT REMINDER";
+    "3dText" = "When you go in for your appointment, make sure to take in the following: \n– Your completed application, \n– Income verifications, \n– Birth certificates and \n– Social Security Cards.";
+
+    // Item 3e - Here is address
+    "3eText" = "Here is the address for the location of your appointment:";
+
+    // Item 3f - Housing office info
+    "3fTitle" = "HOUSING AUTHORITY INFORMATION";
+    "3fText" = "240 E Center St, Provo, UT 84606 \nMonday–Thursday, 7:30am–5:30pm \nPhone: 801-373-8333";
+
+    // Item 3g - Photo
+
+    // Item 3h - Tap complete
+    "3hText" = "Several days after your appointment, you will be notified by the Housing Authority, and a briefing will be set up for you. \n\nOnce you have completed your application appointment at the Housing Authority office, tap the “Complete” button below to move on to the next step!";
+
+// MARK: - STEP 4 ITEMS
+
+    // Item 4a - Intro
+    "4aText" = "You should receive an invitation to attend a briefing several days after your application appointment. If you don’t receive an invitation, call the Housing Authority office to find out when you can come to a briefing.";
+
+    // Item 4b - Housing office info
+    "4bTitle" = "HOUSING AUTHORITY INFORMATION";
+    "4bText" = "Monday–Thursday, 7:30am–5:30pm \nPhone: 801-373-8333";
+
+    // Item 4c - Description of briefing
+    "4cText" = "In the briefing, program procedures are explained, and you will be taught how to begin receiving assistance.";
+
+    // Item 4d - Briefing date picker
+    "4dTitle" = "BRIEFING DATE";
+    "4dText" = "Please enter your briefing date here, so we can send you a reminder notification:";
+    "4dButtonText" = "TAP TO SAVE DATE";
+
+    // Item 4e - If need to reschedule
+    "4eText" = "Make that you don't miss your briefing, and if you need to reschedule, call the Housing Authority office to set up a new time. Then enter the new date in the box above, and tap on the green button again.";
+
+    // Item 4f - Important reminder
+    "4fTitle" = "IMPORTANT REMINDER";
+    "4fText" = "Once you have attended the briefing, you only have 60 days to find a place to live, and to complete the remaining steps.";
+
+    // Item 4g - Tap to complete
+    "4gText" = "After attending the briefing, tap the “Complete” button below to move on to the next step!";
+
+// MARK: - STEP 5 ITEMS
+
+    // Item 5a - Photo
+
+    // Item 5b - Intro
+    "5bText" = "The Housing Authority will only let you rent an apartment within a certain price range. To calculate what you can afford to pay, you will need to provide a couple pieces of information:";
+
+    // Item 5c - Income/voucher inputs
+    "5cTitle" = "OVERALL HOUSEHOLD INCOME";
+    "5cText" = "In the first box below, include all income from everyone in the household. You can include: wages, salaries, unemployment benefits, child support, Social Security payments, interest and royalties, and financial assistance.";
+    "5cUrl" = "HOUSING AUTHORITY VOUCHER AMOUNT";
+    "5cGraphicName" = "In the second box, enter the amount that you qualify for from the Housing Authority voucher you received at your briefing.";
+    "5cButtonText" = "TAP TO SUBMIT AMOUNTS";
+
+    // Item 5d - Max rent amount
+    "5dTitle" = "YOUR MAXIMUM RENT AMOUNT";
+    "5dText" = "Based on your household income, your voucher amount, and an average utility allowance, you should NOT look at apartments with rent higher than this amount:";
+
+    // Item 5e - How is this calculated
+    "5eTitle" = "HOW IS THIS CALCULATED?";
+    "5eText" = "In addition to the voucher amount you qualify for, you are only allowed to pay up to 40% of your household income for rent. Also, an average cost of utilities has been subtracted from the total, because you will pay those in addition to your monthly rent payment.";
+
+    // Item 5f - Tap to complete
+    "5fText" = "After calculating your maximum rent, click the “Complete” button below to move on to the next step!";
+
+// MARK: - STEP 6 ITEMS
+
+    // Item 6a - Map instructions
+    "6aText" = "Time to choose an apartment! Tap a marker for apartment details. Choose one, and tap the green button to move to the next step.";
+
+// MARK: - STEP 7 ITEMS
+
+    // Item 7a - Intro
+    "7aText" = "Now that you have selected a possible apartment complex, it’s time to give them a call to make sure that they accept Section 8 applicants, and to find out their pricing.";
+
+    // Item 7b - Chosen apartment (IF ITEM KEY IS CHANGED, UPDATE CODE IN SELECTED APARTMENT CONTROLLER, INCLUDING INDEX)
+    "7bTitle" = "THE APARTMENT YOU CHOSE:";
+    "7bText" = "You have not selected an apartment yet. Return to Step 6, and select an apartment before completing this step.";
+
+    // Item 7c - Photo
+
+    // Item 7d - Important reminder
+    "7dTitle" = "IMPORTANT REMINDER";
+    "7dText" = "Check to make sure their rates are not higher than your maximum rent amount, which is listed below:";
+
+    // Item 7e - Maximum rent
+    "7eTitle" = "YOUR MAXIMUM RENT AMOUNT";
+    "7eText" = "Based on your household income, your voucher amount, and utility allowance, you should NOT look at apartments with rent higher than this amount:";
+
+    // Item 7f - Important reminder
+    "7fTitle" = "IMPORTANT REMINDER";
+    "7fText" = "When you call, remember your two questions: (1) do they accept Section 8 applicants, and (2) what are their rates for the size apartment you are looking for.";
+
+    // Item 7g - Call button (IF KEY NAME IS CHANGED, ALSO CHANGE IN CLICKLINK DELEGATE EXTENSION IN STEPDETAILTVC)
+    "7gText" = "Now it’s time to call the apartment complex: ";
+    "7gButtonText" = "TAP TO CALL APARTMENT COMPLEX";
+
+    // Item 7h - What if isn't right (IF KEY NAME IS CHANGED, ALSO CHANGE IN CLICKLINK DELEGATE EXTENSION IN STEPDETAILTVC)
+    "7hTitle" = "WHAT IF THE APARTMENT ISN’T RIGHT FOR YOU?";
+    "7hText" = "After you have talked with them, if you find out the apartment isn't right for you, just tap on this button to return to the “Choose Apartment” screen. Select another complex, and try again:";
+    "7hButtonText" = "TAP TO RETURN TO APARTMENT MAP";
+
+    // Item 7i - Tap to complete
+    "7iText" = "Once you have found an apartment that is right for you, tap on the “Complete” button below to move on to the next step!";
+
+// MARK: - STEP 8 ITEMS
+
+    // Item 8a - Intro
+    "8aText" = "Once you’ve found an apartment you think will work, and you have called them to find out that they accept Section 8 applicants, and that they are in your price range, it’s time to go visit them:";
+
+    // Item 8b - Selected apartment
+    "8bTitle" = "ADDRESS OF THE APARTMENT YOU CHOSE";
+    "8bText" = "You have not selected an apartment yet. Return to Step 6, and select an apartment before completing this step.";
+
+    // Item 8c - Photo
+
+    // Item 8d - List of four docs
+    "8dText" = "You will need them to complete four forms: \n\n– Tenancy Approval form \n– Copy of proposed lease \n– W-9 form \n– Cover letter \n\nIn the packet you received at your briefing, you should have a copy of each of these forms. \n\nThe apartment complex might be able to fill everything out while you wait, or they may tell you to come back on another day.";
+
+    // Item 8e - Helpful hint
+    "8eTitle" = "HELPFUL HINT";
+    "8eText" = "If you need to send a copy of these forms to the apartment complex, tap on the links below, and share the forms by email address or mobile number. Then return to this page by tapping on the Section 8 link at the top-left of your browser screen.";
+
+    // Item 8f - Tenancy approval
+    "8fTitle" = "TENANCY APPROVAL FORM";
+    "8fText" = "Make sure the form is filled out completely, and SIGNED:";
+    "8fButtonText" = "LINK TO TENANCY APPROVAL FORM";
+
+    // Item 8g - W-9
+    "8gTitle" = "W-9 FORM";
+    "8gText" = "Make sure the form is filled out completely, and SIGNED:";
+    "8gButtonText" = "LINK TO W-9 FORM";
+
+    // Item 8h - Cover letter
+    "8hTitle" = "COVER LETTER FORM";
+    "8hText" = "Make sure the form is filled out completely, and SIGNED:";
+    "8hButtonText" = "LINK TO COVER LETTER FORM";
+
+    // Item 8i - Copy of proposed lease
+    "8iTitle" = "COPY OF PROPOSED LEASE";
+    "8iText" = "Make sure the following is written somewhere on the lease: “The HUD Tenancy Addendum is hereby made a part of this lease.";
+
+    // Item 8j - Important reminder
+    "8jTitle" = "IMPORTANT REMINDER";
+    "8jText" = "Make sure you get ALL FOUR of these documents, or you won’t be able to complete the next step.";
+
+    // Item 8k - Top to complete
+    "8kText" = "Once you have the documents, tap on the “Complete” button below to move on to the next step!";
+
+// MARK: - STEP 9 ITEMS
+
+    // Item 9a - Intro
+    "9aText" = "Now that you have the four required documents from Step 8, you need to take them to the Housing Authority office:";
+
+    // Item 9b - Housing Authority office info
+    "9bTitle" = "HOUSING AUTHORITY INFORMATION";
+    "9bText" = "240 E Center St, Provo, UT 84606 \nMonday–Thursday, 7:30am–5:30pm \nPhone: 801-373-8333";
+
+    // Item 9c - Photo
+
+    // Item 9d - After you deliver docs
+    "9dText" = "After you deliver these documents, the Housing Authority will process the paperwork, and then they will contact you.";
+
+    // Item 9e - Important reminder
+    "9eTitle" = "IMPORTANT REMINDER";
+    "9eText" = "The Housing Authority will use the phone number and address you provided on your application to contact you, so when you deliver the documents, check with them to make sure your phone number and address are correct.";
+
+    // Item 9f - Tap to complete
+    "9fText" = "Once you deliver the documents to the Housing Authority, tap on the “Complete” button below to move on to the next step!";
+
+// MARK: - STEP 10 ITEMS
+
+    // Item 10a - Intro
+    "10aText" = "Several days after you have submitted the required forms, you will either get a phone call, or receive a letter in the mail from the Housing Authority to set up an appointment to do a apartment inspection.";
+
+    // Item 10b - Important reminder
+    "10bTitle" = "IMPORTANT REQUIREMENT";
+    "10bText" = "The apartment to be inspected must either be vacant, or it must be your current apartment. If it is your current apartment, all the utilities MUST be turned on.";
+
+    // Item 10c - Talk to landlord and housing authority
+    "10cText" = "You will need to talk to the Housing Authority, as well as the apartment complex, to find a time that works for both. You will also need to make sure that an adult is at the until when the inspector arrives.";
+
+    // Item 10d - Inspection date picker
+    "10dTitle" = "INSPECTION DATE";
+    "10dText" = "Please enter your inspection date here, so we can send you a reminder notification:";
+    "10dButtonText" = "TAP TO SAVE DATE";
+
+    // Item 10e - Tap to complete
+    "10eText" = "Once the inspection has been scheduled with the apartment complex AND the Housing Authority, tap on the “Complete” button below to move on to the next step!";
+
+// MARK: - STEP 11 ITEMS
+
+    // Item 11a - Intro
+    "11aText" = "On the day of the inspection, make sure that there is an adult at the apartment when the inspector arrives. That can be you or someone from the apartment complex.";
+
+    // Item 11b - Selected aparmentment (IF ITEM KEY IS CHANGED, UPDATE CODE IN SELECTED APARTMENT CONTROLLER)
+    "11bTitle" = "THE APARTMENT YOU CHOSE";
+    "11bText" = "You have not selected an apartment yet. Return to Step 6, and select an apartment before completing this step.";
+
+    // Item 11c - Photo
+
+    // Item 11d - If it doesn't pass
+    "11dText" = "If unit does not pass inspection, necessary repairs must be made. When repairs are completed, call the Housing Authority at 801-373-8333, extension 117 to schedule a re-inspection appointment.";
+
+    // Item 11e - If you need to reschedule
+    "11eTitle" = "IF YOU NEED TO RESCHEDULE";
+    "11eText" = "If you need to schedule a re-inspection appointment, go back and change the inspection date on Step 10, so we can remind you when it’s getting closer to inspection time.";
+
+    // Item 11f - Tap to complete
+    "11fText" = "Once the inspection is finished, tap on the “Complete” button below to move on to the next step!";
+
+// MARK: - STEP 12 ITEMS
+
+    // Item 12a - Intro
+    "12aText" = "After your unit passes an inspection, the Housing Authority will call you to make an appointment where you will visit them at their office.";
+
+    // Item 12b - Final appointment date picker
+    "12bTitle" = "FINAL APPOINTMENT DATE";
+    "12bText" = "Please enter your final appointment date here, so we can send you a reminder notification:";
+    "12bButtonText" = "TAP TO SAVE DATE";
+
+    // Item 12c - Don't forget appointment
+    "12cText" = "Make sure to not forget your appointment. On the day of the appointment, plan ahead and arrive early.";
+
+    // Item 12d - Housing Authority office info
+    "12dTitle" = "HOUSING AUTHORITY INFORMATION";
+    "12dText" = "240 E Center St, Provo, UT 84606 \nMonday–Thursday, 7:30am–5:30pm \nPhone: 801-373-8333";
+
+    // Item 12d - Photo
+
+    // Item 12e - At appointment
+    "12eText" = "At this appointment, the Housing Authority will have you sign final paperwork.";
+
+    // Item 12f - If you need to reschedule
+    "12fTitle" = "IF YOU NEED TO RESCHEDULE";
+    "12fText" = "If you need to re-schedule your final appointment, go back and change the appointment date above, so we can remind you when it’s getting closer to inspection time.";
+
+    // Item 12g - Tap to complete
+    "12gText" = "Once your final appointment is finished, tap on the “Complete” button below to move on to the next step!";
+
+// MARK: - STEP 13 ITEMS
+
+    // Item 13a - Intro
+    "13aText" = "After your final appointment, you will need to deliver the leases and contracts to the apartment complex, so they can be signed.";
+
+    // Item 13b - Selected aparmentment (IF ITEM KEY IS CHANGED, UPDATE CODE IN SELECTED APARTMENT CONTROLLER)
+    "13bTitle" = "THE APARTMENT YOU CHOSE";
+    "13bText" = "You have not selected an apartment yet. Return to Step 6, and select an apartment before completing this step.";
+
+    // Item 13c - Photo
+
+    // Item 13d - Then return copies to HAUC
+    "13dText" = "Then you must return ALL copies to the Housing Authority:";
+
+    // Item 13e - Housing Authority office info
+    "13eTitle" = "HOUSING AUTHORITY INFORMATION";
+    "13eText" = "240 E Center St, Provo, UT 84606 \nMonday–Thursday, 7:30am–5:30pm \nPhone: 801-373-8333";
+
+    // Item 13f - Photo
+
+    // Item 13g - When paperwork is processed & Tap to complete
+    "13gText" = "When the paperwork has been processed, the Housing Authority will send you copies in the mail. \n\nOnce you have returned the signed leases and contracts to the Housing Authority, tap on the “Complete” button below to move on to the next step!";
+
+// MARK: - STEP 14 ITEMS
+
+    // Item 14a - Intro
+    "14aText" = "Once you have received signed copies of the contracts and leases in the mail, you can schedule a time with the apartment complex to move in.";
+
+    // Item 14b - Selected apartment
+    "14bTitle" = "WELCOME TO YOUR NEW HOME!";
+    "14bText" = "You have not selected an apartment yet. Return to Step 6, and select an apartment before completing this step.";
+
+    // Item 14c - Photo
+
+    // Item 14d - Recertification process
+    "14dText" = "For now, this process is complete! \n\nAt some point in the future, you will have to go through the re-certification process. You will receive a letter two to three months before your re-certification deadline. That letter will contain instructions on what steps to take to complete the process.";
+
+    // Item 14e - Important reminder
+    "14eTitle" = "IMPORTANT REMINDER";
+    "14eText" = "Remember to inform the Housing Authority when any changes occur, either in your household income, or in the number of people living in your apartment.";
+
+    // Item 14f - Tap to complete
+    "14fText" = "Congratulations! You have now completed the process of obtaining affordable Section 8 housing! It is a long and difficult process, and you have done a great job! \n\nTap on the button below to complete the Section 8 Housing process.";
 
 
-// Date Picker Banner Notifications
-"datePickerBanner" = "datePickerBannerEN";
+
