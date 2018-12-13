@@ -78,13 +78,16 @@
 
     "STEP" = "PASO";
 
-    "step1" = "Completar solicitud preliminar";
+    "step1" = "Completar solicitud en línea";
     "step2" = "Traer identificación";
+    //"Complete mailed application"
+    //"Completar la aplicacion que fue recibeda por correro"
+    //"Completar la aplicacion recibido por correro"
     "step3" = "Completar aplicación enviado";
-    "step4" = "Asistir a la reunión informativa";
-    "step5" = "Calcular el pago del alquiler";
+    "step4" = "Asistir reunión informativa";
+    "step5" = "Calcular pago de renta";
     "step6" = "Escojer un apartamento";
-    "step7" = "Llamar al dueño";
+    "step7" = "Llamar la oficina del complejo";
     "step8" = "Formularios para el dueño";
     "step9" = "Devolver los formularios";
     "step10" = "Programar una inspección";
@@ -96,7 +99,7 @@
 // MARK: - STEP 1 ITEMS
 
     // Item 1a - Intro
-    "1aText" = "¡Empecemos! Primero, necesita completar la aplicación preliminar línea, pero antes de que empiece, lea estas instrucciones:";
+    "1aText" = "¡Empecemos! Necesita completar la aplicación preliminar en línea, pero antes de que empiece, lea estas instrucciones:";
 
     // Item 1b - Viewing tip
     "1bTitle" = "Sugerencia de visualización";
