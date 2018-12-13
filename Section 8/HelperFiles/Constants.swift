@@ -10,7 +10,9 @@ import Foundation
 
 struct Constants {
     
-    static let sevenDays = 60
+    // NOTE: - 604800 seconds is 7 days
+    // NOTE: - 1800 seconds is 30 minutes
+    static let sevenDays = 1800
     //    var boolValueToTestTimer = true
     static let sevenDayTimerID = "sevenDays"
     static let categorySevenNotificationID = "dismisActionKey"

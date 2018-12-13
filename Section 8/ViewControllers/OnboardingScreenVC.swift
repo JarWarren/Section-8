@@ -15,7 +15,7 @@ import UserNotifications
 class OnboardingScreenVC: UIViewController, CLLocationManagerDelegate, UNUserNotificationCenterDelegate {
     
     // If true location notification worked, perhaps this line of code should be here
-//    var locationController: LocationController?
+    //    var locationController: LocationController?
     
     
     private let locationManger = CLLocationManager()
@@ -29,29 +29,57 @@ class OnboardingScreenVC: UIViewController, CLLocationManagerDelegate, UNUserNot
     private let desiredRadius = 60.96
     private let utahCountyHousingID = "uCountyHousinginProvo"
     private let utahCountyHousingRequestID = "uCountyHousinginProvoRequestID"
-   
+    
+    // MARK: - Test Variables, Delete once testing completed - Ivan
+    // NOTE: - Student Housing
+    private  let studentHousingLatitude = 40.772759928406
+    private let studentHousingLongitude = -111.90930557447663
+    
+    
+    private let devMountainLatitude = 40.761806
+    private let devMountainLongitude = -111.890533
+    
     
     // MARK: - Life cyles
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //This keeps track of the bool associated with the permissions granted
         loadUserDefaults()
         
         locationManger.delegate = self
-//        37.33477977 -122.03369603
-        // NOTE: - The lines of code below, i put in in order to test the location tracking
-        let center = CLLocationCoordinate2D(latitude: utahCountyHousingLatitude, longitude: utahCountyHousingLongitude)
         
-        let utahHousingActualregion = CLCircularRegion(center: center, radius: desiredRadius, identifier: utahCountyHousingID)
+        /**/
+        /// NOTE: - UtahCounty Housing
+        //        let center = CLLocationCoordinate2D(latitude: utahCountyHousingLatitude, longitude: utahCountyHousingLongitude)
+        //
+        //        let utahHousingActualregion = CLCircularRegion(center: center, radius: desiredRadius, identifier: utahCountyHousingID)
+        //
+        //        locationManger.startMonitoring(for: utahHousingActualregion)
+        /**/
         
-        locationManger.startMonitoring(for: utahHousingActualregion)
-     
-                locationManger.desiredAccuracy = kCLLocationAccuracyBest
+        /// NOTE: - DevMountain
+        /**/
+                let center = CLLocationCoordinate2D(latitude: devMountainLatitude, longitude: devMountainLongitude)
         
-                locationManger.distanceFilter = 10
+                let devMountainregion = CLCircularRegion(center: center, radius: desiredRadius, identifier: "dummyKeyDevMnt")
         
-        // local notification
-        // NOTE: - this needs to be called somehow, perhaps in a button 
-//         locationController?.utahCountyLocationNotification()
+                locationManger.startMonitoring(for: devMountainregion)
+        /**/
+        
+        /// NOTE: - Student Housing
+        /**/
+//        let center = CLLocationCoordinate2D(latitude: studentHousingLatitude, longitude: studentHousingLongitude)
+//
+//        let studentHousingregion = CLCircularRegion(center: center, radius: desiredRadius, identifier: "dummyKeyStudentHousing")
+//
+//        locationManger.startMonitoring(for: studentHousingregion)
+        
+        /**/
+        
+        locationManger.desiredAccuracy = kCLLocationAccuracyBest
+        
+        locationManger.distanceFilter = 10
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -59,7 +87,7 @@ class OnboardingScreenVC: UIViewController, CLLocationManagerDelegate, UNUserNot
         
         // Notification Permission
         // User Notifcation
-        // NOTE: - Ben from class suggested we educate the user and ask them to allow notifications before they are given the option to grant/deny permission
+
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
             
             if granted {
@@ -164,7 +192,7 @@ class OnboardingScreenVC: UIViewController, CLLocationManagerDelegate, UNUserNot
         let homeTVC = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()!
         present(homeTVC, animated: true, completion: nil)
     }
- 
+    
 }
 extension OnboardingScreenVC {
     
@@ -173,7 +201,7 @@ extension OnboardingScreenVC {
         
         print("🚀🚀🌎 didEnterRegion: User Entered location🌎🚀🚀")
         scheduleLocationNotification() 
-
+        
     }
     
     func locationManager(_ manager: CLLocationManager, didStartMonitoringFor region: CLRegion) {
