@@ -42,7 +42,7 @@ class GoogleNetworkController {
     // Takes in one photo reference and returns a photo from Google.
     static func fetchPlaceImage(photoReference: String, completion: @escaping (UIImage?) -> Void) {
         
-        guard let mainURL = URL(string: "https://maps.googleapis.com/maps/api/place/photo?maxwidth=350&photoreference=\(photoReference)&key=AIzaSyAchY5OHlVXXQyaux0dO-kM0gVQz0T0rzE") else { completion(nil); return }
+        guard let mainURL = URL(string: "https://maps.googleapis.com/maps/api/place/photo?maxwidth=500&photoreference=\(photoReference)&key=AIzaSyAchY5OHlVXXQyaux0dO-kM0gVQz0T0rzE") else { completion(nil); return }
         
         let dataTask = URLSession.shared.dataTask(with: mainURL) { (data, _, error) in
             if let error = error { print("IMAGE ERROR: \(error)"); completion(nil); return }

@@ -92,6 +92,8 @@
                         <outlet property="nameLabel" destination="ViN-5v-7E4" id="NEZ-o8-ooO"/>
                         <outlet property="phoneLabel" destination="lWM-vo-tKk" id="HXG-9i-A3n"/>
                         <outlet property="rightButton" destination="J7i-QP-qgA" id="ZIE-Zx-odh"/>
+                        <outlet property="stepNameLabel" destination="rgJ-2N-gGA" id="cgN-i0-WaZ"/>
+                        <outlet property="stepNumberLabel" destination="BxU-9Q-kyR" id="25H-nh-iNI"/>
                         <outlet property="utahCountyMapView" destination="V80-Vl-D1W" id="7u0-B5-XEb"/>
                         <segue destination="vWV-p5-Vch" kind="show" identifier="toStep7" id="YmR-uP-3tq"/>
                     </connections>
@@ -158,11 +160,11 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7i-QP-qgA">
-                            <rect key="frame" x="317" y="128" width="21" height="35"/>
+                            <rect key="frame" x="300" y="128" width="50" height="50"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="35" id="QMh-vE-SSg"/>
-                                <constraint firstAttribute="width" constant="21" id="cSE-Ue-NsQ"/>
+                                <constraint firstAttribute="height" constant="50" id="QMh-vE-SSg"/>
+                                <constraint firstAttribute="width" constant="50" id="cSE-Ue-NsQ"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="23"/>
                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -175,10 +177,10 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y77-UP-bpU">
-                            <rect key="frame" x="12" y="128" width="21" height="35"/>
+                            <rect key="frame" x="0.0" y="128" width="50" height="50"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="35" id="uEq-Gt-PK6"/>
-                                <constraint firstAttribute="width" constant="21" id="yJX-4P-SfV"/>
+                                <constraint firstAttribute="height" constant="50" id="uEq-Gt-PK6"/>
+                                <constraint firstAttribute="width" constant="50" id="yJX-4P-SfV"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="23"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="15" maxY="10"/>
@@ -211,7 +213,7 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="W9h-BB-UWJ" firstAttribute="trailing" secondItem="J7i-QP-qgA" secondAttribute="trailing" constant="12" id="3dh-gI-eH4"/>
+                        <constraint firstItem="W9h-BB-UWJ" firstAttribute="trailing" secondItem="J7i-QP-qgA" secondAttribute="trailing" id="3dh-gI-eH4"/>
                         <constraint firstItem="JlY-TH-btE" firstAttribute="top" secondItem="W9h-BB-UWJ" secondAttribute="top" constant="12" id="5HB-ky-PQ5"/>
                         <constraint firstItem="IoM-0q-xAB" firstAttribute="top" secondItem="lq2-BL-Z0d" secondAttribute="top" id="5Xo-VH-vFq"/>
                         <constraint firstItem="W9h-BB-UWJ" firstAttribute="trailing" secondItem="lWM-vo-tKk" secondAttribute="trailing" constant="12" id="5p9-44-DEa"/>
@@ -224,7 +226,7 @@
                         <constraint firstItem="H6N-AP-vyM" firstAttribute="leading" secondItem="W9h-BB-UWJ" secondAttribute="leading" constant="12" id="SLd-pw-lnt"/>
                         <constraint firstItem="JIj-c4-dss" firstAttribute="top" secondItem="IoM-0q-xAB" secondAttribute="bottom" id="W1Y-FC-7jJ"/>
                         <constraint firstItem="lWM-vo-tKk" firstAttribute="leading" secondItem="W9h-BB-UWJ" secondAttribute="leading" constant="12" id="XC3-sc-roq"/>
-                        <constraint firstItem="y77-UP-bpU" firstAttribute="leading" secondItem="W9h-BB-UWJ" secondAttribute="leading" constant="12" id="chH-ed-uW9"/>
+                        <constraint firstItem="y77-UP-bpU" firstAttribute="leading" secondItem="W9h-BB-UWJ" secondAttribute="leading" id="chH-ed-uW9"/>
                         <constraint firstItem="JIj-c4-dss" firstAttribute="trailing" secondItem="W9h-BB-UWJ" secondAttribute="trailing" id="dcO-rM-9CU"/>
                         <constraint firstItem="ViN-5v-7E4" firstAttribute="top" secondItem="W9h-BB-UWJ" secondAttribute="top" constant="12" id="gWJ-F5-gPO"/>
                         <constraint firstItem="ZTd-3G-N7w" firstAttribute="leading" secondItem="W9h-BB-UWJ" secondAttribute="leading" constant="12" id="gah-Pj-1im"/>
