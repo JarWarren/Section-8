@@ -422,7 +422,7 @@ class StepController {
                 ItemController.addNewItem(title: NSLocalizedString("13bTitle", comment: ""), text: NSLocalizedString("13bText", comment: ""), buttonText: nil, url: nil, graphicName: "home", format: .tip, step: step)
                 
                 // Item 13c - Photo
-                ItemController.addNewItem(title: nil, text: nil, buttonText: nil, url: nil, graphicName: "noApartmentImage", format: .photo, step: step)
+                ItemController.addNewItem(title: nil, text: nil, buttonText: nil, url: nil, graphicName: "noApartmentImage", format: .apartmentPhoto, step: step)
                 
                 // Item 13d - Then return copies to HAUC
                 ItemController.addNewItem(title: nil, text: NSLocalizedString("13dText", comment: ""), buttonText: nil, url: nil, graphicName: nil, format: .paragraph, step: step)
