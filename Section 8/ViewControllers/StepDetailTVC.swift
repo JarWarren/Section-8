@@ -21,10 +21,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     
     var items: [Item] = []
     var userDidComeFromStep6 = false
-    
-    
     var alarm: Alarm?
-    
     
     // MARK: - OUTLETS
     
@@ -63,7 +60,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     let sevenDayContentSubtitle = NSString.localizedUserNotificationString(forKey: "7DayContentSubtitle", arguments: [])
     let sevenDayContentBody = NSString.localizedUserNotificationString(forKey: "7DayContentBody", arguments: [])
     
-    // date Banner
+    // Date banner
     let datePickerNotifBanner = NSString.localizedUserNotificationString(forKey: "datePickerBanner", arguments: [])
     let bannerImageName = NSLocalizedString("notificationBanner", comment: "")
     
@@ -81,25 +78,99 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         guard let unwrappedStep = selectedStep else { return }
         self.navigationItem.title = unwrappedStep.name
         
+        // Set back button title
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Home", style: .plain, target: nil, action: nil)
+        
         // Persistence
         SelectedApartmentController.shared.loadSelectedApartment()
         RentController.shared.loadFromPersistentStorage()
         
-        // Change title to specific step
+        // Change step buttons to specific step
         if let thisStep = selectedStep {
             if !thisStep.stepCompleted {
                 completeButtonStatus.setTitle(NSLocalizedString("completeButtonTextTapToMarkCompleteA", comment: "") + " \(thisStep.stepNumber) " + NSLocalizedString("completeButtonTextTapToMarkCompleteB", comment: ""), for: .normal)
             } else {
                 completeButtonStatus.setTitle(NSLocalizedString("completeButtonTextTapToMarkIncompleteA", comment: "") + " \(thisStep.stepNumber) " + NSLocalizedString("completeButtonTextTapToMarkIncompleteB", comment: ""), for: .normal)
             }
-//            // Header labels and image
-//            self.stepNameLabel.text = thisStep.name
-//            self.stepNumberLabel.text = thisStep.stepNumber
-//            self.stepImageView.image = UIImage(named: thisStep.homeImageName)
-            
-            // Set back button title
-            navigationItem.backBarButtonItem = UIBarButtonItem(title: "Home", style: .plain, target: nil, action: nil)
         }
+        
+        //Listening for certain events related to the keyboard
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        //        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+    }
+    
+    // MARK: - KEYBOARD
+    
+    //Stop listening for certain events reltated to the keybaord such as hide/show
+    deinit {
+        
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+    }
+    
+    // MARK: - KEYBOARD ACTIONS
+    
+    @objc func keyboardWillShow(notification: Notification) {
+        print("\n ✈️ Keyboard will show: \(notification.name.rawValue)\n")
+        print("🎢 Before the Change: \(String(describing: view.frame.origin.y))")
+        
+        //        guard let keyboardRet = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue else {
+        //            return
+        //        }
+        //
+        //        if notification.name == UIResponder.keyboardWillShowNotification || notification.name == UIResponder.keyboardWillChangeFrameNotification {
+        //            self.view.frame.origin.y = -keyboardRet.height
+        //        } else {
+        //            self.view.frame.origin.y = 0
+        //        }
+        //        self.view.frame.origin.y = -180
+        /**/
+        
+        /**/
+        
+        /**/
+        
+        // MARK: - Erics Code
+        var userInfo = notification.userInfo!
+        var keyboardFrame: CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+        
+        // var contentInset: UIEdgeInsets = self.scrollView.contentInset
+        var contentInset: UIEdgeInsets = self.tableView.contentInset
+        contentInset.bottom = keyboardFrame.size.height + 50
+        tableView.contentInset = contentInset
+        
+        /**/ /**/
+        // MARK: - Alternative
+        //        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+        //            UIView.animate(withDuration: 1) {
+        //
+        //                self.view.bounds.origin.y += keyboardSize.height
+        //            }
+        //        }
+        /**/ /**/
+        /**/
+        
+        print("🚧 View's Frame Origin: \(view.frame.origin as Any)")
+        print("🚢 After the change: \(String(describing: view.frame.origin.y))")
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        //        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+        
+        print("⛽️ keyboardWillHide: was called")
+        
+        let contentInset = UIEdgeInsets.zero
+        tableView.contentInset = contentInset
+        
+        //            UIView.animate(withDuration: 1) {
+        //
+        //                self.view.bounds.origin.y -= keyboardSize.height
+        //            }
     }
     
     // MARK: - ACTIONS
@@ -157,7 +228,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         // Switch to choose which custom cell mataches the item format
         switch item.format {
             
-        // MARK: PHOTO CUSTOM CELL
+        // MARK: APARTMENT PHOTO CUSTOM CELL
             
         case .apartmentPhoto:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "apartmentPhotoCell", for: indexPath) as? ApartmentPhotoTVCell else { return UITableViewCell() }
@@ -315,15 +386,15 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
 extension StepDetailTVC: ClickLinkTVCellDelegate {
     func clickLinkButtonTapped(_ sender: ClickLinkTVCell) {
         
-        // Step 7 - Item 7H - Button that calls apartment phone number
-        if sender.clickLinkButtonText?.titleLabel?.text == NSLocalizedString("7hButtonText", comment: "") {
+        // Step 7 - Item 7g - Button that calls apartment phone number
+        if sender.clickLinkButtonText?.titleLabel?.text == NSLocalizedString("7gButtonText", comment: "") {
             guard let phone = SelectedApartmentController.shared.selectedApartment?.phone else { return }
             guard let url = URL(string: "telprompt://\(phone)") else { return }
             UIApplication.shared.open(url)
         }
         
-        // Step 7 - Item 7I - Button that returns to Step 6
-        if sender.clickLinkButtonText?.titleLabel?.text == NSLocalizedString("7iButtonText", comment: "") {
+        // Step 7 - Item 7h - Button that returns to Step 6
+        if sender.clickLinkButtonText?.titleLabel?.text == NSLocalizedString("7hButtonText", comment: "") {
             if self.userDidComeFromStep6 == true{
                 self.navigationController?.popViewController(animated: true)
             } else {
@@ -352,7 +423,6 @@ extension StepDetailTVC: DataInputTVCellDelegate {
         tableView.reloadData()
     }
 }
-
 
 // MARK: - 7-DAY NOTIFICATION EXTENSION
 
@@ -384,12 +454,11 @@ extension StepDetailTVC {
         print("\n7 day notification canceled\n")
     }
     
-    
     func scheduleSevenDayIntervalNotif() {
         print("\n7 day notification was set\n")
         
         timerController.scheduleLocalNotifInterval(dismissActionID: Constants.dismissActionSdId, actionTitle: Constants.sevenDayDismissTitle, categoryID: Constants.categorySdID, contentTitle: Constants.sevenDayContentTitle, contentSubtitle: Constants.sevenDayContentSubtitle, contentBody: Constants.sevenDayContentBody, contentBadge: 1, contentSound: UNNotificationSound.default, contentLaunchImage: "", desiredTimeInterval: Constants.sevenDays, resourceName: Constants.sevenDayNotifBanner, extenstionType: Constants.typePng, resourceID: Constants.resourceSdID, requestID: Constants.requestSdId, doesItRepeat: true)
-
+        
     }
 }
 
