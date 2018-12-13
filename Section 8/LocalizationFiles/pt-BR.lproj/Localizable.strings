@@ -83,8 +83,8 @@
     "step3" = "Completar e enviar aplicação física";
     "step4" = "Participar da reunião informativa";
     "step5" = "Calcular o pagamento do aluguel";
-    "step6" = "Escolher o apartamento";
-    "step7" = "Ligar para o complexo de apartamentos";
+    "step6" = "Escolher apartamento";
+    "step7" = "Ligar para o complexo";
     "step8" = "Formulários do proprietário";
     "step9" = "Retorna os fomrulários do HUAC";
     "step10" = "Programar uma inspecção";
@@ -186,11 +186,11 @@
     "4eText" = "Faça com que você não perca a reunião e, se precisar reagendar, ligue para o escritório da Housing Authority para marcar um novo horário. Em seguida, insira a nova data na caixa acima e toque no botão verde novamente.";
 
     // Item 4f - Important reminder
-    "4fTitle" = "IMPORTANT REMINDER";
-    "4fText" = "Once you have attended the briefing, you only have 60 days to find a place to live, and to complete the remaining steps.";
+    "4fTitle" = "LEMBRETE IMPORTANTE";
+    "4fText" = "Depois de participar da reunião, você tem apenas 60 dias para encontrar um lugar para morar e concluir os passos restantes.";
 
     // Item 4g - Tap to complete
-    "4gText" = "After attending the briefing, tap the “Complete” button below to move on to the next step!";
+    "4gText" = "Depois de participar da reunião, toque no botão abaixo para passar para o próximo passo!";
 
 // MARK: - STEP 5 ITEMS
 
@@ -208,59 +208,59 @@
 
     // Item 5d - Max rent amount
     "5dTitle" = "SEU VALOR MÁXIMO DE ALUGUEL";
-    "5dText" = "Based on your household income, your voucher amount, and an average utility allowance, you should NOT look at apartments with rent higher than this amount:";
+    "5dText" = "Com base no rendimento do seu agregado familiar, na quantia do seu vale e num subsídio de utilidade média, NÃO deve procurar apartamentos com renda superior a este montante:";
 
     // Item 5e - How is this calculated
-    "5eTitle" = "HOW IS THIS CALCULATED?";
-    "5eText" = "In addition to the voucher amount you qualify for, you are only allowed to pay up to 40% of your household income for rent. Also, an average cost of utilities has been subtracted from the total, because you will pay those in addition to your monthly rent payment.";
+    "5eTitle" = "COMO ESTÁ CALCULADO?";
+"5eText" = "Além do valor do vale que você qualifica, você só tem permissão para pagar até 40% da sua renda familiar para aluguel. Além disso, um custo médio de serviços públicos foi subtraído do total porque você pagará aqueles além do seu pagamento de aluguel mensal.";
 
     // Item 5f - Tap to complete
-    "5fText" = "After calculating your maximum rent, click the “Complete” button below to move on to the next step!";
+    "5fText" = "Depois de calcular seu aluguel máximo, clique no botão abaixo para passar para o próximo passo!";
 
 // MARK: - STEP 6 ITEMS
 
     // Item 6a - Map instructions
-    "6aText" = "Time to choose an apartment! Tap a marker for apartment details. Choose one, and tap the green button to move to the next step.";
+    "6aText" = "Hora de escolher um apartamento! Toque num marcador para detalhes do apartamento. Escolha um e toque no botão verde para passar para o próximo passo.";
 
 // MARK: - STEP 7 ITEMS
 
     // Item 7a - Intro
-    "7aText" = "Now that you have selected a possible apartment complex, it’s time to give them a call to make sure that they accept Section 8 applicants, and to find out their pricing.";
+    "7aText" = "Agora que você selecionou um possível complexo de apartamentos, é hora de ligar para eles e garantir que eles aceitem os solicitantes da Seção 8 e descubrir seus preços.";
 
     // Item 7b - Chosen apartment (IF ITEM KEY IS CHANGED, UPDATE CODE IN SELECTED APARTMENT CONTROLLER, INCLUDING INDEX)
-    "7bTitle" = "THE APARTMENT YOU CHOSE:";
-    "7bText" = "You have not selected an apartment yet. Return to Step 6, and select an apartment before completing this step.";
+    "7bTitle" = "O APARTAMENTO QUE VOCÊ ESCOLHEU:";
+    "7bText" = "Você ainda não selecionou um apartamento. Volte ao Passo 6 e selecione um apartamento antes de completar este passo.";
 
     // Item 7c - Photo
 
     // Item 7d - Important reminder
-    "7dTitle" = "IMPORTANT REMINDER";
-    "7dText" = "Check to make sure their rates are not higher than your maximum rent amount, which is listed below:";
+    "7dTitle" = "LEMBRETE IMPORTANTE";
+    "7dText" = "Verifique se as taxas não são maiores do que o valor máximo de aluguel, listado abaixo:";
 
     // Item 7e - Maximum rent
-    "7eTitle" = "YOUR MAXIMUM RENT AMOUNT";
-    "7eText" = "Based on your household income, your voucher amount, and utility allowance, you should NOT look at apartments with rent higher than this amount:";
+    "7eTitle" = "SEU VALOR MÁXIMO DE ALUGUEL";
+    "7eText" = "Com base no rendimento do seu agregado familiar, na quantia do seu vale e no subsídio de serviços públicos, NÃO deve procurar apartamentos com renda superior a este montante:";
 
     // Item 7f - Important reminder
-    "7fTitle" = "IMPORTANT REMINDER";
-    "7fText" = "When you call, remember your two questions: (1) do they accept Section 8 applicants, and (2) what are their rates for the size apartment you are looking for.";
+    "7fTitle" = "LEMBRETE IMPORTANTE";
+    "7fText" = "Quando você ligar, lembre-se de duas perguntas:\n(1) Eles aceitam os solicitantes da Seção 8?\n(2) Quais são suas tarifas para o tamanho do apartamento que você está procurando?";
 
     // Item 7g - Call button (IF KEY NAME IS CHANGED, ALSO CHANGE IN CLICKLINK DELEGATE EXTENSION IN STEPDETAILTVC)
-    "7gText" = "Now it’s time to call the apartment complex: ";
-    "7gButtonText" = "TAP TO CALL APARTMENT COMPLEX";
+    "7gText" = "Agora é hora de ligar para o complexo de apartamentos: ";
+    "7gButtonText" = "TOQUE PARA CHAMAR COMPLEXO DE APARTAMENTO";
 
     // Item 7h - What if isn't right (IF KEY NAME IS CHANGED, ALSO CHANGE IN CLICKLINK DELEGATE EXTENSION IN STEPDETAILTVC)
-    "7hTitle" = "WHAT IF THE APARTMENT ISN’T RIGHT FOR YOU?";
-    "7hText" = "After you have talked with them, if you find out the apartment isn't right for you, just tap on this button to return to the “Choose Apartment” screen. Select another complex, and try again:";
-    "7hButtonText" = "TAP TO RETURN TO APARTMENT MAP";
+    "7hTitle" = "E SE O APARTAMENTO NÃO ESTÁ CERTO PARA VOCÊ?";
+    "7hText" = "Depois de conversar com eles, se descobrir que o apartamento não é adequado para você, basta tocar neste botão para voltar à tela \"Escolher apartamento\". Selecione outro complexo e tente novamente:";
+    "7hButtonText" = "TOQUE PARA RETORNAR AO MAPA";
 
     // Item 7i - Tap to complete
-    "7iText" = "Once you have found an apartment that is right for you, tap on the “Complete” button below to move on to the next step!";
+    "7iText" = "Depois de ter encontrado um apartamento certo para você, toque no botão abaixo para passar para o próximo passo!";
 
 // MARK: - STEP 8 ITEMS
 
     // Item 8a - Intro
-    "8aText" = "Once you’ve found an apartment you think will work, and you have called them to find out that they accept Section 8 applicants, and that they are in your price range, it’s time to go visit them:";
+    "8aText" = "Depois de encontrar um apartamento que você acha que vai funcionar, e os chamar para descobrir \n(1) se eles aceitam os solicitantes da Seção 8 \n(2) e que eles estão em sua faixa de preço,\né hora de visitá-los:";
 
     // Item 8b - Selected apartment
     "8bTitle" = "ADDRESS OF THE APARTMENT YOU CHOSE";
