@@ -79,7 +79,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         mapInstructionsLabel.text = "6aText".localize
         stepNameLabel.text = "step6".localize
         stepNumberLabel.text = "STEP".localize + " 6"
-        // Add step title to navigation bar
+        callButton.setTitle("6bButtonTextChanged".localize, for: .normal)
         self.title = "step6".localize
     }
     
