@@ -78,13 +78,12 @@ class OnboardingScreenVC: UIViewController, CLLocationManagerDelegate, UNUserNot
             switch CLLocationManager.authorizationStatus() {
                 
             case .notDetermined:
-                
+//                self.locationManger.requestWhenInUseAuthorization()
                 self.locationManger.requestAlwaysAuthorization()
                 
             default:
                 break
             }
-            
         }
         locationManger.startUpdatingLocation()
     }

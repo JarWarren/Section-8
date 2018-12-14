@@ -30,10 +30,10 @@ class AlarmController {
         return newAlarm
     }
     
-    func updateAlarm(alarm: Alarm, fireDate: Date, name: String, isOn: Bool) {
+    func updateAlarm(alarm: Alarm, fireDate: Date, imageName: String, isOn: Bool) {
         //cancel notif -> this is called seperatly but alongside the addAlarm in the stepDetailVC
         alarm.fireDate = fireDate
-        alarm.name = name
+        alarm.name = imageName
         //schedule alarm/ create alarm -> this is called seperatly but alongside the addAlarm in the stepDetailVC
         saveToPersistentStorage()
     }
@@ -80,7 +80,7 @@ extension AlarmController {
             
             content.attachments = [attachments]
         } catch {
-            print("\n\n🚀 There was an error with the attachment in: \(#file) \n\n \(#function); \n\n\(error); \n\n\(error.localizedDescription) 🚀\n\n")
+            print("\n\nThere was an error with the attachment in: \(#file) \n\n \(#function); \n\n\(error); \n\n\(error.localizedDescription)\n\n")
         }
         
         let componets = Calendar.current.dateComponents([.hour, .minute], from: alarm.fireDate)
@@ -92,13 +92,13 @@ extension AlarmController {
         
         UNUserNotificationCenter.current().add(request) { (error) in
             if let error = error {
-                print("💩 There was an error in \(#function) ; (error) ; \(error.localizedDescription) 💩")
+                print("There was an error in \(#function) ; (error) ; \(error.localizedDescription)")
             }
         }
     }
     
-    func cancelUserNotificationsForAlarmWith(name: String) {
-        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [name])
+    func cancelUserNotificationsForAlarmWith(imageName: String) {
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [imageName])
     }
 }
 
