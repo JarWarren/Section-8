@@ -7,11 +7,11 @@
 //
 
 import Foundation
-enum AlarmName: String {
+enum AlarmImageName: String {
     
-    case step3 = "STEP 3"
-    case step4 = "STEP 4"
-    case step10 = "STEP 10"
-    case step12 = "STEP 12"
+    case step3 = "step3"
+    case step4 = "step4"
+    case step10 = "step10"
+    case step12 = "step12"
 }
 
