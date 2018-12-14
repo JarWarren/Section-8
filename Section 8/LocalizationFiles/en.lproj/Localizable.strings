@@ -210,6 +210,8 @@
     // Item 5d - Max rent amount
     "5dTitle" = "YOUR MAXIMUM RENT AMOUNT";
     "5dText" = "Based on your household income, your voucher amount, and an average utility allowance, you should NOT look at apartments with rent higher than this amount:";
+    "5dCalculated" = " per month or lower";
+    "5dNotCalculated" = "Maximum rent not yet calculated";
 
     // Item 5e - How is this calculated
     "5eTitle" = "HOW IS THIS CALCULATED?";

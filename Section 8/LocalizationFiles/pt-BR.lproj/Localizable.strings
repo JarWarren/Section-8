@@ -210,6 +210,9 @@
     // Item 5d - Max rent amount
     "5dTitle" = "SEU VALOR MÁXIMO DE ALUGUEL";
     "5dText" = "Com base no rendimento do seu agregado familiar, na quantia do seu vale e num subsídio de utilidade média, NÃO deve procurar apartamentos com renda superior a este montante:";
+    "5dCalculated" = " máximo por mês";
+    "5dNotCalculated" = "Aluguel máximo não determinada";
+
 
     // Item 5e - How is this calculated
     "5eTitle" = "COMO ESTÁ CALCULADO?";
