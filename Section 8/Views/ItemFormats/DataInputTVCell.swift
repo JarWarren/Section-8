@@ -16,9 +16,12 @@ class DataInputTVCell: UITableViewCell {
     @IBOutlet weak var dataInputTitle1Label: UILabel!
     @IBOutlet weak var dataInputText1Label: UILabel!
     @IBOutlet weak var dataInputText1Field: UITextField!
+    //Enter total household income here
+//    Helvetica Neue 17.0
     @IBOutlet weak var dataInputTitle2Label: UILabel!
     @IBOutlet weak var dataInputText2Label: UILabel!
     @IBOutlet weak var dataInputText2Field: UITextField!
+    //Enter voucher amount here
     @IBOutlet weak var dataInputButtonTextLabel: UIButton!
     
     static let shared = DataInputTVCell()
@@ -39,6 +42,17 @@ class DataInputTVCell: UITableViewCell {
         }
     }
 
+    override func awakeFromNib() {
+       super .awakeFromNib()
+        //place hodler text
+       dataInputText1Field.placeholder = "incomeAmount".localize
+        dataInputText2Field.placeholder = "voucherAmount".localize
+    
+        //font
+        dataInputText1Field.font = UIFont(name: "Helvetica Neue", size:  17.0)
+        dataInputText2Field.font = UIFont(name: "Helvetica Neue", size:  17.0)
+    }
+    
     // MARK: - ACTIONS
     
 

@@ -223,6 +223,11 @@
     // NOTE: - Make sure the button is actaully "Completar"
     "5fText" = "Después de calcular su alquiler máximo, toque el botón a continuación para pasar al siguiente paso.";
 
+    // Item 5g - TextField Enter House Hold Income place hodler text
+    "incomeAmount" = "Ingrese el ingreso total del hogar aquí";
+    // Item 5h -Textfield Enter Voucher Amount place hodler text
+    "voucherAmount" = "Ingrese el monto del vale aquí";
+
 // MARK: - STEP 6 ITEMS
 
     // Item 6a - Map instructions

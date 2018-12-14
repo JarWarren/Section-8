@@ -220,6 +220,11 @@
     // Item 5f - Tap to complete
     "5fText" = "After calculating your maximum rent, tap the “Complete” button below to move on to the next step!";
 
+    // Item 5g - TextField Enter House Hold Income place hodler text
+    "incomeAmount" = "Enter total household income here";
+    // Item 5h -Textfield Enter Voucher Amount place hodler text
+    "voucherAmount" = "Enter voucher amount here";
+
 // MARK: - STEP 6 ITEMS
 
     // Item 6a - Map instructions
