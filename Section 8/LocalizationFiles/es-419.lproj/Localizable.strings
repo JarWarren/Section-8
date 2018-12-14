@@ -226,7 +226,7 @@
 // MARK: - STEP 6 ITEMS
 
     // Item 6a - Map instructions
-    "6aText" = "¡Es hora de elegir un apartamento! Pulse un marcador para detalles del apartamento. Elija uno y toque el botón verde para pasar al siguiente paso.";
+    "6aText" = "¡Es hora de elegir un apartamento! Toque un marcador para detalles del apartamento. Elija uno y toque el botón verde para pasar al siguiente paso.";
     "6bButtonTextChanged" = "ESCOGER ESTE APARTAMENTO";
 
 // MARK: - STEP 7 ITEMS
@@ -261,10 +261,10 @@
     // Item 7h - What if isn't right (IF KEY NAME IS CHANGED, ALSO CHANGE IN CLICKLINK DELEGATE EXTENSION IN STEPDETAILTVC)
     "7hTitle" = "SI EL APARTAMENTO NO ES ADECUADO";
     "7hText" = "Después de haber hablado con ellos, si encuentra que el apartamento no es el adecuado para usted, simplemente toque este botón para volver a la pantalla \"Elegir apartamento\". Seleccione otro complejo, y vuelva a intentarlo.";
-    "7hButtonText" = "PULSAR PARA VOLVER AL MAPA";
+    "7hButtonText" = "TOQUE PARA VOLVER AL MAPA";
 
     // Item 7i - Tap to complete
-    "7iText" = "Una vez que haya encontrado un apartamento adecuado para usted, pulse el botón a continuación para pasar al siguiente paso.";
+    "7iText" = "Una vez que haya encontrado un apartamento adecuado para usted, toque el botón a continuación para pasar al siguiente paso.";
 
 // MARK: - STEP 8 ITEMS
 
@@ -349,7 +349,7 @@
     // Item 10d - Inspection date picker
     "10dTitle" = "FECHA DE INSPECCIÓN";
     "10dText" = "Ingrese su fecha de inspección aquí, para que podamos enviarle una notificación de recordatorio:";
-    "10dButtonText" = "PULSAR PARA GUARDAR LA FECHA";
+    "10dButtonText" = "TOQUE PARA GUARDAR LA FECHA";
 
     // Item 10e - Tap to complete
     "10eText" = "Una vez que se haya programado la inspección con el complejo de apartamentos y TAMBIÉN con Housing Authority, toque el botón a continuación para pasar al siguiente paso.";
@@ -383,7 +383,7 @@
     // Item 12b - Final appointment date picker
     "12bTitle" = "FECHA FINAL DE LA CITA";
     "12bText" = "Ingrese la fecha de su cita final aquí, para que podamos enviarle una notificación de recordatorio:";
-    "12bButtonText" = "PULSAR PARA GUARDAR LA FECHA";
+    "12bButtonText" = "TOQUE PARA GUARDAR LA FECHA";
 
     // Item 12c - Don't forget appointment
     "12cText" = "Asegúrese de no olvidar su cita. En el día de la cita, planifique con anticipación y llegue temprano.";
@@ -425,7 +425,7 @@
     // Item 13f - Photo
 
     // Item 13g - When paperwork is processed & Tap to complete
-    "13gText" = "Cuando se haya procesado el papeleo, Housing Authority le enviará copias por correo. \n\n¡Una vez que haya devuelto los contratos firmados a Housing Authority, pulse el botón a continuación para pasar al siguiente paso!";
+    "13gText" = "Cuando se haya procesado el papeleo, Housing Authority le enviará copias por correo. \n\n¡Una vez que haya devuelto los contratos firmados a Housing Authority, toque el botón a continuación para pasar al siguiente paso!";
 
 // MARK: - STEP 14 ITEMS
 
