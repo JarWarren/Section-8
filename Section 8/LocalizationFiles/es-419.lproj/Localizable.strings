@@ -213,7 +213,7 @@
     "5dTitle" = "SU CANTIDAD MAXIMA DE RENTA";
     "5dText" = "En función de los ingresos de su hogar, el monto de su resguardo y una asignación promedio de servicios públicos, NO debe mirar apartamentos con un alquiler superior a este monto:";
     "5dCalculated" = " máximo por mes";
-    "5dNotCalculated" = "Alquiler no calculado";
+    "5dNotCalculated" = "Alquiler maximo no calculado";
 
     // Item 5e - How is this calculated
     "5eTitle" ="¿CÓMO SE CALCULA ESTO?";
