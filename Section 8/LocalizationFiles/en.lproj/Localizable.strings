@@ -222,6 +222,7 @@
 
     // Item 6a - Map instructions
     "6aText" = "Time to choose an apartment! Tap a marker for apartment details. Choose one, and tap the green button to move to the next step.";
+    "6bButtonTextChanged" = "TAP TO CHOOSE THIS APARTMENT";
 
 // MARK: - STEP 7 ITEMS
 

@@ -228,6 +228,7 @@
 
     // Item 6a - Map instructions
     "6aText" = "¡Es hora de elegir un apartamento! Pulse un marcador para detalles del apartamento. Elija uno y toque el botón verde para pasar al siguiente paso.";
+    "6bButtonTextChanged" = "ESCOGER ESTE APARTAMENTO";
 
 // MARK: - STEP 7 ITEMS
 
