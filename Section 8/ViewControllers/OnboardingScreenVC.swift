@@ -97,9 +97,12 @@ class OnboardingScreenVC: UIViewController, CLLocationManagerDelegate, UNUserNot
                 
                 UserDefaults.standard.set(disableRestrictedAlertBool, forKey: restrictedBoolKey)
                 
-                let restrictedAlertController = UIAlertController(title: "Location Services Denied", message: "This device is not alllowed to use location services. Section 8 app needs your location in order to properly display notification. If you wish to later change this it can be done in your phones settings.", preferredStyle: .alert)
-                
-                let dismissAction = UIAlertAction(title: "OK", style: .cancel) { (alert) in
+                //NSLocalizedString is preffered in this case, language does not switch on .localize
+                let restrictedAlertController = UIAlertController(title: NSString.localizedUserNotificationString(forKey: "locationServiceRestrictedAlertTitle", arguments: []), message: NSString.localizedUserNotificationString(forKey: "locationServiceRestrictedAlertMessage", arguments: []), preferredStyle: .alert)
+                    //UIAlertController(title:
+//                    NSLocalizedString("locationServiceRestrictedAlertTitle", comment: ""), message: NSLocalizedString("locationServiceRestrictedAlertMessage", comment: ""), preferredStyle: .alert)
+                //dismissTitle
+                let dismissAction = UIAlertAction(title: NSString.localizedUserNotificationString(forKey: "dismissLocationActionTitle", arguments: []), style: .cancel) { (alert) in
                     self.presentMainView()
                 }
                 
@@ -119,9 +122,11 @@ class OnboardingScreenVC: UIViewController, CLLocationManagerDelegate, UNUserNot
                 
                 UserDefaults.standard.set(disableDeniedAlertBool, forKey: deniedBoolKey)
                 
-                let deniedAlertController = UIAlertController(title: "Location Services Denied", message: "Section 8 app needs your location in order to properly display notification. If you wish to allow loaction services it can be done in your phone's settings.", preferredStyle: .alert)
-                
-                let dismissAction = UIAlertAction(title: "OK", style: .cancel) { (alert) in
+                let deniedAlertController = UIAlertController(title: NSString.localizedUserNotificationString(forKey: "locationServiceDeniedAlertTitle", arguments: []), message: NSString.localizedUserNotificationString(forKey: "locationServiceDeniedAlertMessage", arguments: []), preferredStyle: .alert)
+                    
+//                    UIAlertController(title: NSLocalizedString("locationServiceDeniedAlertTitle", comment: ""), message: NSLocalizedString("locationServiceDeniedAlertMessage", comment: ""), preferredStyle: .alert)
+             
+                let dismissAction = UIAlertAction(title: NSString.localizedUserNotificationString(forKey: "dismissLocationActionTitle", arguments: []), style: .cancel) { (alert) in
                     self.presentMainView()
                 }
                 

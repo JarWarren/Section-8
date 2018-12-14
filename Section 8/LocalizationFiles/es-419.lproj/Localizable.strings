@@ -31,6 +31,20 @@
 
     "locationConentBody" = "¡Buena suerte hoy! Usa la aplicación Section8 para ayudarte a recordar lo que debes hacer.";
 
+        //Location Not Granted UIAlert
+        //this UIAlert message fires if the users device has loation services resitricted during the onboarding process
+        "locationServiceRestrictedAlertTitle" = "Servicios de Ubicación Restringidos";
+        "locationServiceRestrictedAlertMessage" = "Los servicios de localización de este dispositivo están restringidos. La aplicación Section8 necesita tu ubicación para mostrar correctamente la notificación. Si deseas cambiarlo más tarde, puedes hacerlo en la configuración de tu dispositivo.";
+
+        //NOTE: - dismissLocationActionTitle key value is shared between granted and resitricted
+        "dismissLocationActionTitle" = "Descartar";
+
+        // UIAlert Message user denied location services
+        "locationServiceDeniedAlertTitle" = "Servicios de Ubicación Negado";
+        "locationServiceDeniedAlertMessage" = "La aplicación de la Section8 necesita tu ubicación para mostrar correctamente la notificación. Si desea permitir servicios de ubicación, puede hacerlo en la configuración de su dispositivo.";
+
+
+
 // MARK: - SEVEN-DAY NOTIFICATIONS
 
     // Seven-day interval text fields
@@ -284,7 +298,7 @@
 
     // Item 8d - List of four docs
 
-    "8dText" = "Los necesitará para completar cuatro formularios: \n\n– Aprobación de arrendamiento \n– Formulario W-9 \n– Carta de presentación \n– Contrato de arrendamiento propuesto \n\nEn el paquete que recibió en su reunión informativa, habrá una copia de cada uno de estos formularios. \n\nEl complejo de apartamentos podría completar todo mientras usted espera, o pueden pedirle que regrese otro día.";
+    "8dText" = "Los necesitará para completar cuatro formularios: \n\n– Aprobación de arrendamiento \n– Formulario W-9 \n– Carta de presentación \n– Contrato de arrendamiento propuesto \n\nEn el paquete que recibió en su cita informativa, habrá una copia de cada uno de estos formularios. \n\nEl complejo de apartamentos podría completar todo mientras usted espera, o pueden pedirle que regrese otro día.";
 
 
     // Item 8e - Helpful hint
@@ -395,7 +409,7 @@
 
     // Item 12d - Housing Authority office info
     "12dTitle" = "INFORMACIÓN DE HOUSING AUTHORITY";
-    "12dText" = "240 E Center St, Provo, UT 84606 \nLunes-Jueves, 7:30am–5:30pm \nPhone: 801-373-8333";
+    "12dText" = "240 E Center St, Provo, UT 84606 \nLunes-Jueves, 7:30am–5:30pm \nTeléfono: 801-373-8333";
 
     // Item 12d - Photo
 
