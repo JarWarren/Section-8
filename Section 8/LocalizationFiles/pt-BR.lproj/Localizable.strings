@@ -30,6 +30,18 @@
     "locationContentTitle" = "Você está a caminho do escritório da Housing Authority?";
     "locationConentBody" = "Boa sorte hoje! Use o aplicativo Section8 para ajudá-lo a lembrar o que você precisa fazer.";
 
+        //Location Not Granted UIAlert
+        //this UIAlert message fires if the users device has loation services resitricted during the onboarding process
+        "locationServiceRestrictedAlertTitle" = "Serviços de Localização Restritos";
+        "locationServiceRestrictedAlertMessage" = "Os serviços de localização deste dispositivo são restritos. O aplicativo Section8 precisa da sua localização para exibir a notificação corretamente. Se você quiser mudá-lo mais tarde, você pode fazê-lo na configuração do seu dispositivo.";
+
+        //NOTE: - dismissLocationActionTitle key value is shared between granted and resitricted
+        "dismissLocationActionTitle" = "Fechar";
+
+        // UIAlert Message user denied location services
+        "locationServiceDeniedAlertTitle" = "Serviços de Localização Negados";
+        "locationServiceDeniedAlertMessage" = "A aplicação da Section8 precisa da sua localização para exibir corretamente a notificação. Se você quiser permitir serviços de localização, pode fazê-lo na configuração do seu dispositivo.";
+
 // MARK: - SEVEN-DAY NOTIFICATIONS
 
     // Seven-day interval text fields
