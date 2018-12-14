@@ -218,7 +218,7 @@
     "5eText" = "In addition to the voucher amount you qualify for, you are only allowed to pay up to 40% of your household income for rent. Also, an average cost of utilities has been subtracted from the total, because you will pay those in addition to your monthly rent payment.";
 
     // Item 5f - Tap to complete
-    "5fText" = "After calculating your maximum rent, click the “Complete” button below to move on to the next step!";
+    "5fText" = "After calculating your maximum rent, tap the “Complete” button below to move on to the next step!";
 
 // MARK: - STEP 6 ITEMS
 
