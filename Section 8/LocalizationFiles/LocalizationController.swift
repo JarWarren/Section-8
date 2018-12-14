@@ -15,7 +15,22 @@ class LocalizationController {
     static let shared = LocalizationController()
     private init() {}
     
-    var activeLanguage = ["en"] 
+    var activeLanguage: [String] = {
+        let language = NSLocale.preferredLanguages.first
+        
+        switch true {
+            
+        case language?.prefix(2) == "pt" :
+            return ["pt-BR"]
+            
+        case language?.prefix(2) == "es" :
+            return ["es-419"]
+            
+        default:
+            return ["en"]
+            
+        }
+    }()
     
     func setToEnglish() {
         LocalizationController.shared.activeLanguage = ["en"]

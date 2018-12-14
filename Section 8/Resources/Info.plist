@@ -17,17 +17,17 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.01</string>
+	<string>1.5</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>1.5</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>To provide reminders and encouragement when arriving to the Utah County Housing Authority building and apartment buildings in order to assist with the Section 8 application process. </string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>With this option, some features, like reminders might not be available. </string>
-	<key>LSApplicationCategoryType</key>
-	<string></string>
 	<key>UILaunchStoryboardName</key>
 	<string>Launch Screen</string>
 	<key>UIMainStoryboardFile</key>
