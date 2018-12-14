@@ -221,6 +221,11 @@
     // Item 5f - Tap to complete
     "5fText" = "Depois de calcular seu aluguel máximo, toque no botão abaixo para passar para a próxima etapa!";
 
+    // Item 5g - TextField Enter House Hold Income place hodler text
+    "incomeAmount" = "Renda total do domicílio";
+    // Item 5h -Textfield Enter Voucher Amount place hodler text
+    "voucherAmount" = "Valor do vale";
+
 // MARK: - STEP 6 ITEMS
 
     // Item 6a - Map instructions
