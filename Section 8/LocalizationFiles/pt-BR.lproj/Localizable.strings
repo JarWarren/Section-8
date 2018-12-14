@@ -37,7 +37,7 @@
     "7DayDismiss" = "Fechar";
     "7DayContentTitle" = "Section 8 Housing Reminder";
     "7DayContentSubtitle" = "";
-    "7DayContentBody" = "Você está quase lá! Toque aqui para continuar trabalhando na sua solicitud";
+    "7DayContentBody" = "Você está quase lá! Toque aqui para continuar trabalhando na sua solicitação";
 
 // MARK: - DATE PICKER NOTIFICATIONS
 
@@ -80,7 +80,7 @@
 
     "step1" = "Formulário preliminares";
     "step2" = "Apresentar identificação";
-    "step3" = "Completar aplicação física";
+    "step3" = "Enviar solicitação física";
     "step4" = "Reunião informativa";
     "step5" = "Pagamento do aluguel";
     "step6" = "Escolher apartamento";
@@ -203,7 +203,7 @@
     // Item 5c - Income/voucher inputs
     "5cTitle" = "RENDIMENTO TOTAL DO AGREGADO FAMILIAR";
     "5cText" = "Na primeira caixa abaixo, inclua todas as receitas de todos os membros da família. Você pode incluir: salários, subsídios de desemprego, pensão alimentícia, pagamentos de seguridade social, juros e direitos autorais e assistência financeira.";
-    "5cUrl" = "VALOR DO VALE HOUSING AUTHORITY";
+    "5cUrl" = "VALOR DO VALE";
     "5cGraphicName" = "Na segunda caixa, insira o valor que você qualifica para o vale da Housing Authority que você recebeu na sua reunião";
     "5cButtonText" = "TOQUE PARA CALCULAR TOTAL";
 
@@ -216,7 +216,7 @@
     "5eText" = "Além do valor do vale que você qualifica, você só tem permissão para pagar até 40% da sua renda familiar para aluguel. Além disso, um custo médio de serviços públicos foi subtraído do total porque você pagará aqueles além do seu pagamento de aluguel mensal.";
 
     // Item 5f - Tap to complete
-    "5fText" = "Depois de calcular seu aluguel máximo, clique no botão abaixo para passar para a próxima etapa!";
+    "5fText" = "Depois de calcular seu aluguel máximo, toque no botão abaixo para passar para a próxima etapa!";
 
 // MARK: - STEP 6 ITEMS
 
