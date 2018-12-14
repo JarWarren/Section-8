@@ -107,10 +107,10 @@
 
     // Item 1d - Finished button
     "1dTitle" = "AL TERMINAR";
-    "1dText" = "Cuando haya terminado, verá una pantalla de \"Application Receipt\". Toque el botón \"Finished\" cerca de la parte inferior de la pantalla, y regrese a esta página tocando el enlace del Section8 en la parte superior izquierda de la pantalla.";
+    "1dText" = "Cuando haya terminado, verá una pantalla de \"Application Receipt\". Toque el botón \"Finished\" que se encuentra cerca de bajo de la pantalla, y regrese a esta página tocando el enlace del Section8 en la parte superior izquierda de la pantalla.";
 
     // Item 1e - Online application
-    "1eText" = "Toque aquí para iniciar la solicitud en línea en el sitio web de la Housing Authority of Utah County (HAUC):";
+    "1eText" = "Toque aquí para iniciar la solicitud en línea en el sitio web de Housing Authority of Utah County (HAUC):";
     "1eButtonText" = "SOLICITUD PRELIMINAR";
 
     // Item 1f - Tap complete
@@ -119,7 +119,7 @@
 // MARK: - STEP 2 ITEMS
 
     // Item 2a - Intro
-    "2aText" = "Después de presentar su solicitud preliminar en línea, el jefe de familia debe llevar una identificación con foto y una tarjeta de seguridad social a la oficina principal de la Housing Authority.";
+    "2aText" = "Después de presentar su solicitud preliminar en línea, el jefe de familia debe llevar una identificación con foto y una tarjeta de seguridad social a la oficina principal de Housing Authority.";
 
     // Item 2b - Housing office info
     "2bTitle" = "OFICINA DE HOUSING AUTHORITY";
@@ -128,11 +128,11 @@
     // Item 2c - Photo
 
     // Item 2d - Waiting list paragraph
-    "2dText" = "Una vez que haya enviado su identificación, se lo colocará en una lista de espera.";
+    "2dText" = "Una vez que haya enviado su identificación, será colocado en una lista de espera.";
 
     // Item 2e - Waiting list tip
     "2eTitle" = "LISTA DE ESPERA";
-    "2eText" = "El tiempo de espera es de dos meses a más de un año. Asegúrese de actualizar su número de teléfono y dirección postal con la Housing Authority si algo cambia.";
+    "2eText" = "El tiempo de espera puede ser de dos meses a más de un año. Asegúrese de actualizar su número de teléfono y dirección postal con la Housing Authority si algo cambia.";
 
     // Item 2f - Tap complete
     "2fText" = "Una vez que el jefe de familia ha entregado estas dos formas de identificación a la oficina de vivienda, ¡este paso está completo! Toque el botón a continuación para pasar al siguiente paso.";
@@ -140,12 +140,12 @@
 // MARK: - STEP 3 ITEMS
 
     // Item 3a - Intro
-    "3aText" = "Cuando su nombre llegue al principio de la lista de espera, recibirá una solicitud completa por correo. También recibirá una fecha de cita programada, que le informará cuándo debe presentar su solicitud a la oficina principal de la Housing Authority.";
+    "3aText" = "Cuando su nombre llegue al principio de la lista de espera, recibirá una solicitud por correo de parte de Housing Authority. También recibirá una fecha de cita programada, que le informará cuándo debe presentar su solicitud a la oficina principal de la Housing Authority.";
 
     // Item 3b - Appointment date picker
     "3bTitle" = "DÍA DE LA CITA";
     "3bText" = "Ingrese la fecha de su cita aquí, para que podamos enviarle una notificación de recordatorio:";
-    "3bButtonText" = "PULSAR PARA GUARDAR LA FECHA";
+    "3bButtonText" = "TOQUE PARA GUARDAR LA FECHA";
     "3bButtonTextChanged" = "TOQUE PARA CAMBIAR DATA";
 
     // Item 3c - Read carefully
@@ -153,7 +153,7 @@
 
     // Item 3d - Important reminder
     "3dTitle" = "RECORDATORIO IMPORTANTE";
-    "3dText" = "Cuando vaya a su cita, asegúrese de tomar en cuenta lo siguiente: \n– Su solicitud completada, \n– Verificaciones de ingresos, \n– Certificados de nacimiento y \n– Tarjetas de seguridad social.";
+    "3dText" = "Cuando vaya a su cita, asegúrese de tomar en cuenta lo siguiente: \n– Su solicitud completada, \n– Verificaciones de ingresos, \n– Certificados de nacimiento y \n– Tarjetas de seguro social.";
 
     // Item 3e - Here is address
     "3eText" = "Aquí está la dirección de la ubicación de su cita:";
@@ -166,12 +166,12 @@
 
     // Item 3h - Tap complete
 //NOTE: - make sure the button is actaully called "Completar"
-    "3hText" = "Varios días después de su cita, la Housing Authority le notificará y programará una sesión informativa. \n \n ¡Una vez que haya completado su cita de solicitud en la oficina de la Housing Authority, toque el botón a continuación para pasar al siguiente paso!";
+    "3hText" = "Varios días después de su cita, Housing Authority le notificará y programará una cita informativa. \n \n ¡Una vez que haya completado su cita de solicitud en la oficina de Housing Authority, toque el botón a continuación para pasar al siguiente paso!";
 
 // MARK: - STEP 4 ITEMS
 
     // Item 4a - Intro
-    "4aText" = "Debería recibir una invitación para asistir a una reunión informativa varios días después de su cita de solicitud. Si no recibe una invitación, llame a la oficina de la Housing Authority para averiguar cuándo puede asistir a una reunión informativa.";
+    "4aText" = "Debería recibir una invitación para asistir a una cita informativa varios días después de su cita de solicitud. Si no recibe una invitación, llame a la oficina de Housing Authority para averiguar cuándo puede asistir a una cita informativa.";
 
     // Item 4b - Housing office info
     "4bTitle" = "INFORMACIÓN DE LA HOUSING AUTHORITY";
@@ -186,7 +186,7 @@
     "4dButtonText" = "GUARDAR LA FECHA";
 
     // Item 4e - If need to reschedule
-    "4eText" = "Asegúrese que no se le olvide su cita informativa y, si necesita reprogramarla, llame a la oficina de Housing Authority para programar una nueva hora. Luego ingrese la nueva fecha en el cuadro de arriba y toque el botón verde nuevamente.";
+    "4eText" = "Asegúrese que no se le olvide su cita informativa, y si necesita reprogramarla, llame a la oficina de Housing Authority para programar un nuevo horario. Luego ingrese la nueva fecha en el cuadro de arriba y toque el botón verde nuevamente.";
 
     // Item 4f - Important reminder
     "4fTitle" = "RECORDATORIO IMPORTANTE";
@@ -204,15 +204,15 @@
 
     // Item 5c - Income/voucher inputs
     "5cTitle" = "INGRESOS GENERALES DEL HOGAR";
-    "5cText" = "En el primer cuadro abajo, incluya todos los ingresos de todos los miembros de su hogar. Puede incluir: sueldos, salarios, prestaciones por desempleo, manutención de los hijos, pagos de la Seguridad Social, intereses y regalías, y asistencia financiera.";
+    "5cText" = "En el primer cuadro abajo, incluya todos los ingresos de todos los miembros de su hogar. Puede incluir: sueldos, salarios, prestaciones por desempleo, orden de manutención de niños, pagos de la Seguro Social, intereses y regalías, y asistencia financiera.";
     "5cUrl" = "VALOR DEL VALE";
-    "5cGraphicName" = "En el segundo cuadro, ingrese la cantidad para la cual califica del vale de Housing Authority que recibió en su reunión informativa.";
-    "5cButtonText" = "PULSAR PARA PRESENTAR CANTIDADES";
+    "5cGraphicName" = "En el segundo cuadro, ingrese la cantidad para la cual califica del vale de Housing Authority que recibió en su cita informativa.";
+    "5cButtonText" = "TOQUE PARA PRESENTAR CANTIDADES";
 
     // Item 5d - Max rent amount
     "5dTitle" = "SU CANTIDAD MAXIMA DE RENTA";
-    "5dText" = "En función de los ingresos de su hogar, el monto de su resguardo y una asignación promedio de servicios públicos, NO debe mirar apartamentos con un alquiler superior a este monto:";
-    "5dCalculated" = " máximo por mes";
+    "5dText" = "En función de los ingresos de su hogar, el monto de su vale y una asignación promedio de servicios públicos, NO debe mirar apartamentos con un alquiler superior a este monto:";
+    "5dCalculated" = " máximo por mes o menos";
     "5dNotCalculated" = "Alquiler maximo no calculado";
 
     // Item 5e - How is this calculated
@@ -232,7 +232,7 @@
 // MARK: - STEP 7 ITEMS
 
     // Item 7a - Intro
-    "7aText" = "Ahora que ha seleccionado un posible apartamento, es tiempo de llamarlos para asegurarse de que aceptan a los solicitantes de Section 8 y de averiguar sus precios.";
+    "7aText" = "Ahora que ha seleccionado un posible apartamento, es tiempo de llamarlos para asegurarse de que aceptan a los solicitantes de Section 8 y tambien para averiguar sus precios.";
 
     // Item 7b - Chosen apartment (IF ITEM KEY IS CHANGED, UPDATE CODE IN SELECTED APARTMENT CONTROLLER, INCLUDING INDEX)
     // NOTE: - Choose is spelled wrong in the english file "chose"
@@ -244,11 +244,11 @@
     // Item 7d - Important reminder
 
     "7dTitle" = "RECORDATORIO IMPORTANTE";
-    "7dText" = "Asegúrese de que el costo no sea más alta que el monto máximo de su alquiler, que se detalla a continuación:";
+    "7dText" = "Asegúrese de que el costo no sea más alto que el monto máximo que pude pagar de renta, que se detalla a continuación:";
 
     // Item 7e - Maximum rent
-    "7eTitle" = "TU CANTIDAD MAXIMA DE ALQUILER";
-    "7eText" = "Con base en los ingresos de su hogar, el monto de su cupón y la asignación de servicios públicos, NO debe mirar apartamentos con un alquiler superior a este monto:";
+    "7eTitle" = "TU CANTIDAD MÁXIMA DE RENTA";
+    "7eText" = "Con base en los ingresos de su hogar, el monto de su vale y la asignación de servicios públicos, NO debe mirar apartamentos con un alquiler superior a este monto:";
 
     // Item 7f - Important reminder
     "7fTitle" = "RECORDATORIO IMPORTANTE";
@@ -256,7 +256,7 @@
 
     // Item 7g - Call button (IF KEY NAME IS CHANGED, ALSO CHANGE IN CLICKLINK DELEGATE EXTENSION IN STEPDETAILTVC)
     "7gText" = "Ahora es el momento de llamar al complejo de apartamentos: ";
-    "7gButtonText" = "PULSA PARA LLAMAR EL COMPLEJO";
+    "7gButtonText" = "TOQUE PARA LLAMAR EL COMPLEJO";
 
     // Item 7h - What if isn't right (IF KEY NAME IS CHANGED, ALSO CHANGE IN CLICKLINK DELEGATE EXTENSION IN STEPDETAILTVC)
     "7hTitle" = "SI EL APARTAMENTO NO ES ADECUADO";
