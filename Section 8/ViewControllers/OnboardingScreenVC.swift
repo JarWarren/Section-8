@@ -10,13 +10,7 @@ import UIKit
 import CoreLocation
 import UserNotifications
 
-
-//homeTVC
 class OnboardingScreenVC: UIViewController, CLLocationManagerDelegate, UNUserNotificationCenterDelegate {
-    
-    // If true location notification worked, perhaps this line of code should be here
-    //    var locationController: LocationController?
-    
     
     private let locationManger = CLLocationManager()
     private let center = UNUserNotificationCenter.current()
@@ -32,9 +26,6 @@ class OnboardingScreenVC: UIViewController, CLLocationManagerDelegate, UNUserNot
     
     // MARK: - Test Variables, Delete once testing completed - Ivan
     // NOTE: - Student Housing
-    private  let studentHousingLatitude = 40.772759928406
-    private let studentHousingLongitude = -111.90930557447663
-    
     
     private let devMountainLatitude = 40.761806
     private let devMountainLongitude = -111.890533
@@ -49,33 +40,13 @@ class OnboardingScreenVC: UIViewController, CLLocationManagerDelegate, UNUserNot
         
         locationManger.delegate = self
         
-        /**/
-        /// NOTE: - UtahCounty Housing
-        //        let center = CLLocationCoordinate2D(latitude: utahCountyHousingLatitude, longitude: utahCountyHousingLongitude)
-        //
-        //        let utahHousingActualregion = CLCircularRegion(center: center, radius: desiredRadius, identifier: utahCountyHousingID)
-        //
-        //        locationManger.startMonitoring(for: utahHousingActualregion)
-        /**/
+        // NOTE: - UtahCounty Housing
+        let center = CLLocationCoordinate2D(latitude: utahCountyHousingLatitude, longitude: utahCountyHousingLongitude)
         
-        /// NOTE: - DevMountain
-        /**/
-                let center = CLLocationCoordinate2D(latitude: devMountainLatitude, longitude: devMountainLongitude)
+        let utahHousingActualregion = CLCircularRegion(center: center, radius: desiredRadius, identifier: utahCountyHousingID)
         
-                let devMountainregion = CLCircularRegion(center: center, radius: desiredRadius, identifier: "dummyKeyDevMnt")
+        locationManger.startMonitoring(for: utahHousingActualregion)
         
-                locationManger.startMonitoring(for: devMountainregion)
-        /**/
-        
-        /// NOTE: - Student Housing
-        /**/
-//        let center = CLLocationCoordinate2D(latitude: studentHousingLatitude, longitude: studentHousingLongitude)
-//
-//        let studentHousingregion = CLCircularRegion(center: center, radius: desiredRadius, identifier: "dummyKeyStudentHousing")
-//
-//        locationManger.startMonitoring(for: studentHousingregion)
-        
-        /**/
         
         locationManger.desiredAccuracy = kCLLocationAccuracyBest
         
@@ -87,7 +58,7 @@ class OnboardingScreenVC: UIViewController, CLLocationManagerDelegate, UNUserNot
         
         // Notification Permission
         // User Notifcation
-
+        
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
             
             if granted {
@@ -107,17 +78,15 @@ class OnboardingScreenVC: UIViewController, CLLocationManagerDelegate, UNUserNot
             switch CLLocationManager.authorizationStatus() {
                 
             case .notDetermined:
-                
+//                self.locationManger.requestWhenInUseAuthorization()
                 self.locationManger.requestAlwaysAuthorization()
                 
             default:
                 break
             }
-            
         }
         locationManger.startUpdatingLocation()
     }
-    //Delete this test comment
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {
@@ -178,8 +147,8 @@ class OnboardingScreenVC: UIViewController, CLLocationManagerDelegate, UNUserNot
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(true)
-        
-        print("\n📍viewDidDisappear: \(locationManger.monitoredRegions)🥶")
+        //NOTE: - Uncomment in order for testing purposes
+        //print("\n📍viewDidDisappear: \(locationManger.monitoredRegions)🥶")
     }
     
     func loadUserDefaults() {
@@ -198,20 +167,24 @@ extension OnboardingScreenVC {
     
     // MARK: - Location Delegate Functions
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        //NOTE: - Uncomment in order for testing purposes
+        //print("🚀🚀🌎 didEnterRegion: User Entered location🌎🚀🚀")
         
-        print("🚀🚀🌎 didEnterRegion: User Entered location🌎🚀🚀")
-        scheduleLocationNotification() 
+        scheduleLocationNotification()
         
     }
     
     func locationManager(_ manager: CLLocationManager, didStartMonitoringFor region: CLRegion) {
-        print("🌎 didStartMonitoringFor: The monitored regions are: \(manager.monitoredRegions)")
+        //NOTE: - Uncomment in order for testing purposes
+        //print("🌎 didStartMonitoringFor: The monitored regions are: \(manager.monitoredRegions)")
         
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let locValue:CLLocationCoordinate2D = manager.location!.coordinate
-        print("🌎 didUpdateLocations: locations = \(locValue.latitude) \(locValue.longitude)")
+        //NOTE: - Uncomment in order for testing purposes
+        //let locValue:CLLocationCoordinate2D = manager.location!.coordinate
+        //uncomment in order for testing purposes
+        //print("🌎 didUpdateLocations: locations = \(locValue.latitude) \(locValue.longitude)")
     }
 }
 
@@ -267,7 +240,6 @@ extension OnboardingScreenVC {
         } catch {
             print("\n\nThere was an error with the attachment in: \(#file) \n\n \(#function); \n\n\(error); \n\n\(error.localizedDescription)\n\n")
         }
-        
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2, repeats: false)
         

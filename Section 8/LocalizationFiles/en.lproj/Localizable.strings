@@ -145,6 +145,7 @@
     "3bTitle" = "APPOINTMENT DATE";
     "3bText" = "Please enter your appointment date here, so we can send you a reminder notification:";
     "3bButtonText" = "TAP TO SAVE DATE";
+    "3bButtonTextChanged" = "TAP HERE TO CHANGE DATE";
 
     // Item 3c - Read carefully
     "3cText" = "Read the application carefully, and complete each section. Be sure to update household and income verification.";
@@ -215,12 +216,13 @@
     "5eText" = "In addition to the voucher amount you qualify for, you are only allowed to pay up to 40% of your household income for rent. Also, an average cost of utilities has been subtracted from the total, because you will pay those in addition to your monthly rent payment.";
 
     // Item 5f - Tap to complete
-    "5fText" = "After calculating your maximum rent, click the “Complete” button below to move on to the next step!";
+    "5fText" = "After calculating your maximum rent, tap the “Complete” button below to move on to the next step!";
 
 // MARK: - STEP 6 ITEMS
 
     // Item 6a - Map instructions
     "6aText" = "Time to choose an apartment! Tap a marker for apartment details. Choose one, and tap the green button to move to the next step.";
+    "6bButtonTextChanged" = "TAP TO CHOOSE THIS APARTMENT";
 
 // MARK: - STEP 7 ITEMS
 

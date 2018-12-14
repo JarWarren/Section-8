@@ -9,7 +9,7 @@
 import UIKit
 import UserNotifications
 
-class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegate, TimerControllerDelegete {
+class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // MARK: - LANDING PAD & SOURCE OF TRUTH
     
@@ -33,26 +33,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     
     // MARK: - CONSTANTS
     
-    let timerController = TimerController()
-    let timeKeepingId = "timerID"
-    
-    // Let sevenDayCountDown = TimeInterval(5)
-   
-    
-    
-    // BoolValueToTestTimer = true
-    let sevenDayTimerID = "sevenDays"
-    let categorySevenNotificationID = "dismissActionKey"
-    let datePActionId = "datePickerNotifID"
-    let datePCategoryId = "dateCatergoryID"
-    var alarmIsOn: Bool = false
-    
-    // seven day interval constants for notification function
-    let dissmissActionSdId = "SevenDayDissmissActionID"
-    let categorySdID = "sevenDayCatergoryID"
-    let requestSdId = "sevenDayRequestID"
-    let resourceSdID = "sevenDayResourceID"
-    let typePng = "png"
+    let intervalTimerController = IntervalTimerController()
     
     // 7-Day notification alert
     let sevenDayNotifBanner = NSString.localizedUserNotificationString(forKey: "notificationBanner", arguments: [])
@@ -183,7 +164,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         // Switch to choose which custom cell mataches the item format
         switch item.format {
             
-        // MARK: APARTMENT PHOTO CUSTOM CELL
+            // MARK: APARTMENT PHOTO CUSTOM CELL
             
         case .apartmentPhoto:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "apartmentPhotoCell", for: indexPath) as? ApartmentPhotoTVCell else { return UITableViewCell() }
@@ -198,7 +179,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             cell.apartmentPhotoImageView?.image = UIImage(named: "noApartmentImage".localize)
             return cell
             
-        // MARK: CLICK LINK CUSTOM CELL
+            // MARK: CLICK LINK CUSTOM CELL
             
         case .clickLink:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "clickLinkCell", for: indexPath) as? ClickLinkTVCell else { return UITableViewCell() }
@@ -216,7 +197,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             }
             return cell
             
-        // MARK: DATA DISPLAY CUSTOM CELL
+            // MARK: DATA DISPLAY CUSTOM CELL
             
         case .dataDisplay:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "dataDisplayCell", for: indexPath) as? DataDisplayTVCell else { return UITableViewCell() }
@@ -232,7 +213,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             }
             return cell
             
-        // MARK: DATA INPUT CUSTOM CELL
+            // MARK: DATA INPUT CUSTOM CELL
             
         case .dataInput:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "dataInputCell", for: indexPath) as? DataInputTVCell else { return UITableViewCell() }
@@ -262,7 +243,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             }
             return cell
             
-        // MARK: DATE PICKER CUSTOM CELL
+            // MARK: DATE PICKER CUSTOM CELL
             
         case .datePicker:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "datePickerCell", for: indexPath) as? DatePickerTVCell else { return UITableViewCell() }
@@ -277,7 +258,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             cell.datePickerButton?.setTitle("\(item.buttonText ?? "TAP TO SET DATE")", for: .normal)
             return cell
             
-        // MARK: PARAGRAPH CUSTOM CELL
+            // MARK: PARAGRAPH CUSTOM CELL
             
         case .paragraph:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "paragraphCell", for: indexPath) as? ParagraphTVCell else { return UITableViewCell() }
@@ -287,7 +268,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             cell.paragraphTextLabel?.text = item.text
             return cell
             
-        // MARK: PHOTO CUSTOM CELL
+            // MARK: PHOTO CUSTOM CELL
             
         case .photo:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "photoCell", for: indexPath) as? PhotoTVCell else { return UITableViewCell() }
@@ -296,7 +277,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             cell.photoImageView.image = UIImage(named: item.graphicName ?? "")
             return cell
             
-        // MARK: TIP CUSTOM CELL
+            // MARK: TIP CUSTOM CELL
             
         case .tip:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "tipCell", for: indexPath) as? TipTVCell else { return UITableViewCell() }
@@ -307,7 +288,7 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             cell.tipImageView?.image = UIImage(named: item.graphicName ?? "")
             return cell
             
-        // MARK: TITLE CUSTOM CELL
+            // MARK: TITLE CUSTOM CELL
             
         case .title:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "titleCell", for: indexPath) as? TitleTVCell else { return UITableViewCell() }
@@ -383,32 +364,38 @@ extension StepDetailTVC: DataInputTVCellDelegate {
 
 extension StepDetailTVC {
     
-    func timerSecondTick() {
-        // NOTE: - In here we can put in a label that will become a visible timer to show the user how long they have before their housing voucher expires
-        /*
-         example:
-         visableLabel.text = timerontroller.timeAsString()
-         */
-    }
-    
-    func timerCompleted() {
-        
-        timerController.startTimer(time: 3)
-        print("\nTimer hit zero and completed\n")
-    }
-    
-    func timerStopped() {
-        // This func will completely stop the on going 7 day timer
-        timerController.timer?.invalidate()
-    }
-    
     func cancelSevenDayNotification() {
-        timerController.cancelLocalNotificationWith(identifier: Constants.categorySevenNotificationID)
+        intervalTimerController.cancelLocalNotificationWith(identifier: Constants.categorySevenNotificationID)
+        //NOTE: - Uncomment in order fo testing purposes
+        print("\ncancelLocalNotificationWith was triggered\n")
     }
     
     func scheduleSevenDayIntervalNotif() {
         
-        timerController.scheduleLocalNotifInterval(dismissActionID: Constants.dismissActionSdId, actionTitle: Constants.sevenDayDismissTitle, categoryID: Constants.categorySdID, contentTitle: Constants.sevenDayContentTitle, contentSubtitle: Constants.sevenDayContentSubtitle, contentBody: Constants.sevenDayContentBody, contentBadge: 1, contentSound: UNNotificationSound.default, contentLaunchImage: "", desiredTimeInterval: Constants.sevenDays, resourceName: Constants.sevenDayNotifBanner, extenstionType: Constants.typePng, resourceID: Constants.resourceSdID, requestID: Constants.requestSdId, doesItRepeat: true)
+        intervalTimerController.scheduleLocalNotifInterval(dismissActionID: Constants.dismissActionSdId, actionTitle: Constants.sevenDayDismissTitle, categoryID: Constants.categorySdID, contentTitle: Constants.sevenDayContentTitle, contentSubtitle: Constants.sevenDayContentSubtitle, contentBody: Constants.sevenDayContentBody, contentBadge: 1, contentSound: UNNotificationSound.default, contentLaunchImage: "", desiredTimeInterval: Constants.sevenDays, resourceName: Constants.sevenDayNotifBanner, extenstionType: Constants.typePng, resourceID: Constants.resourceSdID, requestID: Constants.requestSdId, doesItRepeat: true)
+        //NOTE: - Uncomment in order fo testing purposes
+        print("\nscheduleLocalNotifInterval was triggered\n")
     }
 }
+// NOTE: - The timerSecondTick, timerSecondTick, timerStopped are commented out until the count down fetaure is revisited
+//    func timerSecondTick() {
+// NOTE: - In here we can put in a label that will become a visible timer to show the user how long they have before their housing voucher expires
+/*
+ example:
+ visableLabel.text = timerontroller.timeAsString()
+ */
+//    }
+//
+//    func timerSecondTick() {
+//
+//        timerController.startTimer(time: 3)
+//        print("\nTimer hit zero and completed\n")
+//    }
+//
+//    func timerStopped() {
+//        // This func will completely stop the on going 7 day timer
+//        timerController.timer?.invalidate()
+//    }
+
+
 

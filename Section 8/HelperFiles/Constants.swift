@@ -12,7 +12,7 @@ struct Constants {
     
     // NOTE: - 604800 seconds is 7 days
     // NOTE: - 1800 seconds is 30 minutes
-    static let sevenDays = 1800
+    static let sevenDays = 604800
     //    var boolValueToTestTimer = true
     static let sevenDayTimerID = "sevenDays"
     static let categorySevenNotificationID = "dismisActionKey"

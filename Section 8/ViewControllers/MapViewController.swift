@@ -16,6 +16,8 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     
     @IBOutlet var markerView: UIView!
     @IBOutlet weak var mapInstructionsLabel: UILabel!
+    @IBOutlet weak var stepNameLabel: UILabel!
+    @IBOutlet weak var stepNumberLabel: UILabel!
     @IBOutlet weak var apartmentImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
@@ -75,8 +77,9 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         addMarkers()
         utahCountyMapView.delegate = self
         mapInstructionsLabel.text = "6aText".localize
-        
-        // Add step title to navigation bar
+        stepNameLabel.text = "step6".localize
+        stepNumberLabel.text = "STEP".localize + " 6"
+        callButton.setTitle("6bButtonTextChanged".localize, for: .normal)
         self.title = "step6".localize
     }
     
