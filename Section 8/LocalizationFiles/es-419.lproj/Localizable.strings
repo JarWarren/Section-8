@@ -13,7 +13,7 @@
 // MARK: - UI COMPONENTS
 
     // Home introduction text
-    "homeIntroText" = "Esta aplicación simplifica el proceso de encontrar Section 8 housing en Utah County. Toque en cada paso para ver qué hacer a continuación. Cuando termines, aparecerá una marca de verificación verde. ¡Entonces muévete al siguiente paso!";
+    "homeIntroText" = "Esta aplicación simplifica el proceso de encontrar Section 8 housing en Utah County. Toque en cada paso para ver qué hacer a continuación. Cuando termine, aparecerá una marca de verificación verde. ¡Entonces muévase al siguiente paso!";
 
     // Complete button
     "completeButtonTextTapToMarkCompleteA" = "MARCAR EL";
@@ -29,19 +29,19 @@
     //Note "locationDismissButtonTitle" and "locationResourceName" are using key value pairs associated with other constants in order to avoid having to re-create them
     "locationContentTitle" = "¿Está usted en camino a la oficina de Housing Authority?";
 
-    "locationConentBody" = "¡Buena suerte hoy! Usa la aplicación Section8 para ayudarte a recordar lo que debes hacer.";
+    "locationConentBody" = "¡Buena suerte! Use la aplicación Section8 para ayudarle a recordar lo que debe hacer.";
 
         //Location Not Granted UIAlert
         //this UIAlert message fires if the users device has loation services resitricted during the onboarding process
         "locationServiceRestrictedAlertTitle" = "Servicios de Ubicación Restringidos";
-        "locationServiceRestrictedAlertMessage" = "Los servicios de localización de este dispositivo están restringidos. La aplicación Section8 necesita tu ubicación para mostrar correctamente la notificación. Si deseas cambiarlo más tarde, puedes hacerlo en la configuración de tu dispositivo.";
+        "locationServiceRestrictedAlertMessage" = "Los servicios de localización de este dispositivo están restringidos. La aplicación Section8 necesita tu ubicación para mostrar correctamente la notificación. Si desea cambiarlo más tarde, puede hacerlo en la configuración de su dispositivo.";
 
         //NOTE: - dismissLocationActionTitle key value is shared between granted and resitricted
         "dismissLocationActionTitle" = "Descartar";
 
         // UIAlert Message user denied location services
         "locationServiceDeniedAlertTitle" = "Servicios de Ubicación Negado";
-        "locationServiceDeniedAlertMessage" = "La aplicación de la Section8 necesita tu ubicación para mostrar correctamente la notificación. Si desea permitir servicios de ubicación, puede hacerlo en la configuración de su dispositivo.";
+        "locationServiceDeniedAlertMessage" = "La aplicación de Section8 necesita su ubicación para mostrar correctamente la notificación. Si desea permitir servicios de ubicación, puede hacerlo en la configuración de su dispositivo.";
 
 
 
@@ -52,7 +52,7 @@
     "7DayDismiss" = "Descartar";
     "7DayContentTitle" = "Recordatorio de Section 8 Housing";
     "7DayContentSubtitle" = "";
-    "7DayContentBody" = "Ha pasado una semana desde que trabajaste en tu aplicación. Presione aquí para dar el siguiente paso!";
+    "7DayContentBody" = "Ha pasado una semana desde que trabajo en su aplicación. Presione aquí para dar el siguiente paso!";
 
 // MARK: - DATE PICKER NOTIFICATIONS
 
@@ -78,7 +78,7 @@
     "s12DatePickerDismissTitle" = "Descartar";
     "s12DatePickerContentTitle" = "Recordatorio de cita";
     "s12DatePickercontentSubtitle" = "";
-    "s12DatePickerContentBody" = "¡Hoy es el día! Asegúrate de llevar todo tu papeleo a tu cita final";
+    "s12DatePickerContentBody" = "¡Hoy es el día! Asegúrese de llevar todo su papeleo a su cita final";
 
 // MARK: - NOTIFICATION IMAGES
 
@@ -115,7 +115,7 @@
 
     // Item 1b - Viewing tip
     "1bTitle" = "SUGERENCIA";
-    "1bText" = "Una vez que abre la aplicación, podría ser más fácil girar tu teléfono de lado, para que sea más fácil de leer.";
+    "1bText" = "Una vez que abre la aplicación, podría ser más fácil girar su teléfono de lado, para que sea más fácil de leer.";
 
     // Item 1c - Photo
 
@@ -133,7 +133,7 @@
 // MARK: - STEP 2 ITEMS
 
     // Item 2a - Intro
-    "2aText" = "Después de presentar su solicitud preliminar en línea, el jefe de familia debe llevar una identificación con foto y una tarjeta de seguridad social a la oficina principal de Housing Authority.";
+    "2aText" = "Después de presentar su solicitud preliminar en línea, el jefe de familia debe llevar una identificación con foto y una tarjeta de seguro social a la oficina principal de Housing Authority.";
 
     // Item 2b - Housing office info
     "2bTitle" = "OFICINA DE HOUSING AUTHORITY";
@@ -146,15 +146,15 @@
 
     // Item 2e - Waiting list tip
     "2eTitle" = "LISTA DE ESPERA";
-    "2eText" = "El tiempo de espera puede ser de dos meses a más de un año. Asegúrese de actualizar su número de teléfono y dirección postal con la Housing Authority si algo cambia.";
+    "2eText" = "El tiempo de espera puede ser de dos meses a más de un año. Asegúrese de actualizar su número de teléfono y dirección postal con Housing Authority si algo cambia.";
 
     // Item 2f - Tap complete
-    "2fText" = "Una vez que el jefe de familia ha entregado estas dos formas de identificación a la oficina de vivienda, ¡este paso está completo! Toque el botón a continuación para pasar al siguiente paso.";
+    "2fText" = "Una vez que el jefe de familia haya entregado estas dos formas de identificación a la oficina de vivienda, ¡este paso está completo! Toque el botón a continuación para pasar al siguiente paso.";
 
 // MARK: - STEP 3 ITEMS
 
     // Item 3a - Intro
-    "3aText" = "Cuando su nombre llegue al principio de la lista de espera, recibirá una solicitud por correo de parte de Housing Authority. También recibirá una fecha de cita programada, que le informará cuándo debe presentar su solicitud a la oficina principal de la Housing Authority.";
+    "3aText" = "Cuando su nombre llegue al principio de la lista de espera, recibirá una solicitud por correo de parte de Housing Authority. También recibirá una fecha de cita programada, que le informará cuándo debe presentar su solicitud a la oficina principal de Housing Authority.";
 
     // Item 3b - Appointment date picker
     "3bTitle" = "DÍA DE LA CITA";
@@ -204,7 +204,7 @@
 
     // Item 4f - Important reminder
     "4fTitle" = "RECORDATORIO IMPORTANTE";
-    "4fText" = "Una vez que haya asistido a la reunión informativa, solo tiene 60 días para encontrar un lugar donde vivir y completar los pasos restantes.";
+    "4fText" = "Una vez que haya asistido a la reunión informativa, solo tiene 60 días para encontrar un lugar donde vivir y completar el resto de los pasos.";
 
     // Item 4g - Tap to complete
     "4gText" = "Después de asistir a la reunión informativa, toque el botón a continuación para pasar al siguiente paso!";
@@ -218,7 +218,7 @@
 
     // Item 5c - Income/voucher inputs
     "5cTitle" = "INGRESOS GENERALES DEL HOGAR";
-    "5cText" = "En el primer cuadro abajo, incluya todos los ingresos de todos los miembros de su hogar. Puede incluir: sueldos, salarios, prestaciones por desempleo, orden de manutención de niños, pagos de la Seguro Social, intereses y regalías, y asistencia financiera.";
+    "5cText" = "En el primer cuadro abajo, incluya todos los ingresos de todos los miembros de su hogar. Puede incluir: sueldos, salarios, prestaciones por desempleo, orden de manutención de niños, pagos del Seguro Social, intereses y regalías, y asistencia financiera.";
     "5cUrl" = "VALOR DEL VALE";
     "5cGraphicName" = "En el segundo cuadro, ingrese la cantidad para la cual califica del vale de Housing Authority que recibió en su cita informativa.";
     "5cButtonText" = "TOQUE PARA PRESENTAR CANTIDADES";
@@ -245,13 +245,13 @@
 // MARK: - STEP 6 ITEMS
 
     // Item 6a - Map instructions
-    "6aText" = "¡Es hora de elegir un apartamento! Toque un marcador para detalles del apartamento. Elija uno y toque el botón verde para pasar al siguiente paso.";
+    "6aText" = "¡Es hora de elegir un apartamento! Toque un marcador para ver detalles del apartamento. Elija uno y toque el botón verde para pasar al siguiente paso.";
     "6bButtonTextChanged" = "ESCOGER ESTE APARTAMENTO";
 
 // MARK: - STEP 7 ITEMS
 
     // Item 7a - Intro
-    "7aText" = "Ahora que ha seleccionado un posible apartamento, es tiempo de llamarlos para asegurarse de que aceptan a los solicitantes de Section 8 y tambien para averiguar sus precios.";
+    "7aText" = "Ahora que ha seleccionado un apartamento, es tiempo de llamarlos para asegurarse de que aceptan a los solicitantes de Section 8 y tambien para averiguar sus precios.";
 
     // Item 7b - Chosen apartment (IF ITEM KEY IS CHANGED, UPDATE CODE IN SELECTED APARTMENT CONTROLLER, INCLUDING INDEX)
     // NOTE: - Choose is spelled wrong in the english file "chose"
@@ -267,14 +267,14 @@
 
     // Item 7e - Maximum rent
     "7eTitle" = "TU CANTIDAD MÁXIMA DE RENTA";
-    "7eText" = "Con base en los ingresos de su hogar, el monto de su vale y la asignación de servicios públicos, NO debe mirar apartamentos con un alquiler superior a este monto:";
+    "7eText" = "Con base de los ingresos de su hogar, el monto de su vale y la asignación de servicios públicos, NO debe mirar apartamentos con un alquiler superior a este monto:";
 
     // Item 7f - Important reminder
     "7fTitle" = "RECORDATORIO IMPORTANTE";
     "7fText" = "Cuando llame, recuerde sus dos preguntas: (1) aceptan a los solicitantes de Section 8 y (2) cuáles son sus tarifas para el tamaño de apartamento que busca?";
 
     // Item 7g - Call button (IF KEY NAME IS CHANGED, ALSO CHANGE IN CLICKLINK DELEGATE EXTENSION IN STEPDETAILTVC)
-    "7gText" = "Ahora es el momento de llamar al complejo de apartamentos: ";
+    "7gText" = "Ahora es el momento de llamar la oficina del apartamento: ";
     "7gButtonText" = "TOQUE PARA LLAMAR EL COMPLEJO";
 
     // Item 7h - What if isn't right (IF KEY NAME IS CHANGED, ALSO CHANGE IN CLICKLINK DELEGATE EXTENSION IN STEPDETAILTVC)
@@ -303,7 +303,7 @@
 
     // Item 8e - Helpful hint
     "8eTitle" = "CONSEJO ÚTIL";
-    "8eText" = "Si necesita enviar una copia de estos formularios al complejo de apartamentos, toque en los enlaces a continuación y comparta los formularios por correo electrónico o número de teléfono móvil. Luego regrese a esta página tocando el enlace de la Sección 8 en la parte superior izquierda de la pantalla de su navegador.";
+    "8eText" = "Si necesita enviar una copia de estos formularios a la oficina de apartamentos, toque en los enlaces a continuación y comparta los formularios por correo electrónico o número de teléfono móvil. Despues regrese a esta página tocando el enlace de la Sección 8 en la parte superior izquierda de la pantalla de su navegador.";
 
     // Item 8f - Tenancy approval
     "8fTitle" = "FORMULARIO DE APROBACIÓN DE LA TENENCIA";
@@ -344,11 +344,11 @@
 
     // Item 9d - After you deliver docs
 
-    "9dText" = "Después de entregar estos documentos, la Housing Authority procesará la documentación y luego se comunicará con usted.";
+    "9dText" = "Después de entregar estos documentos, Housing Authority procesará la documentación y despues se comunicará con usted.";
 
     // Item 9e - Important reminder
     "9eTitle" = "RECORDATORIO IMPORTANTE";
-    "9eText" = "Housing Authority utilizará el número de teléfono y la dirección que proporcionó en su solicitud para contactarlo, de modo que cuando entregue los documentos, verifique con ellos para asegurarse de que su número de teléfono y dirección sean correctos.";
+    "9eText" = "Housing Authority utilizará el número de teléfono y la dirección que proporcionó en su solicitud para contactarle, de modo que cuando entregue los documentos, verifique con ellos y asegurese de que su número de teléfono y dirección esten correctos.";
 
     // Item 9f - Tap to complete
     "9fText" = "Una vez que entregue los documentos a Housing Authority, toque el botón a continuación para pasar al siguiente paso.";
@@ -371,21 +371,21 @@
     "10dButtonText" = "TOQUE PARA GUARDAR LA FECHA";
 
     // Item 10e - Tap to complete
-    "10eText" = "Una vez que se haya programado la inspección con el complejo de apartamentos y TAMBIÉN con Housing Authority, toque el botón a continuación para pasar al siguiente paso.";
+    "10eText" = "Una vez que se haya programado la inspección con la oficina de apartamento y TAMBIÉN con Housing Authority, toque el botón a continuación para pasar al siguiente paso.";
 
 // MARK: - STEP 11 ITEMS
 
     // Item 11a - Intro
-    "11aText" = "El día de la inspección, asegúrese de que haya un adulto en el apartamento cuando llegue el inspector. Eso puede ser usted o alguien del complejo de apartamentos.";
+    "11aText" = "El día de la inspección, asegúrese de que haya un adulto en el apartamento cuando llegue el inspector. Eso puede ser usted o alguien de la oficina del apartamento.";
 
     // Item 11b - Selected aparmentment (IF ITEM KEY IS CHANGED, UPDATE CODE IN SELECTED APARTMENT CONTROLLER)
     "11bTitle" = "EL APARTAMENTO QUE ELIGIÓ";
-    "11bText" = "Aún no has seleccionado un apartamento. Vuelva al paso 6 y seleccione un apartamento antes de completar este paso.";
+    "11bText" = "Aún no ha seleccionado un apartamento. Vuelva al paso 6 y seleccione un apartamento antes de completar este paso.";
 
     // Item 11c - Photo
 
     // Item 11d - If it doesn't pass
-    "11dText" = "Si la unidad no pasa la inspección, se deben hacer las reparaciones necesarias. Cuando se completen las reparaciones, llame a la Housing Authority al 801-373-8333, extensión 117 para programar una cita de reinspección.";
+    "11dText" = "Si la unidad no pasa la inspección, se deben hacer las reparaciones necesarias. Cuando se completen las reparaciones, llame a Housing Authority al 801-373-8333, extensión 117 para programar una cita de reinspección.";
 
     // Item 11e - If you need to reschedule
     "11eTitle" = "SI USTED NECESITA REPROGRAMAR";
@@ -426,7 +426,7 @@
 // MARK: - STEP 13 ITEMS
 
     // Item 13a - Intro
-    "13aText" = "Después de su cita final, deberá entregar los contratos de arrendamiento y los contratos al complejo de apartamentos, para que puedan ser firmados.";
+    "13aText" = "Después de su cita final, debe entregar los contratos de arrendamiento y los contratos al complejo de apartamentos, para que puedan ser firmados.";
 
     // Item 13b - Selected aparmentment (IF ITEM KEY IS CHANGED, UPDATE CODE IN SELECTED APARTMENT CONTROLLER)
     "13bTitle" = "EL APARTAMENTO QUE ELIGIÓ";
@@ -435,7 +435,7 @@
     // Item 13c - Photo
 
     // Item 13d - Then return copies to HAUC
-    "13dText" = "Luego debe devolver TODAS las copias a Housing Authority:";
+    "13dText" = "Despues debe devolver TODAS las copias a Housing Authority:";
 
     // Item 13e - Housing Authority office info
     "13eTitle" = "INFORMACIÓN DE HOUSING AUTHORITY";
@@ -465,7 +465,7 @@
     "14eText" = "Recuerde informar a Housing Authority cuando se produzcan cambios, ya sea en los ingresos de su hogar o en el número de personas que viven en su apartamento.";
 
     // Item 14f - Tap to complete
-    "14fText" = "¡Felicidades! ¡Ya ha completado el proceso de obtención de viviendas asequibles de Section 8! Es un proceso largo y difícil, ¡y ha hecho un gran trabajo! \n\nPresione el botón a continuación para completar el proceso de Section 8 Housing.";
+    "14fText" = "¡Felicidades! ¡Ya ha completado el proceso de obtención de viviendas de Section 8! Es un proceso largo y difícil, ¡y ha hecho un gran trabajo! \n\nPresione el botón a continuación para completar el proceso de Section 8 Housing.";
 
 
 
