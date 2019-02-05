@@ -26,9 +26,22 @@
 
 // MARK: LOCATION NOTIFICATION
 
-    //Note "locationDismissButtonTitle" and "locationResourceName" are using key value pairs associated with other constants in order to avoid having to re-create them
+    //Note: - "locationDismissButtonTitle" and "locationResourceName" are using key value pairs associated with other constants in order to avoid having to re-create them
     "locationContentTitle" = "Headed to the Housing Authority office?";
     "locationConentBody" = "Good Luck Today! Use the Section8 app to help you remember what you need to do.";
+
+    //Location Not Granted UIAlert
+    //this UIAlert message fires if the users device has loation services resitricted during the onboarding process
+    "locationServiceRestrictedAlertTitle" = "Location Services Restricted";
+"locationServiceRestrictedAlertMessage" = "This device location services are restricted. Section8 app needs your location in order to properly display notification. If you wish to later change this it can be done in your device's settings";
+
+        //NOTE: - dismissLocationActionTitle key value is shared with granted and resitricted
+        "dismissLocationActionTitle" = "Dismiss";
+
+        // UIAlert Message user denied location services
+        "locationServiceDeniedAlertTitle" = "Location Services Denied";
+        "locationServiceDeniedAlertMessage" = " Section8 app needs your location in order to properly display notification. If you wish to allow location services it can be done in your phone's settings.";
+
 
 // MARK: - SEVEN-DAY NOTIFICATIONS
 
@@ -210,6 +223,8 @@
     // Item 5d - Max rent amount
     "5dTitle" = "YOUR MAXIMUM RENT AMOUNT";
     "5dText" = "Based on your household income, your voucher amount, and an average utility allowance, you should NOT look at apartments with rent higher than this amount:";
+    "5dCalculated" = " per month or lower";
+    "5dNotCalculated" = "Maximum rent not yet calculated";
 
     // Item 5e - How is this calculated
     "5eTitle" = "HOW IS THIS CALCULATED?";
@@ -217,6 +232,11 @@
 
     // Item 5f - Tap to complete
     "5fText" = "After calculating your maximum rent, tap the “Complete” button below to move on to the next step!";
+
+    // Item 5g - TextField Enter House Hold Income place hodler text
+    "incomeAmount" = "Enter total household income here";
+    // Item 5h -Textfield Enter Voucher Amount place hodler text
+    "voucherAmount" = "Enter voucher amount here";
 
 // MARK: - STEP 6 ITEMS
 

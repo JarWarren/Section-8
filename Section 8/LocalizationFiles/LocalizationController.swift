@@ -15,7 +15,22 @@ class LocalizationController {
     static let shared = LocalizationController()
     private init() {}
     
-    var activeLanguage = ["en"] 
+    var activeLanguage: [String] = {
+        let language = NSLocale.preferredLanguages
+        
+        switch true {
+            
+        case language.first?.prefix(2) == "pt" :
+            return ["pt-BR"]
+            
+        case language.first?.prefix(2) == "es" :
+            return ["es-419"]
+            
+        default:
+            return ["\(String(describing: NSLocale.preferredLanguages.first))"]
+            
+        }
+    }()
     
     func setToEnglish() {
         LocalizationController.shared.activeLanguage = ["en"]
@@ -63,7 +78,7 @@ public extension String {
     var localize: String {
         LocalizationController.shared.loadLanguage()
         let path = Bundle.main.path(forResource: LocalizationController.shared.activeLanguage[0], ofType: "lproj")
-        let localizedBundle = Bundle(path: path!)
+        let localizedBundle = Bundle(path: path ?? Bundle.main.path(forResource: "en", ofType: "lproj")!)
         return NSLocalizedString(self, tableName: nil, bundle: localizedBundle!, value: "", comment: "")
     }
 }

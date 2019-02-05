@@ -204,12 +204,12 @@ class StepDetailTVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             if let rent = RentController.shared.rent {
                 cell.dataDisplayTitleLabel.text = item.title
                 cell.dataDisplayTextLabel?.text = item.text
-                cell.dataDisplayDataLabel?.text = "$\(rent.maxRent) per month or lower"
+                cell.dataDisplayDataLabel?.text = "$\(rent.maxRent)" + "5dCalculated".localize
             } else {
                 // Configure cell
                 cell.dataDisplayTitleLabel.text = item.title
                 cell.dataDisplayTextLabel?.text = item.text
-                cell.dataDisplayDataLabel?.text = "Maximum rent not yet calculated"
+                cell.dataDisplayDataLabel?.text = "5dNotCalculated".localize
             }
             return cell
             
